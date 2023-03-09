@@ -1,0 +1,15 @@
+CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+
+What is CORS used for?
+Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins 
+(domain, scheme, or port) other than its own from which a browser should permit loading resources
+
+What is CORS JavaScript?
+CORS (Cross-Origin Resource Sharing) is a system, consisting of transmitting HTTP headers, that determines whether browsers 
+block frontend JavaScript code from accessing responses for cross-origin requests. 
+The same-origin security policy forbids cross-origin access to resources.
+
+What is CORS in Web API?
+Cross-origin resource sharing (CORS) is a browser security feature that restricts cross-origin HTTP requests that are initiated
+from scripts running in the browser. If your REST API's resources receive non-simple cross-origin HTTP requests,
+you need to enable CORS support.
