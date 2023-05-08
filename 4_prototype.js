@@ -9,8 +9,8 @@ fun1.prototype.greet=function(){
 function fun2(){
     // this.fun1=new fun1();
     
-    // this.greet=fun1.prototype; // This will not create new object but will 'greet' varibale assign to same object
-    this.greet=Object.create(fun1.prototype); // this will create new Object
+    this.greet=fun1.prototype; // This will not create new object but will 'greet' varibale assign to same object
+    // this.greet=Object.create(fun1.prototype); // this will create new Object
     // this.greet=new fun1.prototype(); //Error---Wrong
 }
 
@@ -22,4 +22,5 @@ fun2Var.greet.greet= ()=> {
 let fun1Var=new fun1();
 fun1Var.greet();
 fun2Var.greet.greet();
+console.log(fun1Var.__proto__===fun2Var.__proto__);
 // console.log(fun2Var.fun1.greet());
