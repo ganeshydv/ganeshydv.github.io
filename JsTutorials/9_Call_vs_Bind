@@ -1,0 +1,28 @@
+//both are used for assigning parent object to the function called
+
+let p={
+    name:"tony",
+    getName:function(){ console.log(this); return " name: "+this.name}
+}
+
+let {getName}=p;
+
+getName=getName.bind(p);   // --> here Bind() returns { NEW function or object } which is binds {this }  to p as parent object the it assigns to getName so basically it also binds this abut PERMENANTLY it means this value can not be changed and it alos creates new object
+
+getName.call(p);    //--> call() does not creates new object rather call the function immediately and also set this to a specified object
+                     // but binding is dynamic it means { this } can be changed
+
+
+// The call() and bind() methods in JavaScript are used to invoke functions and set the value of this within the function. The main differences between call() and bind() are:
+
+// Invocation:
+// call(): The call() method immediately invokes the function with the provided this value and any additional arguments passed individually.
+// bind(): The bind() method creates a new function with the provided this value and any additional arguments but does not immediately invoke the function. Instead, it returns a new function that can be invoked later.
+
+// Immediate vs. Delayed Invocation:
+// call(): Invokes the function immediately with the provided this value and arguments.
+// bind(): Returns a new function with the bound this value and optional arguments, which can be invoked later at any time.
+// Function Binding:
+
+// call(): Temporarily sets the this value for the function and invokes it in one step.
+// bind(): Creates a new function with a permanently bound this value and optional arguments.
