@@ -1,0 +1,28 @@
+
+
+in javascript Object is like base function or parent function for all other user defined or predefined functions
+
+when you call a function it is called in global context i.e. window --> this refers to window
+
+if use strict mode then it local context  --> this refers to undefined 
+
+
+if you want to configure this to certain object then us bind()
+How?  let say there is one object and that object has a method and you wnat use this method there are two ways
+to call this method 
+
+  let person={
+    name:"tony",
+    getName:function(){ return "name:"+this.name}
+  }
+1) person.getName()
+2) using destructring 
+
+  let { getName } = person;
+  console.log(getName()); //----> ERROR why beacuse this refers to global context i.e. window so use bind to bind with object 
+  getName =getName.bind(person) //--> now in getName fucntion "{this}" refers to person so it will work
+  console.log(getName())
+
+
+
+
