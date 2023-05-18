@@ -1,8 +1,5 @@
 /node_modules
 /views
 index.js
-<<<<<<< HEAD
-package-lock.json
-=======
 package.json
->>>>>>> 54ad5cf49a3b3ed685c75b75c64f1e4c826cb3fe
+
