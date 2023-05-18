@@ -1,0 +1,79 @@
+{
+    "name": "audit",
+    "hostname": "APH10191",
+    "pid": 13724,
+    "audit": true,
+    "level": 30,
+    "remoteAddress": "::1",
+    "remotePort": 9555,
+    "req_id": "6caf17cc-d5d3-4ef6-9b63-411491ae2dab",
+    "req": {
+      "query": "",
+      "method": "POST",
+      "url": "/mentor-csr/api/v1/auth",
+      "headers": {
+        "host": "localhost:3000",
+        "connection": "keep-alive",
+        "content-length": "63",
+        "sec-ch-ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"",
+        "client_info": "web,consumer_portal",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+        "ed_app": "mentor_web",
+        "content-type": "application/json;charset=UTF-8",
+        "accept": "application/json, text/plain, */*",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "origin": "http://localhost:9000",
+        "sec-fetch-site": "same-site",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "http://localhost:9000/",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-US,en;q=0.9",
+        "route-spec": "POST/mentor-csr/api/v1/auth"
+      },
+      "httpVersion": "1.1",
+      "trailers": {},
+      "version": "*",
+      "timers": {
+        "parseQueryString": 32,
+        "restifyResponseHeaders": 14,
+        "crossOrigin": 344,
+        "session": 1486,
+        "setup": 34,
+        "postAuth": 81,
+        "adminRequest": 72,
+        "grantAttacher": 1116,
+        "logout": 141,
+        "readBody": 1691,
+        "parseBody": 306,
+        "handler-0": 10010
+      }
+    },
+    "res": {
+      "statusCode": 200,
+      "headers": {
+        "access-control-allow-origin": "http://localhost:9000",
+        "access-control-allow-headers": "authorization,client_info,ed_app,ed_user_id,ed_device,ed_locale,ED_REGION,Access-Control-Allow-Origin,Content-Type,Content-Length",
+        "access-control-allow-methods": "*",
+        "content-type": "application/json",
+        "content-length": 223,
+        "set-cookie": [
+          "connect.sid=s%3AYUwZcQs3DclyKGL4IUK2Np3SoJO5gRJs.aDOR%2B7U4dKXKfBYl3ULsZI2T02oPtYSGU%2FqSOQWjlQI; Path=/; HttpOnly"
+        ],
+        "access-control-expose-headers": "Api-Version, Request-Id, Response-Time",
+        "connection": "Keep-Alive",
+        "content-md5": "zqgnmArSNu4677P7QEM1OQ==",
+        "date": "Wed, 17 May 2023 06:35:13 GMT",
+        "server": "restify",
+        "request-id": "6caf17cc-d5d3-4ef6-9b63-411491ae2dab",
+        "response-time": 15
+      },
+      "trailer": false
+    },
+    "latency": 15,
+    "_audit": true,
+    "msg": "handled: 200",
+    "time": "2023-05-17T06:35:13.151Z",
+    "v": 0
+  }

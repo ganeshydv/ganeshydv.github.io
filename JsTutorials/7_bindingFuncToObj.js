@@ -7,7 +7,7 @@ let person={
 
 let {getName}= person;
 // console.log(this);
-console.log(getName())   //--> this refers to global object here in browser window
+console.log(getName())   //--> this refers to global object here .....in browser --> window is global object
 getName=getName.bind(person)
 console.log(getName())
 

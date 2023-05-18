@@ -12,6 +12,7 @@ getName=getName.bind(p);   // --> here Bind() returns { NEW function or object }
 getName.call(p);    //--> call() does not creates new object rather call the function immediately and also set this to a specified object
                      // but binding is dynamic it means { this } can be changed
 
+getName.apply(p,[])  //--> apply works same as call() basic differece is it uses array to pass the argunments.
 
 // The call() and bind() methods in JavaScript are used to invoke functions and set the value of this within the function. The main differences between call() and bind() are:
 
