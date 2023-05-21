@@ -7,7 +7,7 @@ when you call a function it is called in global context i.e. window --> this ref
 if use strict mode then it local context  --> this refers to undefined 
 
 
-if you want to configure this to certain object then us bind()
+if you want to configure this to certain object then us bind(),call() or apply()
 How?  let say there is one object and that object has a method and you wnat use this method there are two ways
 to call this method 
 
@@ -20,7 +20,7 @@ to call this method
 
   let { getName } = person;
   console.log(getName()); //----> ERROR why beacuse this refers to global context i.e. window so use bind to bind with object 
-  getName =getName.bind(person) //--> now in getName fucntion "{this}" refers to person so it will work
+  getName =getName.call(person) //--> now in getName fucntion "{this}" refers to person so it will work
   console.log(getName())
 
 

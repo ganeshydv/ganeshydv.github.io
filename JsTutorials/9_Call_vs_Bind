@@ -27,3 +27,52 @@ getName.apply(p,[])  //--> apply works same as call() basic differece is it uses
 
 // call(): Temporarily sets the this value for the function and invokes it in one step.
 // bind(): Creates a new function with a permanently bound this value and optional arguments.
+
+
+
+
+//---------------------------------------------------
+
+// explain use of call() in inheritance
+// ChatGPT
+// The call() method can be used in inheritance to invoke a constructor function defined in a parent object and set the this value of the child object to the newly created object. This allows the child object to inherit properties and methods from the parent object.
+
+// Here's an example to illustrate the use of call() in inheritance:
+
+// javascript
+// Copy code
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.greet = function() {
+  console.log(`Hello, my name is ${this.name}.`);
+};
+
+function Student(name, grade) {
+  Person.call(this, name); // Invoke parent constructor with child object as 'this'
+  this.grade = grade;
+}
+
+// Create a new object using Student constructor
+const student = new Student('John', 10);
+
+console.log(student.name);  // Output: John
+console.log(student.grade); // Output: 10
+
+student.greet(); // Output: Hello, my name is John.
+// In this example, we have a Person constructor function that sets the name property and defines a greet() method on its prototype. Then, we have a Student constructor function that inherits from Person.
+
+// To establish inheritance, we use Person.call(this, name) inside the Student constructor. This invokes the Person constructor and sets the newly created Student object as the this value. By doing this, the name property defined in the Person constructor is assigned to the name property of the Student object.
+
+// The Student object also has its own grade property defined in its constructor.
+
+// As a result, when we create a new Student object using new Student('John', 10), the name property is set to 'John', the grade property is set to 10, and the greet() method is inherited from the Person prototype.
+
+// By using call() in the inheritance process, we can reuse the initialization logic of the parent constructor and properly set the this value of the child object to achieve inheritance in JavaScript.
+
+
+
+
+
+

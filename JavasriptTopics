@@ -24,3 +24,14 @@
 24) handling promise using then(),catch()
 25) require vs import and what is module
 26) IIEF
+27) deep copy vs shallow copy-->
+    Object.assign() used for shallow copy - means creating a new object having properties of one or more objects but for objects it will 
+    pass only referance means will not crate a new copy
+
+------------------------------------------------------------------------------------------
+0) let vs var vs const
+1) Object Literals
+2) Function constructor
+3) prototype inheritance
+
+3) class
