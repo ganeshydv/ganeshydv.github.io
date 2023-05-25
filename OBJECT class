@@ -68,3 +68,14 @@
 // To change the name property on the prototype object, we can access it through the __proto__ property of any object that inherits from it. In this case, we access john.__proto__.name and set it to 'Jane'. This change in the prototype object is then reflected in both john and jane when we access the name property on them.
 
 // It's important to note that accessing the __proto__ property directly is not recommended for regular use. It's used here for demonstration purposes to showcase the ability to modify the prototype object through an inheriting object. In practice, it's generally better to modify the prototype object directly or use other methods provided by JavaScript, such as Object.setPrototypeOf(), to change the prototype of an object.
+
+//------------------------- Object.hasOwnProperty() --------------------
+
+//------------------------- Object.defineProperty() --------------------
+
+// Object.defineProperty(AuthProvider.prototype, "tokenHeader", {
+//     get: function () { return this.SatellizerConfig.tokenHeader; },
+//     set: function (value) { this.SatellizerConfig.tokenHeader = value; },
+//     enumerable: true,
+//     configurable: true
+// });
