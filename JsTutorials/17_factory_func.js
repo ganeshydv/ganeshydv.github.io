@@ -12,6 +12,8 @@ function calTax(amount,tax){
 let gst=calTax(200,10);
 let vat=calTax(200,5);
 
+//---------------------------- Factory Function Example -------------------------
+
 function getTaxCal(tax){
     return function(amount){
         return amount*tax/100;
