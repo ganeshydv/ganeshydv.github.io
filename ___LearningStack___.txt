@@ -19,8 +19,8 @@
 
 
 -) Javascritpt :
-        1) Array  ...
-        2) Events
+        1) Array  ... DONE ~~~
+        2) Events 
         3) Modular Js -20
         4) js workflows and tools -21
         5) Browser storage -22
@@ -72,8 +72,12 @@
     : JWT
     : Session
     : Stateless or Statefull microservice
-    : microservice : 1) Gateway 
-                     2) Service Provder
+    : microservice : 1) Gateway microservice
+                     2) Learner microservice 
+                     3) chatBoat microservice
+                     4) Payment microservice
+                     5) DocumentOp microservice
+
 
 3) HOSTING :
     : Docker
