@@ -7,3 +7,8 @@ const squere_arr=arr.map((ele)=>{
     return ele*ele;
 })
 console.log(squere_arr);
+
+// map() mainly used to extarct values from Object :
+
+const originalArray = [{price: 10.99}, {price: 5.99}, {price: 29.99}];
+const transformedArray = originalArray.map(obj => obj.price); // produces [10.99, 5.99, 29.99]

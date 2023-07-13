@@ -1,0 +1,94 @@
+
+--------------------------- AT HOME ---------------------------------
+
+0) DSA : .... going on 
+       Topics:
+           1) Operators ...
+           2) Recursion
+           3) Array
+           4) Searching
+           5) Sorting
+
+0.1) Operating System :
+
+0.2) Networking :
+
+---------------------------- IN Office -------------------------------
+
+1) Nodejs (40 hrs) :
+
+
+-) Javascritpt :
+        1) Array  ... DONE ~~~
+        2) Events 
+        3) Modular Js -20
+        4) js workflows and tools -21
+        5) Browser storage -22
+        6) Meta programming - 26
+        7) security -28 
+        8) Performance optimization -30
+        9) Testiong -31
+        10) Aysnc jS
+
+
+3) AWS - lambda + S3 + SQS + dynamoDB + redshift:
+
+
+
+----------------------------------------------------------------------                          
+
+2) React
+ 
+4) Docker 
+
+-----------------------------------------------------------------------
+
+5) System Design : 93 vdos from youtube: https://www.youtube.com/watch?v=64geP_LAZ5U&list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv
+
+-------------------------------------------------------------------------
+
+
+
+
+==========================================================================
+==========================================================================
+========================== PROJECT Structure =============================
+
+1) Front End : 
+    : React
+    : Endpoints -
+
+2) Back End :
+    : MVC Architecture
+    : Node + Express + S3 + dynamoDB + lambda + redshift
+    : Logging ( Kibana )
+    : Unit testing
+    ------------ Features ----------
+    : 3rd Party LOGIN - OAUTH 2.0
+    : Authentication + Aurhorization
+    : Payment system (If possible)      ........
+    : Document upload feature (like image) .....
+    : chat boat ( if possible )          .......
+    : JWT
+    : Session
+    : Stateless or Statefull microservice
+    : microservice : 1) Gateway microservice
+                     2) Learner microservice 
+                     3) chatBoat microservice
+                     4) Payment microservice
+                     5) DocumentOp microservice
+
+
+3) HOSTING :
+    : Docker
+    : AWS lambda 
+    : AWS redshift
+    : AWS S3 
+    : AWS dynamoDB
+
+==========================================================================
+==========================================================================
+
+
+
+

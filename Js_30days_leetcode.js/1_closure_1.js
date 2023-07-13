@@ -5,8 +5,8 @@ function dataManipulation(data){
         return counter++;
     };
     return {data, count};
-//     return {data:data, count:(()=>{
-//         return counter++;
+//     return {data:data, count:(()=>{         
+//         return counter++;  // counter is out of scope so will always return 0
 //     })()}
 }
 
