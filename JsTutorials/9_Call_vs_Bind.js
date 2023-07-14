@@ -48,19 +48,24 @@ function Person(name) {
 Person.prototype.greet = function() {
   console.log(`Hello, my name is ${this.name}.`);
 };
-
+const p1=new Person("ray");
 function Student(name, grade) {
   Person.call(this, name); // Invoke parent constructor with child object as 'this'
   this.grade = grade;
 }
-
+Student.prototype=Object.create(Person.prototype);
+// Student.__proto__=Person.prototype.constructor;
 // Create a new object using Student constructor
 const student = new Student('John', 10);
 
+//another solution without using OBject.create()
+// student.__proto__=p1.__proto__; // this works as I am taking __proto__ which refers to Person Object
+console.log(student.__proto__);
 console.log(student.name);  // Output: John
 console.log(student.grade); // Output: 10
+// Student.prototype=Object.create(Person.prototype);  // will give error as it will be assigned after creating object
 
-student.greet(); // Output: Hello, my name is John.
+student.greet(); // Output: Hello, my name is John. //
 // In this example, we have a Person constructor function that sets the name property and defines a greet() method on its prototype. Then, we have a Student constructor function that inherits from Person.
 
 // To establish inheritance, we use Person.call(this, name) inside the Student constructor. This invokes the Person constructor and sets the newly created Student object as the this value. By doing this, the name property defined in the Person constructor is assigned to the name property of the Student object.
