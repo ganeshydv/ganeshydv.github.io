@@ -117,6 +117,33 @@ request(expressApp)
   .end((err, res) => {
     // Your test assertions here
   });
+//---------- send() : send data in body  ---------
+// JSON format
+const request = require('supertest');
+const expressApp = require('./app'); // Your Express.js app to be tested
+
+// Example of sending a POST request with data in the body
+request(expressApp)
+  .post('/api/users')
+  .set('Content-Type', 'application/json')   // not needed but it is good to write
+  .send({ name: 'John Doe', age: 30 })  
+  .expect(200)
+  .end((err, res) => {
+    // Your test assertions here
+  });
+// form format
+const request = require('supertest');
+const expressApp = require('./app'); // Your Express.js app to be tested
+
+// Example of sending a POST request with data in the body
+request(expressApp)
+  .post('/api/users')
+  .set('Content-Type', 'application/x-www-form-urlencoded')
+  .send('name=John%20Doe&age=30')
+  .expect(200)
+  .end((err, res) => {
+    // Your test assertions here
+  });
 
 // --------------- attach() :add files --------
 
@@ -137,7 +164,24 @@ request(expressApp)
 //response body or headers before executing an assertion.
 
 
+describe('POST /user', function() {
+  it('user.name should be an case-insensitive match for "john"', function(done) {
+    request(app)
+      .post('/user')
+      .send('name=john') // x-www-form-urlencoded upload
+      .set('Accept', 'application/json')
+      .expect(function(res) {
+        res.body.id = 'some fixed id';
+        res.body.name = res.body.name.toLowerCase();
+      })
+      .expect(200, {
+        id: 'some fixed id',
+        name: 'john'
+      }, done);
+  });
+});
 
+//------------------------------------
 
 
 
