@@ -1,5 +1,6 @@
 // import pkg from './file2.js' ;
 const funs=require('./file2.js');
-
-console.log(funs)
-funs.a()
+import {a,b,c} from "./file2";
+// console.log(funs)
+// funs.a()
+c();
