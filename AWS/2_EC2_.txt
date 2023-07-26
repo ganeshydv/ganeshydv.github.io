@@ -30,4 +30,4 @@ Launch EC2:
 10) LAUNCH instance
 
 ---------------------------------
-after LAUNCH :- it has public and Private Ips 
+after LAUNCH :- it has public and Private Ips to access the instance
