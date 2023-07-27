@@ -1,0 +1,33 @@
+
+
+EC2 :
+
+select: 1) OS 
+        2) CPU
+        3) RAM
+        4) storage : Network + hardware
+        5) Network card 
+        6) Firewall rules : security groups
+        
+EC2 user data : to start task
+    - used for automating task
+
+----------------------------------
+Launch EC2:
+
+1) instance - launch new instance
+2) name and Tags
+3) OS image 
+4) instance types ( ex. t2.micro)
+5) key pair : used for SSH utility - create -> name + RSA + format : .pem / .ppk -> crrate
+6) Network : add security Groups (for allowig network traffic)
+  : allow SSH / HTTP/ https from internet
+7) configure storage
+8) Advanced details 
+    --- User data: commands to execute for only once and only at start
+
+9) summary 
+10) LAUNCH instance
+
+---------------------------------
+after LAUNCH :- it has public and Private Ips to access the instance

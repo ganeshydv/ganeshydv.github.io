@@ -1,0 +1,7 @@
+
+Multi Factor Authentication
+
+psd + mfa device ==> login succeess
+
+mfa device : Google auth (phone only ) or authy (for all devices)
+

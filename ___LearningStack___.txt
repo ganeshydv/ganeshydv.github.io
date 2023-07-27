@@ -1,10 +1,16 @@
 
+layer  1 ) Software Architecture / System Design
+       2 ) Operating System
+       3 ) Networking
+       4 ) Cloud - AWS
+
+
 --------------------------- AT HOME ---------------------------------
 
 0) DSA : .... going on 
        Topics:
-           1) Operators ...
-           2) Recursion
+           1) Operators ----
+           2) Recursion ---
            3) Array
            4) Searching
            5) Sorting
@@ -19,16 +25,16 @@
 
 
 -) Javascritpt :
-        1) Array  ... DONE ~~~
-        2) Events 
+        1) Array  ---- DONE ~~~
+        2) Events  ----
         3) Modular Js -20
         4) js workflows and tools -21
-        5) Browser storage -22
+        5) Browser storage -22   ----
         6) Meta programming - 26
         7) security -28 
         8) Performance optimization -30
         9) Testiong -31
-        10) Aysnc jS
+        10) Aysnc jS ----
 
 
 3) AWS - lambda + S3 + SQS + dynamoDB + redshift:

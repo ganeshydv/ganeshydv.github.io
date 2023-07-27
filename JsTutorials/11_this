@@ -26,7 +26,7 @@ something(); // logs global object (window in browser) in non-strict mode, undef
 
 // 3) this in an Arrow-Function - Called in the global context
 
-const something = () => { 
+var something = () => { 
     console.log(this);
 }
  
@@ -37,7 +37,7 @@ something(); // logs global object (window in browser) - ALWAYS (also in strict 
 
 // 4) this in a Method (non-Arrow) - Called on an object
 
-const person = { 
+var person = { 
     name: 'Max',
     greet: function() { // or use method shorthand: greet() { ... }
         console.log(this.name);
@@ -50,7 +50,7 @@ person.greet(); // logs 'Max', "this" refers to the person object
 
 // 5) this in a Method (Arrow Function) - Called on an object
 
-const person = { 
+var person = { 
     name: 'Max',
     greet: () => {
         console.log(this.name);
@@ -60,14 +60,14 @@ const person = {
 person.greet(); // logs nothing (or some global name on window object), "this" refers to global (window) object, even in strict mode
 // this can refer to unexpected things if you call it on some other object, e.g.:
 
-const person = { 
+var person = { 
     name: 'Max',
     greet() {
         console.log(this.name);
     }
 };
  
-const anotherPerson = { name: 'Manuel' }; // does NOT have a built-in greet method!
+var anotherPerson = { name: 'Manuel' }; // does NOT have a built-in greet method!
  
 anotherPerson.sayHi = person.greet; // greet is NOT called here, it's just assigned to a new property/ method on the "anotherPerson" object
  
@@ -87,7 +87,7 @@ anotherPerson.sayHi(); // logs 'Manuel' because method is called on "anotherPers
 
 // javascript
 // Copy code
-const obj = {
+var obj = {
   name: 'John',
   sayHello: function() {
     console.log(`Hello, ${this.name}!`);
@@ -103,7 +103,7 @@ obj.sayHello(); // Output: Hello, John!
 
 // javascript
 // Copy code
-const obj = {
+var obj = {
   name: 'John',
   sayHello: () => {
     console.log(`Hello, ${this.name}!`);
