@@ -26,7 +26,7 @@ Every serverless templete:
         2) subnetIds :       //: Lists the IDs of the private subnets in the VPC where the Lambda functions will be deployed
     6) environment :         //for variables
 6] custom:
-7] functions:
+7] functions:   // can give IAM role access for resources to each lambda function as well
 8] resources:
     1) Resources:
     -----------------------------------------------------
@@ -34,43 +34,43 @@ Every serverless templete:
         PlaylistsDynamoDBTable:
             Type: AWS::DynamoDB::Table
             Properties:
-               TableName: pl-driver-playlist-item
+               TableName: ExampletableName
                 AttributeDefinitions:
-                  - AttributeName: user_id
+                  - AttributeName: id
                     AttributeType: S
-                  - AttributeName: course_master_code
+                  - AttributeName: key_2
                     AttributeType: S
-                  - AttributeName: company_id
+                  - AttributeName: key_3
                     AttributeType: S
-                  - AttributeName: prescribe_date_ts
+                  - AttributeName: key_4
                     AttributeType: N
                  
                 KeySchema:
-                  - AttributeName: user_id
+                  - AttributeName: id
                     KeyType: HASH
-                  - AttributeName: course_master_code
+                  - AttributeName: key_2
                     KeyType: RANGE
                 BillingMode: PAY_PER_REQUEST
                 
                 GlobalSecondaryIndexes:
-                  - IndexName: company_id-index
+                  - IndexName: key_3-index
                     KeySchema:
-                      - AttributeName: company_id
+                      - AttributeName: key_3
                         KeyType: HASH
                     Projection:
                       ProjectionType: ALL
                    
                     
-                  - IndexName: prescribe_date_ts-index
+                  - IndexName: key_4-index
                     KeySchema:
-                      - AttributeName: prescribe_date_ts
+                      - AttributeName: key_4
                         KeyType: HASH
                     Projection:
                       ProjectionType: ALL
                  
                   - IndexName: prescribe_date-index
                     KeySchema:
-                      - AttributeName: prescribe_date_ts
+                      - AttributeName: key_4
                         KeyType: HASH
                     Projection:
                       ProjectionType: ALL

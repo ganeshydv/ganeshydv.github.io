@@ -14,10 +14,44 @@
    these endpoint URLS to call respective lambda functions 
 
 3) in awsApiGateWay you have to 
----------------------------------------------
+-------------------------------------------------
+           IAM ROLE and Lambda Fucntion
+-------------------------------------------------
 Q1) do each lambda Fucntion needs IAM Role ?
+         yes 
+Q2) what are the ways to assign IAM role to lambda function >
+   2 ways:
+   -1] IAM Execution Role: You can assign an IAM execution role to your Lambda     function.
+     This role is automatically assumed by the Lambda service 
+     when it executes your function. 
+     By attaching IAM policies to this role,
+     you grant specific permissions to the Lambda function to access other AWS services. 
+     For example, if your Lambda function needs to read data from DynamoDB,
+     you can attach an IAM policy to the IAM execution role that allows read access to the relevant DynamoDB tables.
 
-
+   -2] Inline Policies: Instead of using an IAM execution role,
+      you can define IAM policies directly in the serverless.yml file
+     (or equivalent when using other deployment methods) for each Lambda function. 
+     These policies are referred to as inline policies and are attached directly to the function, granting it specific permissions to access AWS services. 
+     This method is less common than using an IAM execution role but can be useful 
+     for fine-grained control when different Lambda functions require different permissions.
+    Example for inline:
+  
+        functions:
+          myLambdaFunction:
+            handler: handler.myFunction
+            events:
+              - http:
+                  path: /myendpoint
+                  method: get
+        
+            # Inline IAM policy for the Lambda function
+            iamRoleStatements:
+              - Effect: Allow
+                Action:
+                  - dynamodb:GetItem
+                  - dynamodb:PutItem
+                Resource: "arn:aws:dynamodb:us-east-1:123456789012:table/MyTable"
 //------------------------------------------------------------------------------------------------------
 
 if you configure your AWS Lambda functions with their respective HTTP events 

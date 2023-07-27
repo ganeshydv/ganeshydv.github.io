@@ -15,6 +15,10 @@ Each group is independent.
 
 Tags: just for additional info for group/user/other aws resource
 
+--------------------------------------------
+           IAM Policy structure
+--------------------------------------------
+
 IAM Policy structure:
 
 {

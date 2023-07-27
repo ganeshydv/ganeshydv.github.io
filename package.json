@@ -4,15 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server1": "nodemon ./JWT/accesToken_RefreshToken",
+    "server2": "nodemon ./JWT/Authserver2"
   },
   "author": "ganesh r g",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",
+    "dotenv": "^16.3.1",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "mongoose": "^6.9.1",
-    "nodemon": "^2.0.21"
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^6.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
