@@ -1,4 +1,8 @@
-
+OAuth2.0: why use?
+   used to login in different applications using single account
+   Ex. logging in Instagram,Youtube,Twitter,Github using Google account
+       user don't need to create different accounts so there is minmum
+       security risk to provide details about self
 ------------------------------------------------------
 
 Main Part :
@@ -15,7 +19,7 @@ Main Part :
                  so before it was like if there is token google will give directly acceess to
                  users data without finding if user is valid or not but now OpenID inforces to 
                  recognize the user 
-            
+             
 2] OAuth 2.0 : for authorization -gives [ Refresh Token ]
              - Provides authorization on behalf of user
              - when a user logs in a 3rd party app uisng let say google it ask for access of user data so 
@@ -46,8 +50,14 @@ Yes, Keycloak supports both OpenID Connect (OIDC) and OAuth 2.0. In fact,
 OpenID Connect (OIDC): client App: ex. Instagram
    
     client   ------------>    AuthServer ex. google
-      app   <-- IdToken ----  [ OpenID Connect] 
+      app   <-- IdToken ----  [ OpenID Connect - uses grants] 
+           [ unique user data]
 ----------------------------------------------------
+- client App will store userInfo of IdToken and will send request 
+   to resource server/client server (both are different) to get 
+   acceess or Refresh token or both
+
+
     client   ---  IdTOken   --->  client server
      app     <-- acceess +  ---   [ OAuth2.0 ] (this may store )
                 Refresh token

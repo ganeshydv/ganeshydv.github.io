@@ -9,13 +9,73 @@ OpenID Connect uses these  standardized message to provide Identity services.
 -------------------------------------------------------------------------------
 
 How does OpenID Connect relate to SAML?
-The Security Assertion Markup Language (SAML) is an XML-based federation technology used in some enterprise and academic use cases.
+The Security Assertion Markup Language (SAML) is an XML-based federation technology 
+used in some enterprise and academic use cases.
 OpenID Connect can satisfy these same use cases but with a simpler, JSON/REST based protocol.
-OpenID Connect was designed to also support native apps and mobile applications, whereas SAML was designed only for Web-based applications. 
-SAML and OpenID Connect will likely coexist for quite some time, with each being deployed in situations where they make sense.
+OpenID Connect was designed to also support native apps and mobile applications, 
+whereas SAML was designed only for Web-based applications. 
+SAML and OpenID Connect will likely coexist for quite some time, 
+with each being deployed in situations where they make sense.
 
--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+    |||  How OpenID + OAuth2 works to gateher ? |||
+--------------------------------------------------------------------------------
 
+A ] OpenID Connect (OIDC) for Authentication:
+
+OIDC is an extension of OAuth 2.0 that provides an identity layer on top of the authorization framework.
+It allows clients (applications) to verify the identity of the end-user based on the authentication 
+performed by an authorization server (OIDC provider).
+
+The OIDC flow typically involves the following steps:
+The client application initiates the authentication process by 
+redirecting the user to the OIDC provider's authentication endpoint.
+The user interacts with the OIDC provider, providing their credentials 
+(e.g., username and password) or using a social login (e.g., Google, Facebook).
+If the authentication is successful, the OIDC provider issues an ID token, 
+which is a JSON Web Token (JWT) containing information about the user's identity.
+The user is redirected back to the client application along with the ID token.
+The client application verifies the ID token's signature and validates its claims to 
+ensure the user's identity and determine user-specific details like name, email, etc.
+
+b ] OAuth 2.0 for Authorization:
+
+OAuth 2.0 is an authorization framework that allows a client application to 
+access resources (e.g., APIs, protected data) on behalf of a user with their permission.
+
+The OAuth 2.0 flow involves the following steps:
+The client application requests authorization from the user to access certain resources.
+The user is redirected to the OAuth 2.0 provider's authorization endpoint, 
+where they grant or deny access.
+If the user grants access, the OAuth 2.0 provider issues an access token 
+representing the client's authorization to access specific resources.
+The client application includes the access token in the request headers 
+when accessing protected resources on the resource server.
+The resource server verifies the access token with the OAuth 2.0 provider 
+to ensure that the client is authorized to access the requested resources.
+If the access token is valid, the resource server grants access to the requested resources.
+
+
+The OIDC flow establishes the user's identity and provides user information 
+to the client application through the ID token. 
+The OAuth 2.0 flow then allows the client application to access protected resources 
+on behalf of the user using the issued access token.
+----------------------------------------------------------------------
+A]
+   client   ------------>    AuthServer ex. google
+      app   <-- IdToken ----  [ OpenID Connect - uses grants] 
+           [ unique user data]
+-------------------------------------------------------------
+- client App will store userInfo of IdToken and will send request 
+   to resource server/client server (both are different) to get 
+   acceess or Refresh token or both
+
+B]
+    client   ---  IdTOken   --->  client server
+     app     <-- acceess +  ---   [ OAuth2.0 ] (this may store )
+                Refresh token
+                
+----------------------------------------------------------------------
 
 
 
