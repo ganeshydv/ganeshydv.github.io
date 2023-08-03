@@ -15,10 +15,13 @@ function f1() {
     while (remainingEntries.length > 0) {
         const result = getEntriesInParts(remainingEntries, limit);
         retrievedEntries = retrievedEntries.concat(result);
+        console.log(result)
+        // console.log(remainingEntries);
         // remainingEntries = remainingEntries.slice(limit);
     }
 
     console.log(retrievedEntries);
+    console.log(remainingEntries);
 
 }
 f1();

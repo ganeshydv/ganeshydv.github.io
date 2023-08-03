@@ -1,0 +1,21 @@
+
+What is OAuth 2.0 and how does it related to OpenID Connect?
+
+OAuth 2.0, is a framework, specified by the IETF in RFCs 6749 and 6750 (published in 2012) 
+designed to support the development of authentication and authorization protocols. 
+It provides a variety of standardized message flows based on JSON and HTTP;
+OpenID Connect uses these  standardized message to provide Identity services.
+
+-------------------------------------------------------------------------------
+
+How does OpenID Connect relate to SAML?
+The Security Assertion Markup Language (SAML) is an XML-based federation technology used in some enterprise and academic use cases.
+OpenID Connect can satisfy these same use cases but with a simpler, JSON/REST based protocol.
+OpenID Connect was designed to also support native apps and mobile applications, whereas SAML was designed only for Web-based applications. 
+SAML and OpenID Connect will likely coexist for quite some time, with each being deployed in situations where they make sense.
+
+-------------------------------------------------------------------------------
+
+
+
+

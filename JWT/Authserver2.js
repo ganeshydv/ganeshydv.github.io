@@ -15,7 +15,6 @@ app.post('/token',(req,resp)=>{
         resp.json({accessToken:accessToken})
     })
 
-
 })
 
 
@@ -30,6 +29,7 @@ app.post('/login',(req,resp)=>{
     }
     const accessToken=generateAccessTOken(jwtPayload);
     const refreshToken=jwt.sign(jwtPayload,process.env.REFRESH_TOKEN_SECRET);
+    tokesn.push(refreshToken)
     resp.json( {accessToken:accessToken,refreshToken:refreshToken});
 
 })

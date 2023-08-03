@@ -15,18 +15,24 @@ Every serverless templete:
                            // create and manage AWS resources related to the service.
 4] plugin :                // Lists the plugins used for the Serverless Framework.
 5] provider:
-    1) name                // name of provider  ex. awss
+    1) name                // name of provider  ex. aws
     2) runtime             // runtime environment ex. node
     3) region               // region where it will be deployed
     4) iam :                //Configures the IAM (Identity and Access Management) role
-                            // used by the Lambda functions.
+                            // used by the ALL Lambda functions.
         1) role:            //This IAM role determines what permissions the Lambda functions have.
-    5) vpc:                 //Configures the Virtual Private Cloud (VPC) settings for the Lambda functions
-        1) securityGroupIds: //Specifies the IDs of the security groups associated with the Lambda functions.
+    5) vpc:                 //Configures the Virtual Private Cloud (VPC) settings for the Lambda functions  
+                            
+        1) securityGroupIds: //Specifies the IDs of the security groups associated with the Lambda functions.//
+                            //They control inbound and outbound traffic,
+                             allowing you to define what type of traffic is 
+                             allowed to access your instances and 
+                             what traffic is restricted.
+                             //Security groups allow you to specify the source IP addresses or other security groups that are allowed to access your EC2 instances. You can define rules to permit specific ports and protocols, such as HTTP (port 80), HTTPS (port 443), SSH (port 22), etc. This helps to ensure that only authorized users and services can access your instances.
         2) subnetIds :       //: Lists the IDs of the private subnets in the VPC where the Lambda functions will be deployed
     6) environment :         //for variables
 6] custom:
-7] functions:   // can give IAM role access for resources to each lambda function as well
+7] functions:   // can give IAM role access for resources to each lambda function seperately as well
 8] resources:
     1) Resources:
     -----------------------------------------------------
@@ -122,4 +128,24 @@ Every serverless templete:
                             - "deadLetterQueue"
                             - "Arn"
                         maxReceiveCount: 5
-          
+
+//--------------------------------------------------------
+      Every Lambda Fucntion needs IAM Role
+----------------------------------------------------------
+Example for inline IAM role:
+
+        functions:
+          myLambdaFunction:
+            handler: handler.myFunction
+            events:
+              - http:
+                  path: /myendpoint
+                  method: get
+        
+            # Inline IAM policy for the Lambda function
+            iamRoleStatements:
+              - Effect: Allow
+                Action:
+                  - dynamodb:GetItem
+                  - dynamodb:PutItem
+                Resource: "arn:aws:dynamodb:us-east-1:123456789012:table/MyTable"
