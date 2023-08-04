@@ -26,7 +26,7 @@ Main Part :
                to give specific data or specific permission to access user data we use OAuth2.0 
              - Ex. you have made vdo on tiktok and you want share it on Instagram so using OAuth2.0 
                you provide permissions to give access to tiktok to upload vdo on Instagram
-            - uses JWT Token -1) access token 2) Refresh token
+            - uses JWT Token -0) authorization code 1) access token 2) Refresh token
 
 3] keycloak : OIDC + OAuth2.0 => it is a service which has its own SERVER
             - used for authentication and authorization
