@@ -9,7 +9,9 @@ in general take example of pubg sign in using Facebook
 1) pubg ---> 2) Facebook log in -->
 
 3) Facebook AuthServer (  Authentication IdToken+ refreshToken + acceess Token )
-  ---> 4) Pubg --access token + refreshToken --> 5 ) Facebook Resource Server
+  ---> 4) Pubg --access token + refreshToken ( Pubg gets users unique id from Facebook it 
+                will use it to store user data in pubg dbs)
+   --> 5 ) Facebook Resource Server
 
 ---------------------------------------------------------------------
           SERVER to SERVER ( Authorization COde Flow : OAuth2.0 )

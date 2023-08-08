@@ -1,0 +1,56 @@
+-In serverless functions are used to perform task 
+using events
+-these Fucntion runs like docker container
+and these Fucntion responds to event like HTTP
+get request these Fucntion start running 
+
+------------------------------------------------------
+serverless = Lambda + Amazon API Gateway + DynamoDB
+------------------------------------------------------
+
+Lambda : Lambda function runs as container
+       - who can access this function
+
+AWS API Gateway : to create APIs
+         - used to build RestFul APIs
+         - can Integrate these request APIs with different
+          AWS service
+
+DynamoDB : NoSql
+         - can be sacale on demand
+
+SNS & SQS : used for communication between different
+         AWS services
+
+AWS CloudFormation: AWS CloudFormation which 
+   is used to create and automate
+   deployment of different AWS service
+   using a simple text templete.
+   
+
+Step Fucntion : to coordinate lambda function 
+        - used for running lambda function in a 
+         required manner or sequence
+------------------------------------------------------
+Other services:
+S3: can be used for static file to store
+SNS & SQS : used for communication between different
+Kinesis : for data streaming application
+Athena : serach in s3
+X-ray + cloudwatch : for debugging
+cognito : authN + authZ for serverless
+------------------------------------------------------
+
+       USE Cases of Serverless
+------------------------------------------------------
+1) backends
+2) real time data processing
+
+
+
+
+
+
+
+
+

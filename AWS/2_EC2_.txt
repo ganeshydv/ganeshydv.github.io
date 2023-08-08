@@ -19,7 +19,7 @@ Launch EC2:
 2) name and Tags
 3) OS image 
 4) instance types ( ex. t2.micro)
-5) key pair : used for SSH utility - create -> name + RSA + format : .pem / .ppk -> crrate
+5) key pair : used for SSH utility - create -> name + RSA + format : .pem(all os) / .ppk(puTTY windows -7,8) -> crrate
 6) Network : add security Groups (for allowig network traffic)
   : allow SSH / HTTP/ https from internet
 7) configure storage
@@ -31,3 +31,11 @@ Launch EC2:
 
 ---------------------------------
 after LAUNCH :- it has public and Private Ips to access the instance
+             : public IP changes every time instance statrs after stopped.
+             : private IP: constant
+
+EC2 Types: 7 : why? compute + Memory + Networking
+Ex: 1) m5.2xlarge: 
+    > m: instance class
+    > 5: Generation
+    > 2xlarge: size within instance class

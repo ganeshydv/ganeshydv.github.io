@@ -11,6 +11,7 @@
   "author": "ganesh r g",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1431.0",
     "body-parser": "^1.20.1",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.8",

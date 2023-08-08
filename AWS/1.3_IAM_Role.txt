@@ -16,6 +16,6 @@ Common ROles:
 Create Roles:
 
 Roles are created for Sevice for specific persmissions for short duration
-1) chose role
+1) choose role
 2) give persmissions
 3) create ROle

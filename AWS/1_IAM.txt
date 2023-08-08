@@ -4,7 +4,9 @@ IAM : Global service
 
 IAM USed for : crating and managing
         1) user 2) group 3) role 4) group policies
-
+   - User : needs permission for access
+          - AWS policies are used to give perm
+   - services : need IAM Roles for access
 Groups : can not have sub groups
         : Why crate Groups ?
          - to give directly access to same policies to multiple users
