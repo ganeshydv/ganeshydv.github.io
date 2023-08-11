@@ -8,9 +8,10 @@
 //    new AWS.S3();
 // S3: has artay of record we need to map to process it
 
-// first create S3 buckets then give access to lambda function using Role
-// before performing op on aws s3 need to assign IAM Role to this lambda
-//function for accessing the s3
+// Create S3 bucket and then create configure it to trigger
+// lambda function that lambda function takes all s3 .jpg 
+// files and resizes them and saves into new s3 bucket
+
 // IMP:
 // configure source s3 bucket so when ever something is added it will trigger
 // the lambda function -> 2 ways by serverless or using console add event to 
@@ -73,11 +74,11 @@ const handler = async(event)=>{
     return "done";
 }
 
-//-------------------------------------------------------------
+//--------------------upload code zip to s3 -----------------------------------------
 // upload file to s3 using CMD after configuring s3 to trigget EVENT
 
 // aws s3 cp zipFIleNAme s3://bucketName/targetFileNAme
 
-// --------------------------------------------------------------
+// --------------------run lambda function------------------------------------------
 // aws lambda update-function-code --function-name functionName 
 // --s3-bucket bucketName --s3-key resize nameOfTHeZipFle.zip

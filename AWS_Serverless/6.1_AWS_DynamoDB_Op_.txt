@@ -1,0 +1,42 @@
+
+
+create table:
+dynamoDB.crateTable(
+{
+    TableName:"",
+    AttributeDefination :[
+        {
+            AttributeName: "",
+            AttributeType:"S"
+        },{
+            AttributeName:"",
+            AttributeType:"N"
+        }
+    ],
+    KeySchema :[
+        {
+            AttributeName:"",
+            KeyType:"HASH"
+        },
+        {
+            AttributeName:"",
+            KeyType:"RANGE"
+        }
+    ],
+    ProvisionedThroughput:{
+        ReadCapacityUnits:1
+        WriteCapacityUnits:1
+    }
+})
+
+--------------------------------------------
+
+//--------- AWS.DynamoDB vs AWS.DynamoDB.DocumetClient --------------
+
+AWS.DynamoDB.DocumetClient() : both are used for same purpose
+    purpose
+    - used for query over items and is simple
+    - javascripts data types are automatically mapped with
+      DynamoDb internal data type by DocumetClient so 
+      while working we can use js data types instead
+      of DynamoDB data type.

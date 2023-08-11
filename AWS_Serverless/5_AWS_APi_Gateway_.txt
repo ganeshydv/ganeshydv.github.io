@@ -1,0 +1,42 @@
+
+AWS Apigateway : serverless no need for configuration
+    - uses HTTPs i.e. restAPIs
+    - used to build/manage APIs
+    
+
+CORS : cors origin resource sharing
+    - brwoser block request site1 calling site 2
+      if site 1 does not allow request from site 2
+
+OPTION request : browser sends this request to verify CORS 
+    is enabled on particular API so it can pass the original
+    request.
+
+VIMP : whent lambda is integrated with AWS Apigateway proxy
+    the request or response can only be modified within 
+    Lambda Function.
+
+-------------------------------------------------------
+                Request Validator 
+-------------------------------------------------------
+-in Method Request Block : here can validate body,queryStringParameters
+    queryStringParameters and headers
+
+-------------------------------------------------------
+            Request-Body Mapping Templete 
+-------------------------------------------------------
+- when lambda function is expecting direct request as 
+there is no api Gateway but in AWS Apigateway OPTIONS 
+for CORS is on then it will modify the incoming request
+beacuse of some setup in API Gateway method request block
+so need to do body mapping 
+
+-In Integration Request BLOCK - here mapping is done
+    - content-Type : application/json --> generate templete (model)
+-------------------------------------------------------
+            1) Body Mapping Templete 
+            2) CORS & OPTIONS Preflight request configuration
+            3) API Gateway Models and json
+            4) Models for Request body Validations & Body mapping
+
+-------------------------------------------------------

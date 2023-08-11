@@ -31,7 +31,7 @@ Q2) what are the ways to assign IAM role to lambda function >
      to the relevant DynamoDB tables.
 
    -2] Inline Policies: Instead of using an IAM execution role,
-      you can define IAM policies directly in the serverless.yml file
+     you can define IAM policies directly in the serverless.yml file
      (or equivalent when using other deployment methods) for each Lambda function. 
      These policies are referred to as inline policies and are attached directly to the function,
      granting it specific permissions to access AWS services. 

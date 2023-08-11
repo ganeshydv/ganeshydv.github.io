@@ -1,0 +1,79 @@
+-------------------------------------------------------
+        Terminology 
+-------------------------------------------------------
+1) Table :[
+    Item : {
+        attributes:'',
+        attributes:'',
+        attributes:'',
+    },
+    Item : {
+        attributes
+    },
+    .
+    .
+    .
+    .
+]
+
+- DynamoDB table must have PRIMARY Key : only of type string,
+    number,binary
+2) Partion_key : PRIMARY KEY ( Compulsory for table creation/read/write)
+    - can be 1 or max combination of 2 attributes
+        i.e. ( Partion_key is hash_key + sort_key is range_key )
+    - scan does not require Partion_key but not recommended scan
+    - makes query operation fast
+3) Local Secondary Indexes   : must create when creating table
+   ( secondary indexes share Partion_key with PRIMARY key but 
+    have different sort_key ) 
+    - combination of Partion_key + another attribute
+    
+4) Global Secondary Indexes : can be created at any time (RCU/WCU)
+  ( Partion_key is different from PRIMARY key )
+    - can have duplciate elements 
+
+ 
+index key --> simple key = only Partition key : decides where item to be stored
+          --> composite key = Partion_key + sort_key
+-------------------------------------------------------
+        Data Types 
+-------------------------------------------------------
+1) scalar Type : string,number,binary
+2) set type : sets (contains same type of data) [1,2,3]
+3) Document type : 
+        -list: (contains different type of data)[1,'a',true]
+         nested upto 32 levels
+        -map:json type
+-------------------------------------------------------
+        Consistency Models
+-------------------------------------------------------
+
+Regions :--> 1) Availabilit Zone A  ---> Facility A1
+                                    ---> Facility A1
+
+             2) Availabilit Zone B  ---> Facility B1
+                                    ---> Facility B1
+-Data stored in 3 Zones 
+-------------------------------------------------------
+        Capacity Units (CU)
+-------------------------------------------------------
+throughput capacity : RCU and WCU
+a capacity unit= 1 request/sec
+
+-------------------------------------------------------
+        DynamoDB Partitions
+-------------------------------------------------------
+- block of memory 
+
+
+
+
+
+
+
+
+
+
+
+
+
