@@ -1,0 +1,31 @@
+LMS Assignment:
+
+Task Statement:
+- develope a feature to show following details in CSR portal
+ 1) course progress of a user using activity id and user id
+ 2) along with respective course details 
+ use only one request
+
+- get the details about course progress using activity id and user id from 
+  database (using LMS microservice): LMS (dev) (can use local databse Instead) 
+  tables: courses and course_progress (can use local db with dummy data)
+- Repositories: 1) web app (CSR portal) 2) API Gateway 3) Mentor LMS 
+- Instructions:
+    - 1) make UI in CSR
+      2) Use Api Gateway to forward request to LMS service
+      3) Use Mentor LMS to query databse
+      4) follow naming convention
+      5) you can use local database or LMS dev database
+
+- Expections:
+  > To understand flow of request. 
+  > To understand how logging is used and Implemented.
+  > To understand working and Implementation of different 
+    features in mentor LMS service.
+    ex: how course is created, how to get course contents, etc.
+  > To understand If any 3rd party service is used or integrated
+    With LMS and if yes then how they are used in LMS.
+    ex: Experince Api(xApi)
+  > To understand which other mentor and VRM services are used.
+    ex: mentor-playlist,
+  > which other databases are used.

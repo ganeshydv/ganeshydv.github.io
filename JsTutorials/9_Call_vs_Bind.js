@@ -7,7 +7,7 @@ let p={
 
 let {getName}=p;
 
-getName=getName.bind(p);   // --> here Bind() returns { NEW function or object } which is binds {this }  to p as parent object the it assigns to getName so basically it also binds this abut PERMENANTLY it means this value can not be changed and it alos creates new object
+getName=getName.bind(p);   // --> here Bind()   { NEW function or object } which is binds {this }  to p as parent object the it assigns to getName so basically it also binds this abut PERMENANTLY it means this value can not be changed and it alos creates new object
 
 getName.call(p);    //--> call() does not creates new object rather call the function immediately and also set this to a specified object
                      // but binding is dynamic it means { this } can be changed

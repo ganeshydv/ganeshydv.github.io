@@ -1,0 +1,57 @@
+Divide in 3 Parts:
+
+1) Routing - module = { imports + controllers + Providers} i.e. use of inbuilt methods
+    -] Valdiations- 1) Pipe : Query and params Valdiations
+                    2) DTO : for BODY Valdiation
+    -] Interceptor- 
+2) Configuration -
+    in main module i.e. AppModule : it is a ROOT module
+    if isGlobal is set to true  then this module will be available for all other modules
+    - configModule is used to add Configuration
+    - db config + other config use Custom config files  
+    - 
+ 
+    - 1) const obj of config type
+    - 2) validator class 
+    - 3) registerAs (inbuilt method) - ConfigObject or ConfigFactory
+         + ConfigModule.forRoot({load:[configFiles]})
+    - importing constants from ENV file or loading from another object
+3) Database Connection
+   - 2 ways: using
+       1) DataSource - from typeorm
+        -->to use/initialize 2 options: 1) DataSource.initialize() 
+                                    or   2) TypeOrmModule.forRoot()
+       2) TypeOrmModule + TypeOrmModuleOptions 
+        -->to initialize : 1) TypeOrmModule.forRoot()
+-----------------
+1] DataSource : [typeorm] module used for establishing connection 
+    between NestApp and DB 
+    - it can be used to perform operation on DB
+    - it registers Entity/Table and we can perform operation on these
+     tables using 
+    1) EntityManager or
+    2) Repository  both are part of DataSource [typeorm]
+    (https://typeorm.io/data-source)
+    (https://typeorm.io/working-with-repository)
+  2] EntityManager: part of DataSource used to manage all Entities
+  3] Repository : part of DataSource used to manage Entity
+    - manage means CRUD operation on tables
+4] 
+--------------
+always remember:
+1) Entity is always seperate means you can first create entity/table 
+    and then register it with Database connection or Module where you
+    want to use
+2) DB config can be done using 
+    1) directly in  -> TypeOrmModule.forRoot() or
+    2) DataSource (TYPEORM) + TypeOrmModule.forRoot()  or 
+    3) DataSource (TYPEORM) + DataSource.initialize()
+    4) TypeOrmModuleOptions (nestJs/typeorm) + TypeOrmModule.forRoot()
+      -TypeOrmModuleOptions used to config DB
+    5) use directly TYPEORM ( connection and createConnection ) in each service
+      - this will create new instance if DB for each request-
+3) always register Entity in 1) DB config 2) Module where to use
+4) DTO : it is only for VALIDATION + TRANSFORMATION + Interceptor (in Response)
+      - for Interceptor : use pipe + service in module
+      - for transform use Include() and Exclude()
+5) Controller : only for route handling
