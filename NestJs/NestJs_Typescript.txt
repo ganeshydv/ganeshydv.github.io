@@ -1,4 +1,5 @@
-1) flow of request/ structure : modules = Providers+ controllers + services 
+1) flow of request/ structure :
+   modules = Providers+ controllers + services 
  --
         1) Configuration
         2) Valdiations - Pipes
@@ -13,6 +14,7 @@
 6) Providers/service :   
             @Injectable
             CMD: nest g service nameOfProvider_Service
+            - return in service is same as resp.send()
 7) modules  : 
             @Module(Controllers:[controllers],imports:[moduls],providers:[services])   
             CMD : nest g module nameOfModule --no-spec
@@ -32,10 +34,10 @@
         - types: 1)TRANSFORMATION pipe 
                  2) VALIDATION pipe
                  3) Interceptor using DTO
-11) Guards
+11) Guards : used for Authorization
 12) Interceptors- applied using DTO + service + Pipe
         - use Expose() in DTO to transform property
-13) Custom Decorators
+
 --------------------------------
 1) type ORM modules
 2) rxJs

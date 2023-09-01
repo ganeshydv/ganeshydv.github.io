@@ -18,23 +18,51 @@ Divide in 3 Parts:
     - importing constants from ENV file or loading from another object
 3) Database Connection
    - 2 ways: using
-       1) DataSource - from typeorm
+       1) DataSource - from typeorm (DataSource + DataSourceOptions)
+       - used for MIGRATION + DB Connection
         -->to use/initialize 2 options: 1) DataSource.initialize() 
                                     or   2) TypeOrmModule.forRoot()
        2) TypeOrmModule + TypeOrmModuleOptions 
         -->to initialize : 1) TypeOrmModule.forRoot()
+
+=============================================================================
+          [ general to connect DB in Global Scope]
+=============================================================================
+
+      1]  DataSource (TYPEORM) + DataSource.initialize() (this approach is general)
+          : TYPEORM
+      
+      2] [Connection() = createConnection (config obj)]. getConnection()
+          : TYPEORM
+-------------------------------------------------------------------------
+[ To connect in Module Scope]:
+
+      3]  DataSource + DataSourceOptions + TypeOrmModule.forRoot()
+          : TYPEORM
+
+      4]  TypeOrmModuleOptions + TypeOrmOptionsFactory + TypeOrmModule.forRoot()
+          : @nestJs/typeorm
+
+      5] TypeOrmModule.forRoot( { config details } ) : directly
+
+===========================================================================
+
 -----------------
 1] DataSource : [typeorm] module used for establishing connection 
     between NestApp and DB 
-    - it can be used to perform operation on DB
+    - it can be used to connect DB with NestApp
     - it registers Entity/Table and we can perform operation on these
      tables using 
     1) EntityManager or
     2) Repository  both are part of DataSource [typeorm]
     (https://typeorm.io/data-source)
     (https://typeorm.io/working-with-repository)
-  2] EntityManager: part of DataSource used to manage all Entities
-  3] Repository : part of DataSource used to manage Entity
+
+    -- to use DataSource to connect with DB 
+     1) create DataSourceOptions using DataSource- contains db Configuration
+     2) use this DataSourceOptions in TypeOrmModule.forRoot()
+2] EntityManager: part of DataSource used to manage all Entities
+3] Repository : part of DataSource used to manage Entity
     - manage means CRUD operation on tables
 4] 
 --------------
@@ -44,8 +72,8 @@ always remember:
     want to use
 2) DB config can be done using 
     1) directly in  -> TypeOrmModule.forRoot() or
-    2) DataSource (TYPEORM) + TypeOrmModule.forRoot()  or 
-    3) DataSource (TYPEORM) + DataSource.initialize()
+    2) DataSource (TYPEORM) + DataSourceOptions (TYPEORM) + TypeOrmModule.forRoot()  or 
+    3) DataSource (TYPEORM) + DataSource.initialize() (this approach is general)
     4) TypeOrmModuleOptions (nestJs/typeorm) + TypeOrmModule.forRoot()
       -TypeOrmModuleOptions used to config DB
     5) use directly TYPEORM ( connection and createConnection ) in each service
@@ -55,3 +83,7 @@ always remember:
       - for Interceptor : use pipe + service in module
       - for transform use Include() and Exclude()
 5) Controller : only for route handling
+6) Entity: it is table also called Repository 
+  - Entity is injected in service to perform CRUD on it i.e. table
+
+--------------- DataSource vs Connection ------------
