@@ -8,6 +8,11 @@
 2) how all modules are loaded
 3) closure
 4) Decorators Predefined and custom
+
+-------------
+for DB resource: cmd : nest g resource resourceName
+creates Module,controller,service,entity,DTO
+-------------
 5) controllers :       
             @Controller
             CMD: nest g controller nameOfcontroller

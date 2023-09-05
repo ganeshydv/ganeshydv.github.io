@@ -26,14 +26,18 @@ Divide in 3 Parts:
         -->to initialize : 1) TypeOrmModule.forRoot()
 
 =============================================================================
-          [ general to connect DB in Global Scope]
+          [ general ways to connect DB in Global Scope]
 =============================================================================
 
       1]  DataSource (TYPEORM) + DataSource.initialize() (this approach is general)
           : TYPEORM
+          -perform CRUD using instance of DataSource
       
-      2] [Connection() = createConnection (config obj)]. getConnection()
+      2] [Connection() = createConnection( {config obj} )]. getConnection()
           : TYPEORM
+          - perform CRUD using instance of Connection (verified)
+
+      -Accesing using 1) Repository 2) EntityManager
 -------------------------------------------------------------------------
 [ To connect in Module Scope]:
 
@@ -45,6 +49,18 @@ Divide in 3 Parts:
 
       5] TypeOrmModule.forRoot( { config details } ) : directly
 
+      6] TypeOrmModule.forRootAsync ( {
+        useClass:
+        dataSourceFactory: async (options: DataSourceOptions) => {
+        return new DataSource(options).initialize();
+      },
+      })
+
+      7] TypeOrmModule.forRootAsync ( { 
+        useFactory:(confiService:ConfigService)=>({ configObj}),
+        inject:[ConfigService]
+
+      })
 ===========================================================================
 
 -----------------
@@ -64,7 +80,7 @@ Divide in 3 Parts:
 2] EntityManager: part of DataSource used to manage all Entities
 3] Repository : part of DataSource used to manage Entity
     - manage means CRUD operation on tables
-4] 
+4] ConfiService : to use env file varibales
 --------------
 always remember:
 1) Entity is always seperate means you can first create entity/table 
