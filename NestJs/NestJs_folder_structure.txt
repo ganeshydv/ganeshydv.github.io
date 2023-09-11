@@ -37,26 +37,28 @@ Divide in 3 Parts:
           : TYPEORM
           - perform CRUD using instance of Connection (verified)
 
-      -Accesing using 1) Repository 2) EntityManager
+      3] DataSource directly
+
+ -Accesing using 1) Repository 2) EntityManager 3) DataSource 4) Connection
 -------------------------------------------------------------------------
 [ To connect in Module Scope]:
 
-      3]  DataSource + DataSourceOptions + TypeOrmModule.forRoot()
+      1]  DataSource + DataSourceOptions + TypeOrmModule.forRoot()
           : TYPEORM
 
-      4]  TypeOrmModuleOptions + TypeOrmOptionsFactory + TypeOrmModule.forRoot()
+      2]  TypeOrmModuleOptions + TypeOrmOptionsFactory + TypeOrmModule.forRoot()
           : @nestJs/typeorm
 
-      5] TypeOrmModule.forRoot( { config details } ) : directly
+      3] TypeOrmModule.forRoot( { config details } ) : directly
 
-      6] TypeOrmModule.forRootAsync ( {
+      4] TypeOrmModule.forRootAsync ( {
         useClass:
         dataSourceFactory: async (options: DataSourceOptions) => {
         return new DataSource(options).initialize();
       },
       })
 
-      7] TypeOrmModule.forRootAsync ( { 
+      5] TypeOrmModule.forRootAsync ( { 
         useFactory:(confiService:ConfigService)=>({ configObj}),
         inject:[ConfigService]
 
@@ -71,6 +73,8 @@ Divide in 3 Parts:
      tables using 
     1) EntityManager or
     2) Repository  both are part of DataSource [typeorm]
+    3) DataSource
+    4) Connection
     (https://typeorm.io/data-source)
     (https://typeorm.io/working-with-repository)
 
@@ -80,7 +84,7 @@ Divide in 3 Parts:
 2] EntityManager: part of DataSource used to manage all Entities
 3] Repository : part of DataSource used to manage Entity
     - manage means CRUD operation on tables
-4] ConfiService : to use env file varibales
+4] ConfigService : to use env file varibales
 --------------
 always remember:
 1) Entity is always seperate means you can first create entity/table 
@@ -103,3 +107,9 @@ always remember:
   - Entity is injected in service to perform CRUD on it i.e. table
 
 --------------- DataSource vs Connection ------------
+
+-----------------------------------------------------
+> EntityCondition  - to GET or Find DB
+> FindOptionsWhere - to GET or Find one or many DB 
+> deepPartial   - to UPDATE DB
+> DTO  - to CREATE 
