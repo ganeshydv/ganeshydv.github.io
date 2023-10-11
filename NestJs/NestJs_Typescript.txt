@@ -9,7 +9,7 @@
 3) closure
 4) Decorators Predefined and custom
 
--------------
+-------------) IMP (--------
 for DB resource: cmd : nest g resource resourceName
 creates Module,controller,service,entity,DTO
 -------------

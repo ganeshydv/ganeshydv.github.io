@@ -40,6 +40,7 @@ Divide in 3 Parts:
       3] DataSource directly
 
  -Accesing using 1) Repository 2) EntityManager 3) DataSource 4) Connection
+      5) queryBuilder
 -------------------------------------------------------------------------
 [ To connect in Module Scope]:
 
@@ -75,6 +76,7 @@ Divide in 3 Parts:
     2) Repository  both are part of DataSource [typeorm]
     3) DataSource
     4) Connection
+    5) Repository_ queryBuilder
     (https://typeorm.io/data-source)
     (https://typeorm.io/working-with-repository)
 
@@ -85,6 +87,7 @@ Divide in 3 Parts:
 3] Repository : part of DataSource used to manage Entity
     - manage means CRUD operation on tables
 4] ConfigService : to use env file varibales
+     - to access const values of Configuration we can use 
 --------------
 always remember:
 1) Entity is always seperate means you can first create entity/table 
@@ -92,7 +95,8 @@ always remember:
     want to use
 2) DB config can be done using 
     1) directly in  -> TypeOrmModule.forRoot() or
-    2) DataSource (TYPEORM) + DataSourceOptions (TYPEORM) + TypeOrmModule.forRoot()  or 
+    2) DataSource (TYPEORM) + DataSourceOptions (TYPEORM) +
+     TypeOrmModule.forRoot()  or 
     3) DataSource (TYPEORM) + DataSource.initialize() (this approach is general)
     4) TypeOrmModuleOptions (nestJs/typeorm) + TypeOrmModule.forRoot()
       -TypeOrmModuleOptions used to config DB
@@ -105,7 +109,21 @@ always remember:
 5) Controller : only for route handling
 6) Entity: it is table also called Repository 
   - Entity is injected in service to perform CRUD on it i.e. table
-
+7) each service can be enjected independently in each module but it will not be
+  singleton means for each module it will be new instance
+- SOLUTION : if you want to use the same object of service for all other 
+  modules then you have to use MODULE instead of service ,means export 
+  the service from module and use that module in each service so each 
+  other module can have same service object
+  {
+    If you want to use the same instance of a service across multiple modules 
+  in NestJS, you can achieve this by exporting the service from the module 
+  where it's defined and then importing that module into the modules where
+   you want to use the service. This way, you'll have a single shared 
+   instance of the service across all the modules.
+   }
+  -By default, providers have a singleton scope within their module, 
+  meaning a single instance is shared among all components within that module.
 --------------- DataSource vs Connection ------------
 
 -----------------------------------------------------
@@ -113,3 +131,5 @@ always remember:
 > FindOptionsWhere - to GET or Find one or many DB 
 > deepPartial   - to UPDATE DB
 > DTO  - to CREATE 
+
+---------------------------------------------------------
