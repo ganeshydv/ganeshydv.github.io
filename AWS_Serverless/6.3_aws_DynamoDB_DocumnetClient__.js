@@ -5,7 +5,7 @@
 // AWS.DynamoDB.DocumetClient() : both are used for same
 // purpose
 // - used for query over items and is simple
-// - DynamoDb internal data types are mapped with
+// - DynamoDb internal data types are mapped with00
 //   javascripts data type so while working we can
 //   use js data types instead of DynamoDB data
 //   type 

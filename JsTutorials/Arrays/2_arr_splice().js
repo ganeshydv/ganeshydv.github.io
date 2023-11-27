@@ -25,7 +25,7 @@ const getEntriesInParts = (entries, limit) => {
     return result;
 };
 
-function f1() {
+function copyInNewAndRemoveFromOld() {
     const entries = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const limit = 3;
 
@@ -42,8 +42,9 @@ function f1() {
 
     console.log(retrievedEntries);
     console.log(remainingEntries);
+    console.log(entries);
 
 }
-f1();
+copyInNewAndRemoveFromOld();
 
 

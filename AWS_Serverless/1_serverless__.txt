@@ -5,7 +5,7 @@ and these Fucntion responds to event like HTTP
 get request these Fucntion start running 
 
 ------------------------------------------------------
-serverless = Lambda + Amazon API Gateway + DynamoDB
+serverless = Lambda + Amazon API Gateway + DynamoDB + ..
 ------------------------------------------------------
 
 Lambda : Lambda function runs as container

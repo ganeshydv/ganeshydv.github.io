@@ -18,7 +18,7 @@
 
 - DynamoDB table must have PRIMARY Key : only of type string,
     number,binary
-2) Partion_key : PRIMARY KEY ( Compulsory for table creation/read/write)
+2) Partion_key ie. hash_key: PRIMARY KEY ( Compulsory for table creation/read/write)
     - can be 1 or max combination of 2 attributes
         i.e. ( Partion_key is hash_key + sort_key is range_key )
     - scan does not require Partion_key but not recommended scan

@@ -7,6 +7,6 @@ proxy can revere proxy : service mesh
 Proxy VS VPN
 
 VPN only know IP 
-Proxy may know datas
+Proxy may know data
 
 
