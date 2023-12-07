@@ -133,3 +133,9 @@ always remember:
 > DTO  - to CREATE 
 
 ---------------------------------------------------------
+how to use one service in another service
+
+1) Injectable 
+2) use directly in constructor as usual
+3) make sure to registern both services in same module
+------------------------------------------------

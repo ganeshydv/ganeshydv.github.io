@@ -13,6 +13,9 @@
 for DB resource: cmd : nest g resource resourceName
 creates Module,controller,service,entity,DTO
 -------------
+
+ > resource : nest g resource reward
+
 5) controllers :       
             @Controller
             CMD: nest g controller nameOfcontroller
