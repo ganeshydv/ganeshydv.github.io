@@ -19,3 +19,10 @@ Roles are created for Sevice for specific persmissions for short duration
 1) choose role
 2) give persmissions
 3) create ROle
+
+In summary, IAM roles are entities with associated 
+policies that define permissions. The policies attached 
+to a role determine what actions entities assuming the 
+role can perform. IAM policies, on the other hand, can 
+be attached directly to users, groups, roles, or resources 
+to define their permissions.

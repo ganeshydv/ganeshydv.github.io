@@ -26,13 +26,15 @@
 // fs.writeFileSync('predefined_comments.csv', csvString);
 
 
-let el={
-"predefinedComments": "WINDSHIELD-CRACKS,WINDSHIELD-SCRATCHED",
-"photoUrl": "dgfh",
-"hasDamage": true,
-}
-if (!el.photoUrl && 
-    el.hasDamage === true && 
-    !el.predefinedComments.endsWith("OTHER")){
-    console.log("error");
-}
+// let el={
+// "predefinedComments": "WINDSHIELD-CRACKS,WINDSHIELD-SCRATCHED",
+// "photoUrl": "dgfh",
+// "hasDamage": true,
+// }
+// if (!el.photoUrl && 
+//     el.hasDamage === true && 
+//     !el.predefinedComments.endsWith("OTHER")){
+//     console.log("error");
+// }
+
+console.log(Math.floor(1000 + Math.random() * 9000));

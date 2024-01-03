@@ -3,7 +3,7 @@
 
 1) AWS management console 
 2) AWS CLIENT ( CLI ): protected by access key
-3) AWS SDK : for code protected  by access key
+3) AWS API (SDK): for code protected  by access key
 
 # ACCESS KEYS : Every User has his own access key
               : genereated through AWS console

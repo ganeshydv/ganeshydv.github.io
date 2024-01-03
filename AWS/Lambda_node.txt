@@ -28,7 +28,11 @@ Every serverless templete:
                              allowing you to define what type of traffic is 
                              allowed to access your instances and 
                              what traffic is restricted.
-                             //Security groups allow you to specify the source IP addresses or other security groups that are allowed to access your EC2 instances. You can define rules to permit specific ports and protocols, such as HTTP (port 80), HTTPS (port 443), SSH (port 22), etc. This helps to ensure that only authorized users and services can access your instances.
+                             //Security groups allow you to specify the source IP addresses or 
+                             other security groups that are allowed to access your EC2 instances. 
+                             You can define rules to permit specific ports and protocols, such as
+                              HTTP (port 80), HTTPS (port 443), SSH (port 22), etc. This helps to
+                               ensure that only authorized users and services can access your instances.
         2) subnetIds :       //: Lists the IDs of the private subnets in the VPC where the Lambda functions will be deployed
     6) environment :         //for variables
 6] custom:
