@@ -1,0 +1,21 @@
+
+
+service: cicddemo
+provider:
+  name: aws
+  runtime: nodejs18.x
+  memorySize: 128
+  timeout: 10
+  region: us-east-1
+
+plugins:
+  - serverless-offline
+
+functions:
+  hello:
+    handler: handler.logger
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true
