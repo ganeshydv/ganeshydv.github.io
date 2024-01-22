@@ -8,7 +8,7 @@ Current Requirement:
 1) AWS serverless
 2) DynamoDB + S3
 3) Typescript
-4) Next.js 
+4) Nest.js 
 5) Serverless Node service using Typescript
 --------------------------- AT HOME ---------------------------------
 
