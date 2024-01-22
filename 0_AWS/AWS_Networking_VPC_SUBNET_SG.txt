@@ -21,44 +21,45 @@ Sequence for route in AWS :
  --> security Group ( attached to each instance ) --> Resource
 
 +------------------------+      +------------------------+
-|     Internet Cloud    |      |     Internet Cloud    |
+|     Internet Cloud    |       |     Internet Cloud    |
 +------------------------+      +------------------------+
            |                                |
-     +-----+-----+                    +-----+-----+
+     +-----+-----+                     +-----+-----+
      |  Subnet 1  |                    |  Subnet 2  |
      +------------+                    +------------+
      |   Route    |                    |   Route    |
      |   Table    |                    |   Table    |
      +------------+                    +------------+
            |                                |
-     +-------------+               +-------------+
-     | EC2 Instance|               | EC2 Instance|
-     | + Security  |               | + Security  |
-     |   Group     |               |   Group     |
-     +-------------+               +-------------+
-
+     +-------------+                   +-------------+
+     | EC2 Instance|                   | EC2 Instance|
+     | + Security  |                   | + Security  |
+     |   Group     |                   |   Group     |
+     +-------------+                   +-------------+
+    
 2]  cloud --> Internet Gateway -->( VPC starts ) ROUTE Table (for each subnet and has config for from to ip)
  -->ALB/NLB [ Target Group ] --> security Group ( attached to each instance ) --> Resource
 
 +------------------------+      +------------------------+
-|     Internet Cloud    |      |     Internet Cloud    |
+|     Internet Cloud    |       |     Internet Cloud    |
 +------------------------+      +------------------------+
            |                                |
-     +-----+-----+                    +-----+-----+
+     +-----+-----+                     +-----+-----+
      |  Subnet 1  |                    |  Subnet 2  |
      +------------+                    +------------+
      |   Route    |                    |   Route    |
      |   Table    |                    |   Table    |
      +------------+                    +------------+
            |                                |
-     +-------------+               +-------------+
-     |   ALB/NLB   |               |   ALB/NLB   |
-     | + Target    |               | + Target    |
-     |   Group     |               |   Group     |
-     +-------------+               +-------------+
-           |                                |
-     +-------------+               +-------------+
-     | EC2 Instance|               | EC2 Instance|
-     | + Security  |               | + Security  |
-     |   Group     |               |   Group     |
-     +-------------+               +-------------+
+     +-------------+                  +-------------+
+     |   ALB/NLB   |                  |   ALB/NLB   |
+     | + Target    |                  | + Target    |
+     |   Group     |                  |   Group     |
+     +-------------+                  +-------------+
+           |                                   |
+     +-------------+                  +-------------+
+     | EC2 Instance|                  | EC2 Instance|
+     | + Security  |                  | + Security  |
+     |   Group     |                  |   Group     |
+     +-------------+                  +-------------+
+   

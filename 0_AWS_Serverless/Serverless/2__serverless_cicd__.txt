@@ -32,7 +32,7 @@
   - source Provider: CodeCommit ( or s3, github, bitbucket)
   - repository:
   - Environment :
-    - Image managed by CodeBuild (as ours is serverless) ( Image managed by CodeBuild or Docker Image, ) 
+    - Image managed by CodeBuild (as ours is serverless) ( Image managed by CodeBuild or Docker Image,) 
     - OS 
     - Runtime : nodejs-version
     - BuildSpec: buildsepc.yml ( to tell CodeBuild what to do with source code from repo)
@@ -56,4 +56,4 @@
  - review
  - create CodePipeline
  
- [ CodePipeline actually uses CodeBuild ]
+ [ CodePipeline actually uses CodeBuild ? ]

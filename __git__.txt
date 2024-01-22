@@ -1,0 +1,5 @@
+}to remove all files from previous commits: 
+git rm -r --cached _path_
+
+}to reset or to go previous commit :
+git reset .
