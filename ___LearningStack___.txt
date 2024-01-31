@@ -5,7 +5,7 @@ layer  1 ) Software Architecture / System Design
        4 ) Cloud - AWS - Serverless + EC2 + Docker
 -------------------------------------
 Current Requirement:
-1) AWS serverless
+1) AWS serverless : Basics: DONE
 2) DynamoDB + S3
 3) Typescript
 4) Nest.js 
@@ -26,32 +26,22 @@ Current Requirement:
 
 ---------------------------- IN Office -------------------------------
 
-1) Nodejs (40 hrs) :
+1) Nodejs (40 hrs) : -- DONE
 
-
--) Javascritpt :
-        Done...
-
-
-3) AWS - lambda + S3 + SQS + dynamoDB + redshift:
-        
-           5,6,7,12,13,14,17,19,20,21,24,27,29
-
-
-----------------------------------------------------------------------                          
+-) Javascritpt :  -- DONE
 
 2) React
- 
-4) Docker : 5 hr -- 3hr remaining
+3) AWS - lambda + S3 + SQS + dynamoDB + redshift:
+        
+           5,6,7,12,13,14,17,19,20,21,24,27,29                     
+
+4) Docker : 5 hr -- DONE
 
 -----------------------------------------------------------------------
 
 5) System Design : 93 vdos from youtube: https://www.youtube.com/watch?v=64geP_LAZ5U&list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv
 
 -------------------------------------------------------------------------
-
-
-
 
 ==========================================================================
 ==========================================================================
@@ -91,7 +81,9 @@ Current Requirement:
 
 ==========================================================================
 ==========================================================================
-
+working skills: 
+1) OAuth2.0 : 
+  SSO : KEYCLOAK, other 3rd party 
 
 
 
