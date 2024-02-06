@@ -48,7 +48,7 @@ class Circle implements Shape {
     name: string ;
     private radius:number
     static circleInsatcne:Circle;
-    constructor(name:string,readius:number){
+    private constructor(name:string,readius:number){
         this.name=name;
         this.radius=readius;
     }

@@ -26,3 +26,4 @@ function sayHelloAfter2Sec(msg){
     console.log(msg);
     console.log("starting function fun2 ");
 })();
+

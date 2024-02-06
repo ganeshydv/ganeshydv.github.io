@@ -1,0 +1,46 @@
+
+Rust: statically + strongly types pl
+- means: u give variable type or Compiler will give
+
+- variables IMMUATABLE by Deafult
+1) let 
+
+- shadowing:
+ same var name but different scope
+
+=========================
+ Data Types:
+=========================
+
+1] Primitive Data Types:
+
+ 1) scalar :
+ 2) compound:
+
+------------------------
+1] Scalar Data Type:
+
+- 1. int: i32 Deafult size
+   ex: let x:i32 =2;
+-  let x:u32=2 ;// only positive
+
+- 2. float : f32 and f64
+- 3. char : in single quote
+- 4. boolean : 0/1=false/true
+
+2] compound Type:
+ -1) touple : IMMUATABLE
+    - ex: let tup1:(i32,bool,char)=(1,true,'s')
+    
+ -2) array
+   - ex: let arr = [1,2,3]
+
+
+
+
+
+
+
+
+
+

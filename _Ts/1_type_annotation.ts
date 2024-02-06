@@ -35,10 +35,10 @@ id_3 = { name: "John", age: 30 };
 //-------------------------------
 // 6] Enum type:
 enum Direction {
-  Up,
-  Down,
-  Left,
-  Right,
+  Up='UP',
+  Down='DOWN',
+  Left='LEFT',
+  Right='RIGHT',
 }
 
 let dir: Direction = Direction.Up;

@@ -1,0 +1,14 @@
+{
+    "rust-analyzer.linkedProjects": [
+        ".\\RustEx\\RustProject\\fucntionsEx\\Cargo.toml",
+        ".\\RustEx\\RustProject\\fucntionsEx\\Cargo.toml",
+        ".\\RustEx\\RustProject\\DataTypes\\Cargo.toml",
+        ".\\RustEx\\Cargo.toml",
+        ".\\RustEx\\Cargo.toml",
+        ".\\RustEx\\RustProject\\functions_ex\\Cargo.toml",
+        ".\\RustEx\\general_ex\\Cargo.toml",
+        ".\\RustEx\\general_ex\\Cargo.toml",
+        ".\\RustEx\\general_ex\\Cargo.toml",
+        ".\\RustEx\\general_ex\\Cargo.toml"
+    ]
+}
