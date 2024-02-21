@@ -1,5 +1,6 @@
 ECS : https://www.youtube.com/watch?v=ARGmrYFfv44
       https://www.youtube.com/watch?v=Oe7RlNRYEpI
+      https://www.youtube.com/watch?v=ARGmrYFfv44
 
 1) cluster : have infrastructure - EC2 or Fargate ( like OS for running Code)
 2) Services : are associated with TASK Defination 

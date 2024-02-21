@@ -24,7 +24,7 @@ Kernal = comminucates with Hardware
   2] file management
   3] process management
   4] memory management
-- tpes: 3 
+- types: 3 
     1] monolithic Kernal (oldest)- all functions to be done by Kernal itself not gives someone else to do that task
        - comminucates fast as all functions are in Kernal
        - but single point of failure so less relaibale 

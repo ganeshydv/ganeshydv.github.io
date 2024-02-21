@@ -1,6 +1,11 @@
-You can use both IAM and AWS IAM Identity Center to create new users or federate existing users into AWS. The main difference between the two is that IAM users are granted long-term credentials to your AWS resources while users in IAM Identity Center have temporary credentials that are established each time the user signs-in to AWS
+You can use both IAM and AWS IAM Identity Center to create new users
+or federate existing users into AWS. The main difference between 
+the two is that IAM users are granted long-term credentials to 
+your AWS resources while users in IAM Identity Center have temporary 
+credentials that are established each time the user signs-in to AWS
 -----------------------------------------------------------------------
-A principal entity is a person or application that is authenticated using an IAM entity (user or role)
+A principal entity is a person or application that is authenticated 
+using an IAM entity (user or role)
 --> IAM Entity (User or Role ) becomes Principal Entity when authenticated
 ----------------------------------------------------------------------
 IAM Entity === IAM Principal 

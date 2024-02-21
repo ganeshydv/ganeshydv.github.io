@@ -22,7 +22,7 @@ ex: 10.0.0.0/25 :-- it means Network IP 10.0.0 and
                     subnetwork Ips 1) 10.0.0.0 to 10.0.0.127 and 
                              2)10.0.0.128 to 10.0.0.255
 ex: 10.0.0.0/26 :-- it means Network IP 10.0.0 and 
-                    subnetwork Ips 1) 10.0.0.0 to 10.0.0.62 and 
+                    subnetwork Ips 1) 10.0.0.0 to 10.0.0.63 and 
                              2) 10.0.0.64 to 10.0.0.127 and 
                              3) 10.0.0.128 to 10.0.0.191
                              4) 10.0.0.192 to 10.0.0.255
@@ -32,3 +32,13 @@ ex: 10.0.0.0/27 :-- it means Network IP 10.0.0 and
 
 ex mix: 10.0.0.X/25/27/27/26 : total 256 in 4 subnetworks
 -----------------------------------------------------
+
+cheet sheet:
+ 
+ steps : 1) start with 1 double until reach 128  : Right to left
+         2) substract top row from 256
+         3) From /32 list CIDR
+
+ 128   64    32    16    8    4    2   1   : group size - No of IPs
+ 128   192  225   240   248  252  254  255 : subnet MAsk
+ /25   /26 ............................/32  : CIDR

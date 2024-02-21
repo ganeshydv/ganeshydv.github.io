@@ -28,13 +28,17 @@ Device A from PORT (SWITCH - MAC Table )
 --> Router Sends Back ARP Response [ MAC and IP of Router ]
 --> TO device A 
 --> Device A saves ARP response in Device A'a ARP Table 
---> Device A creates Frame : add LAyer 3 to packet [ source MAC : destination MAC]
+--> Device A creates Frame : add MAC  [LAyer 2: TCP/IP:DATA Link Layer] to packet [ source MAC : destination MAC]
 --> send Frame to Router
 --> ROuter verifies IP and decides using subnet if IP in local or not
 --> Router Removes L2 data ( source MAC : destination MAC) - NOT L3
 --> Router needed to complete Frame
 --> if Router don't have MAC of destination it broadcasts ARP and 
    device sends back ARP Response in unicast [MAC address ]
+   { 
+      It's essential to clarify that ARP requests and responses are typically broadcast
+    within the local network segment. Routers do not forward ARP broadcasts across different network segments.
+}
 --> destination updates ARP table 
 --> on Receving response Router updates ARP table
 --> ADDS L3 [ Routers MAC as source : destination MAC as receivers MAC]
