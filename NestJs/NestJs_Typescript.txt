@@ -1,0 +1,51 @@
+1) flow of request/ structure :
+   modules = Providers+ controllers + services 
+ --
+        1) Configuration
+        2) Valdiations - Pipes
+        3) Swagger
+        4) 
+2) how all modules are loaded
+3) closure
+4) Decorators Predefined and custom
+
+-------------) IMP (--------
+for DB resource: cmd : nest g resource resourceName
+creates Module,controller,service,entity,DTO
+-------------
+
+ > resource : nest g resource reward
+
+5) controllers :       
+            @Controller
+            CMD: nest g controller nameOfcontroller
+6) Providers/service :   
+            @Injectable
+            CMD: nest g service nameOfProvider_Service
+            - return in service is same as resp.send()
+7) modules  : 
+            @Module(Controllers:[controllers],imports:[moduls],providers:[services])   
+            CMD : nest g module nameOfModule --no-spec
+8) Middleware : can add Middleware to specific routes ex.Logger, authN, authZ, etc. 
+        - by default JSON and URLENCODED is used when using express adapter in 
+         nest if dont't want to use need to turn off when crating app 
+         i.e. NestFactory.create()
+         - can include , exclude , specify specific route type, method
+         - can bind multiple Middleware sequentially using apply() method
+         - can create Global Middleware
+         - 2 types: class and Function - use Function it's easy
+9) Exception Filters
+        - automatic exception handling by global exception filter
+        - can be custom
+10) Pipes --- USED for VALIDATION and TRANSFORMATION of REQUEST 
+        - can be CUSTOM 
+        - types: 1)TRANSFORMATION pipe 
+                 2) VALIDATION pipe
+                 3) Interceptor using DTO
+11) Guards : used for Authorization
+12) Interceptors- applied using DTO + service + Pipe
+        - use Expose() in DTO to transform property
+
+--------------------------------
+1) type ORM modules
+2) rxJs

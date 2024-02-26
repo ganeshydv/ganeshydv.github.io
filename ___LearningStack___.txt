@@ -2,14 +2,19 @@
 layer  1 ) Software Architecture / System Design
        2 ) Operating System
        3 ) Networking
-       4 ) Cloud - AWS
-
-
+       4 ) Cloud - AWS - Serverless + EC2 + Docker
+-------------------------------------
+Current Requirement:
+1) AWS serverless : Basics: DONE
+2) DynamoDB + S3
+3) Typescript : mostly done
+4) Nest.js 
+5) Serverless Node service using Typescript
 --------------------------- AT HOME ---------------------------------
 
 0) DSA : .... going on 
        Topics:
-           1) Operators ----
+           1) Bit manipilation ----
            2) Recursion ---
            3) Array
            4) Searching
@@ -21,40 +26,22 @@ layer  1 ) Software Architecture / System Design
 
 ---------------------------- IN Office -------------------------------
 
-1) Nodejs (40 hrs) :
+1) Nodejs (40 hrs) : -- DONE
 
-
--) Javascritpt :
-        1) Array  ---- DONE ~~~
-        2) Events  ----
-        3) Modular Js -20
-        4) js workflows and tools -21
-        5) Browser storage -22   ----
-        6) Meta programming - 26
-        7) security -28 
-        8) Performance optimization -30
-        9) Testiong -31
-        10) Aysnc jS ----
-
-
-3) AWS - lambda + S3 + SQS + dynamoDB + redshift:
-
-
-
-----------------------------------------------------------------------                          
+-) Javascritpt :  -- DONE
 
 2) React
- 
-4) Docker 
+3) AWS - lambda + S3 + SQS + dynamoDB + redshift:
+        
+           5,6,7,12,13,14,17,19,20,21,24,27,29                     
+
+4) Docker : 5 hr -- DONE
 
 -----------------------------------------------------------------------
 
 5) System Design : 93 vdos from youtube: https://www.youtube.com/watch?v=64geP_LAZ5U&list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv
 
 -------------------------------------------------------------------------
-
-
-
 
 ==========================================================================
 ==========================================================================
@@ -94,7 +81,9 @@ layer  1 ) Software Architecture / System Design
 
 ==========================================================================
 ==========================================================================
-
+working skills: 
+1) OAuth2.0 : 
+  SSO : KEYCLOAK, other 3rd party 
 
 
 

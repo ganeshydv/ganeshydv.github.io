@@ -1,0 +1,59 @@
+
+1] AWS CodeCommit : to host git repo here (source control)
+2] AWS CodeBuild : continious integration ( CI ) service to build/package for deployment
+3] AWS CodePipeline : continious delivery ( CD ) to automate continious delivery
+
+1. add repo to remote CodeCommit
+2. use CodeBuild
+  - IMP: need to give same permissions ( Role to CodeBuild ) as a user we have in local developement
+   for Accesing RDS, dynamoDB, S3 or other services so CodeBuild can assume same role as user
+   - EX: user created serverless demo project and deployed it using serverless framework 
+       which uses AWS dynamoDB, RDS, S3 etc 
+       user can access this using credentials stored on local machine ( access key, Secret key)
+       and it is done by AWS CloudFormation automatically for USER by using credentials
+       but after pushing the code to redeploy, CodeBuild needs to have same permissions as of USER
+       for continious integration purpose
+
+[
+    1} From local to CodeBuild:
+    VIMP: serverless --uses--> CloudFormation for Accesing services like dynamoDB, s3, etc and 
+    CloudFormation uses users credentials to do this which are stored on local machine thats why when 
+    deployed we see already connected APIGateay, S3, dynamoDB etc to Lambda function
+
+    2} CodeBuild creates Containersed Environment :
+    - now as User has all permissions, same persmissions needs to be given to CodeBuild
+    - for this need to crate ROLE which has all the permissions
+
+]
+
+3. create IAM ROle which has permissions on behalf of USER 
+4. Create CodeBuild project  
+  - name:
+  - source Provider: CodeCommit ( or s3, github, bitbucket)
+  - repository:
+  - Environment :
+    - Image managed by CodeBuild (as ours is serverless) ( Image managed by CodeBuild or Docker Image,) 
+    - OS 
+    - Runtime : nodejs-version
+    - BuildSpec: buildsepc.yml ( to tell CodeBuild what to do with source code from repo)
+
+  - service role:
+    - choose role created
+  - advanced setting:
+    - Environment variables setup
+5. create and add buildsepc.yml file to source code  i.e. repo
+6. push code to remote
+7. build CodeBuild project-- upto here it's mannual deployment
+8. CodePipeline : for automate deployment
+ [ change in repo CodeCommit :--> deploy ]
+ - create CodePipeline
+ - source Provider : bitbucket,git, CodeCommit
+ - branch name : 
+ - deployment Provider : ex. CodeBuild, ECS, CloudFormation (used by serverless) 
+   but for serverless no need as using serverless framework
+   using buildsepc.yml file
+ - ROLE: create role
+ - review
+ - create CodePipeline
+ 
+ [ CodePipeline actually uses CodeBuild ? ]

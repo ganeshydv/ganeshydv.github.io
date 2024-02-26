@@ -1,0 +1,15 @@
+}to remove all files from previous commits: 
+git rm -r --cached _path_
+
+}to reset or to go previous commit :
+git reset .
+
+===================
+total : 145
+PORCELAIN : 82
+main: 44
+manipulators: 11
+interrogators : 17
+interactors: 10
+
+---Plumbing -63

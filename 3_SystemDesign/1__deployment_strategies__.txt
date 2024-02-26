@@ -1,0 +1,29 @@
+
+General 6 Ways:
+
+1) Recreate : replace at once : Remove A --> Deploy B : Replace A by B
+        : Remove A --> Deploy B --> forward to B
+2) Ramped : Replace step by step :
+        Replace Insatnce of A not complete A by instance of B : after each instance replaced Remove A
+        : B deployment in Process (not complete)--> instance of A replaced by B ( Step by step )--> B complete --> Remove A
+3) Blue-Green : Tested --> B Deployed along side A then A will be Replaced
+        : B is deployed [ A is still in use ] --> forward to B -->  Remove A
+4) Canary : shift traffic gradually from A to B
+        : both complete Deployed --> shift traffic gradually to B --> complete traffic to B --> Remove A 
+
+5) A/B testing: shift specific group of user to B  ( Netflix uses this)
+        : users are shifted based on some params Ex device type, browser type, locations etc
+        : both A and B up 
+
+        [This technique is widely used to test conversion of a given feature and only roll-out the version that converts the most.
+        
+        Here is a list of conditions that can be used to distribute traffic amongst the versions:
+        
+        By browser cookie
+        Query parameters
+        Geolocalisation
+        Technology support: browser version, screen size, operating system, etc.
+        Language]
+
+6) Shadow :
+        

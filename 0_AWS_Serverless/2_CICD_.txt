@@ -1,0 +1,46 @@
+Serverless application may have lots of APIs
+configuring them manually with services will
+take lots of time so using automation is 
+necessary
+- if code is changed then need to change these
+endpoint and their configuration so it will
+be very hard to this and may be error prone 
+
+- write code --> run test --> deploy 
+this is what a serverless deployment process
+
+] AWS SAM ( serverless application Model)
+
+  -version of AWS CloudFormation which 
+   is used to create and automate
+   deployment of different AWS service
+   using a simple text based templete
+  -SAM uses same file but simpler form
+   suited for serverless
+ - CloudFormation converts this file into
+  standard CloudFormation templete
+
+] Serverless Framework : 
+ - templete is different from SAM
+ - have different plugins which makes this
+   serverless framework to be used for other
+   service other than serverless
+   Ex. to build API endpoint (Instead of 
+   using AWS API Gateway) along with 
+   labmda Fucntion and giving DynamoDB access 
+   (Instead of using IAM Role )
+   these lambda function using IAM role and can
+   define security Groups so controlling traffic
+   configuration is also possible 
+
+] AWS CodeCommit : for code base like GitHub
+] AWS CodeBuild : allows to build serverless code
+         and create or update AWS resource automatically
+] AWS CodePipline:allows define delivery or 
+        deployment cycle
+        from source repository through deployment
+
+
+
+
+

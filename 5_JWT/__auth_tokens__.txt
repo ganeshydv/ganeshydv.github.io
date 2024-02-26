@@ -1,0 +1,46 @@
+
+
+1) access token : given by [ OAuth2.0 ] 
+               -issued when client/user wants to access secure data ex. profiles updates,password changes ,payments,etc
+               -used for secure API calls
+               - access token tells server that client is authorized to make the request on secure routes/ APIs
+               - short life time
+               - IMP : access tokens are transfered in URI fragment so when using 3rd party authentication
+                 it will expose this token to unauthorized 3rd party application as well so use
+                 PKFCE 
+
+2) Refresh token :
+               - access token expires then use refresh token to get new access token in this way user 
+                does not need to login again until refresh token expires
+                - long life token
+                - use ProofKeyCodeExchange (PKFCE) with refresh token
+                - how to secure? 
+                 1) Refresh token rotation : Always return refresh token as well with access token 
+                 2) server stores these refresh tokens
+                 3) when 2nd request is made it verifies refresh token if the token is the last one
+                 it issues new access token as well refrsh token but if the token is not the last but
+                 older one (checks it by finding in db) then server logs out user as there might be a
+                 chance that user is not valid or legit - some one else is using it. 
+                   
+                   -- agar user ko sirf ed device me login permission deni ho tab 
+                 1) Refresh token rotation use karna 
+                 -- hamesh request k object me referred URL ata hai to isse agar db me save kar k 
+                 rakhenge to ye bhi verify kar sakte hai ki user same hi hai ya nhi 
+
+3) Id token : - gievn by [ OpenID ] after authentication to client application
+              - not have auth info
+              used to take identity of user from 3rd party application ex. google,fb 
+              and  use these details to build profile of that user in our application
+            - OpenID connect : it is used by authServer (Ex of google,fb ) for authentication 
+              which issues idTOken to client (ex. our application )when user logs In 
+
+--------------------------------------------------------------------------------------------
+
+how this mechanisms work like why 2 token why not only one?
+
+1) access token: short time , refrsh token: long time
+ if refresh token is stolen then ?
+  an issuer of refresh token i.e. auth server saves that refresh token you have to build 
+  a mechanisms if that token is being used again means 2 users are using the same 
+  refresh token again immediatly delete that token so each one has to login again
+  

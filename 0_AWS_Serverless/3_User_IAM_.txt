@@ -1,0 +1,8 @@
+
+1) create USer : using IAM 
+  - give programatic access
+  - permission: attach permission
+  - create
+  - access key and secret key
+  - add these key to environment variables 
+  in PC 
