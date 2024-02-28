@@ -1,3 +1,8 @@
+how node handles millions of request on single thread?
+
+https://tontinton.com/posts/scheduling-internals/
+
+
 what is BIOS
 ChatGPT
 BIOS stands for Basic Input/Output System. It is a firmware that resides 
