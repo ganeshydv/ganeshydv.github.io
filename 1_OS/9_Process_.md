@@ -53,6 +53,8 @@ in Kernal Space
         - The program counter is another CPU register 
         that stores the memory address of the next instruction to be executed.
   - Stack Pointer : Points to TOP of Execution Stack (when PUSH/POP then only changed)
+  - Heap Pointer : points to the start of the process's heap, 
+                  which is a region of memory used for dynamic memory allocation.
   - 3. Process State
   - 4. Priority
   - 5. Open File List
