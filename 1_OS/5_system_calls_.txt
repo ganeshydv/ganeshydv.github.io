@@ -20,8 +20,8 @@ Ex. 2) user runs a .exe file
 -----------------------------------
 > Types of System Calls:
 
-1] process management
-2] File management
-3] Device management
-4] comminucation management
-5] Information management
+1] process management SC
+2] File management SC
+3] Device management SC
+4] comminucation management SC
+5] Information management SC

@@ -1,8 +1,18 @@
-}to remove all files from previous commits: 
-git rm -r --cached _path_
+1) to remove all files from previous commits: 
+:- git rm -r --cached _path_
 
-}to reset or to go previous commit :
-git reset .
+2) to reset or to go previous commit :
+:- git reset .
+
+3) delete branch
+:- git branch -d branchname
+:- git branch -D branchname
+
+4) rename branch 
+:- git branch -m old_branch_name new_branch_name
+
+5) uncommit last commit
+:- git reset commit_hast
 
 ===================
 total : 145
@@ -13,3 +23,4 @@ interrogators : 17
 interactors: 10
 
 ---Plumbing -63
+============
