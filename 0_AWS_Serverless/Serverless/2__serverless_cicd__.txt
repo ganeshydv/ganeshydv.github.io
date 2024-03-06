@@ -1,7 +1,7 @@
 
 1] AWS CodeCommit : to host git repo here (source control)
 2] AWS CodeBuild : continious integration ( CI ) service to build/package for deployment
-3] AWS CodePipeline : continious delivery ( CD ) to automate continious delivery
+3] AWS CodePipeline/CodeDeploy : continious delivery ( CD ) to automate continious delivery
 
 1. add repo to remote CodeCommit
 2. use CodeBuild
@@ -11,7 +11,7 @@
        which uses AWS dynamoDB, RDS, S3 etc 
        user can access this using credentials stored on local machine ( access key, Secret key)
        and it is done by AWS CloudFormation automatically for USER by using credentials
-       but after pushing the code to redeploy, CodeBuild needs to have same permissions as of USER
+       but after pushing the code to redeploy, CodeBuild needs to h ave same permissions as of USER
        for continious integration purpose
 
 [
