@@ -1,7 +1,8 @@
-//use JWT refresh token + access token
+
+
 Two things in Docker 
 
-always remeber: In Docker file 
+always remember: In Docker file 
 1) set base Image
 2) choose WORKDIR
 3) COPY file/folder
@@ -9,50 +10,77 @@ always remeber: In Docker file
 5) Set ENVIRONMENT variables
 6) EXPOSE PORTS 
 7) listen On PORT
-8) use Volumes:1.sync folder(bind mount) 
-               2.make hard copy of folder(named volume) 
-               3. exclude sync (anonymous volume)
-[ Copy + Sync + Exclude + Hard Copy Dir , PORT , Argument ,ENVIRONMENT variables]
+8) use Volumes:
+  - sync folder (bind mount) 
+  - make hard copy of folder (named volume) 
+  - exclude sync (anonymous volume)
+
+[ Copy + Sync + Exclude + Hard Copy Dir , PORT , Argument , ENVIRONMENT variables]
+
 -----------------------------------------------------------------------------
-               Docker Image + conatiner CMDs
+          Docker Image + Container Commands
 -----------------------------------------------------------------------------
-1) Image  :
-     docker build -t imageName . (path of Docker File)
-2) Container :
-     docker run -d -p portFromOutside:portToContainer --name containerName imageNameBasesdOnWhichCionatineIsCreated
+1) Image:
+  - Build the image: `docker build -t imageName .` (path of Docker File)
+2) Container:
+  - Run the container: `docker run -d -p portFromOutside:portToContainer --name containerName imageNameBasedOnWhichContainerIsCreated`
 
-cmds :
-1) docker image ls : check images
-   docker images
+Commands:
+1) Check images:
+  - `docker image ls` or `docker images`
+  - Remove image: `docker image rm imageID` or `docker rmi IMAGE_ID_OR_NAME`
 
-   -docker image rm imageID : remove image
-   -docker rmi IMAGE_ID_OR_NAME
-   -docker rmi IMAGE_ID1 IMAGE_ID2 IMAGE_ID3
+2) Check running containers:
+  - `docker ps`
+  - Stop and delete running container: `docker rm containerName -f` or `docker rm CONTAINER_ID_OR_NAME`
+  - Check all containers (including stopped ones): `docker ps -a`
+  - Remove all stopped containers at once: `docker container prune`
+  - Remove container and its volume: `docker rm containerName -fv`
 
+3) Docker bash shell run command:
+  - Run bash shell in container: `docker exec -it containerName bash`
 
-2) -docker ps : check running conatines
-3) -docker rm containerName -f : stop and delete running Container
-   -docker rm CONTAINER_ID_OR_NAME
-   -docker rm CONTAINER_ID1 CONTAINER_ID2 CONTAINER_ID3
-   -docker ps -a
-   -//if you want to remove all stopped containers at once, you can use the following command:
-   -docker container prune
-   --docker rm containerName -fv : removes volume along with container
+4) Check logs for crash:
+  - View container logs: `docker logs containerName -f`
 
-4) Docker bash shell run cmd : 
-   -Docker exec -it containerName bash
+5) Add environment variables:
+  - Run container with environment variables: `docker run -v %cd%:/app:ro -v /app/node_modules --env PORT=8080 -p 4000:8080 -d --name api-g-1 api-gateway-1`
+  - Load environment variables from .env file: `--env-file ./.env`
 
-5) check logs for crash
-   -cmd: docker log containerName -f
-6) add ENV vars:
-   -cmd : docker run -v %cd%:/app:ro -v /app/node_modules --env PORT=8080 -p 4000:8080 -d --name api-g-1 api-gateway-1
-  -From .dotenv file: --env-file ./.env
+6) Check environment variables using bash:
+  - Print environment variables: `printenv`
 
-7) check env using bash : -printenv
+7) Remove anonymous volume:
+  - Remove volume: `docker volume volumeId`
+  - Remove all unused volumes: `docker volume prune`
 
-8) remove Anynamous volume:
-   - docker volume volumeId
-   - docker volume prune
+========================================================================
+
+# Docker Volumes
+
+Docker volumes are used while running a container. There are three types:
+
+1. **Bind mount**: Used to sync local folder changes with docker image so no need to build image every time when code is changed.
+   - Syntax: `-v pathOfFolderInLocal:pathOfFolderInContainer`
+   - Example: 
+     - Windows: `-v %cd%:/app` (if powershell: `-v ${pwd}:/app`)
+     - Linux/Mac: `-v $(pwd):/app`
+   - Note: Be careful with bind mount. If you delete a folder (like `node_modules`) from local, it will be deleted from the container as well. To avoid this, create an anonymous mount i.e. another Volume for `node_modules` folder of `/app` directory. For example: `-v %cd%:/app -v /app/node_modules`
+   - To make bind mount read only: `-v %cd%:/app:ro`
+
+2. **Anonymous volume**: Created every time we run a container. It always creates a new volume so it can be a waste of storage. To remove unused anonymous volumes, run the container and use the command: `docker volume prune`
+
+3. **Named volume**: Used to persist data. The folder in the container as well as in the host will save data so when the container is down or the image is removed, data will be persisted in the host machine. Can be used in multiple services.
+
+# Docker Ignore
+
+To exclude all files except for the project files, you can add to `.dockerignore`:
+
+```ignore
+*
+!project_directory/
+
+===================================================================
 ---------------------------------------------------------------
 For example, to exclude all files except for the project files, you can add to .dockerignore:
 *

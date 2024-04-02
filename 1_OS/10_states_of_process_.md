@@ -14,7 +14,7 @@ Process Life cycle :
 [ 
     There are different OS modules which makes Process 
     go from one stage to another EX. schedule Dispatcher
-    it give control of cpu to process from raady to running
+    it give control of cpu to process from ready to running
 ]
 - Context Switching: 
 If the scheduler decides to switch to another 

@@ -25,7 +25,7 @@ within the device controller based on Operation
     5) controller may return Pointer of Register 
     6) Device Drivers return COntrol to OS
     7) [DMA]: Direct memory Access:
-      why? for every intersaction with device it 
+      why? for every interaction with device it 
       creates interrupt which is not good 
       as it creates problem for large operations
       other process needs to wait so DMA is used

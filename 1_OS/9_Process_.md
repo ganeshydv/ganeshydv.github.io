@@ -26,7 +26,7 @@ __________
 |  ..    |
 |  ..    |
 |________|
-| Heap   | ->Stack overflow error: when continuesly creates new stack and it reaches size of HEAP this error will be thrown (need base case)
+| Heap   | -> Stack overflow error: when continuesly creates new stack and it reaches size of HEAP this error will be thrown (need base case)
 |________|   Out OF Memory Error-Circular Depedency-: when new Heap is allocated continously it reaches size of Stack this error will be thrown (create objects wisely)
 | DATA   | -> Gloabl & Static Data
 |________|
