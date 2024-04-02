@@ -1,3 +1,37 @@
+# Introduction to Network
+
+## Network Components
+
+1. **End Nodes**: These include compute, storage, and management nodes. They serve as the source or destination nodes.
+2. **Intermediate Nodes**: These are switches and routers. They receive traffic generated from end nodes and decide where to forward the traffic.
+
+## Connection of Network Components
+
+Network components are connected using hardware Network Interface Cards (NICs) and cables.
+
+## Communication Between Nodes
+
+Communication between two nodes happens through a protocol suite, which is a group of protocols that run concurrently to implement network communication. Each protocol defines a common format and a set of rules for exchanging messages between devices.
+
+## Network Models
+
+- OSI Model
+- TCP/IP Model
+
+## Encapsulation of Data
+
+At each layer of the network model, data is encapsulated and a header is added. There can be encoding, decoding, or formatting at different layers.
+
+## Protocol Data Units (PDUs)
+
+Encapsulated data at each layer is referred to as a Protocol Data Unit (PDU). Examples of PDUs include packets, segments, datagrams, or frames. Each layer in the OSI model is associated with different protocols, PDUs, addresses, and devices.
+
+- **Application Layer (Layer 7)**: The PDU is referred to as a message or data.
+- **Transport Layer (Layer 4)**: The data is encapsulated and a port number is added. The PDU is known as a TCP segment or UDP datagram at this stage.
+- **Internet Layer (Network Layer, Layer 3)**: A header containing source and destination IP addresses is added (at router or mobile). The PDU is called a packet. Packets are forwarded on layer 3 devices, such as routers.
+- **Data Link Layer (Layer 2)**: The header contains source and destination MAC addresses. The PDU is referred to as a frame. Frames are forwarded on layer 2 devices, such as switches.
+- **Physical Layer (Layer 1)**: The data is transmitted as bits (0s and 1s).
+============================================
 
 Network components :
 1] End Nodes -compute, storage, mangement nodes 
