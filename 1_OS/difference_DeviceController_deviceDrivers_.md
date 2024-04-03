@@ -1,3 +1,17 @@
+# Device Driver vs Controller
+
+## Device Driver
+
+1. **Software**: Device drivers are software components.
+2. **Managed by OS**: The operating system manages device drivers.
+3. **Abstraction**: Device drivers are provided by hardware manufacturers to create an abstraction between the hardware and the operating system.
+
+## Controller
+
+1. **Device Specific**: Each device chip has its own controller.
+2. **Firmware**: Controllers have their own firmware stored in RAM, which loads and prepares the device for interaction.
+
+# ----------------------------
 
 DEVICE DRIVER: 
 1) Software

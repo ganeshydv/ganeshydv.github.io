@@ -58,6 +58,8 @@ is added at each layer
 - there can be encoding, decoding or formating 
 at layers
 =====================================
+
+# general
 - Protocol Data Units [PDU]: enacpsulated data at each layer
   ex: packet,segment, datagram or frame is PDU
 -Each layer in OSI model is associated with
