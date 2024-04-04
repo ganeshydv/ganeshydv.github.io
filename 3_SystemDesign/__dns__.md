@@ -14,7 +14,7 @@ The process of a browser performing a DNS lookup to resolve a domain name into a
 
 4. **Send Request**: Once the IP address is known, the DNS resolver sends a request to the browser.
 
-======================================================
+## ==============================
 steps:
 
 1) browser check's if site IP is present in
