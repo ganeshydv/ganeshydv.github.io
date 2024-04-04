@@ -1,36 +1,36 @@
 # Communication with External Network
 
-## Device Obtains IP from Router
+## 1) Device Obtains IP from Router
 
 1. The device (with its MAC address) sends a request to the router, which has both an internal and external IP address.
 2. The router assigns a new internal IP address to the device using DHCP (Dynamic Host Configuration Protocol).
 3. The router saves the association between the device's MAC address and the new internal IP address in its ARP (Address Resolution Protocol) table.
 4. The router then sends the new internal IP address back to the device.
 
-## Device Sends Request to Router
+## 2) Device Sends Request to Router
 
 1. The device determines the destination IP address using DNS (Domain Name System).
 2. The device, with its internal IP address (e.g., 10.0.0.2/24:8080), creates a packet at the transport layer. This packet includes the HTTP data and is sent using either TCP (Transmission Control Protocol) or UDP (User Datagram Protocol).
 3. The packet includes both the source IP and destination IP, but does not include the MAC address.
 4. The device sends the packet to the router.
 
-## Router Forwards Request to Next-Hop Router or ISP
+## 3) Router Forwards Request to Next-Hop Router or ISP
 
 1. The router determines whether the destination device is in the internal or external network based on the subnet mask.
 2. The router uses NAT (Network Address Translation) to change the original source IP of the packet to its public IP address given by the ISP. This is maintained in the NAT table with a specific port (e.g., 10.0.0.2/24:8080 --> 196.68.10.1:3000).
 3. The router adds the source MAC (its own MAC address) and the destination MAC (the MAC address of the next-hop router or the ISP's router).
 4. The router then sends the packet to the ISP or the next-hop router.
 
-## Destination Server Sends Response
+## 4) Destination Server Sends Response
 
 1. The destination server sends a response to the ISP or the next-hop router.
 
-## Router Receives Response
+## 5) Router Receives Response
 
 1. The router receives the response and uses NAT to map the source IP and port back to the original internal IP of the device.
 2. The router then sends the response to the device's internal IP address.
 
-## Response Process
+## 6) Response Process
 
 The response process is not detailed in the selected content. However, typically, upon receiving the response, the device would process the data as needed (e.g., rendering a web page in a browser).
 
