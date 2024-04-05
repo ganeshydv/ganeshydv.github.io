@@ -24,7 +24,7 @@
       1. client ----[Sync]---> server
       2. client <--[ACK+SYNC]-- server
       3. client --[ACK]----> Server
-  2) Decide [SEGMENT] SIZE [Byets_of_msg] 
+  2) Decide [SEGMENT] SIZE [Bytes_of_msg] 
     [SEQ#] segment: number of first byte in Segment
   3) Decide Window Size : 
     [ACK#] Acknowledgment - is number for next byte it expect to receive
