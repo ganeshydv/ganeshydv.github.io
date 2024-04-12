@@ -17,7 +17,7 @@
   - Flow Control : TCP allows Receiver to govern amount of data sent by sender
     - TCP uses WINDOW size to indicate Allowd number of bytes the sender may
       transmit before receiving furthur permisssion
-  - Ordered Delivery - Sequence Numbers are used to order segments
+  - Sequencing : Ordered Delivery - Sequence Numbers are used to order segments
 
   ### Process :
   1) 3 way Handshake 
@@ -30,3 +30,20 @@
     [ACK#] Acknowledgment - is number for next byte it expect to receive
   3) client <-------> server [SEQ#+ACK#]
 
+  ## UDP
+    - no handshake
+    - no relability 
+    - for real time data transmission 
+    - ex. voice or vdo
+
+# 3] Internet Layer Protocols [Network_Layer]:
+    - IP operates at network layer
+    - IP provide services to layer 3 protocols
+    - IP asks layer 2 protocols to carry the ip packets
+    - IP provides the funtions necessary to deliver packet from a source
+      to a destination over an interconnected system of networks
+    - TCP : operates end to end
+    - IP :  any directly connected nodes EX device to router or router to router
+    - for communicataion : 1) IP addressing 2) Packet Format 3) routing func.
+    - IP addressing :
+      - Network Address + Subnet Address
