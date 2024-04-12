@@ -34,10 +34,10 @@ id_3 = { name: "John", age: 30 };
 // 6] Enum type:
 var Direction;
 (function (Direction) {
-    Direction[Direction["Up"] = 0] = "Up";
-    Direction[Direction["Down"] = 1] = "Down";
-    Direction[Direction["Left"] = 2] = "Left";
-    Direction[Direction["Right"] = 3] = "Right";
+    Direction["Up"] = "UP";
+    Direction["Down"] = "DOWN";
+    Direction["Left"] = "LEFT";
+    Direction["Right"] = "RIGHT";
 })(Direction || (Direction = {}));
 let dir = Direction.Up;
 dir = Direction.Down;
@@ -47,3 +47,10 @@ let user = {
     permission: ["r", "w"],
     isMarried: true,
 };
+//------------------------------------------------
+function add_(a, b) {
+    return a + b;
+}
+let result = add_(1, 2);
+console.log(typeof result);
+//------------------------------------------------

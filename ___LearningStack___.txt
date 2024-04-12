@@ -20,10 +20,9 @@ Current Requirement:
            4) Searching
            5) Sorting
 
-0.1) Operating System :
+0.1) Operating System : total 32 - 6 done
 
-0.2) Networking :
-
+0.2) Networking : DONE
 ---------------------------- IN Office -------------------------------
 
 1) Nodejs (40 hrs) : -- DONE

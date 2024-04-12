@@ -61,3 +61,18 @@ let user: person = {
   permission: ["r", "w"],
   isMarried: true,
 };
+
+//------------------------------------------------
+function add_(a: number, b: number): number {
+  return a + b;
+}
+
+type extarctReturnType<T> = T extends (...arg:any[])=> infer T ? T : any;
+type assigntypeOfAdd_ = extarctReturnType<typeof add_>;
+let result: assigntypeOfAdd_ = add_(1, 2);
+console.log(typeof result); 
+
+type MyFunc = () => number;
+type MyFuncReturnType = extarctReturnType<MyFunc>; // This will be 'number'
+
+//------------------------------------------------
