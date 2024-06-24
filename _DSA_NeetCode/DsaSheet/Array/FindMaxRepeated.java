@@ -6,6 +6,15 @@ import java.util.Map;
 
 //https://leetcode.com/problems/majority-element/description/
 // 169 Majority Element
+// Given an array nums of size n, return the majority element.
+/*  
+Logic: 
+1. Create a map to store the frequency of each element.
+2. Iterate over the array and store the frequency of each element in the map.
+3. Find the element with the maximum frequency in the map.
+4. Return the element with the maximum frequency.
+
+ */
 public class FindMaxRepeated {
     public static void main(String[] args) {
         int[] nums = {6,5,5};

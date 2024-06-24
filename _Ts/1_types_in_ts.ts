@@ -3,12 +3,13 @@ let x: boolean | number = true;
 x = 1;
 //----------------------------------
 // 2] function type:
+// Array Function
 let sum: (x: number, y: number) => number;
 // use case 1: function expression
 sum = function (x: number, y: number) {
   return x + y;
 };
-// use case 2: function return type
+// use case 2: Named function return type
 function add(x: number, y: number): typeof sum {
   return function (x: number, y: number) {
     return x + y;
@@ -33,8 +34,8 @@ let id_3: { name: string; age: number } | number[] = [1, 2, 3];
 
 id_3 = { name: "John", age: 30 };
 //-------------------------------
-// 6] Enum type:
-enum Direction {
+// 6] Enum type: make const always 
+const enum Direction {
   Up='UP',
   Down='DOWN',
   Left='LEFT',
@@ -42,6 +43,9 @@ enum Direction {
 }
 
 let dir: Direction = Direction.Up;
+// dir='UP'; // error
+dir = 'UP' as Direction;
+dir =<Direction>"Up";
 dir = Direction.Down;
 // dir= Left; // error
 //-------------------------------

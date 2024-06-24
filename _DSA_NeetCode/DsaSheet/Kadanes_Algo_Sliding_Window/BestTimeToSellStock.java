@@ -2,10 +2,24 @@ package DsaSheet.Kadanes_Algo_Sliding_Window;
 
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 // 121. Best Time to Buy and Sell Stock
+/*
+Logic:
+1. We have to buy at low and sell at high to get the maximum profit.
+2. We will keep track of the minimum price to buy.
+3. We will keep track of the maximum profit.
+4. We will iterate over the array.
+5. If the current price is less than the minimum price then update the minimum price.
+6. If the current price is greater than the minimum price then calculate the profit.
+7. Update the maximum profit.
+8. Return the maximum profit.
+
+ */
 public class BestTimeToSellStock {
     public static void main(String[] args) {
         int[] prices = {7, 1,5, 3, 6, 4};
         System.out.println(maxProfit(prices));
+        System.out.println(maxProfit_2(prices));
+        System.out.println(maxProfit_3(prices));
     }
 
     // buy at low sell at high to get max profit
@@ -22,6 +36,24 @@ public class BestTimeToSellStock {
                 maxProfit=Math.max(maxProfit, prices[i]-buy);
             }
         }
+        return maxProfit;
+    }
+    //two pointer approach
+    static int maxProfit_3(int[] prices){
+        int maxProfit=0;
+        int buy=0;
+        int sell=0;
+        while (sell<prices.length){
+            int profit=prices[sell]-prices[buy];
+            if(profit>0){
+                maxProfit=Math.max(maxProfit, profit);
+            }else{
+                buy=sell;
+            }
+            sell++;
+            
+        }
+
         return maxProfit;
     }
 
