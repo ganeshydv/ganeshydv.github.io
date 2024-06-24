@@ -10,6 +10,9 @@ Current Requirement:
 3) Typescript : mostly done
 4) Nest.js 
 5) Serverless Node service using Typescript
+6) GraphQL
+7) KEYCLOAK
+8) Learning Locker
 --------------------------- AT HOME ---------------------------------
 
 0) DSA : .... going on 

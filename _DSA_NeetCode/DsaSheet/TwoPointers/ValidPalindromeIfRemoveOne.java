@@ -1,6 +1,24 @@
 package DsaSheet.TwoPointers;
 
 import java.util.Set;
+/*
+ * 680. Valid Palindrome II
+ * Given a string s, return true if the s can be palindrome after deleting at most one character from it.
+ * 
+ * Example 1:
+ * Input: s = "aba"
+ * Output: true
+ * ------------------------------
+ * Logic:
+ * 1. We will use two pointer approach.
+ * 2. We will check if the characters at the start and end are equal.
+ * 3. If they are not equal then we will check if the string is palindrome after removing the character at the start or end.
+ * 4. If the string is palindrome after removing the character then we will return true.
+ * 5. If the string is not palindrome after removing the character then we will return false.
+ * 6. We will get the desired output.
+ * 7. Time complexity is O(n) and space complexity is O(1).
+ * 
+ */
 
 public class ValidPalindromeIfRemoveOne {
     public static void main(String[] args) {
@@ -11,7 +29,7 @@ public class ValidPalindromeIfRemoveOne {
     }
 
     static boolean validPalindrome(String s){
-
+        
         return checkPalindrome(0, s.length()-1, s, 0);
     }
 

@@ -2,6 +2,8 @@ package DsaSheet.TwoPointers;
 
 /*
 #11. Container With Most Water
+ex : [1,8,6,2,5,4,8,3,7]
+o/p : 49
 
 Logic:
 1. We have to find the max area of water that can be stored between two lines.
@@ -39,14 +41,14 @@ public class ContainerWithMostWater {
     static int maxVolume(int[] height){
         int max=0;
         int current=0;
-        int hMaxIndex=0;
+        int maxHeight=0;
         int currentWidth=1;
         for(int i=0;i<height.length;i++){
-            if(height[i]>height[hMaxIndex]){
-                hMaxIndex=i; 
+            if(height[i]>height[maxHeight]){
+                maxHeight=i; 
                 currentWidth=1;
             }
-            current=Math.max(current, Math.min(height[hMaxIndex],height[i])*(currentWidth)); // i: width
+            current=Math.max(current, Math.min(height[maxHeight],height[i])*(currentWidth)); // i: width
             max=Math.max(max, current);
             currentWidth++;
         }

@@ -24,7 +24,15 @@ nums.length <= 3 * 104
 -------------------------
 -----------------------
 Algorithm :
-1. 
+1. We will use two pointer approach.
+2. We will keep a count variable to keep track of the duplicates.
+3. We will iterate over the array.
+4. If the current element is equal to the previous element then we will increment the count.
+5. If the count is less than 2 then we will increment the pointer and update the element.
+6. If the count is greater than 2 then we will continue the iteration.
+7. We will get the desired output.
+8. Time complexity is O(n) and space complexity is O(1).
+
  */
 
 public class RemoveDuplicates2 {
@@ -46,8 +54,7 @@ public class RemoveDuplicates2 {
                 nums[count++]=nums[i];
             }
         }
-        HashMap<Integer,
-        int[]> map=new HashMap<>();
+        HashMap<Integer,int[]> map=new HashMap<>();
         map.put(count,nums);
         return map;
     

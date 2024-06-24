@@ -18,6 +18,8 @@ public class BestTimeToSellStock {
     public static void main(String[] args) {
         int[] prices = {7, 1,5, 3, 6, 4};
         System.out.println(maxProfit(prices));
+        System.out.println(maxProfit_2(prices));
+        System.out.println(maxProfit_3(prices));
     }
 
     // buy at low sell at high to get max profit
@@ -34,6 +36,24 @@ public class BestTimeToSellStock {
                 maxProfit=Math.max(maxProfit, prices[i]-buy);
             }
         }
+        return maxProfit;
+    }
+    //two pointer approach
+    static int maxProfit_3(int[] prices){
+        int maxProfit=0;
+        int buy=0;
+        int sell=0;
+        while (sell<prices.length){
+            int profit=prices[sell]-prices[buy];
+            if(profit>0){
+                maxProfit=Math.max(maxProfit, profit);
+            }else{
+                buy=sell;
+            }
+            sell++;
+            
+        }
+
         return maxProfit;
     }
 
