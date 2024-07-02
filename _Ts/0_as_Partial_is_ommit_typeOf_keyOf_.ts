@@ -131,9 +131,15 @@ let user2: NewUser = { name: "John", age: 30 };
 // always use enums when you have a set of related constants.
 // always make enums as constants
 const enum Direction_ {
-  Up,
-  Down,
-  Left,
-  Right,
+  Up='UP',
+  Down='DOWN',
+  Left='LEFT',
+  Right='RIGHT',
 }
-let direction = Direction.Up;
+let direction:Direction_ = Direction_.Up;
+
+function move<T>(dir:T):T[]{
+  return new Array<T>().concat(dir);
+}
+
+console.log(move<Direction_>(Direction_.Up));
