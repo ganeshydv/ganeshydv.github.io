@@ -49,6 +49,7 @@
 ### Event Handling
 
 - () : event binding syntax
+```typescript
 - import {Component} from '@angular/core';
   @Component({
   selector: 'app-root',
@@ -60,14 +61,14 @@
   console.log('Hello, there 👋');
   }
   }
-
+```
 ### Component Communication with
 
 ### @Input : data from parent to child
 
 - like PROPS in React
 - from parent to child
-
+```typescript
 class UserComponent {
 @Input() occupation = '';
 }
@@ -76,7 +77,7 @@ class UserComponent {
 template: `<app-user occupation="Angular Developer"><app-user/>`
 })
 class AppComponent {}
-
+```
 ### @Output : data from child to Parent
 
 - in child create eventEmitter and emit when need to send data to parent
@@ -89,7 +90,7 @@ class AppComponent {}
   inputChange, where input is the name of the @Input() property. For example,
   if the @Input() property is size, the @Output() property must be sizeChange.
   WX:
-
+```typescript
 export class SizerComponent {
 @Input() size!: number | string;
 @Output() sizeChange = new EventEmitter<number>();
@@ -113,19 +114,19 @@ this.sizeChange.emit(this.size);
 -- APP --
 <app-sizer [(size)]="fontSizePx"></app-sizer>
 <div [style.font-size.px]="fontSizePx">Resizable Text</div>
-
+```
 ## =================================================
 
 ### @defer : to lazy load component
 
 - viewport: Deferrable views have a number of trigger options.
   Add a viewport trigger so the content will defer load once it enters the viewport
-
+```typescript
 @component({
 selector: 'app-root',
 teplate: '
 @defer (on viewport){
-<comments /> --> this is selector of ClassNameOFComponent
+<comments /> //--> this is selector of ClassNameOFComponent
 } @placeholder {
 
   <p>Future comments</p>
@@ -138,12 +139,14 @@ imports: [ClassNameOFComponent]
 class AppComponent{
 
 }
+```
 
 ==================================================
 
 ### Routing : Routes + providRouter + RouterOutlet
 
 - 1. Create an app.route.ts file : app.routes.ts
+```typescript
      import {Routes} from '@angular/router';
      export const routes: Routes = [
      {
@@ -151,16 +154,19 @@ class AppComponent{
      component: HomeComponent,
      },
      ];
+```
 
 - 2. Add routing to provider : app.config.ts
+```typescript
      import {ApplicationConfig} from '@angular/core';
      import {provideRouter} from '@angular/router';
      import {routes} from './app.routes';
      export const appConfig: ApplicationConfig = {
      providers: [provideRouter(routes)],
      };
-
+```
 - 3.  Import RouterOutlet in the component
+```typescript
       import {RouterOutlet} from '@angular/router';
       @Component({
       ...
@@ -175,15 +181,17 @@ class AppComponent{
       imports: [RouterOutlet],
       })
       export class AppComponent {}
-
+```
 - 4. Import RouterLink directive
      ...
+     ```typescript
      import { RouterLink, RouterOutlet } from '@angular/router';
      @Component({
      standalone: true,
      imports: [RouterLink, RouterOutlet],
      ...
      })
+     ```
 
 - 5. Add a routerLink to template
      Add a routerLink to template
@@ -197,10 +205,12 @@ class AppComponent{
 
   - 1.  Import FormsModule
   - 2.  Add binding to the value of the input
+```typescript
         <label for="framework">
         Favorite Framework:
         <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
         </label>
+```
 
 - b] Reactive Forms
   - 1. Import ReactiveForms module
