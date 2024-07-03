@@ -208,44 +208,45 @@ class AppComponent{
   - 3. Link the FormGroup and FormControls to the form
   - 4. Add ngSubmit to the form
 
+```typescript
 import {Component} from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 
 @Component({
-selector: 'app-root',
-template: `
-<form [formGroup]="profileForm" (ngSubmit)="handleSubmit()">
-<input type="text" formControlName="name" />
-<input type="email" formControlName="email" />
-<button type="submit">Submit</button>
-</form>
-
+  selector: 'app-root',
+  template: `
+    <form [formGroup]="profileForm" (ngSubmit)="handleSubmit()">
+      <input type="text" formControlName="name" />
+      <input type="email" formControlName="email" />
+      <button type="submit">Submit</button>
+    </form>
+    
     <h2>Profile Form</h2>
     <p>Name: {{ profileForm.value.name }}</p>
     <p>Email: {{ profileForm.value.email }}</p>
-
-`,
-standalone: true,
-imports: [ReactiveFormsModule],
+  `,
+  standalone: true,
+  imports: [ReactiveFormsModule],
 })
 export class AppComponent {
-profileForm = new FormGroup({
-name: new FormControl(''),
-email: new FormControl(''),
-});
+  profileForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+  });
 
-handleSubmit() {
-alert(this.profileForm.value.name + ' | ' + this.profileForm.value.email);
+  handleSubmit() {
+    alert(this.profileForm.value.name + ' | ' + this.profileForm.value.email);
+  }
 }
-}
+```
 
 ## ==============================================
 
 ### Modules:
 
 - Modules structure:
-`
+```typescript
 @NgModule({
     declarations :[
         component1,
@@ -264,10 +265,10 @@ alert(this.profileForm.value.name + ' | ' + this.profileForm.value.email);
 class ListModule{
 
 }
-`
+```
 
 ### Components :
-`
+```typescript
  @Component({
     selector: "name_of_component",
     teplateUrl : "template_.html",
@@ -279,10 +280,10 @@ class ListModule{
  class ListComponent{
 
  }
-`
+```
 
  ### Routes Module :
- `
+ ```typescript
  const routes:Routes=[
     {
         path:"url",
@@ -300,11 +301,11 @@ class ListModule{
 class ListRouterModule{
 
 }
-`
+```
 ## ---------------------------------------------
 
 ### Mat Table:
-
+```typescript
 <mat-table class="mat-elevation-z8" [dataSource]="driversList" >
 <!-- Columns Definitions -->
 <ng-container matColumnDef="id" 
@@ -317,5 +318,5 @@ ID
 </mat-cell>
 </ng-container>
 </mat-table>
-
+```
 ## ---------------------------------------------
