@@ -34,7 +34,7 @@
 ## Structure:
 
 1. Components [CSS+TS+HTML] --> Module
-2. Routes[Components] + Module --> RoutingModule --> MainRoute --> Config --> bootstarp
+2. Routes[+Components] + Module --> RoutingModule --> MainRoute --> Config --> bootstarp
    gi
 
 ## ------------------------------------------
@@ -330,3 +330,9 @@ ID
 </mat-table>
 ```
 ## ---------------------------------------------
+
+- Pagination
+- forms for submissions
+- search 
+
+
