@@ -1,8 +1,9 @@
 
 // Factory Function: function which generates another function
 
-// when to use: you have to call a function multiple times with some same value and some differnent values then just make  a factory fucntion for same vale while that 
-// factory function return another function which will value which is variable
+// when to use: you have to call a function multiple times with some same value and some differnent 
+//values then just make  a factory fucntion for same type of value while that 
+// factory function return another function which will be a value which is variable
 
 
 function calTax(amount,tax){
