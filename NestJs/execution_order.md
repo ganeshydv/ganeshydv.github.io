@@ -1,8 +1,12 @@
+## Order of Execution
+```typescript
+Middleware --> Guards --> Interceptors (Before) --> Pipes[can be global] --> Controller/Route Handler --> Interceptors (After) --> Exception Filters (can be any time)
+```
 
 General way:
 pipes [Data_Transform_Validation]--> Guards [AuthN_AuthZ] --> Interceptor [Logger_modify_request]--> Middleware --> Controller --> Interceptor [Modify_Response]
 
-## oreder of instances created
+## Order of instances creation
 
 In a NestJS application, the lifecycle of modules, providers (which include services), controllers, and middleware is managed by the NestJS dependency injection system. Here's a simplified version of how it works:
 

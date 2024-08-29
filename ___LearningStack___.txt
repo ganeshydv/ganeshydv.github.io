@@ -58,6 +58,10 @@ Current Requirement:
     : Node + Express + S3 + dynamoDB + lambda + redshift
     : Logging ( Kibana )
     : Unit testing
+    : Streams: for Logging
+    : Sreams: for Profile upload
+    : stream : for transforming data in real time
+    : Streams : for video/audio calls
     ------------ Features ----------
     : 3rd Party LOGIN - OAUTH 2.0
     : Authentication + Aurhorization
@@ -72,7 +76,7 @@ Current Requirement:
                      3) chatBoat microservice
                      4) Payment microservice
                      5) DocumentOp microservice
-
+--- VDO/audio from OS--> Server --> Compresss--> stream--> send --> receive--> decompress--> render
 
 3) HOSTING :
     : Docker
