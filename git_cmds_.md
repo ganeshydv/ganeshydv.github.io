@@ -13,6 +13,11 @@
 
 5. Uncommit last commit
    - `git reset commit_hash`
+     
+6. Branch: Create + Checkout
+   - `git branch -b branch_name`
+
+7. Branch: 
 
 # stash
 
@@ -36,7 +41,9 @@
 
 12. Create branch from stash
     - `git stash branch branchname stash@{0}`
-
+      
+13. Create stash with Message
+    - `git stash push -m 'message'`
 ---
 
 Total : 145
