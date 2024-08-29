@@ -11,4 +11,5 @@ console.log(squere_arr);
 // map() mainly used to extarct values from Object :
 
 const originalArray = [{price: 10.99}, {price: 5.99}, {price: 29.99}];
-const transformedArray = originalArray.map(obj => obj.price); // produces [10.99, 5.99, 29.99]
+const transformedArray = originalArray.map(obj => {if(obj.price>10)return obj}); // produces [10.99, 5.99, 29.99]
+console.log(transformedArray);

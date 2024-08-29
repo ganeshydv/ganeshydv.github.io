@@ -7,7 +7,7 @@ function eventListner(){
 
 eventListner.prototype.on=(type,callBackFunc)=>{
     this.obj[type]=this.obj[type]||[];
-    this.obje[type].push(callBackFunc);
+    this.obj[type].push(callBackFunc);
 }
 
 eventListner.prototype.emit=function(type){
