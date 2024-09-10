@@ -68,6 +68,7 @@
 
 - like PROPS in React
 - from parent to child
+- Ex: Occupation variable is in User Component and it's being sent from App Component
 ```typescript
 class UserComponent {
 @Input() occupation = '';
