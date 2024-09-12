@@ -34,12 +34,12 @@ step 4 : gets link and code
             "badge_icon": "https://portal.edriving.com/img/badge/fast_start.png"
         },
     ]
- ````
+````
 
  - ### Reward Redeem Rule : to convert Points into $ 
      EX: Exchange Rate to convert points of specific country to Cash
      - JP: 
-     ````yml
+````yml
       {
         "type": "AMAZON",
         "name": "Amazon.com Gift Card",
@@ -55,8 +55,32 @@ step 4 : gets link and code
         "minimumStep": 1,
         "maximumStep": 2
     },
-     ````
+ ````
+ - ### Business Rule : country to custom tc data for customization
 
+ - #### Rules : 
+```js
+  {
+   name: REWARD_KEY.rule_playlist_orientation_complete,
+   cadence: RewardTriggerCadences.ONETIME,
+   requiredFacts: [FACTS.playlist],
+   badge: "fast_start",
+   points: 500,
+   when: [
+     (facts) =>{
+       var orientationAssigned=0;
+       for(var i=0;i<facts.playlist.length;i++){
+         var module = facts.playlist[i];
+         if(module.masterProductCode.startsWith("MENTOR-MODULE-O-")){
+           orientationAssigned++;
+           if(!module.completedOn || module.completedOn==0 || (module.completedOn-module.createdOn)>14*24*60*60*1000) return false;
+         }
+       }
+       return orientationAssigned>=8;//this guarentee there are more than 8 orientation assigned
+     }
+   ]
+ }
+```
 
 
  
