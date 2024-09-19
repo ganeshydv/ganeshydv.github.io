@@ -7,7 +7,7 @@
   - 3. handles PROMISES as well
   - 4. garbage collection
 
-```typescript
+```yml
 +--------------------+
 |  JavaScript Code   |  (Source Code)
 +--------------------+
@@ -55,7 +55,7 @@ V8 also handles memory management through garbage collection. It automatically m
 
 # Libuv and V8
 
-```typescript
+```yml
 +--------------------------+
 |  Main Thread             |
 |                          |
@@ -76,8 +76,6 @@ V8 also handles memory management through garbage collection. It automatically m
 |  +--------------------+  |
 |                          |
 +--------------------------+
-
-
 ```
 
 

@@ -1,0 +1,1 @@
+[Chain of Responsibilty pattern ](./3_ChainOfResponsibiltyPattern_logging.md)

@@ -8,18 +8,17 @@ step 3 : axios [/orders] to TangoCard
 step 4 : gets link and code
 ```
 
-### 1. How Points are assigned ? which service is handling it?
+## 1. How Points are assigned ? which service is handling it?
 
-### 2. How Redeem works? How user claims rewards ?
+## 2. How Redeem works? How user claims rewards ?
 
-#### Tango Card :
-
+### **Tango Card** :
 
  - ### Reward Catalog : Collection of Cards/Gifts for all countries. 
    It typically includes various digital gift cards, prepaid cards, 
    and other rewards from different brands and retailers, such as Amazon, Starbucks, and many other
 
- - ### Reward Rule :  contans Badge + Points
+ - ### Reward Rule :  contains Badge + Points data and used with RULES Engine : then used for Redeem and furthur process like storing/notificaton/settled 
  ````yml
     [  {
             "name": "rule_playlist_orientation_complete",
@@ -58,7 +57,7 @@ step 4 : gets link and code
  ````
  - ### Business Rule : country to custom tc data for customization
 
- - #### Rules : 
+ - ### Rules : 
 ```js
   {
    name: REWARD_KEY.rule_playlist_orientation_complete,
@@ -81,6 +80,8 @@ step 4 : gets link and code
    ]
  }
 ```
+
+
 
 
  

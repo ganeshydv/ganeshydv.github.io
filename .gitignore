@@ -20,3 +20,4 @@ Nodemailer/sample-api-gateway-408808-2809254f45df.json
 *libData*
 *.TAG
 *lock
+**dist/

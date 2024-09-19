@@ -14,7 +14,7 @@
 ## Main Features:
 
 ### Driver fleet management:
-- Driver's Driving Behaviour- ABCDS- Accelearion, Break, Cluch, Drift, Shift events recording
+- Driver's Driving Behaviour- ABCDS- Accelearion, Break, Cornering, Drift, Shift events recording
 - Vehicle Inspection - reports- daily/Weekly - Shift/Trip based
 - Courses/Modules assignment - sls-playsist 
 - Rewards assignment
