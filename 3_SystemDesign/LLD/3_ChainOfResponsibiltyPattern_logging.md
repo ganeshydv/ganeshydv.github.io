@@ -12,3 +12,161 @@
   - 2. if 1000 Rs Handler have 2000 then it will fulfil else it will
     send that to 500 handler
   - 3. if 500 handler is able to fulfil it will send 2000 else not enough money.
+
+```java
+
+//parent class must have child idetntification
+// in this example child takes another object and child calls log of next one
+class LogProcessor{
+  public static int INFO=1;
+  public static int DEBUG=2;
+  public static int ERROR=3;
+  LogProcessor nextLogProcessor;
+  LogProcessor(Logprocessor nextLogProcessor){
+    this.nextLogProcessor=nextLogProcessor;
+  }
+
+  public void log(int level,String msg){
+    if(nextLogProcessor!=null){
+      nextLogProcessor.log(level,msg);
+    }
+  }
+
+}
+
+class LogInfo extends LogProcessor{
+  LogProcessor nextLogProcessor;
+  LogInfo(LogProcessor nextLogProcessor){
+    this.nextLogProcessor=nextLogProcessor;
+  }
+
+  public void log(int level,String msg){
+    if(level== INFO){
+      //do
+      sout(msg);
+    }else{
+      this.nextLogProcesspor.log(level,msg);
+    }
+  }
+}
+
+class LogDebug extends LogProcessor{
+  LogProcessor nextLogProcessor;
+  LogDebug(LogProcessor nextLogProcessor){
+    this.nextLogProcessor= nextLogProcessor;
+  }
+
+  public void log(int level,String msg){
+    if(level == DEBUG){
+      //do
+      sout(msg);
+    }else{
+      this.nextLogProcesspor.log(level,msg);
+    }
+  }
+}
+
+class LogError extends LogProcessor{
+  LogProcessor nextLogProcessor;
+  LogError(LogProcessor nextLogProcessor){
+    this.nextLogProcessor= nextLogProcessor;
+  }
+
+  public void log(int level,String msg){
+    if(level == ERROR){
+      //do
+      sout(msg);
+    }else{
+      this.nextLogProcesspor.log(level,msg);
+    }
+  }
+}
+
+public static void main(){
+  LogProcessor logger=new LogInfo(new LogDebug(new LogError(null)));
+
+  logger.log(LogProcessor.ERROR,"this is error msg");
+}
+
+```
+#### Exmple 2: In this Parent Takes Responsibility to Call next Objects Method
+
+```java
+//parent class must have child idetntification
+class LogProcessor{
+  public static int INFO=1;
+  public static int DEBUG=2;
+  public static int ERROR=3;
+  LogProcessor nextLogProcessor;
+  LogProcessor(Logprocessor nextLogProcessor){
+    this.nextLogProcessor=nextLogProcessor;
+  }
+
+  public void log(int level,String msg){
+    if(nextLogProcessor!=null){
+      nextLogProcessor.log(level,msg);
+    }
+  }
+
+}
+
+class LogInfo extends LogProcessor{
+  // LogProcessor nextLogProcessor;
+  LogInfo(LogProcessor nextLogProcessor){
+    // this.nextLogProcessor=nextLogProcessor;
+    super(nextLogProcessor);
+  }
+
+  public void log(int level,String msg){
+    if(level== INFO){
+      //do
+      sout(msg);
+    }else{
+      // this.nextLogProcesspor.log(level,msg);
+      super.log(level,msg);
+    }
+  }
+}
+
+class LogDebug extends LogProcessor{
+  // LogProcessor nextLogProcessor;
+  LogDebug(LogProcessor nextLogProcessor){
+    // this.nextLogProcessor= nextLogProcessor;
+    super(nextLogProcessor);
+  }
+
+  public void log(int level,String msg){
+    if(level == DEBUG){
+      //do
+      sout(msg);
+    }else{
+      // this.nextLogProcesspor.log(level,msg);
+      super.log(level,msg);
+    }
+  }
+}
+
+class LogError extends LogProcessor{
+  // LogProcessor nextLogProcessor;
+  LogError(LogProcessor nextLogProcessor){
+    // this.nextLogProcessor= nextLogProcessor;
+    super(nextLogProcessor);
+  }
+
+  public void log(int level,String msg){
+    if(level == ERROR){
+      //do
+      sout(msg);
+    }else{
+      // this.nextLogProcesspor.log(level,msg);
+      super.log(level,msg);
+    }
+  }
+}
+
+public static void main(){
+  LogProcessor logger=new LogInfo(new LogDebug(new LogError(null)));
+
+  logger.log(LogProcessor.ERROR,"this is error msg");
+}
+```

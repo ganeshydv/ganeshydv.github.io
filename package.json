@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server1": "nodemon ./JWT/accesToken_RefreshToken",
     "server2": "nodemon ./JWT/Authserver2",
-    "roolsEx":"nodemon --exec ts-node ./RoolsEngine/index.ts"
+    "roolsEx": "nodemon --exec ts-node ./RoolsEngine/index.ts"
   },
   "author": "ganesh r g",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.1431.0",
+    "axios": "^1.7.7",
     "body-parser": "^1.20.1",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.8",
@@ -20,9 +21,12 @@
     "googleapis": "^129.0.0",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^6.9.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.3",
     "nodemailer": "^6.9.7",
     "rools": "^2.3.0",
     "ts-node": "^10.9.2",
+    "typeorm": "^0.3.20",
     "typescript": "^5.6.2",
     "ws": "^8.16.0"
   },
