@@ -20,6 +20,7 @@
   - Sequencing : Ordered Delivery - Sequence Numbers are used to order segments
 
   ### Process :
+  ```text
   1) 3 way Handshake 
       1. client ----[Sync]---> server
       2. client <--[ACK+SYNC]-- server
@@ -29,7 +30,7 @@
   3) Decide Window Size : 
     [ACK#] Acknowledgment - is number for next byte it expect to receive
   3) client <-------> server [SEQ#+ACK#]
-
+  ```
   ## UDP
     - no handshake
     - no relability 
@@ -37,6 +38,7 @@
     - ex. voice or vdo
 
 # 3] Internet Layer Protocols [Network_Layer]:
+```text
     - IP operates at network layer
     - IP provide services to layer 3 protocols
     - IP asks layer 2 protocols to carry the ip packets
@@ -47,3 +49,4 @@
     - for communicataion : 1) IP addressing 2) Packet Format 3) routing func.
     - IP addressing :
       - Network Address + Subnet Address
+  ```

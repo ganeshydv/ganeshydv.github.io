@@ -29,7 +29,7 @@
 
 - To Start app by loading Config and index Component : <router-outlet></router-outlet>- in built
 
-## ========================================
+#### ============================
 
 ## Structure:
 
@@ -116,7 +116,7 @@ this.sizeChange.emit(this.size);
 <app-sizer [(size)]="fontSizePx"></app-sizer>
 <div [style.font-size.px]="fontSizePx">Resizable Text</div>
 ```
-## =================================================
+##### ===============================================
 
 ### @defer : to lazy load component
 
@@ -197,7 +197,7 @@ class AppComponent{
 - 5. Add a routerLink to template
      Add a routerLink to template
 
-## ================================================
+##### ==============================================
 
 ### Forms :
 
@@ -252,7 +252,7 @@ export class AppComponent {
 }
 ```
 
-## ==============================================
+##### ============================================
 
 ### Modules:
 

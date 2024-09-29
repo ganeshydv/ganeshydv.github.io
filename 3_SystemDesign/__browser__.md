@@ -10,7 +10,7 @@ The process of a browser making a request and establishing a connection with a s
 3. **TCP Connection**: Once the IP address is known, the browser establishes a TCP connection with the server. This involves an SSL and TLS handshake.
 4. **Connection Established**: After the handshake is successful, the connection is established and the browser can start sending requests to the web server.
 
-## ================================
+##### ==============================
      Url --> DNS look up --> 1) DNS cache (browser cache) 
                         2) OS cache
         --> DNS resolver --> DNS server--> browser

@@ -21,7 +21,7 @@ When the frame reaches a router, the router looks at the destination IP address 
 
 In summary, encapsulation starts at the higher layers, and as you move down the networking stack, additional headers are added at each layer until you have a complete frame ready for transmission over the physical medium. The specific protocols used for encapsulation can vary, but the general idea is to add the necessary headers at each layer of the protocol stack.
 
-## =================================
+##### ===============================
 Data Layer [ Application Layer + Transport Layer ] --> Network Laye [IP added to packet ] --> Data link [Link layer ] : mac added to 
 
 
