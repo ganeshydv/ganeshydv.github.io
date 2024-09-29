@@ -35,8 +35,7 @@ within your local network, while the external IP address is used
 for communication with devices on the internet. The router acts 
 as a gateway, managing the communication between the internal 
 and external networks
--------------------------------------------------------------
--------------------------------------------------------------
+----------------------------------------
 Q2] I have doubt do end devices like mobile,pc also have 
    internal and external Ip addresses?
 
@@ -80,5 +79,4 @@ for local network communication, they rely on the router's
 external IP address when communicating with devices on the 
 internet. The router acts as an intermediary, handling the 
 translation between internal and external IP addresses.
----------------------------------------------------------
----------------------------------------------------------
+---------------------------------------------------
