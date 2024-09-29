@@ -2,7 +2,7 @@
 # Internal Network Communication
 
 Always remember: For a frame, both IP (for packet) and MAC are always necessary. A frame cannot be sent over local or external network if MAC and IP are unknown.
-#### ======================================================
+-----
 ## Device to Device Communication in Internal Network
 
 1. A device, when it needs to communicate with another, first searches in its ARP (Address Resolution Protocol) table for the MAC address associated with the IP of the target device.
@@ -12,7 +12,7 @@ Always remember: For a frame, both IP (for packet) and MAC are always necessary.
 5. The frame is sent to the target device.
 6. Upon receiving a response from the target device, the source IP is replaced with the destination IP to complete the response.
 
-#### ======================================================
+------
 ## Role of MAC and IP in Internal Network Communication
 
 Communication within an internal network typically involves both MAC addresses and IP addresses. Here's how they work together to facilitate the exchange of data between devices:
@@ -70,7 +70,7 @@ It's important to note that ARP is specific to local networks, and it operates a
        destination IP
     --> Response complete
 
-#### ======================================================
+------
 
 do communcation in internal network happen using only 
 mac and independent of IP

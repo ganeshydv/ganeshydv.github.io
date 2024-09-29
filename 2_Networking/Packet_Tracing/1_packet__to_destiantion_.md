@@ -24,27 +24,36 @@ This document describes the process of routing a packet from a source device (De
 
 ## Response Process
 
-The response process follows the same steps in reverse. The destination device creates a packet with the source and destination IP addresses. It checks if the IP is local or not and broadcasts an ARP message to find the MAC of the router. The router receives the request, refreshes its ARP table data, and sends a unicast ARP response. The destination device saves the MAC and IP of the router in its ARP table and also updates its MAC table. It then creates a frame and sends it to the router. The router checks the destination IP by subnet to decide if it's local or not, strips the Layer 2 data, broadcasts an ARP request to find the MAC of the next hop router or ISP, gets the ARP response, updates its ARP and routing tables or NAT table, adds Layer 3 data to the packet, and forwards it to the next hop or ISP.
-=======================================================
+The response process follows the same steps in reverse. 
+- The destination device creates a packet with the source and destination IP addresses. 
+- It checks if the IP is local or not and broadcasts an ARP message to find the MAC of the router. 
+- The router receives the request, refreshes its ARP table data, and sends a unicast ARP response. 
+- The destination device saves the MAC and IP of the router in its ARP table and also updates its MAC table. 
+- It then creates a frame and sends it to the router. 
+- The router checks the destination IP by subnet to decide if it's local or not, strips the Layer 2 data, broadcasts an ARP request to find the MAC of the next hop router or ISP, gets the ARP response, updates its ARP and routing tables or NAT table, adds Layer 3 data to the packet, and forwards it to the next hop or ISP.
+----
+# 3 Tables:
 
-### 3 Tables:
+### 1) MAC address tables : 
+- maps MAC address to PORT ( Layer 2: Data Link Layer, EX. Switch, Mobile,Laptop)
+### 2) ARP Table : 
+- Maps IP address : MAC Address (Layer 2 - Data link layer , Ex. Router/Mobile/Laptop)
+### 3) Routing Table : 
+- IP address : IP address ( layer 3 - network Layer , Ex. ROuter)
 
-1) MAC address tables : maps MAC address to PORT ( Layer 2: Data Link Layer, EX. Switch, Mobile,Laptop)
-2) ARP Table : Maps IP address : MAC Address (Layer 2 - Data link layer , Ex. Router/Mobile/Laptop)
-3) Routing Table : IP address : IP address ( layer 3 - network Layer , Ex. ROuter)
+-------------------------------------------------
 
-#### -------------------------------------------------
-
-MAC Address Table : in Mobile
-ARP Table : in Mobile
-Routing Table : In ROuter
-
-IP address : provided by ISP
-#### -------------------------------
+## MAC Address Table : in Mobile
+## ARP Table : in Mobile
+## Routing Table : In ROuter
+## IP address : provided by ISP
+-------------------------------
 
 ### 1) create packet:
+```text
 Device A (Mobile )--> create packet : find destination IP - DNS 
 --> create packet [ source IP : destination IP ] : layer 3
+```
 
 ### 2) find MAC address to create frame :
 

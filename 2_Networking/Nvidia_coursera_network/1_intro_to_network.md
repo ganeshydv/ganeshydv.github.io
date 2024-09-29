@@ -32,7 +32,7 @@ Encapsulated data at each layer is referred to as a Protocol Data Unit (PDU). Ex
 - **Internet Layer (Network Layer, Layer 3)**: A header containing source and destination IP addresses is added (at router or mobile). The PDU is called a packet. Packets are forwarded on layer 3 devices, such as routers.
 - **Data Link Layer (Layer 2)**: The header contains source and destination MAC addresses. The PDU is referred to as a frame. Frames are forwarded on layer 2 devices, such as switches.
 - **Physical Layer (Layer 1)**: The data is transmitted as bits (0s and 1s).
-#### ============================================
+-----
 
 # Network components :
 1] End Nodes -compute, storage, mangement nodes 
@@ -40,25 +40,25 @@ Encapsulated data at each layer is referred to as a Protocol Data Unit (PDU). Ex
 2] Intermediate Nodes - switches and routers 
    - receives traffic generated from end nodes
    - makes decision where to forward traffic.
-#### ==========================================
+------
 How network component are conncted ? 
 - using hardware NIC and cables
-#### ========================================
+-----
 ## How communcation between two nodes happen?
 - Protocol suite : group of protocols that run
 concurrently to implement network communication
 - Each protocol defines a common format and
  set of rules for exchnaging messages between devices
-#### ======================================
-OSI model 
-TCP/IP model 
-#### ====================================
+-----
+### OSI model 
+### TCP/IP model 
+
 ## Encapsulation of Data:
 - at each layer data is encapsulated and a header
 is added at each layer
 - there can be encoding, decoding or formating 
 at layers
-#### =====================================
+----
 
 # general
 - Protocol Data Units [PDU]: enacpsulated data at each layer
