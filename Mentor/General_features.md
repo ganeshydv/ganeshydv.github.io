@@ -29,3 +29,12 @@
  - CSR Portal : AWS Cognito
  - SDK Portal : AWS Cognito Pool
  - 
+
+ ### 2. Device token 
+ - creates SNS token using ARN's based on APP?
+ 
+ ### 3. Rewards :
+ - get catalog [collection of gift vouchers] from Tango 
+ - create Rules Based on Requirements
+   - EX . first login based on rule assign points using rule engine
+   - How redeem ?

@@ -78,9 +78,20 @@ setTimeout(() => {
 Promise.resolve().then(() => {
   console.log('Microtask: Promise callback');
 });
-
-
 /*
+Script start
+Before await
+Hi  -- 1
+Hi -- 2
+Promise { <pending> }
+Script end
+10
+After await
+Microtask: Promise callback
+Macrotask: setTimeout callback
+*/
+
+// /*
 async function asyncFunction() {
   console.log('Before await');
   await new Promise((resolve) => {
@@ -95,6 +106,8 @@ async function asyncFunction() {
   console.log('After await'); // 1.if resolve is not used then this line will not be executed
    //2. this will be exuted after all the synchronous code is executed as 
 }
+//  */
+ /*
 OP:
 Script start
 Before await
@@ -105,10 +118,9 @@ After await
 Microtask: Promise callback
 Hi from setTimeout
 Macrotask: setTimeout callback
+*/
 
-
-//
-
+/*
 
 async function asyncFunction() {
   console.log('Before await');
@@ -124,7 +136,9 @@ async function asyncFunction() {
   console.log('After await'); // 1.if resolve is not used then this line will not be executed
    //2. this will be exuted after all the synchronous code is executed as 
 }
-   OP:
+   */
+/*   
+OP:
 Script start
 Before await
 Hi  -- 1
