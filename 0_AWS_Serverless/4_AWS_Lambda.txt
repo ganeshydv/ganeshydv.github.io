@@ -1,0 +1,125 @@
+--------------------------------------------------------------
+       Requirement of A Lambda function
+--------------------------------------------------------------
+1) ROLE: lambda function needs role 
+    and roles are used by services
+    to acceess other services
+    ( user need permission to access )
+
+2) Each lambda function should
+    only perform single task
+
+3) VPC + SecurityGroup (not Compulsory ):
+    each labmda function has  
+    VPC + subnets + SecurityGroup
+    ( lambda Fucntion runs in vpc 
+    so can only access resource present 
+    in vpc and can not access resource 
+    outside of the vpc )
+    - if need to access Internet or
+    resource ouside VPC need to
+    configure Security Group and
+    Vpc will require NAT Gateway in this
+    case.
+
+4) deadLetterQueue: error handling
+5) Concurrency LIMIT : running 
+   single function 
+6) Cloud Trail : for auditing
+
+----------------------------------------------------------------
+ Function Policy and Execution Role
+----------------------------------------------------------------
+Function Policy : used by triggering event which trigger Lambda 
+        Fucntions (includes pathParamaters and queryParameter )
+Execution Role : used by lambda function to access different AWS 
+        services
+both are independent
+----------------------------------------------------------------
+           Lambda Handlers : invocation can be sync or asycn
+----------------------------------------------------------------
+1] event: structure of this object varies beacuse it 
+       depends on event which trigger Fucntion
+       - this contains data from the event
+
+2] context : context tells about environment in which
+       it runs ex. timeout,log,aws request ids
+
+------------[invocation] -----------
+ Sync or asycn invocation depends on event type which 
+    trigger lambda Fucntion
+a) Async: s3 invocation
+b) sync : API Gateway call and Cognito call sync 
+c) if lambda Fucntion invoked through app then can choose 
+type of invocation using labmda sdk.
+
+ex: 
+1] if not async :
+exports.handler = (event, context, callback){
+    ...
+    callback(null,result);
+}
+2] if async :
+exports.handler =async (event, context){
+    ...
+    return result;
+}
+
+--------[Types of Lambda Event Sources]--------------
+1) push events : s3,API Gateway
+2) pull event : dynamoDB
+
+Ex: when dynamoDB table is changed then dynamoDB PUSH EVENT data\
+to dynamoDB streams which can then be hold by lambda
+-------------------------------------------
+            Context Object
+-------------------------------------------
+context.getReaminingTimeInMillis;
+context.functionName;
+context.functionArn;
+context.awsRequestedId;
+context.clientContext;
+context.logGroupName;
+context.logStreamName;
+context.identity;
+----------------------------------------------------------------
+           Path parameters and Query parameters
+----------------------------------------------------------------
+
+let name = event.pathParamaters.xyz
+let {type,...info} = event.queryStringParameters.param1
+
+
+
+----------------------------------------------------------------
+           Upload to Lambda
+----------------------------------------------------------------
+
+options:
+1) ZIP: if less than 10 mb else first upload to S3 and then give
+    s3 link
+2) using cmd
+
+
+1) name2
+2) ROle : basic execution role
+3) create
+4) Uploda zip or link S3 where zip uploaded
+5) test --> select event api Gateway proxy : edit templete for
+      queryStringParameters and pathParamaters, give event name
+    --> create
+6) test
+----
+----------------------------------------------------------------
+           LIMIT of AWS Lambda
+----------------------------------------------------------------
+MemorySize : 128 MB to 3008 MB ( 64MB per increment)
+Disk capacity : 512 MB (temp)
+Timeout : 900 sec ( 15 min)
+Body Payload limit : 1] sync invocation(api Gateway): 6 MB
+                     2] async invocation: 128 KB 
+Deployement Pkg size : 50 MB compressed
+                    - 250 MB uncompressed
+                    - 3 MB online editing from console
+TOtal size of all pkg : 75 GB 
+Concurrency : 1000 executions

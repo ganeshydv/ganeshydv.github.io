@@ -1,0 +1,4 @@
+
+Federated identity
+Used for login in different application using single account
+

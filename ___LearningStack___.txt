@@ -1,0 +1,95 @@
+
+layer  1 ) Software Architecture / System Design
+       2 ) Operating System
+       3 ) Networking
+       4 ) Cloud - AWS - Serverless + EC2 + Docker
+-------------------------------------
+Current Requirement:
+1) AWS serverless : Basics: DONE
+2) DynamoDB + S3
+3) Typescript : mostly done
+4) Nest.js 
+5) Serverless Node service using Typescript
+6) GraphQL
+7) KEYCLOAK
+8) Learning Locker
+--------------------------- AT HOME ---------------------------------
+
+0) DSA : .... going on 
+       Topics:
+           1) Bit manipilation ----
+           2) Recursion ---
+           3) Array
+           4) Searching
+           5) Sorting
+
+0.1) Operating System : total 32 - 6 done
+
+0.2) Networking : DONE
+---------------------------- IN Office -------------------------------
+
+1) Nodejs (40 hrs) : -- DONE
+
+-) Javascritpt :  -- DONE
+
+2) React
+3) AWS - lambda + S3 + SQS + dynamoDB + redshift:
+        
+           5,6,7,12,13,14,17,19,20,21,24,27,29                     
+
+4) Docker : 5 hr -- DONE
+
+-----------------------------------------------------------------------
+
+5) System Design : 93 vdos from youtube: https://www.youtube.com/watch?v=64geP_LAZ5U&list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv
+
+-------------------------------------------------------------------------
+
+==========================================================================
+==========================================================================
+========================== PROJECT Structure =============================
+
+1) Front End : 
+    : React
+    : Endpoints -
+
+2) Back End :
+    : MVC Architecture
+    : Node + Express + S3 + dynamoDB + lambda + redshift
+    : Logging ( Kibana )
+    : Unit testing
+    : Streams: for Logging
+    : Sreams: for Profile upload
+    : stream : for transforming data in real time
+    : Streams : for video/audio calls
+    ------------ Features ----------
+    : 3rd Party LOGIN - OAUTH 2.0
+    : Authentication + Aurhorization
+    : Payment system (If possible)      ........
+    : Document upload feature (like image) .....
+    : chat boat ( if possible )          .......
+    : JWT
+    : Session
+    : Stateless or Statefull microservice
+    : microservice : 1) Gateway microservice
+                     2) Learner microservice 
+                     3) chatBoat microservice
+                     4) Payment microservice
+                     5) DocumentOp microservice
+--- VDO/audio from OS--> Server --> Compresss--> stream--> send --> receive--> decompress--> render
+
+3) HOSTING :
+    : Docker
+    : AWS lambda 
+    : AWS redshift
+    : AWS S3 
+    : AWS dynamoDB
+
+==========================================================================
+==========================================================================
+working skills: 
+1) OAuth2.0 : 
+  SSO : KEYCLOAK, other 3rd party 
+
+
+

@@ -1,0 +1,8 @@
+
+An iterator is something which implements "iterable" protocol and have @@iterator method
+
+==> simply can say Object where we can use "for-of loop"
+
+IMP : NOT every OBJECT in JAVASCRIPT is an ARRAY 
+
+ARRAY-LIKE object : any Object which has length and Index ex. NodeList and String

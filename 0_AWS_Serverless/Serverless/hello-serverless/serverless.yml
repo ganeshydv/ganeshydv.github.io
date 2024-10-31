@@ -1,0 +1,72 @@
+
+
+service: hello-serverless
+
+plugins:
+  - serverless-offline
+# frameworkVersion: "3"
+
+# provider: has default values for stage and region , vpc, securityGroupIds, subnetIds etc
+provider:
+  name: aws
+  runtime: nodejs18.x
+  memorySize: 128
+  timeout: 10
+  region: us-east-1
+  vpc:
+    securityGroupIds:
+      - sg-0a0a0a0
+    subnetIds:
+      - subnet-0a0a0a0
+      - subnet-0a0a0a
+addBm:
+  handler: filename.functionName
+  events:   
+    - http :
+        path: math/add-addBm
+        method: post
+        integration: lambda
+        request: 
+          template:
+            application/json: >
+              #set($inputRoot = $input.path('$'))
+              {
+                "num1": $inputRoot.input.operand1,
+                "num2": $inputRoot.input.operand2
+              }
+        response:
+          headers: 
+            Access-Control-Allow-Origin: "'*'"
+            Content-Type: "'application/json'"
+          template: >
+             #set($inputRoot = $input.path('$'))
+              {
+                "result": $inputRoot
+              }
+  
+
+
+functions:
+  hello:
+    handler: handler.hello
+    memorySize: 128
+    timeout: 3  
+    # override global timeout
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true
+  add:
+    handler: add.add
+    vpc:
+      securityGroupIds:
+        - sg-0a0a0a0
+      subnetIds:
+        - subnet-0a0a0a0
+        - subnet-0a0a0a
+    events:
+      - http:
+          path: math/add
+          method: post
+          cors: true

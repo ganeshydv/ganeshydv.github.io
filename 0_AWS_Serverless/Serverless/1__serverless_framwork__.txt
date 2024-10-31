@@ -1,0 +1,85 @@
+serverlss aka sls 
+
+cmd : create template
+- sls create -t aws-nodejs -p hello-serverless
+
+cmd : run function locally 
+- sls invoke local -f functionNAme
+
+cmd : pass values along with invoke
+- sls invoke local -f functionNAme -d '{\"key\":\"val\"}'
+
+
+--------- deploy -------
+
+cmd : sls deploy
+
+---------- change in deployment ----
+
+cmd :
+1) sls remove
+2) add or remove data from yaml file and redeploy
+- sls deploy --stage prod (overriding stage var)
+
+--------- creating APIs -------------
+
+
+----------- VPC setting ------------
+
+vpc: 
+  securityGroupId:
+     -
+  subnetIds: 
+     -
+redeploy 
+
+------------- serverless plugins -----------
+
+to check APIs i.e. run API Gateway locally
+- this will run service locally
+
+1. npm init 
+2. npm i --save-dev serverless-offline
+3. in serverless.yml 
+  add: 
+   
+   plugins:
+     - serverless-offline
+4. cmd : sls offline
+
+--------- Accesing Logging CLoudWatch -----
+
+cmd : sls logs -f functionName -s prod --startTime 5m
+
+> to see logs continiously in cmd 
+cmd : sls logs -f functionName -s prod --tail
+
+------ body mapping ---------
+--> modifing request in API Gateway
+- define request bodymapping template in serverless.yml file
+ - 
+    addBm:
+        handler: filename.functionName
+        events:   
+            -http :
+                path: math/add-addBm
+                method: post
+                integration: lambda
+                request: 
+                  template:
+                    application/json: >
+                      #set($inputRoot = $input.path('$'))
+                      {
+                        "num1": $inputRoot.input.operand1,
+                        "num2": $inputRoot.input.operand2
+                      }
+                response:
+                  headers: 
+                    Access-Control-Allow-Origin: "'*'"
+                    Content-Type:"'application/json'"
+                  template: >
+                     #set($inputRoot = $input.path('$'))
+                      {
+                        "result": $inputRoot
+                      }
+         

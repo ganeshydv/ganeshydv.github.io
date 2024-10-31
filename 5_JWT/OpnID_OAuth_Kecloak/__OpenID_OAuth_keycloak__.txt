@@ -1,0 +1,106 @@
+OAuth2.0: why use?
+   used to login in different applications using single account
+   Ex. logging in Instagram,Youtube,Twitter,Github using Google account
+       user don't need to create different accounts so there is minmum
+       security risk to provide details about self
+------------------------------------------------------
+
+Main Part :
+
+1) Authentication (AuthN) - OpenID Connect (OIDC)
+2) authorization  (AuthZ) - OAuth2.0
+
+--------------------------------------------------
+1] OpenID Connect (OIDC) : for Authentication - gives [ IdTOken ]
+            - Provides: TOKEN after authentication : it always have something in payload 
+                        to identify user.
+            - it will be used when you have to login in differet sites using only one account
+            - Ex. Sign in with Google or let say Instagram wants to save data in google drive 
+                 so before it was like if there is token google will give directly acceess to
+                 users data without finding if user is valid or not but now OpenID inforces to 
+                 recognize the user 
+             
+2] OAuth 2.0 : for authorization -gives [ Refresh Token ]
+             - Provides authorization on behalf of user
+             - when a user logs in a 3rd party app uisng let say google it ask for access of user data so 
+               to give specific data or specific permission to access user data we use OAuth2.0 
+             - Ex. you have made vdo on tiktok and you want share it on Instagram so using OAuth2.0 
+               you provide permissions to give access to tiktok to upload vdo on Instagram
+            - uses JWT Token -0) authorization code 1) access token 2) Refresh token
+
+3] keycloak : OIDC + OAuth2.0 => it is a service which has its own SERVER
+            - used for authentication and authorization
+---------------------------------------------- 
+
+OAuth 2.0 is primarily used for authorization, granting access to resources.
+If you need both authentication and authorization, 
+consider using OpenID Connect (OIDC) in combination with OAuth 2.0.
+OIDC extends OAuth 2.0 to provide user authentication and additional user information through ID tokens.
+For authentication without authorization, 
+you can use other protocols like SAML or
+implement custom authentication mechanisms separate from OAuth 2.0.
+
+--------------------------------------------------------
+do keycloak uses both openID and Oauth2.0
+
+Yes, Keycloak supports both OpenID Connect (OIDC) and OAuth 2.0. In fact,
+ Keycloak is built upon these protocols and provides comprehensive support for 
+ both authentication and authorization use cases.
+
+OpenID Connect (OIDC): client App: ex. Instagram
+   
+    client   ------------>    AuthServer ex. google
+      app   <-- IdToken ----  [ OpenID Connect - uses grants] 
+           [ unique user data]
+----------------------------------------------------
+- client App will store userInfo of IdToken and will send request 
+   to resource server/client server (both are different) to get 
+   acceess or Refresh token or both
+
+
+    client   ---  IdTOken   --->  client server
+     app     <-- acceess +  ---   [ OAuth2.0 ] (this may store )
+                Refresh token
+
+Keycloak acts as an OIDC provider, which means it can handle authentication and
+provide identity information about the user in the form of ID tokens.
+When a client application wants to authenticate a user, 
+it redirects the user to Keycloak's authentication endpoint.
+Keycloak authenticates the user and issues an ID token, 
+which contains user information and authentication claims. 
+The ID token is a JSON Web Token (JWT).
+The client application can then validate the ID token to verify the user's identity.
+
+OAuth 2.0:
+
+Keycloak supports OAuth 2.0 for authorization purposes, 
+enabling client applications to access protected resources on behalf of a user.
+When a client application needs access to certain resources, 
+it obtains an access token from Keycloak's token endpoint after the user grants permission.
+The access token is then sent along with each request to the resource server, 
+allowing the server to validate the token and grant access based on the user's permissions.
+Keycloak offers a wide range of features related to authentication, user management, 
+and access control, making it a powerful tool for building secure applications. 
+By combining OIDC and OAuth 2.0 support, Keycloak can handle both user authentication and 
+client authorization efficiently, simplifying the development of identity and access management solutions.
+
+
+
+//-------------------------------------------
+
+so do keycloak have its own server  == YES
+
+Yes, Keycloak has its own server. It is a standalone identity and access management (IAM) solution that runs independently on its own server or container. Keycloak is designed to be deployed as a centralized service that handles authentication, authorization, user management, and other IAM-related functionalities.
+
+When you install and set up Keycloak, it provides its own server instance that can be accessed through its administration console and API endpoints. This server is responsible for handling user authentication, issuing access tokens and identity tokens, managing user sessions, and enforcing access control rules.
+
+Keycloak's server is built on top of the WildFly application server, which is a Java-based application server. It incorporates various extensions and modules to implement support for OpenID Connect (OIDC), OAuth 2.0, SAML, user federation, and other IAM-related features.
+
+By using Keycloak as a dedicated IAM server, you can centralize identity and access management across multiple applications and services. This approach simplifies the implementation of secure authentication and authorization mechanisms and allows for a consistent user experience across different applications.
+
+Keycloak can be deployed in various ways, such as:
+
+Standalone server: You can download the Keycloak distribution and run it as a standalone Java application.
+Docker container: Keycloak provides Docker images for easy containerization and deployment.
+Kubernetes: Keycloak can be deployed on Kubernetes clusters for container orchestration.
+Regardless of the deployment method, Keycloak operates as its own server instance, managing all aspects of user authentication and authorization for the applications that integrate with it.

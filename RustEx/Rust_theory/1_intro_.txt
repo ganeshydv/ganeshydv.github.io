@@ -1,0 +1,27 @@
+Rust :
+
+-close to mid level but higher level pl
+- converts code into executable
+- provides security
+- platform dependent not like JAVA which is platform dependent
+[Java applications are compiled into bytecode, 
+which is then executed by the JVM. The JVM provides
+ a layer of abstraction that allows Java programs 
+ to run on any platform that has a compatible JVM
+  implementation ]
+
+======================================
+
+main.rs --> main() : entry point for rust
+======================================
+CMD Rools:
+
+1] Cargo : initialize repo, track files
+- 1. initialize: cargo new project_name
+   - - file:  .toml: toms obvious minimal language
+     
+- 2. build : cargo build (run where .toml file )
+- 3. run : cargo run ( build + run )
+- 4. check project error - to check code is compailable or not
+       : cargo check 
+- 5. format code: rustfmt file_name.rs 

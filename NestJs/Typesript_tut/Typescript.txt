@@ -1,0 +1,11 @@
+typecript why?
+
+1) strong type checking using { type }
+2) can have compulsion on passing parameter type
+3) inheritance
+4) abstraction 
+5) polymorphism
+6) upacasting is possible
+
+
+

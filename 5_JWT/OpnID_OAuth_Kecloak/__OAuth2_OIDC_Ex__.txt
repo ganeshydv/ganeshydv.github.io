@@ -1,0 +1,94 @@
+
+---------------------------------------------------------------------
+          SERVER to SERVER 
+---------------------------------------------------------------------
+
+
+in general take example of pubg sign in using Facebook
+
+1) pubg ---> 2) Facebook log in -->
+
+3) Facebook AuthServer (  Authentication IdToken+ refreshToken + acceess Token )
+  ---> 4) Pubg --access token + refreshToken ( Pubg gets users unique id from Facebook it 
+                will use it to store user data in pubg dbs)
+   --> 5 ) Facebook Resource Server
+
+---------------------------------------------------------------------
+          SERVER to SERVER ( Authorization COde Flow : OAuth2.0 )
+---------------------------------------------------------------------
+Scenerio: let say user wants to login in APP1 using APP2 :
+         it means user of APP1 integrates with APP2 data first
+          ADMIN of APP1 needs to registers with APP2
+APP1: client
+APP2: AuthServer ( only authorization) + Resource Server
+
+1) Regiser APP1 on APP2:
+    > APP1 (client)---> APP2
+        if APP1 wants to use APP2 for authenti cation and Authorization
+        APP1 has to regiser on APP2 with :
+        { 
+            application name:APP1 ,
+           CALLBACKURL/ redirecteduri  : for sending refreshToken and acceess token
+        }
+    > APP2 creates {
+         CLIENTID : AB12 , 
+         CLIENTSECRET : xyz
+       } --> APP1
+        APP1 uses this CLIENTID and CLIENTSECRET to communicate with APP2
+
+2) User can integrate 2 APPS 
+    browser (user) --> APP1 (client)
+   {   CLIENTID: ,
+       REDIRECT_URI: ,
+       Response_Type: ,
+       Scope: 
+   } 
+   ---> APP2 (if user is not logged it has to login first) 
+   ---> in APP2 user gives permission 
+   ---> APP2 { [Authorization code] generated in APP2 and } sent to
+   ---> browser ---> 
+   ---> APP1 sends [CLIENTID + CLIENTSECRET + 
+        Authorization Code + grant_type (based on scope)] 
+        now APP1 want to get acceess token and refreshToken token from APP2
+   ---> APP2 sends [ ACCESS_TOKEN + REFRESH_TOKEN ] to ---> APP1
+   ---> APP1 uses this to get 
+
+
+------------------------------------------------------------------------
+        Instagram login using GOOGLE ( OAuth2.0 )
+------------------------------------------------------------------------
+Client APP has to register on Authserver provider ex. Instagram has to register on google
+for sign in usoing google option 
+
+   1] google gives CLIENTID and CLIENTSECRET to Instagram (here client)
+   
+   2] Instagram   -----[ CLIENTID ] ------->  AuthServer ex. (if CLIENTID is found)
+    ---> google asks user to grant access to Instagram if yes --> 
+    google gives ---- [Authorization code unique for user]   ------>    to Instagram 
+    Instagram --[CLIENTID + CLIENTSECRET + Authorization Code] --> google 
+    google gives --[ access Token + Refresh Token ] --> Instagram 
+    --> Instagram --[acceess token]-->users google resource
+
+
+------------------------------------------------------------------------
+         OpenID Connect for Authentication 
+------------------------------------------------------------------------
+
+-OpenID connect build on OAuth2.0
+
+-APP1: Client (Relying Party ) or RP
+-APP2: AuthServer ( Authentication + Authorization) + Resource Server
+
+- APP1 or Client must be already configured with APP2 here OpenID/OAuth2 provider 
+  (Authentication + authorization for resource)
+
+USer Login --> APP1 -->redirected to {
+    CLIENTID:,
+    REDIRECT_URI:
+    Response_Type:
+    Scope : OpenID Profile
+} -->in APP2  user authenticated and send [Authorization code]---> APP1
+ --> APP1 sends [Authorization Code] --> to APP2 --> 
+ --> APP2 gives [ ACCESS_TOKEN + REFRESH_TOKEN + ID_token ] 
+ which has user details with some unique id about user
+ --> 
