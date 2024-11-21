@@ -12,7 +12,7 @@
 4. Rename branch 
    - `git branch -m old_branch_name new_branch_name`
 
-5. Uncommit last commit
+5. Uncommit last commit       
    - `git reset commit_hash`
      
 6. Branch: Create + Checkout

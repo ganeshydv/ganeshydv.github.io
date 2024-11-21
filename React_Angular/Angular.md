@@ -85,37 +85,37 @@ class AppComponent {}
 - create eventEmitter and emitMerhod in child
 - uses prperty binding syntax
 
-### Two Way binding : [()] : Propery + Event Binding
+### Two Way binding : [()] : Property + Event Binding
 
 - For two-way data binding to work, the @Output() property must use the pattern,
   inputChange, where input is the name of the @Input() property. For example,
   if the @Input() property is size, the @Output() property must be sizeChange.
-  WX:
-```typescript
-export class SizerComponent {
-@Input() size!: number | string;
-@Output() sizeChange = new EventEmitter<number>();
-dec() {
-this.resize(-1);
-}
-inc() {
-this.resize(+1);
-}
-resize(delta: number) {
-this.size = Math.min(40, Math.max(8, +this.size + delta));
-this.sizeChange.emit(this.size);
-}
-}
-
-<div>
-  <button type="button" (click)="dec()" title="smaller">-</button>
-  <button type="button" (click)="inc()" title="bigger">+</button>
-  <span [style.font-size.px]="size">FontSize: {{size}}px</span>
-</div>
--- APP --
-<app-sizer [(size)]="fontSizePx"></app-sizer>
-<div [style.font-size.px]="fontSizePx">Resizable Text</div>
-```
+- EX:
+    ```typescript
+    export class SizerComponent {
+    @Input() size!: number | string;
+    @Output() sizeChange = new EventEmitter<number>();
+    dec() {
+    this.resize(-1);
+    }
+    inc() {
+    this.resize(+1);
+    }
+    resize(delta: number) {
+    this.size = Math.min(40, Math.max(8, +this.size + delta));
+    this.sizeChange.emit(this.size);
+    }
+    }
+    
+    <div>
+      <button type="button" (click)="dec()" title="smaller">-</button>
+      <button type="button" (click)="inc()" title="bigger">+</button>
+      <span [style.font-size.px]="size">FontSize: {{size}}px</span>
+    </div>
+    -- APP --
+    <app-sizer [(size)]="fontSizePx"></app-sizer>
+    <div [style.font-size.px]="fontSizePx">Resizable Text</div>
+    ```
 ------
 
 ### @defer : to lazy load component
@@ -142,7 +142,6 @@ class AppComponent{
 }
 ```
 
-==================================================
 
 ### Routing : Routes + providRouter + RouterOutlet
 
@@ -195,7 +194,6 @@ class AppComponent{
      ```
 
 - 5. Add a routerLink to template
-     Add a routerLink to template
 
 -------
 
@@ -271,7 +269,8 @@ export class AppComponent {
         MAtIconModule,
         MatButtonModule,
         MatPaginationModule
-    ]
+    ],
+    providers:[service1,service2]
 })
 class ListModule{
 
