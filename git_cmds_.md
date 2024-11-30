@@ -123,6 +123,58 @@ pick 1234567 First commit message
 
 # Remove all files :
    - `git rm -rf .`
+
+# Configure Remote Repo :
+  - Set Remote URL :
+    ```
+    git remote add origin https://github.com/username/repo.git
+    ```
+   - Change Remote URL:
+
+     ```
+     git remote set-url origin https://new-url.git
+     ```
+   - Enable/Disable Colored Output:
+     ```
+     git config color.ui auto
+     ```
+   - Set Merge Tool:
+      ```
+      git config merge.tool vimdiff
+      ```
+   - Set User Name:
+      ```
+      git config user.name "Your Name"
+      ```
+   - Set User Email:
+     ```
+     git config user.email "your.email@example.com"
+     ```
+   - Set Default Branch Name (e.g., main)
+     ```
+     git config init.defaultBranch main
+     ```
+   - Enable Rebase for Pulls:
+     ```
+     git config pull.rebase true
+     ```
+   - View Config
+      ```
+      git config --list
+      ```
+   - Repository-specific config file (in .git/config):
+     ```
+     nano .git/config
+     ```
+   - Global config file (in ~/.gitconfig)
+      ```
+      nano ~/.gitconfig
+      ```
+
+# save Configuration for Automation
+If you want to share configurations (like hooks or templates), use .git/config directly in the repository, or consider adding automation scripts for CI/CD.
+
+#
 ## Total : 145
 - PORCELAIN : 82
 - main: 44

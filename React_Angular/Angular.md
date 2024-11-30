@@ -29,7 +29,7 @@
 
 - To Start app by loading Config and index Component : <router-outlet></router-outlet>- in built
 
-#### ============================
+##
 
 ## Structure:
 
@@ -37,16 +37,31 @@
 2. Routes[+Components] + Module --> RoutingModule --> MainRoute --> Config --> bootstarp
    gi
 
-## ------------------------------------------
+## 
 
-### Property Binding
+## Property Binding
 
 - to set valued dynamically
 - <img alt="photo" [src]="imageURL">
 - [] : property binding syntax
 - in this can set value of src to property of imageURL from component class
-
-### Event Handling
+- ## Static Binding :
+ ```ts
+@Component({
+template: `<app-user occupation="Angular Developer"><app-user/>`
+})
+class AppComponent {}
+  ```
+    -- occupation set to value which is static 
+    - Occupation is varibale of component which is going to child 
+  - ## Dynamic Binding 
+```ts
+@Component({
+template: `<app-user [occupation]="Angular Developer"><app-user/>`
+})
+class AppComponent {}
+```
+## Event Handling
 
 - () : event binding syntax
 ```typescript
@@ -183,15 +198,15 @@ class AppComponent{
       export class AppComponent {}
 ```
 - 4. Import RouterLink directive
-     ...
-     ```typescript
-     import { RouterLink, RouterOutlet } from '@angular/router';
-     @Component({
-     standalone: true,
-     imports: [RouterLink, RouterOutlet],
-     ...
-     })
-     ```
+     
+ ```typescript
+ import { RouterLink, RouterOutlet } from '@angular/router';
+ @Component({
+ standalone: true,
+ imports: [RouterLink, RouterOutlet],
+ ...
+ })
+ ```
 
 - 5. Add a routerLink to template
 
@@ -312,7 +327,7 @@ class ListRouterModule{
 
 }
 ```
-## ---------------------------------------------
+## 
 
 ### Mat Table:
 ```typescript
@@ -329,7 +344,7 @@ ID
 </ng-container>
 </mat-table>
 ```
-## ---------------------------------------------
+## 
 
 - Pagination
 - forms for submissions
