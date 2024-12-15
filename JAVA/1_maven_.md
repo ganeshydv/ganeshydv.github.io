@@ -1,0 +1,45 @@
+## Maven : 
+- `Maven is a powerful build automation and project management tool for Java`
+- Manage - depencency, Project Structure, Creating Executable File, Plugins, Build Lifecycle
+- **`Build--> compile --> test --> package --> install `**
+- Nothing but collection of different architecure which can be used to kick start project ex. a spring boot project or web app or react preject. 
+#
+### 1. Catalog 
+   -  essentially a collection of Maven archetypes
+### 2. Archetype
+   - A Maven archetype is a project template that defines the structure and configuration for a specific type of project
+   - Examples of Archetypes:
+       ```
+       maven-archetype-quickstart: A basic Java project setup.
+       maven-archetype-webapp: A template for Java web applications.
+       ```
+#
+### Customizing Archetype Configuration:
+
+    - After selecting an archetype, you’ll need to provide information such as:
+    - Group ID: The base package for your project (e.g., com.example).
+    - Artifact ID: The name of your project.
+    - Version: The project version (e.g., 1.0-SNAPSHOT).
+    - Ex: 
+      ```
+        <groupId>com.mycompany</groupId>
+        <artifactId>user-service</artifactId>
+        <version>1.0.0</version>
+      ```
+#
+### **Artifact**: Executable file
+- An artifact in Maven represents the output of your project or module after it is built (e.g., a JAR, WAR, or other package types).
+- Each Maven project or module is associated with one artifact, which is uniquely identified by the Group ID, Artifact ID, and Version.
+- **Artifact ID** = Name of the Module/Project:
+    - `When you build your Maven project, Maven generates an artifact file - ex. JAR`.
+    - For example:
+        - A Java library project outputs a .jar file (e.g., my-library-1.0.0.jar).
+        - A web application project outputs a .war file (e.g., my-webapp-1.0.0.war).
+    - Artifacts (e.g., JAR files) can be added as dependencies to other Maven projects. For example:
+    ``` <dependency>
+    <groupId>com.mycompany</groupId>
+    <artifactId>user-service</artifactId>
+    <version>1.0.0</version>
+    </dependency>
+    ```
+   - This allows you to reuse the executable code from one project/module in another project/module

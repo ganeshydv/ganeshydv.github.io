@@ -19,7 +19,7 @@ async function start() {
     console.log('Rools Engine started');
 
     // create a new instance of Rools
-    const userRepo = await userDbConnection.getRepository("User");
+    const userRepo = userDbConnection.getRepository("User");
     const rools = new Rools();
 
     // create new CustomRule
