@@ -15,17 +15,13 @@
        ```
 #
 ### Customizing Archetype Configuration:
-
-    - After selecting an archetype, you’ll need to provide information such as:
-    - Group ID: The base package for your project (e.g., com.example).
-    - Artifact ID: The name of your project.
-    - Version: The project version (e.g., 1.0-SNAPSHOT).
-    - Ex: 
-      ```
-        <groupId>com.mycompany</groupId>
-        <artifactId>user-service</artifactId>
-        <version>1.0.0</version>
-      ```
+- After selecting an archetype, you’ll need to provide information suchas:- Group ID: The base package for your project (e.g., com.example).- Artifact ID: The name of your project.- Version: The project version (e.g., 1.0-SNAPSHOT).
+- Ex: 
+```xml
+  <groupId>com.mycompany</groupId>
+  <artifactId>user-service</artifactId>
+  <version>1.0.0</version>
+```
 #
 ### **Artifact**: Executable file
 - An artifact in Maven represents the output of your project or module after it is built (e.g., a JAR, WAR, or other package types).
@@ -36,7 +32,8 @@
         - A Java library project outputs a .jar file (e.g., my-library-1.0.0.jar).
         - A web application project outputs a .war file (e.g., my-webapp-1.0.0.war).
     - Artifacts (e.g., JAR files) can be added as dependencies to other Maven projects. For example:
-    ``` <dependency>
+    ```xml 
+    <dependency>
     <groupId>com.mycompany</groupId>
     <artifactId>user-service</artifactId>
     <version>1.0.0</version>
