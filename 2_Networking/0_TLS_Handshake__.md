@@ -1,4 +1,4 @@
-## can you explain and TLS and what are the significance it has
+## Can you explain and TLS and what are the significance it has
 
 - TLS stands for Transport Layer Security,
 and it is a cryptographic protocol used to secure communication over a computer network,

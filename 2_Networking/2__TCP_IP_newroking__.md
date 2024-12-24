@@ -6,7 +6,7 @@
 4. **Data Link Layer (Layer 2)**: The header contains source and destination MAC addresses. The PDU is referred to as a frame. Frames are forwarded on layer 2 devices, such as switches.
 5. **Physical Layer (Layer 1)**: The data is transmitted as bits (0s and 1s).
 
-### ====================================
+#
 7] Application Layer :  message : [DATA] 
    - message is called as DATA
 4] Transport Layer : [TCP_PORT+DATA]   : TCP segment/UDP Datagram

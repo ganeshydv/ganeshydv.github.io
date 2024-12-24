@@ -17,11 +17,11 @@
 ### Customizing Archetype Configuration:
 - After selecting an archetype, you’ll need to provide information suchas:- Group ID: The base package for your project (e.g., com.example).- Artifact ID: The name of your project.- Version: The project version (e.g., 1.0-SNAPSHOT).
 - Ex: 
-```xml
+  ```xml
   <groupId>com.mycompany</groupId>
   <artifactId>user-service</artifactId>
   <version>1.0.0</version>
-```
+  ```
 #
 ### **Artifact**: Executable file
 - An artifact in Maven represents the output of your project or module after it is built (e.g., a JAR, WAR, or other package types).

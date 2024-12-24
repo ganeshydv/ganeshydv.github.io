@@ -44,7 +44,34 @@ control the behavior of the method during testing without executing the actual i
 ## How can mock Axios request
 
 ## How can mock DB
+```ts
+const module = await Test.createTestingModule({
+  providers:[
+    {
+      provide:getRepositoryToken(TableName,'db_name'),
+      useValue:{
+        findOne:()=>{return 1},
+      }
+    }
+  ]
+}).compile();
+```
 
 ## How SpyOn is implemented
 
-## How can private Properties/Methods of Objects 
+## How can mock private Properties/Methods of Objects 
+
+
+```ts
+const module = await Test.createTestingModule({
+  providers:[
+    {
+      provide:ExampleService,
+      useValue: MockClass
+    }
+  ]
+}).compile()
+//when reading
+const service = module.get<ExampleService>(ExampleService);
+service['id']=1;
+```
