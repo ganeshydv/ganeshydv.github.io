@@ -12,6 +12,8 @@ Q1. can we directly pass query to hibernate and can not use JPA as hibernate is 
 - `Query`: Used to execute SQL or HQL (Hibernate Query Language) to interact with the database.
 
 ## How to configure Hibernate ?
+- Mapping of POJO clasess/Entity Bean Class Using Annotation
+- JDK >= 5 && Hibernate >=3 
 ### 1. Dependency :
 - For Hibernate 6 :
 ```xml
@@ -32,6 +34,10 @@ Q1. can we directly pass query to hibernate and can not use JPA as hibernate is 
 ```
 ### 2. Config file  : `hibernate.cfg.xml`
 ```xml
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+   "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+   "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd"> 
 <hibernate-configuration>
     <session-factory>
         <!-- Database Configuration -->
@@ -51,7 +57,7 @@ Q1. can we directly pass query to hibernate and can not use JPA as hibernate is 
     </session-factory>
 </hibernate-configuration>
 ```
-### 3. Register Entities :
+### 3. Create and Register Entities :
 - 4 ways :
     ### 1. Entity Class Definition:
     - You define an entity as a plain Java class (POJO) annotated with Hibernate-specific annotations (org.hibernate.annotations) or by using an XML configuration file (if you prefer).
@@ -95,6 +101,10 @@ Q1. can we directly pass query to hibernate and can not use JPA as hibernate is 
     ### 2. Hibernate Configuration File (hibernate.cfg.xml): 
     - Register the entity explicitly in the Hibernate configuration file.
     ```xml
+     <?xml version='1.0' encoding='UTF-8'?>  
+     <!DOCTYPE hibernate-configuration PUBLIC  
+   "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+   "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd"> 
      <hibernate-configuration>
          <session-factory>
              <!-- Database connection settings -->
