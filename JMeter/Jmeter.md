@@ -22,7 +22,7 @@
 7. tools : 1. heap dump 2. thread dump 3. function helper 4. html report
 
 # Steps :
-## 1. Create TestPlan
+## 1. Create TestPlan : consider it as project
 ## 2. Thread Group 
 1. Actions : what to do after sampler i.e. test faces error
 2. Thread Properties : 

@@ -29,7 +29,7 @@ https://www.youtube.com/watch?v=l3htAzOAx7c
    - Custom Exception
    - Docker
    - Validations
-   - Swagger
+   - Swagger 
    - unit test cases
    - code coverage
    - api test cases
@@ -68,3 +68,52 @@ https://www.youtube.com/watch?v=l3htAzOAx7c
     - 0/1 Knapsack - DP: choose/skip item
     - Topological sort : graph
 
+
+
+# Node:
+1. JS : 
+   1. questions from pdf
+   2. map/filter/reduce
+   3. array:IMP methods
+   4. string : IMP methods
+   5. 
+2. Node :
+   0. Node structure : event loop- how code gets executed
+   1. api design
+   2. middlewares
+   3. promise to async/await
+   4. loggers
+   5. create custom event listners
+   6. different ways to create objects
+      - 1. object literal 2. function object 3. class object
+   7. Inheritance - protoype and how it is used in inheritacne
+      - do examples
+   8. Streams in Node - VIMP  (do in last)
+      - what/how/where can use
+   9. Sequilize/ Tyeorm: for db tasks
+   10. axios
+3. Testing:
+   1. Unit testing - 
+      - Frameworks : 
+        1. chai+mocha+sinon
+        2. jest - all in one
+   2. Integration testing
+      1. Supertest
+4. DB :
+   1. SQL - 
+      1. create/read/update/delete using raw sql query
+      2. relations:
+         1. one-to-many
+         2. many-to-one
+         3. many-to-many
+         4. one-to-one
+         - write SQL raw query
+      3. TypeORM and Sequlize : to perform same operations as above 
+      4. Try to understand how sql query gets exeuted - flow of execution
+
+5. Auth & OAuth2 -JWT/session/cookie 
+6. others
+- NestJs framework
+- Swagger
+- AWS - RDS, Dynamodb, S3,SNS,SES, IAM, Lambda,EC2,ECS 
+   - what/why/how/configs/access
