@@ -16,7 +16,7 @@
 16) CLASS -> static methods , method overriding , inheritance, private properties, super()
 17) Events and adding events, listner to custom Event
 18) Pure Function vs Impure FUnction 
-19) Factory FUnction
+19) Factory FUnction : to create objects
 20) Closures and memory management
 21) Event Loop 
 22) async- await 
@@ -28,10 +28,3 @@
     Object.assign() used for shallow copy - means creating a new object having properties of one or more objects but for objects it will 
     pass only referance means will not crate a new copy
 
-------------------------------------------------------------------------------------------
-0) let vs var vs const
-1) Object Literals
-2) Function constructor
-3) prototype inheritance
-
-3) class

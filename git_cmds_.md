@@ -129,6 +129,10 @@ pick 1234567 First commit message
     ```
     git remote add origin https://github.com/username/repo.git
     ```
+   - Check Repo :
+     ```
+       git remote -v
+     ```
    - Change Remote URL:
 
      ```
@@ -161,6 +165,7 @@ pick 1234567 First commit message
    - View Config
       ```
       git config --list
+      git config -l
       ```
    - Repository-specific config file (in .git/config):
      ```
@@ -170,7 +175,6 @@ pick 1234567 First commit message
       ```
       nano ~/.gitconfig
       ```
-
 # save Configuration for Automation
 If you want to share configurations (like hooks or templates), use .git/config directly in the repository, or consider adding automation scripts for CI/CD.
 
