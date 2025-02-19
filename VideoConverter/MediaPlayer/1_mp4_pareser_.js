@@ -12,6 +12,8 @@ function processBuffer(buffer) {
   let offset = 0;
 
   // Process as many complete atoms as possible.
+//   The loop ensures there are at least 8 bytes (size + type) available.
+// why 8 bytes? 4 bytes for size and 4 bytes for type of atom to ensure that the complete atom is within the buffer.
   while (offset + 8 <= buffer.length) {
     // Read the atom size (first 4 bytes) and type (next 4 bytes)
     const atomSize = readUInt32BE(buffer, offset);
@@ -71,4 +73,12 @@ function parseMP4Stream(filename) {
 
 // Run parser on a sample MP4 file
 parseMP4Stream("C:/Users/GGurkhude/Pictures/Mentor_app_weekly_meeting_28032023.mp4");
+/* OP:
+Start Time:  4:26:52 pm
+Found atom: ftyp, Size: 24
+Found atom: moov, Size: 521976
+Found atom: mdat, Size: 227846165
+Finished parsing file.
+End Time:  4:28:51 pm
+*/
 
