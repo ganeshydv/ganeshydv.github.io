@@ -56,26 +56,25 @@ V8 also handles memory management through garbage collection. It automatically m
 # Libuv and V8
 
 ```text
-+--------------------------+
-|  Main Thread             |
-|                          |
-|  +--------------------+  |
-|  |    V8 Engine       |  |  (JavaScript Execution)
-|  |  - Executes code   |  |
-|  |  - Manages event   |  |
-|  |    loop and        |  |
-|  |    microtasks      |  |
-|  +--------------------+  |
-|                          |
-|  +--------------------+  |
-|  |    libuv           |  |  (Asynchronous Task Management)
-|  |  - Manages I/O     |  |
-|  |  - Schedules       |  |
-|  |    macrotasks      |  |
-|  |  - Uses thread pool|  |
-|  +--------------------+  |
-|                          |
-+--------------------------+
++-----------------------------+
+|  **Main Thread**            |
+|                             |
+|  +----------------------+   |
+|  |  **V8 Engine**       |   |  _(JavaScript Execution)_
+|  |  - Executes JS code  |   |
+|  |  - Manages microtasks|   |  
+|  +----------------------+   |
+|                             |
+|  +------------------------+ |
+|  |  **libuv**             | |  _(Asynchronous Task Management)_
+|  |  - Manages Event Loop  | |
+|  |  - Handles I/O ops     | |
+|  |  - Schedules macrotasks| |
+|  |  - Uses thread pool    | |
+|  +------------------------+ |
+|                             |
++-----------------------------+
+
 ```
 
 
