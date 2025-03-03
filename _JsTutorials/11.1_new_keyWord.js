@@ -1,6 +1,6 @@
 
 function Person(){
-    this.name="tony";
+    this.name="Person";
 
     return this
 }
@@ -8,7 +8,7 @@ function Person(){
 class Teacher{
     #name;  //private variable ES2022
     constructor(){
-       this.#name="stark"
+       this.#name="Teacher"
     }
     get getName(){
         return this.#name;
@@ -23,9 +23,8 @@ let p=new Person();
 console.log(p.name);
 
 function Person2(){
-    this.name="tony";
-
-    return {}
+    let name="person2";
+    // return {}
 }
 
 let p2=new Person2();

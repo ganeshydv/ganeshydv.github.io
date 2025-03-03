@@ -114,7 +114,7 @@ describe('SomeComponent',()=>{
         fixture = TestBed.createComponent(SomeComponent);
         someComponent = fixture.componentInstance;
         debugElement=fixture.debugElement;
-        fixture.detectChanges();
+        fixture.detectChanges(); // ✅ Triggers `ngOnInit()`
     })
 
     afterEach(()=>{
@@ -140,3 +140,22 @@ describe('SomeComponent',()=>{
     })
 })
 ```
+### when you create a testing module using TestBed.configureTestingModule(), the behavior depends on whether you call compileComponents() and when you create the component fixture.
+
+- ### ✅ Default Behavior (Without compileComponents())
+   - If you simply configure the test module and create a component, Angular will: 
+      - Instantiate the component → Calls the constructor.
+      - Run ngOnInit() (if fixture.detectChanges() is called).
+    ```ts
+    beforeEach(() => {
+      TestBed.configureTestingModule({
+        declarations: [MyComponent],
+      }).compileComponents(); // Optional
+    
+      fixture = TestBed.createComponent(MyComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges(); // ✅ Triggers `ngOnInit()`
+    });
+    ```
+     - The constructor runs immediately when TestBed.createComponent() is called.
+     - The ngOnInit() lifecycle hook runs when fixture.detectChanges() is called.
