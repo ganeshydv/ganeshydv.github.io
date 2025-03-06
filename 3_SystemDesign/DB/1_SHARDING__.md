@@ -18,7 +18,7 @@
        - but how to decide which db stores user data - hash functions or simple another layer which helps in deciding db
      - PROS: 
        1. scale- horizontally
-       2. availability : if one d b down but another db is on means some usr can still use it
+       2. availability : if one db down but another db is on means some usr can still use it
           fault tolerence-
      - CONS:
        1. Costly 
