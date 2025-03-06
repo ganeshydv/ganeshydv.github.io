@@ -13,7 +13,7 @@ ECS : https://www.youtube.com/watch?v=ARGmrYFfv44
 - One Task Defination for one Task
 - can run only one container
 - The service handles tasks' deployment, scaling, and recovery
->VIMP:  task are responsible for running containers [ Image, Container Id]
+> VIMP:  task are responsible for running containers [ Image, Container Id]
  
 - Task 1 :
 - Task 2 :  -> Service ( Creates multiple Task based on Task Defination )

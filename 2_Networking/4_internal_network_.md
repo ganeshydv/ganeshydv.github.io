@@ -7,7 +7,7 @@ Always remember: For a frame, both IP (for packet) and MAC are always necessary.
 
 1. A device, when it needs to communicate with another, first searches in its ARP (Address Resolution Protocol) table for the MAC address associated with the IP of the target device.
 2. If the MAC address is not found, the device broadcasts a request to all devices in the local network asking for the MAC address associated with the target IP.
-3. Once the MAC address is received, it is updated in the ARP table.
+3. Once the MAC address is received, it is updated in the ARP (IP:MAC)table.
 4. The device then creates a packet (at Network layer-3) and a frame (at Link layer-2) using the MAC address.
 5. The frame is sent to the target device.
 6. Upon receiving a response from the target device, the source IP is replaced with the destination IP to complete the response.
@@ -61,10 +61,10 @@ It's important to note that ARP is specific to local networks, and it operates a
 
     Device --> Searching in ARP for MAC and IP ( if no MAC )
     --> decide IP in local Network (using subnet mask along with IP)
-    --> if yes create packet ( Network layer-3 in device itself )
-    --> now find mac --> if not ask for mac by borad casting to
+    --> if yes create packet ( **Network layer-3 -IP basesd** in device itself )
+    --> now find mac --> if not ask for mac by broad casting to
     every device to get MAC based on IP -->  Update to ARP
-    --> create Frame using MAC ( link layer-2)
+    --> create Frame using MAC ( **link layer-2 : MAC based**)
     --> send frame to IP ( device )
     --> Response from end Device --> replace soure IP to 
        destination IP

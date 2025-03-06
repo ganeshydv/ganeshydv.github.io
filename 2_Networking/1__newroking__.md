@@ -29,8 +29,7 @@ So when a request is made, the following steps are taken:
 In summary, the process involves checking whether the destination is within the local network. If it is, ARP is used to find the MAC address for direct communication. If the destination is outside the local network, the packet is sent to the router, which encapsulates the packet and forwards it based on IP addresses across the Internet. At each hop, MAC addresses are updated within the Ethernet frame, while IP addresses remain constant for routing decisions.
 
 
-
-=======================================================
+#
 
 DEVICE (IP+MAC) ---> Router-MAC+IP [Device IP+Device MAC] --> 
 Router makes Source Mac: device MAC and Destination Mac: Routers MAC 

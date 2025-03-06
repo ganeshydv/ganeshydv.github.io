@@ -1,17 +1,23 @@
 
- 
+
 // every function in javascript is closure
 
 //lexical environment vs global environmnet 
 
 // lexical env: local scope of function
+// lexical scope : Inner function retains access to outer function's variables.
 
-function math(){
-    var a = 10;
-    return function(){
-        console.log(a);
-    }
+function createCounter() {
+    let count = 0; // Private variable
+
+    return function () {
+        count++;
+        console.log(`Count: ${count}`);
+    };
 }
 
-let a = math();
-a(); //10
+const counter = createCounter();
+counter(); // Count: 1
+counter(); // Count: 2
+counter(); // Count: 3
+

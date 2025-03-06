@@ -73,7 +73,7 @@ Current Requirement:
     : Stateless or Statefull microservice
     : microservice : 1) Gateway microservice
                      2) Learner microservice 
-                     3) chatBoat microservice
+                     3) chatBot microservice
                      4) Payment microservice
                      5) DocumentOp microservice
 --- VDO/audio from OS--> Server --> Compresss--> stream--> send --> receive--> decompress--> render
