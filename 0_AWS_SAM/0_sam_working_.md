@@ -43,11 +43,20 @@ sam local invoke MyLambdaFunction  # Runs the function locally
 sam local start-api  # Starts a local API Gateway to test endpoints
 ```
 ### Step 3: Deploy to AWS
-After testing, deploy it to AWS:
+After testing, deploy it to AWS: this will deploy code only
 ```sh
 sam deploy --guided
 ```
+- after uplaod to s3 
+   - SAM Package: replaces templates code uri with s3 bucket location
 
+> Step 3: SAM Deploy (sam deploy)
+- SAM sends the packaged CloudFormation template (packaged-template.yaml) to CloudFormation.
+- CloudFormation reads the template and starts provisioning the AWS resources.
+### 💡 Key point:
+- This is the step where SAM tells CloudFormation about the template.
+
+## Yes, AWS SAM has a default structure for calling CloudFormation based on your AWS credentials (Access Key, Secret Key, and Region). Here's how it works under the hood.
 # Docker & SAM in Local
 
 ### When Do You NEED Docker? 🐳
