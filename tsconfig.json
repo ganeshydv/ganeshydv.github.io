@@ -9,10 +9,10 @@
     "target": "ES2021",
     "esModuleInterop": true,
     "sourceMap": true,
-    "outDir": "./RoolsEngine/dist",
-    "baseUrl": "./RoolsEngine",
+    "outDir": "RoolsEngine_Rewards/dist",
+    "baseUrl": "RoolsEngine_Rewards",
     "paths": {
-      "src/*": ["RoolsEngine/*"]
+      "src/*": ["RoolsEngine_Rewards/*"]
     },
     "incremental": true,
     "skipLibCheck": true,
@@ -23,6 +23,6 @@
     "noFallthroughCasesInSwitch": false,
    "resolveJsonModule": true,
   },
-  "include": ["RoolsEngine/**/*"],
+  "include": ["RoolsEngine_Rewards/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts", "**/dist"]
 }

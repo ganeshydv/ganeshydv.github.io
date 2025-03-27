@@ -30,15 +30,7 @@ The process of network communication, whether within a Local Area Network (LAN) 
 
 In summary, the process involves checking whether the destination is within the local network. If it is, ARP is used to find the MAC address for direct communication. If the destination is outside the local network, the packet is sent to the router, which encapsulates the packet and forwards it based on IP addresses across the Internet. At each hop, MAC addresses are updated within the Ethernet frame, while IP addresses remain constant for routing decisions.
 
-==========================================================
-DEVICE (IP+MAC) ---> Router-MAC+IP [Device IP+Device MAC] --> 
-Router makes Source Mac: device MAC and Destination Mac: Routers MAC 
-
-so when request is made then first look for ip if ip in lan then find mac
- if not in lan then send to router i.e. gateway router has ip and mac of 
- sender then it stores that mac respective to ip then it forwards this request o 
- internet with same Ip but now mac is changed from devices mac to routers mac 
-ChatGPT
+```
 Yes, you've captured the process correctly. Let's break down the steps:
 
 Request within Local Network (LAN):
@@ -91,3 +83,4 @@ sent to the router, which encapsulates the packet and forwards
 it based on IP addresses across the Internet. At each hop, MAC 
 addresses are updated within the Ethernet frame, while IP 
 addresses remain constant for routing decisions.
+```
