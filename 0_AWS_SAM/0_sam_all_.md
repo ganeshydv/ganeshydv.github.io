@@ -65,7 +65,7 @@ Outputs:
 - Outputs:
   - ApiUrl: Provides the API Gateway URL after deployment.
 
-## How can create Resources
+# How can create Resources
 - Template:
 ```yml
 Resources:
