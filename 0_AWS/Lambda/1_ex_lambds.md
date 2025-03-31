@@ -103,6 +103,8 @@ exports.handler = async (event) => {
   }
 };
 ```
+# Template:
+```yml
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: SQS triggered Lambda example with SAM
@@ -140,3 +142,4 @@ Resources:
         - !Ref CommonDependenciesLayer
     Metadata:
       SamResourceId: ProcessAccounts
+```
