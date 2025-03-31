@@ -1,0 +1,81 @@
+## 🔹 MP4 Structure (ISO Base Media Format - ISO/IEC 14496-12)
+- An MP4 file is structured as a hierarchy of atoms (or boxes). Each atom has:
+
+  1. Size (4 bytes) → Indicates the size of the atom.
+  1. Type (4 bytes) → A four-character code (e.g., ftyp, moov, mdat).
+  1. Payload → Contains the actual data or references to data.
+- Atoms can contain other nested atoms, forming a hierarchical structure.
+
+## 📌 Key Atoms & Their Order
+1️⃣ File Type Atom (ftyp) → Always at the beginning
+
+- Identifies the MP4 file format.
+- Example: isom, mp42, avc1.
+- A player checks this first to verify compatibility.
+
+2️⃣ Movie Atom (moov) → Usually after ftyp but before mdat
+
+- Contains metadata like track duration, codecs, sample tables.
+- Essential for video playback before loading actual media data.
+- Contains track (trak), movie header (mvhd), and sample tables (stbl).
+
+3️⃣ Media Data Atom (mdat) → Contains actual video, audio, and subtitle data.
+
+- Can be large, spanning most of the file size.
+- Players reference mdat using sample tables from moov.
+4️⃣ Free Space Atom (free) (optional) → Padding or metadata updates.
+
+5️⃣ Metadata Atom (udta) (optional) → User metadata like subtitles, copyright info.
+# 
+## 🔍 How Does a Video Player Read MP4?
+### 1. Reads ftyp → Confirms MP4 format.
+### 2. Reads moov → Extracts:
+- Track info (trak) → Finds video, audio, subtitle tracks.
+- Sample tables (stbl) → Finds where actual data is in mdat.
+- Time scale (timescale) → Determines playback speed.
+### 3. Reads mdat → Fetches frames from video/audio/subtitle tracks.
+### 4. Decodes frames and renders them in sync.
+
+
+## 📌 Understanding Sample Tables (stbl)
+### Inside moov → trak → mdia → minf → stbl, we have:
+- Sample Description (stsd) → Codec info (e.g., avc1 for H.264 video).
+- Sample Size (stsz) → Size of each frame/sample.
+- Chunk Offset (stco or co64) → File positions of media chunks.
+- Time-to-Sample (stts) → Playback timing.
+### When a player needs the next frame, it:
+- Looks at stsz to know frame size.
+- Uses stco to locate mdat data.
+- Refers to stts to sync audio/video.
+
+## 📌 How MP4 Knows Where Video, Audio & Subtitle Are?
+#### 1. Multiple trak atoms in moov:
+
+  - One trak for video (hdlr → vide).
+  - One trak for audio (hdlr → soun).
+  - One trak for subtitles (hdlr → sbtl or subt).
+#### 2. Each track has a sample table (stbl) that points to mdat positions.
+#### 3. Player decodes & synchronizes tracks using stts (time mapping).
+
+## 🔹 Real-World Example (MP4 Atom Layout)
+```scss
+[ftyp] (File Type)
+[moov] (Movie Metadata)
+  ├── [mvhd] (Movie Header)
+  ├── [trak] (Video Track)
+  │    ├── [mdia] (Media)
+  │         ├── [minf] (Media Info)
+  │              ├── [stbl] (Sample Table)
+  ├── [trak] (Audio Track)
+  │    ├── [mdia] (Media)
+  │         ├── [minf] (Media Info)
+  │              ├── [stbl] (Sample Table)
+[mdat] (Media Data)
+```
+## 🔹 Optimizations for Streaming
+### 1. Progressive MP4 (Fast Start):
+
+- Moves moov to the beginning so players can start playback before downloading mdat.
+### 2. Fragmented MP4 (fMP4):
+
+- Splits video into multiple moof + mdat pairs, useful for adaptive streaming.
