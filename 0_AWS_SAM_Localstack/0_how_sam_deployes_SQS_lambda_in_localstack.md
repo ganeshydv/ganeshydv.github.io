@@ -32,6 +32,10 @@ sam deploy --config-env local
 ## Delete Queue:
 - `aws --endpoint-url=http://localhost:4566 sqs delete-queue --queue-url http://localhost:4566/000000000000/MyQueue`
 
+## ✅ Clear All Messages
+- `aws sqs purge-queue --queue-url http://localhost:4566/000000000000/my-queue --endpoint-url http://localhost:4566 --region us-east-1
+`
+
 ## Check Queue ARN:
 - `aws --endpoint-url=http://localhost:4566 sqs get-queue-attributes  --queue-url http://localhost:4566/000000000000/MyQueue  --attribute-name QueueArn`
 

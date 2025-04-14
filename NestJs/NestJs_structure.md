@@ -48,7 +48,7 @@
     5) queryBuilder
 #
 ## [ To connect in Module Scope]:
-
+```
       1]  DataSource + DataSourceOptions + TypeOrmModule.forRoot()
           : TYPEORM
 
@@ -69,7 +69,7 @@
         inject:[ConfigService]
 
       })
-
+```
 -----------------
 
 ## 1] DataSource : [typeorm] module used for establishing connection between NestApp and DB 
