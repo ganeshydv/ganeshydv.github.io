@@ -1,5 +1,7 @@
 # 1. start localstack container
-- docker run -d --rm -it -p 4566:4566 -p 4510-4559:4510-4559 --name localstack localstack/localstack
+```sh
+docker run -d --rm -it -p 4566:4566 -p 4510-4559:4510-4559 --name localstack localstack/localstack
+```
 # 2. create s3 bucket in that localstack :to upload lambda in that
 - aws --endpoint-url=http://localhost:4566 s3 mb s3://localstack-bucket --region us-west-2
 - aws --endpoint-url=http://localhost:4566 s3 ls
