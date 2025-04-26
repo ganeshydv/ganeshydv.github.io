@@ -23,7 +23,9 @@
   <version>1.0.0</version>
   ```
 #
-### **Artifact**: Executable file
+
+
+### **Artifact** : Executable file
 - An artifact in Maven represents the output of your project or module after it is built (e.g., a JAR, WAR, or other package types).
 - Each Maven project or module is associated with one artifact, which is uniquely identified by the Group ID, Artifact ID, and Version.
 - **Artifact ID** = Name of the Module/Project:

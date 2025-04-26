@@ -5,27 +5,28 @@
 1. [0_AWS](#0_aws)
 2. [0_AWS_SAM](#0_aws_sam)
 3. [0_AWS_SAM_Localstack](#0_aws_sam_localstack)
-4. [0_AWS_Serverless](#0_aws_serverless)
-5. [1_OS](#1_os)
-6. [2_Networking](#2_networking)
-7. [3_SystemDesign](#3_systemdesign)
-8. [4_DataBase_RDS_DynamoDB](#4_database_rds_dynamodb)
-9. [4_Docker](#4_docker)
-10. [5_Auth_JWT](#5_auth_jwt)
-11. [6_Node_Dev](#6_node_dev)
-12. [Miscellaneous](#miscellaneous)
-13. [JAVA](#java)
-14. [JMeter](#jmeter)
-15. [keycloak_](#keycloak_)
-16. [NestJs](#nestjs)
-17. [React_Angular](#react_angular)
-18. [RustEx](#rustex)
-19. [SonarQube](#sonarqube)
-20. [Testing](#testing)
-21. [VideoProcessing](#videoprocessing)
-22. [_DSA_NeetCode](#_dsa_neetcode)
-23. [_JsTutorials](#_jstutorials)
-24. [_Ts](#_ts)
+4. [0_AWS_sdk_v2_v3](#0_aws_sdk_v2_v3)
+5. [0_AWS_Serverless](#0_aws_serverless)
+6. [1_OS](#1_os)
+7. [2_Networking](#2_networking)
+8. [3_SystemDesign](#3_systemdesign)
+9. [4_DataBase_RDS_DynamoDB](#4_database_rds_dynamodb)
+10. [4_Docker](#4_docker)
+11. [5_Auth_JWT](#5_auth_jwt)
+12. [6_Node_Dev](#6_node_dev)
+13. [Miscellaneous](#miscellaneous)
+14. [JAVA](#java)
+15. [JMeter](#jmeter)
+16. [keycloak_](#keycloak_)
+17. [NestJs](#nestjs)
+18. [React_Angular](#react_angular)
+19. [RustEx](#rustex)
+20. [SonarQube](#sonarqube)
+21. [Testing](#testing)
+22. [VideoProcessing](#videoprocessing)
+23. [_DSA_NeetCode](#_dsa_neetcode)
+24. [_JsTutorials](#_jstutorials)
+25. [_Ts](#_ts)
 
 ---
 
@@ -46,6 +47,7 @@
 - [AWS Networking VPC SUBNET SG](0_AWS/AWS_Networking_VPC_SUBNET_SG.md) - *(0_AWS/AWS_Networking_VPC_SUBNET_SG.md)*
 - [2  aws cicd  ](0_AWS/CICD/2__aws_cicd__.md) - *(0_AWS/CICD/2__aws_cicd__.md)*
 - [CloudWatch ](0_AWS/CloudWatch_.md) - *(0_AWS/CloudWatch_.md)*
+- [0 cognito ](0_AWS/Cognito/0_cognito_.md) - *(0_AWS/Cognito/0_cognito_.md)*
 - [0 EC2 ](0_AWS/EC2/0_EC2_.md) - *(0_AWS/EC2/0_EC2_.md)*
 - [1 EC2 SecutityGroups](0_AWS/EC2/1_EC2_SecutityGroups.md) - *(0_AWS/EC2/1_EC2_SecutityGroups.md)*
 - [0 How ECS auto scales ](0_AWS/ECS/0_How_ECS_auto_scales_.md) - *(0_AWS/ECS/0_How_ECS_auto_scales_.md)*
@@ -93,6 +95,19 @@
 - [ex1 create lambda sqs cmd](0_AWS_SAM_Localstack/ex1_create_lambda_sqs_cmd.md) - *(0_AWS_SAM_Localstack/ex1_create_lambda_sqs_cmd.md)*
 - [ex2 using localstack sam ](0_AWS_SAM_Localstack/ex2_using_localstack_sam_.md) - *(0_AWS_SAM_Localstack/ex2_using_localstack_sam_.md)*
 - [localstack approach comparison](0_AWS_SAM_Localstack/localstack_approach_comparison.md) - *(0_AWS_SAM_Localstack/localstack_approach_comparison.md)*
+
+---
+
+## 0_AWS_sdk_v2_v3
+
+- [0 aws sdk v2 vs v3](0_AWS_sdk_v2_v3/0_aws_sdk_v2_vs_v3.md) - *(0_AWS_sdk_v2_v3/0_aws_sdk_v2_vs_v3.md)*
+- [1 aws sdk sqs ](0_AWS_sdk_v2_v3/1_aws_sdk_sqs_.md) - *(0_AWS_sdk_v2_v3/1_aws_sdk_sqs_.md)*
+- [2 aws sdk dynamodb ](0_AWS_sdk_v2_v3/2_aws_sdk_dynamodb_.md) - *(0_AWS_sdk_v2_v3/2_aws_sdk_dynamodb_.md)*
+- [3 aws sdk rds ](0_AWS_sdk_v2_v3/3_aws_sdk_rds_.md) - *(0_AWS_sdk_v2_v3/3_aws_sdk_rds_.md)*
+- [4 aws sdk s3](0_AWS_sdk_v2_v3/4_aws_sdk_s3.md) - *(0_AWS_sdk_v2_v3/4_aws_sdk_s3.md)*
+- [5 aws sdk ses ](0_AWS_sdk_v2_v3/5_aws_sdk_ses_.md) - *(0_AWS_sdk_v2_v3/5_aws_sdk_ses_.md)*
+- [6 aws sdk lambda ](0_AWS_sdk_v2_v3/6_aws_sdk_lambda_.md) - *(0_AWS_sdk_v2_v3/6_aws_sdk_lambda_.md)*
+- [dynamodb upsert guide](0_AWS_sdk_v2_v3/dynamodb_upsert_guide.md) - *(0_AWS_sdk_v2_v3/dynamodb_upsert_guide.md)*
 
 ---
 
@@ -187,6 +202,7 @@
 - [how request works  dns ](3_SystemDesign/how_request_works__dns_.md) - *(3_SystemDesign/how_request_works__dns_.md)*
 - [3 ChainOfResponsibiltyPattern logging](3_SystemDesign/LLD_Design_Patterns/3_ChainOfResponsibiltyPattern_logging.md) - *(3_SystemDesign/LLD_Design_Patterns/3_ChainOfResponsibiltyPattern_logging.md)*
 - [index](3_SystemDesign/LLD_Design_Patterns/index.md) - *(3_SystemDesign/LLD_Design_Patterns/index.md)*
+- [overview](3_SystemDesign/LLD_Design_Patterns/overview.md) - *(3_SystemDesign/LLD_Design_Patterns/overview.md)*
 - [SQS 0 ](3_SystemDesign/Queue/SQS_0_.md) - *(3_SystemDesign/Queue/SQS_0_.md)*
 - [SQS SAM ](3_SystemDesign/Queue/SQS_SAM_.md) - *(3_SystemDesign/Queue/SQS_SAM_.md)*
 - [Readme](3_SystemDesign/Readme.md) - *(3_SystemDesign/Readme.md)*
@@ -284,7 +300,6 @@
 - [3.1.2 Hibernate JPA Mapping ](JAVA/3.1.2_Hibernate_JPA_Mapping_.md) - *(JAVA/3.1.2_Hibernate_JPA_Mapping_.md)*
 - [3 Hibernate ](JAVA/3_Hibernate_.md) - *(JAVA/3_Hibernate_.md)*
 - [4 Server Config ](JAVA/4_Server_Config_.md) - *(JAVA/4_Server_Config_.md)*
-- [ tasks ](JAVA/_tasks_.md) - *(JAVA/_tasks_.md)*
 
 ---
 
@@ -349,14 +364,18 @@
 ## VideoProcessing
 
 - [0.1 basic mp4 ](VideoProcessing/0.1_basic_mp4_.md) - *(VideoProcessing/0.1_basic_mp4_.md)*
+- [0.2 how video player reads ](VideoProcessing/0.2_how_video_player_reads_.md) - *(VideoProcessing/0.2_how_video_player_reads_.md)*
 - [0.2 mp4 vs mkv stream](VideoProcessing/0.2_mp4_vs_mkv_stream.md) - *(VideoProcessing/0.2_mp4_vs_mkv_stream.md)*
 - [0.3 HLS DASH ](VideoProcessing/0.3_HLS_DASH_.md) - *(VideoProcessing/0.3_HLS_DASH_.md)*
 - [0 vdo terms](VideoProcessing/0_vdo_terms.md) - *(VideoProcessing/0_vdo_terms.md)*
 - [1 steps ](VideoProcessing/1_steps_.md) - *(VideoProcessing/1_steps_.md)*
 - [2 Parse Video container format](VideoProcessing/2_Parse_Video_container_format.md) - *(VideoProcessing/2_Parse_Video_container_format.md)*
 - [1 parsing video meta data ](VideoProcessing/MediaPlayer/1_parsing_video_meta_data_.md) - *(VideoProcessing/MediaPlayer/1_parsing_video_meta_data_.md)*
+- [3 atom audio vdo ](VideoProcessing/MediaPlayer/3_atom_audio_vdo_.md) - *(VideoProcessing/MediaPlayer/3_atom_audio_vdo_.md)*
 - [tcp http mulipart upload](VideoProcessing/tcp_http_mulipart_upload.md) - *(VideoProcessing/tcp_http_mulipart_upload.md)*
 - [0 vdo upload](VideoProcessing/VideoUpload/0_vdo_upload.md) - *(VideoProcessing/VideoUpload/0_vdo_upload.md)*
+- [1 vdo large file upload s3 presigned](VideoProcessing/VideoUpload/1_vdo_large_file_upload_s3_presigned.md) - *(VideoProcessing/VideoUpload/1_vdo_large_file_upload_s3_presigned.md)*
+- [2 vdo large file upload s3 lambda ](VideoProcessing/VideoUpload/2_vdo_large_file_upload_s3_lambda_.md) - *(VideoProcessing/VideoUpload/2_vdo_large_file_upload_s3_lambda_.md)*
 
 ---
 
@@ -370,6 +389,7 @@
 ## _JsTutorials
 
 - [JavasriptTopics](_JsTutorials/JavasriptTopics.md) - *(_JsTutorials/JavasriptTopics.md)*
+- [0 Promise in node ](_JsTutorials/PromisesAndAsync/0_Promise_in_node_.md) - *(_JsTutorials/PromisesAndAsync/0_Promise_in_node_.md)*
 - [use strict](_JsTutorials/use_strict.md) - *(_JsTutorials/use_strict.md)*
 
 ---
