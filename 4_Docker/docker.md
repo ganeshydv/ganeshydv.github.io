@@ -22,6 +22,7 @@ always remember: In Docker file
 
 ### 1) Image:
   - Build the image: `docker build -t imageName .` (path of Docker File)
+  - withoud cache: `docker build --no-cache -t imgName .`
 ### 2) Container:
   - Run the container: `docker run -d -p portFromOutside:portToContainer --name containerName imageNameBasedOnWhichContainerIsCreated`
 
@@ -43,8 +44,9 @@ always remember: In Docker file
   - List containers
    ```cmd
     docker ps -a --format "{{.ID}}\t{{.CreatedAt}}\t{{.Names}}"
-
    ```
+  - paas ENV file:
+  `docker run --env-file <path_to_env_file> <image_name>`
 
 
 ### 3) Docker bash shell run command:
