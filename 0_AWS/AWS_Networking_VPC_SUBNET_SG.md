@@ -38,7 +38,7 @@ Sequence for route in AWS :
      +-------------+                   +-------------+
     
 2]  cloud --> Internet Gateway -->( VPC starts ) ROUTE Table (for each subnet and has config for from to ip)
- -->ALB/NLB [ Target Group ] --> security Group ( attached to each instance ) --> Resource
+ -->ALB/NLB --> Target Group [decides instance] --> security Group ( attached to each instance ) --> Resource
 
 +------------------------+      +------------------------+
 |     Internet Cloud    |       |     Internet Cloud    |
