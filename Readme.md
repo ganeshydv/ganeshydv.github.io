@@ -43,8 +43,10 @@
 - [1 IAM](0_AWS/1_IAM.md) - *(0_AWS/1_IAM.md)*
 - [3 aws cicd serverless ](0_AWS/3_aws_cicd_serverless_.md) - *(0_AWS/3_aws_cicd_serverless_.md)*
 - [3 SSH  ](0_AWS/3_SSH__.md) - *(0_AWS/3_SSH__.md)*
+- [0 AWS API gateway ](0_AWS/Api_Gateway/0_AWS_API_gateway_.md) - *(0_AWS/Api_Gateway/0_AWS_API_gateway_.md)*
 - [AWS ECS complete cicd ](0_AWS/AWS_ECS_complete_cicd_.md) - *(0_AWS/AWS_ECS_complete_cicd_.md)*
 - [AWS Networking VPC SUBNET SG](0_AWS/AWS_Networking_VPC_SUBNET_SG.md) - *(0_AWS/AWS_Networking_VPC_SUBNET_SG.md)*
+- [0 aws codePipeline ](0_AWS/CICD/0_aws_codePipeline_.md) - *(0_AWS/CICD/0_aws_codePipeline_.md)*
 - [2  aws cicd  ](0_AWS/CICD/2__aws_cicd__.md) - *(0_AWS/CICD/2__aws_cicd__.md)*
 - [CloudWatch ](0_AWS/CloudWatch_.md) - *(0_AWS/CloudWatch_.md)*
 - [0 cognito ](0_AWS/Cognito/0_cognito_.md) - *(0_AWS/Cognito/0_cognito_.md)*
@@ -69,12 +71,18 @@
 - [Lambda awsApiGateWay](0_AWS/Lambda/Lambda_awsApiGateWay.md) - *(0_AWS/Lambda/Lambda_awsApiGateWay.md)*
 - [Lambda serverlessYml](0_AWS/Lambda/Lambda_serverlessYml.md) - *(0_AWS/Lambda/Lambda_serverlessYml.md)*
 - [Readme](0_AWS/Readme.md) - *(0_AWS/Readme.md)*
+- [SQS 0 ](0_AWS/SQS/SQS_0_.md) - *(0_AWS/SQS/SQS_0_.md)*
+- [SQS SAM ](0_AWS/SQS/SQS_SAM_.md) - *(0_AWS/SQS/SQS_SAM_.md)*
+- [0 TargetGroup](0_AWS/TagretGroup+ALB+ECS/0_TargetGroup.md) - *(0_AWS/TagretGroup+ALB+ECS/0_TargetGroup.md)*
+- [2 AWS Target group how failure handles ](0_AWS/TagretGroup+ALB+ECS/2_AWS_Target_group_how_failure_handles_.md) - *(0_AWS/TagretGroup+ALB+ECS/2_AWS_Target_group_how_failure_handles_.md)*
+- [AWS Target Group Health check Rolback](0_AWS/TagretGroup+ALB+ECS/AWS_Target_Group_Health_check_Rolback.md) - *(0_AWS/TagretGroup+ALB+ECS/AWS_Target_Group_Health_check_Rolback.md)*
 
 ---
 
 ## 0_AWS_SAM
 
 - [0 sam all ](0_AWS_SAM/0_sam_all_.md) - *(0_AWS_SAM/0_sam_all_.md)*
+- [0 sam stack creta update delete ](0_AWS_SAM/0_sam_stack_creta_update_delete_.md) - *(0_AWS_SAM/0_sam_stack_creta_update_delete_.md)*
 - [0 sam working ](0_AWS_SAM/0_sam_working_.md) - *(0_AWS_SAM/0_sam_working_.md)*
 - [1.0 sam deploy cloudformation ](0_AWS_SAM/1.0_sam_deploy_cloudformation_.md) - *(0_AWS_SAM/1.0_sam_deploy_cloudformation_.md)*
 - [1.2 sam IAM VPC SG ACL](0_AWS_SAM/1.2_sam_IAM_VPC_SG_ACL.md) - *(0_AWS_SAM/1.2_sam_IAM_VPC_SG_ACL.md)*
@@ -186,8 +194,17 @@
 - [1  newroking  ](3_SystemDesign/1__newroking__.md) - *(3_SystemDesign/1__newroking__.md)*
 - [2  newroking  ](3_SystemDesign/2__newroking__.md) - *(3_SystemDesign/2__newroking__.md)*
 - [2  rate limiting  ](3_SystemDesign/2__rate_limiting__.md) - *(3_SystemDesign/2__rate_limiting__.md)*
+- [ACID 0](3_SystemDesign/ACID_0.md) - *(3_SystemDesign/ACID_0.md)*
+- [ACID 1 ](3_SystemDesign/ACID_1_.md) - *(3_SystemDesign/ACID_1_.md)*
+- [ACID 2 I lock 1](3_SystemDesign/ACID_2_I_lock_1.md) - *(3_SystemDesign/ACID_2_I_lock_1.md)*
+- [ACID 2 I Lock 2](3_SystemDesign/ACID_2_I_Lock_2.md) - *(3_SystemDesign/ACID_2_I_Lock_2.md)*
 - [0 Analysis ](3_SystemDesign/BatchProcessing/0_Analysis_.md) - *(3_SystemDesign/BatchProcessing/0_Analysis_.md)*
 - [1 requirement ](3_SystemDesign/BatchProcessing/1_requirement_.md) - *(3_SystemDesign/BatchProcessing/1_requirement_.md)*
+- [CAP 0](3_SystemDesign/CAP_0.md) - *(3_SystemDesign/CAP_0.md)*
+- [CAP AP 0](3_SystemDesign/CAP_AP_0.md) - *(3_SystemDesign/CAP_AP_0.md)*
+- [CAP AP 1](3_SystemDesign/CAP_AP_1.md) - *(3_SystemDesign/CAP_AP_1.md)*
+- [CAP CP 0](3_SystemDesign/CAP_CP_0.md) - *(3_SystemDesign/CAP_CP_0.md)*
+- [CAP CP VS AP](3_SystemDesign/CAP_CP_VS_AP.md) - *(3_SystemDesign/CAP_CP_VS_AP.md)*
 - [CAP Theorem](3_SystemDesign/CAP_Theorem.md) - *(3_SystemDesign/CAP_Theorem.md)*
 - [Cloud Server ](3_SystemDesign/Cloud_Server_.md) - *(3_SystemDesign/Cloud_Server_.md)*
 - [1 SHARDING  ](3_SystemDesign/DB/1_SHARDING__.md) - *(3_SystemDesign/DB/1_SHARDING__.md)*
@@ -199,12 +216,18 @@
 - [Spotify design](3_SystemDesign/HLD/spotify/Spotify_design.md) - *(3_SystemDesign/HLD/spotify/Spotify_design.md)*
 - [stock market design](3_SystemDesign/HLD/stock_market_design.md) - *(3_SystemDesign/HLD/stock_market_design.md)*
 - [Design ](3_SystemDesign/HLD/VideoStreamApp/Design_.md) - *(3_SystemDesign/HLD/VideoStreamApp/Design_.md)*
+- [0 vdo upload](3_SystemDesign/HLD/VideoUpload/0_vdo_upload.md) - *(3_SystemDesign/HLD/VideoUpload/0_vdo_upload.md)*
+- [1 vdo large file upload s3 presigned](3_SystemDesign/HLD/VideoUpload/1_vdo_large_file_upload_s3_presigned.md) - *(3_SystemDesign/HLD/VideoUpload/1_vdo_large_file_upload_s3_presigned.md)*
+- [2 vdo large file upload s3 lambda ](3_SystemDesign/HLD/VideoUpload/2_vdo_large_file_upload_s3_lambda_.md) - *(3_SystemDesign/HLD/VideoUpload/2_vdo_large_file_upload_s3_lambda_.md)*
 - [how request works  dns ](3_SystemDesign/how_request_works__dns_.md) - *(3_SystemDesign/how_request_works__dns_.md)*
 - [3 ChainOfResponsibiltyPattern logging](3_SystemDesign/LLD_Design_Patterns/3_ChainOfResponsibiltyPattern_logging.md) - *(3_SystemDesign/LLD_Design_Patterns/3_ChainOfResponsibiltyPattern_logging.md)*
 - [index](3_SystemDesign/LLD_Design_Patterns/index.md) - *(3_SystemDesign/LLD_Design_Patterns/index.md)*
 - [overview](3_SystemDesign/LLD_Design_Patterns/overview.md) - *(3_SystemDesign/LLD_Design_Patterns/overview.md)*
-- [SQS 0 ](3_SystemDesign/Queue/SQS_0_.md) - *(3_SystemDesign/Queue/SQS_0_.md)*
-- [SQS SAM ](3_SystemDesign/Queue/SQS_SAM_.md) - *(3_SystemDesign/Queue/SQS_SAM_.md)*
+- [Cognito ](3_SystemDesign/OAuth2-cognito/Cognito_.md) - *(3_SystemDesign/OAuth2-cognito/Cognito_.md)*
+- [Cognito 1 sign up ](3_SystemDesign/OAuth2-cognito/Cognito_1_sign_up_.md) - *(3_SystemDesign/OAuth2-cognito/Cognito_1_sign_up_.md)*
+- [Cognito 2.1 sign in](3_SystemDesign/OAuth2-cognito/Cognito_2.1_sign_in.md) - *(3_SystemDesign/OAuth2-cognito/Cognito_2.1_sign_in.md)*
+- [Cognito 2 sing in ](3_SystemDesign/OAuth2-cognito/Cognito_2_sing_in_.md) - *(3_SystemDesign/OAuth2-cognito/Cognito_2_sing_in_.md)*
+- [JWKS ](3_SystemDesign/OAuth2-cognito/JWKS_.md) - *(3_SystemDesign/OAuth2-cognito/JWKS_.md)*
 - [Readme](3_SystemDesign/Readme.md) - *(3_SystemDesign/Readme.md)*
 - [SOLID ](3_SystemDesign/SOLID_.md) - *(3_SystemDesign/SOLID_.md)*
 - [SSO ](3_SystemDesign/SSO_.md) - *(3_SystemDesign/SSO_.md)*
@@ -260,6 +283,7 @@
 - [0 how node start exe func](6_Node_Dev/0_how_node_start_exe_func.md) - *(6_Node_Dev/0_how_node_start_exe_func.md)*
 - [0 Node ](6_Node_Dev/0_Node_.md) - *(6_Node_Dev/0_Node_.md)*
 - [0 Node Details](6_Node_Dev/0_Node_Details.md) - *(6_Node_Dev/0_Node_Details.md)*
+- [0 Node rss memory](6_Node_Dev/0_Node_rss_memory.md) - *(6_Node_Dev/0_Node_rss_memory.md)*
 - [1 node ](6_Node_Dev/1_node_.md) - *(6_Node_Dev/1_node_.md)*
 - [2 node event loop ](6_Node_Dev/2_node_event_loop_.md) - *(6_Node_Dev/2_node_event_loop_.md)*
 - [3 node event loop libuv](6_Node_Dev/3_node_event_loop_libuv.md) - *(6_Node_Dev/3_node_event_loop_libuv.md)*
@@ -282,6 +306,7 @@
 - [NVM in WSL ](NVM_in_WSL_.md) - *(NVM_in_WSL_.md)*
 - [Readme](Readme.md) - *(Readme.md)*
 - [Roadmap](Roadmap.md) - *(Roadmap.md)*
+- [routine](routine.md) - *(routine.md)*
 - [striker](striker.md) - *(striker.md)*
 
 ---
@@ -300,6 +325,11 @@
 - [3.1.2 Hibernate JPA Mapping ](JAVA/3.1.2_Hibernate_JPA_Mapping_.md) - *(JAVA/3.1.2_Hibernate_JPA_Mapping_.md)*
 - [3 Hibernate ](JAVA/3_Hibernate_.md) - *(JAVA/3_Hibernate_.md)*
 - [4 Server Config ](JAVA/4_Server_Config_.md) - *(JAVA/4_Server_Config_.md)*
+- [0 before spring boot](JAVA/SpringBoot/0_before_spring_boot.md) - *(JAVA/SpringBoot/0_before_spring_boot.md)*
+- [1 spring boot](JAVA/SpringBoot/1_spring_boot.md) - *(JAVA/SpringBoot/1_spring_boot.md)*
+- [2.1 spring boot request validation ](JAVA/SpringBoot/2.1_spring_boot_request_validation_.md) - *(JAVA/SpringBoot/2.1_spring_boot_request_validation_.md)*
+- [2 spring boot request handling](JAVA/SpringBoot/2_spring_boot_request_handling.md) - *(JAVA/SpringBoot/2_spring_boot_request_handling.md)*
+- [what when ](JAVA/what_when_.md) - *(JAVA/what_when_.md)*
 
 ---
 
@@ -320,6 +350,7 @@
 
 ## NestJs
 
+- [0 nestJs ](NestJs/0_nestJs_.md) - *(NestJs/0_nestJs_.md)*
 - [execution order](NestJs/execution_order.md) - *(NestJs/execution_order.md)*
 - [NestJs structure](NestJs/NestJs_structure.md) - *(NestJs/NestJs_structure.md)*
 - [NestJs Typescript](NestJs/NestJs_Typescript.md) - *(NestJs/NestJs_Typescript.md)*
