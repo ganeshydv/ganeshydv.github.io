@@ -2,7 +2,7 @@
 - `Maven is a powerful build automation and project management tool for Java`
 - Manage - depencency, Project Structure, Creating Executable File, Plugins, Build Lifecycle
 - **`Build--> compile --> test --> package --> install `**
-- Nothing but collection of different architecure which can be used to kick start project ex. a spring boot project or web app or react preject. 
+- Nothing but collection of different architecure which can be used to kick start project ex. a spring boot project or web app or react project. 
 #
 ### 1. Catalog 
    -  essentially a collection of Maven archetypes
