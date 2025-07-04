@@ -127,7 +127,7 @@ class GreetController{
 }
 
 ```
-
+# 🧭 Spring Boot Parameter Binding Annotations
 ## Path Variable (Path Param) + Request Param (Query param)
 - Example 1:
 ```java
@@ -142,6 +142,7 @@ class GreetController{
     }
 ```
 - Example 2:
+
 ```java
     @GetMapping("/greet/v1/{name}")
     public GreetResponse greetUser2(@PathVariable String name,@RequestParam int id){
@@ -153,3 +154,9 @@ class GreetController{
         return response;
     }
 ```
+
+| Annotation      | Used to extract data from  | Example usage                          |
+| --------------- | -------------------------- | -------------------------------------- |
+| `@PathVariable` | URL **path**               | `/users/{id}` → `@PathVariable int id` |
+| `@RequestParam` | Query **parameters**       | `/search?name=John` → `@RequestParam`  |
+| `@PathParam`    | (JAX-RS) Path **segments** | Rarely used in Spring (more in JAX-RS) |
