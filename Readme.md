@@ -172,25 +172,27 @@
 - [Network Communication Process](3_SystemDesign/1__newroking__.md)
 - [Network Encapsulation Process](3_SystemDesign/2__newroking__.md)
 - [Rate Limiting:](3_SystemDesign/2__rate_limiting__.md)
-- [# ACID](3_SystemDesign/ACID_0.md)
-- [⚙ A — Atomicity](3_SystemDesign/ACID_1_.md)
-- [# ✅ Lock Conflicts in SQL Databases](3_SystemDesign/ACID_2_I_lock_1.md)
-- [# Eaxmple booking systems](3_SystemDesign/ACID_2_I_Lock_2.md)
 
 ### BatchProcessing
 - [# What needs to process? - object, system analysis](3_SystemDesign/BatchProcessing/0_Analysis_.md)
 - [Objective: Design Course assignment System](3_SystemDesign/BatchProcessing/1_requirement_.md)
-- [# 💡 Note on SQL Databases](3_SystemDesign/CAP_0.md)
-- [# ✅ What is Partition Tolerance?](3_SystemDesign/CAP_AP_0.md)
-- [# 💡 Key Concepts That Make AP Possible:](3_SystemDesign/CAP_AP_1.md)
-- [# How Consistency is managed? (CP system)](3_SystemDesign/CAP_CP_0.md)
-- [# 🔁 Quick Comparison: CP vs AP](3_SystemDesign/CAP_CP_VS_AP.md)
-- [# Distributed system](3_SystemDesign/CAP_Theorem.md)
 - [# in cloud computing:](3_SystemDesign/Cloud_Server_.md)
 
 ### DB
 - [SHARDING : to Optimize](3_SystemDesign/DB/1_SHARDING__.md)
 - [# Sharding and Consistent Hashing Explained](3_SystemDesign/DB/2_Consistent_Hashing_.md)
+- [3 DB Isolation ](3_SystemDesign/DB/3_DB_Isolation_.md)
+- [# ACID](3_SystemDesign/DB/ACID_0.md)
+- [⚙ A — Atomicity](3_SystemDesign/DB/ACID_1_.md)
+- [🔒 Isolation ensures:](3_SystemDesign/DB/ACID_2_Isolation_levels_1.md)
+- [# ✅ Lock Conflicts in SQL Databases](3_SystemDesign/DB/ACID_2_I_lock_1.md)
+- [# Eaxmple booking systems](3_SystemDesign/DB/ACID_2_I_Lock_2.md)
+- [# 💡 Note on SQL Databases](3_SystemDesign/DB/CAP_0.md)
+- [# ✅ What is Partition Tolerance?](3_SystemDesign/DB/CAP_AP_0.md)
+- [# 💡 Key Concepts That Make AP Possible:](3_SystemDesign/DB/CAP_AP_1.md)
+- [# How Consistency is managed? (CP system)](3_SystemDesign/DB/CAP_CP_0.md)
+- [# 🔁 Quick Comparison: CP vs AP](3_SystemDesign/DB/CAP_CP_VS_AP.md)
+- [# Distributed system](3_SystemDesign/DB/CAP_Theorem.md)
 
 ### demo
 
@@ -280,6 +282,7 @@
 - [# DynamoDB Command Support Matrix](4_DataBase_RDS_DynamoDB/DynamoDB/DynamoDB_5_cmd_.md)
 - [EntityRelations](4_DataBase_RDS_DynamoDB/EntityRelations.md)
 - [# 1. Storage Limits](4_DataBase_RDS_DynamoDB/RDS_0.md)
+- [RDS 1 Structure ](4_DataBase_RDS_DynamoDB/RDS_1_Structure_.md)
 - [# Key Differences: Data API vs. Traditional HTTP-DB Request](4_DataBase_RDS_DynamoDB/RDS_API_1.md)
 - [# DynamoDB vs. RDS (MySQL Default) Comparison](4_DataBase_RDS_DynamoDB/RDS_VS_DynamoDB_.md)
 - [# Check indexes Query:](4_DataBase_RDS_DynamoDB/SQL_.md)
@@ -305,6 +308,7 @@
 - [🛠 How Node.js Resolves Modules (require & import)](6_Node_Dev/5.1_require_import_.md)
 - [4️⃣ Comparison: `require()` vs `import()` for Lazy Loading](6_Node_Dev/5.2_require_vs_import_.md)
 - [CommonJS vs. ES Modules in Node.js](6_Node_Dev/5_commonJs_vs_ESM_.md)
+- [Node.js: Single Threaded Processing](6_Node_Dev/How_node_processes_millions_of_request_on_single_thread.md)
 - [## 1. check outdated pkg and lates version](6_Node_Dev/Node_CMD.md)
 - [# 1. How vdo,music,docs,img : read-write works](general.md)
 - [How git works?](git.md)
@@ -326,11 +330,21 @@
 - [# Hibernate](JAVA/3_Hibernate_.md)
 - [# Depnedency](JAVA/4_Server_Config_.md)
 
+### Adv_Java
+- [# 🧭 Final Refined Summary (Steps)](JAVA/Adv_Java/0.1_How_Java_code_runs_.md)
+- [# Step 1: Compile java code (JDK) --> .java to .class (bytecode)](JAVA/Adv_Java/0.2_How_Java_code_runs_.md)
+- [# 🔍 JDK = JRE (JVM + libs) + Compiler](JAVA/Adv_Java/0_JVM_JRE_JDK_.md)
+- [# Memory Management:](JAVA/Adv_Java/1.0_Memory_management_Garbage_collection.md)
+- [# Stack & Heap in RAM Created/Managed by JVM](JAVA/Adv_Java/1.1_Memory_management_Garbage_collection.md)
+- [# Hierarchy:](JAVA/Adv_Java/2_Java_exception_.md)
+- [3.0 Multihreading process thread heap stack](JAVA/Adv_Java/3.0_Multihreading_process_thread_heap_stack.md)
+
 ### SpringBoot
 - [# ✅ **Spring Ecosystem Evolution Overview**](JAVA/SpringBoot/0_before_spring_boot.md)
 - [# Spring Boot](JAVA/SpringBoot/1_spring_boot.md)
 - [@Valid: for validations](JAVA/SpringBoot/2.1_spring_boot_request_validation_.md)
 - [@Controller](JAVA/SpringBoot/2_spring_boot_request_handling.md)
+- [# Spring Boot Exception Handling](JAVA/SpringBoot/3_spring_boot_exception_handling_.md)
 - [# Request:](JAVA/what_when_.md)
 
 ### JMeter
