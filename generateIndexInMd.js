@@ -4,73 +4,70 @@ const path = require('path');
 // Root directory of your workspace
 const rootDir = __dirname;
 
-// Function to recursively find all .md files
-function findMarkdownFiles(dir, basePath = '') {
-    let files = fs.readdirSync(dir);
-    let markdownFiles = [];
-
+// Recursively build a nested structure of folders and their .md files
+function buildFolderTree(dir, basePath = '') {
+    const files = fs.readdirSync(dir);
+    let tree = {};
     files.forEach(file => {
         const fullPath = path.join(dir, file);
         const relativePath = path.join(basePath, file);
-
-        // Exclude node_modules or any other folder
         if (fs.statSync(fullPath).isDirectory()) {
-            if (file === 'node_modules') return; // Skip node_modules
-            markdownFiles = markdownFiles.concat(findMarkdownFiles(fullPath, relativePath));
+            if (file === 'node_modules') return;
+            const subTree = buildFolderTree(fullPath, relativePath);
+            if (Object.keys(subTree).length > 0) {
+                tree[file] = subTree;
+            }
         } else if (file.endsWith('.md')) {
-            markdownFiles.push(relativePath);
+            tree[file] = relativePath;
         }
     });
-
-    return markdownFiles;
+    return tree;
 }
 
-// Function to generate the index
-function generateIndex(markdownFiles) {
-    const index = {};
-    markdownFiles.forEach(file => {
-        console.log(`Processing file: ${file}`); // Debugging line
-        
-        const parts = file.split(path.sep);
-        const category = parts.length > 1 ? parts[0] : 'Miscellaneous';
-        const fileName = parts.slice(1).join('/');
-        console.log(`File: ${fileName}, Category: ${category}`); // Debugging line
-        
-        if (!index[category]) {
-            index[category] = [];
+// Extract a meaningful title from a Markdown file (first heading or comment)
+function extractTitle(filePath) {
+    try {
+        const content = fs.readFileSync(filePath, 'utf-8');
+        const lines = content.split('\n');
+        for (let line of lines) {
+            const headingMatch = line.match(/^#\s*(.+)/);
+            if (headingMatch) return headingMatch[1].trim();
+            const commentMatch = line.match(/^<!--\s*(.+?)\s*-->/);
+            if (commentMatch) return commentMatch[1].trim();
         }
-        index[category].push(file);
-    });
-
-    return index;
+    } catch (e) {}
+    return null;
 }
 
-// Function to write the index to Readme.md
-function writeReadme(index) {
-    let content = '# Project Documentation\n\n## Table of Contents\n\n';
+// Generate Markdown index from the folder tree
+function generateMarkdown(tree, parentPath = '') {
+    let content = '';
+    for (const key in tree) {
+        if (typeof tree[key] === 'string') {
+            const filePath = path.join(rootDir, tree[key]);
+            let title = extractTitle(filePath);
+            if (!title) {
+                title = path.basename(key, '.md').replace(/_/g, ' ');
+            }
+            const link = tree[key].replace(/\\/g, '/');
+            content += `- [${title}](${link})\n`;
+        } else {
+            content += `\n### ${key}\n`;
+            content += generateMarkdown(tree[key], path.join(parentPath, key));
+        }
+    }
+    return content;
+}
 
-    Object.keys(index).forEach((category, i) => {
-        content += `${i + 1}. [${category}](#${category.toLowerCase().replace(/\s+/g, '-')})\n`;
-    });
-
-    content += '\n---\n\n';
-
-    Object.keys(index).forEach(category => {
-        content += `## ${category}\n\n`;
-        index[category].forEach(file => {
-            const link = file.replace(/\\/g, '/');
-            const name = path.basename(file, '.md').replace(/_/g, ' ');
-            content += `- [${name}](${link}) - *(${link})*\n`; // Added relative path
-        });
-        content += '\n---\n\n';
-    });
-
+// Write the index to Readme.md
+function writeReadme(tree) {
+    let content = '# Project Documentation\n\n## Index\n';
+    content += generateMarkdown(tree);
     fs.writeFileSync(path.join(rootDir, 'Readme.md'), content, 'utf-8');
 }
 
 // Main execution
-const markdownFiles = findMarkdownFiles(rootDir);
-const index = generateIndex(markdownFiles);
-writeReadme(index);
+const folderTree = buildFolderTree(rootDir);
+writeReadme(folderTree);
 
 console.log('Readme.md index updated successfully!');

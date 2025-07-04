@@ -7,4 +7,4 @@
 ### 3. Isolation:  One Row can be accessed by only one transaction at a time.
 - If 2 transactions wants to access same row or waiting to acess one row after another but that row is being locked by another transaction this will create `DEADLOCK`.
 - 
-### 4. Durability: After Commit if DB fails still aftr restart data should be recovered
+### 4. Durability: After Commit if DB fails still after restart data should be recovered
