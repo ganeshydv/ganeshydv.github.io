@@ -160,3 +160,17 @@ class GreetController{
 | `@PathVariable` | URL **path**               | `/users/{id}` → `@PathVariable int id` |
 | `@RequestParam` | Query **parameters**       | `/search?name=John` → `@RequestParam`  |
 | `@PathParam`    | (JAX-RS) Path **segments** | Rarely used in Spring (more in JAX-RS) |
+
+## Response JSON or xML
+- Spring automatically supports content negotiation, allowing responses in different formats
+(e.g., JSON, XML) based on Accept headers.
+- Example
+```java
+@GetMapping(value = "/info", produces = { MediaType.APPLICATION_JSON_VALUE,
+MediaType.APPLICATION_XML_VALUE })
+public User getInfo() {
+return new User(1L, "Alice");
+}
+```
+-  Request Accept: application/json → JSON
+-  Request Accept: application/xml → XML
