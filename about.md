@@ -27,7 +27,7 @@ I'm a passionate software developer with expertise in cloud technologies, system
 
 ## 📫 Connect with Me
 
-- GitHub: [your-username](https://github.com/your-username)
+- GitHub: [ganeshydv](https://github.com/ganeshydv)
 - LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
 - Email: your-email@example.com
 
