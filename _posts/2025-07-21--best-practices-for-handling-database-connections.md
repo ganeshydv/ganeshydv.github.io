@@ -1,0 +1,113 @@
+---
+layout: post
+title: "� Best Practices for Handling Database Connections in AWS Lambda"
+date: 2025-07-21
+categories: [aws, lambda]
+tags: [aws, javascript, typescript, database]
+author: "GGurkhude"
+excerpt: "Learning notes on � best practices for handling database connections in aws lambda"
+original_path: "0_AWS/Lambda/0.1_db_connection_.md"
+---
+
+> if connection is closed when execution is done will it be good I mean as u said a lambda once executed it's container still will be running to take other tasks it means if will make connection close it will reestablish for second right but if connection is not closed issue will be connection exhausted right if there are 5 lambda functions and connection limit is 5 it means it's fine and it will be like there are continuous 25 request it will not make new 25 connections but will use existing connections so possible number of connection request to db <=25 but if connection is closed after each request possible number of connection request to db ==25 right
+
+# 🔹 Best Practices for Handling Database Connections in AWS Lambda
+
+## 1️⃣ Understanding Lambda’s Execution Model
+- A **Lambda container** is reused for multiple invocations if it remains warm.
+- **DB connections persist** across warm invocations when defined outside the handler.
+- If a DB connection is **closed after each request**, it must be reestablished, leading to **higher latency** and **unnecessary overhead**.
+
+## 2️⃣ Connection Handling Strategies
+
+### 🔴 Closing Connection After Each Request (❌ Not Recommended)
+#### **Impact:**
+- Every invocation creates a **new DB connection** and closes it afterward.
+- If **25 concurrent requests** occur, it results in **25 new DB connections**.
+- **High latency** due to frequent connection establishment.
+- **Database overhead** from handling excessive new connections.
+
+---
+
+## 3️⃣ Recommended Strategy: 
+✅ Keeping Connections Open
+### **How It Works:**
+- Define the **database connection outside the Lambda handler**.
+- This allows connection **reuse across multiple invocations** when the Lambda remains warm.
+
+### **Example: Using MySQL with Node.js (TypeORM)**
+```typescript
+import { DataSource } from "typeorm";
+
+const dbConnection = new DataSource({
+  type: "mysql",
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT),
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  synchronize: false,
+  logging: false,
+  entities: ["./entities/*.ts"],
+});
+
+let isConnected = false;
+
+export const handler = async (event) => {
+  if (!isConnected) {
+    await dbConnection.initialize();
+    isConnected = true;
+  }
+
+  const userRepository = dbConnection.getRepository("User");
+  const users = await userRepository.find();
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify(users),
+  };
+};
+```
+# 4️⃣ Additional Optimization Tips
+✅ Use Connection Pooling
+Instead of a single connection, use a pool to manage connections efficiently.
+
+Example: Using mysql2 with connection pooling
+
+```typescript
+import mysql from "mysql2/promise";
+
+const pool = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 10,  // Adjust based on expected concurrency
+  queueLimit: 0,
+});
+
+export const handler = async (event) => {
+  const connection = await pool.getConnection();
+  
+  try {
+    const [rows] = await connection.query("SELECT * FROM users");
+    return {
+      statusCode: 200,
+      body: JSON.stringify(rows),
+    };
+  } finally {
+    connection.release(); // Always release back to the pool
+  }
+};
+```
+## 5️⃣ Key Takeaways
+
+| **Approach**                     | **Performance** | **Latency**  | **DB Load**      | **Recommended?**          |
+|----------------------------------|---------------|------------|----------------|-------------------------|
+| **Closing DB Connection Per Request** | ❌ Poor        | ❌ High     | ❌ High         | 🚫 No                   |
+| **Keeping DB Connection Open**  | ✅ Good       | ✅ Low      | ✅ Optimized    | ✅ Yes                  |
+| **Using Connection Pooling**    | 🔥 Best       | 🔥 Lowest  | 🔥 Efficient   | ✅ Highly Recommended   |
+| **Using RDS Proxy**             | 🔥🔥 Best for High Load | 🔥🔥 Very Low | 🔥🔥 Very Efficient | ✅✅ Best for Production |
+
+---
