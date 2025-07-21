@@ -28,8 +28,8 @@ I'm a passionate software developer with expertise in cloud technologies, system
 ## 📫 Connect with Me
 
 - GitHub: [ganeshydv](https://github.com/ganeshydv)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-- Email: your-email@example.com
+- LinkedIn: [Ganesh R G](https://www.linkedin.com/in/ganesh-gurkhude-52bb66233)
+- Email: gurkhudeganesh@gmail.com
 
 ---
 

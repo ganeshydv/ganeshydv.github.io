@@ -1,7 +1,7 @@
 title: "Tech Skills Blog"
 description: "My journey through AWS, Java, Databases, System Design, and more"
-author: "GGurkhude"
-email: your-email@example.com
+author: "Ganesh Gurkhude"
+email: gurkhudeganesh@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ganeshydv.github.io" # the base hostname & protocol for your site
 
@@ -27,6 +27,50 @@ defaults:
     values:
       layout: "post"
       author: "GGurkhude"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "GGurkhude"
+
+# Main Categories for Navigation
+main_categories:
+  - name: "Cloud & DevOps"
+    slug: "cloud-devops"
+    subcategories:
+      - "AWS Services"
+      - "Docker & Containers"
+      - "Serverless"
+      - "Infrastructure"
+  - name: "Programming Languages"
+    slug: "programming"
+    subcategories:
+      - "Java & Spring"
+      - "JavaScript & Node.js"
+      - "TypeScript"
+      - "Rust"
+  - name: "System Design & Architecture"
+    slug: "system-design"
+    subcategories:
+      - "Distributed Systems"
+      - "Database Design"
+      - "API Design"
+      - "Performance"
+  - name: "Development & Testing"
+    slug: "development"
+    subcategories:
+      - "Testing Frameworks"
+      - "Code Quality"
+      - "Frontend Frameworks"
+      - "Authentication"
+  - name: "Computer Science Fundamentals"
+    slug: "fundamentals"
+    subcategories:
+      - "Operating Systems"
+      - "Networking"
+      - "Algorithms & Data Structures"
+      - "Multimedia Processing"
 
 # Navigation
 header_pages:

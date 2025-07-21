@@ -34,7 +34,13 @@ const categoryMapping = {
     'VideoProcessing': 'multimedia',
     '_DSA_NeetCode': 'algorithms',
     '_JsTutorials': 'javascript',
-    '_Ts': 'typescript'
+    '_Ts': 'typescript',
+    'ExportTut': 'nodejs',
+    'Js_30days_leetcode.js': 'algorithms',
+    'Mongodb': 'databases',
+    'Nodemailer': 'nodejs',
+    'RoolsEngine_Rewards': 'nodejs',
+    'socket_chat_ex': 'nodejs'
 };
 
 // Extract title from markdown content
