@@ -13,9 +13,10 @@
     ],
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
+        "_DSA_NeetCode/recurssion",
         "_DSA_NeetCode/LinkedListEx",
         "_DSA_NeetCode/DsaSheet/binarySearch",
         "_DSA_NeetCode/DsaSheet/MaxNext",
-        "_DSA_NeetCode/recurssion"
+        "3_SystemDesign/LLD_Design_Patterns/2_Behavioural Pattarns"
     ]
 }

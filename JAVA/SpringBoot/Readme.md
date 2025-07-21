@@ -1,0 +1,56 @@
+- Contexts:
+   - Application Context
+   - Servlet context
+- Applicaton: 
+   - `@SpringBootApplication()`
+      - `@Configuration()`
+      - `@EnableAutoConfiguration()`
+      - `@ComponentScan()`
+- API (servlet) : Done
+   - `@Controller()` 
+   - `@RestController()`
+   - `@RequestBody()`
+   - `@PathVariable()`
+   - `@RequestParam()`
+   - `@RequestMapping()`
+   - `@ResponseBody()`
+   - DTO 
+- API Validations 
+   - `@Valid` : with @RequestBody()
+   - `@NotNull()`
+   - `@NotBlank()`
+- Exception: Done
+   - Custom Exceptions
+   - `@ControllerAdvice()` - class level
+   - `@ExceptionHandler()` - method level
+- Component:
+   - `@Component`
+- DI + IOC : theory 
+   - `@Autowired`
+   - `@Qualifier`
+   - `@Value`
+- DB : In progress
+   - @Table( name="table") : for db table name
+       - `@Table(name= "",
+       uniqueConstraints = @UniqueContstraint(columnNames=""),
+       indexes={
+         @Index(name="",columnList="",@Index(name="",columnList=""))
+       })`
+   -  Entity: (for ORM)
+      - `@Entity()` : for ORM
+      - `@Id`
+      - `@GeneratedValue(startegy=GenerationType.IDENTITY)`
+      - `@Column(unique=true,nullable=false)`
+      - `@Column(name="db_table_column_name")`
+   - Repository: Spring data JPA
+      - `@Repository`
+      - `@Query`
+   - Relations:
+       - One to many
+       - many to one
+- Configs: 
+   - `@Profile("dev")`
+   - `@Configuration` : class level
+   - `@Bean` : method level
+   - `@ConfigurationProperties(prefix="app")` (used with @Component for making class config)
+   - `@EnableConfigurationProperties(AppProperties.class)` : need to use mannuly if not springbootapplication to make config class 

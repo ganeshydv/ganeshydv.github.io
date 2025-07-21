@@ -1,118 +1,178 @@
-# Project Documentation
+# 🎯 Tech Skills Blog
 
-## Table of Contents
+> **My comprehensive journey through Cloud Computing, System Design, Programming Languages, and Computer Science Fundamentals**
 
-1. [Learning Stack](#learning-stack)
-2. [Networking](#networking)
-3. [System Design](#system-design)
-4. [Docker](#docker)
-5. [Node.js Development](#nodejs-development)
-6. [Authentication](#authentication)
-7. [Data Structures and Algorithms](#data-structures-and-algorithms)
-8. [Angular](#angular)
-9. [Miscellaneous](#miscellaneous)
-10. [AWS](#aws)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://ganeshydv.github.io)
+[![Jekyll](https://img.shields.io/badge/Jekyll-4.3-red)](https://jekyllrb.com/)
+[![Posts](https://img.shields.io/badge/Posts-250+-blue)](#)
 
-## Learning Stack
+---
 
-- [Learning Stack](___LearningStack___.txt)
+## 🌟 About This Blog
 
-## Networking
+This blog contains my learning notes, insights, and technical documentation across various technology domains. Each post is carefully organized by categories and tags for easy navigation and discovery.
 
-- [DNS](__dns__.txt)
-- [Networking](3_SystemDesign/2__newroking__.md)
-- [Packet Tracing](2_Networking/Packet_Tracing/)
-  - [Subnetting](2_Networking/Packet_Tracing/3_subnetting_.md)
-- [Docker Networking](4_Docker/2_docker_networking_.md)
-- [Track IP and Trace Route](2_Networking/0_Tarck_ip__traceRoute__.md)
+**Live Blog:** [https://ganeshydv.github.io](https://ganeshydv.github.io)
 
+---
 
+## 📚 Content Structure
 
-1. [Packet Tracing](#packet-tracing)
-2. [Subnetting](#subnetting)
-3. [Track IP and Trace Route](#track-ip-and-trace-route)
-4. [Nginx Load Balancer](#nginx-load-balancer)
+### 🔥 Main Categories
 
-## Nginx Load Balancer
+#### ☁️ **Cloud & DevOps**
+- **AWS Services** - Lambda, S3, DynamoDB, ECS, API Gateway
+- **Serverless Architecture** - SAM, Localstack, Event-driven design
+- **DevOps Tools** - Docker, CI/CD pipelines, Infrastructure as Code
+- **Monitoring & Security** - CloudWatch, IAM, Authentication
 
-- [Nginx Load Balancer](../___nginx_load_balancer__.txt)
+#### 💻 **Programming Languages**
+- **Java & Spring** - Spring Boot, JPA, Hibernate, Multithreading
+- **JavaScript & Node.js** - Event Loop, Modules, Async Programming
+- **TypeScript** - Type safety, Advanced patterns
+- **Rust** - Systems programming concepts
 
-## System Design
+#### 🏗️ **System Design & Architecture**
+- **Distributed Systems** - CAP theorem, Consistency models
+- **Database Design** - SQL vs NoSQL, ACID properties, Indexing
+- **Scalability** - Load balancing, Caching, Microservices
+- **Performance** - Optimization strategies, Bottleneck analysis
 
-- [System Design](3_SystemDesign/)
+#### 🛠️ **Development & Testing**
+- **Testing Frameworks** - JMeter, Jest, Karma, Unit testing
+- **Code Quality** - SonarQube, Best practices
+- **Frontend Development** - React, Angular, Component architecture
+- **Authentication** - JWT, OAuth, Keycloak, Session management
 
-## Docker
+#### 🔬 **Computer Science Fundamentals**
+- **Operating Systems** - Process management, Memory allocation, Scheduling
+- **Networking** - TCP/IP, HTTP/HTTPS, DNS, Network layers
+- **Algorithms & Data Structures** - Sorting, Searching, Complexity analysis
+- **Multimedia Processing** - Video formats, Streaming protocols
 
-- [Docker](4_Docker/docker.md)
+---
 
-## Node.js Development
+## 📁 Repository Structure
 
-- [Node.js Development](6_Node_Dev/)
-- [Node Details](Node_Details.md)
-- [Node.js Extra Topics](NodeJsExtraTopics/)
-- [Nodemailer](Nodemailer/)
+```
+📦 Tech Skills Blog
+├── 📂 _posts/                    # All blog posts (251 articles)
+├── 📂 _config.yml               # Jekyll configuration
+├── 📂 index.md                 # Homepage
+├── 📂 about.md                 # About page
+├── 📂 categories.md            # Categories overview
+├── 📂 Gemfile                  # Ruby dependencies
+│
+├── 📂 0_AWS/                   # ☁️ AWS Services & Cloud Computing
+├── 📂 0_AWS_SAM/              # AWS SAM Templates & Serverless
+├── 📂 0_AWS_Serverless/       # Serverless Framework & Lambda
+│
+├── 📂 JAVA/                    # ☕ Java & Spring Framework
+├── 📂 _JsTutorials/           # 🟨 JavaScript & Node.js Core
+├── 📂 _Ts/                    # 🔷 TypeScript Development
+├── 📂 RustEx/                 # 🦀 Rust Programming
+│
+├── 📂 3_SystemDesign/          # 🏗️ System Design & Architecture
+├── 📂 4_DataBase_RDS_DynamoDB/ # 🗄️ Database Design & Management
+├── 📂 2_Networking/            # 🌐 Network Protocols & Communication
+├── 📂 1_OS/                    # 💻 Operating System Concepts
+│
+├── 📂 React_Angular/          # ⚛️ Frontend Frameworks
+├── 📂 NestJs/                # 🏠 NestJS Framework
+├── 📂 Testing/                # 🧪 Testing & Quality Assurance
+├── 📂 4_Docker/              # 🐳 Containerization & DevOps
+├── 📂 5_Auth_JWT/            # 🔐 Authentication & Security
+│
+├── 📂 VideoProcessing/       # 🎥 Multimedia & Streaming
+├── 📂 JMeter/                # 📊 Performance Testing
+├── 📂 SonarQube/             # 🔍 Code Quality & Analysis
+├── 📂 _DSA_NeetCode/         # 🧮 Algorithms & Data Structures
+└── 📂 ...                    # Additional specialized topics
+```
 
-## Authentication
+---
 
-- [Auth Tokens](__auth_tokens__.txt)
-- [Session Cookies](__seesion_cookies__.txt)
-- [Keycloak](keycloak_/)
+## 🚀 Quick Start
 
-## Data Structures and Algorithms
+### For Readers
+Simply visit **[ganeshydv.github.io](https://ganeshydv.github.io)** to browse all posts organized by categories.
 
-- [DSA](__dsa__.txt)
-- [DSA NeetCode](DSA_NeetCode/)
+### For Developers
+```bash
+# Clone the repository
+git clone https://github.com/ganeshydv/ganeshydv.github.io.git
 
-## Angular
+# Install dependencies
+bundle install
 
-- [Angular](React_Angular/Angular.md)
-- [Angular 2](React_Angular/Angular_2.md)
+# Run locally
+bundle exec jekyll serve
 
-## Miscellaneous
+# Visit http://localhost:4000
+```
 
-- [Git Commands](git_cmds_.md)
-- [Extra JavaScript Exercises](Js_30days_leetcode.js/)
-- [JavaScript Event Loop](js_event_loop.js)
-- [Environment Variables](.env)
-- [Git Ignore](.gitignore)
-- [Package JSON](package.json)
+---
 
-## AWS
+## 🔍 Finding Content
 
-- [AWS Overview](0_AWS/0_AWS_.md)
-- [AWS Free Tier](0_AWS/0_AWS_Free_Tier.md)
-- [IAM Role](0_AWS/1.3_IAM_Role.txt)
-- [IAM Security Tools](0_AWS/1.4_IAM_Security_Tools.txt)
-- [User Access](0_AWS/1.2_user_access.txt)
-- [EC2](0_AWS/2_EC2_.txt)
-- [How ECS Instance Launched](0_AWS/How_ECS_instance_launched.txt)
-- [AWS Serverless Overview](0_AWS_Serverless/1_serverless__.txt)
-- [AWS CICD](0_AWS_Serverless/2_CICD_.txt)
-- [AWS API Gateway](0_AWS_Serverless/5_AWS_APi_Gateway_.txt)
-- [AWS DynamoDB Operations](0_AWS_Serverless/6.2_AWS_DynamoDB_Op_.js)
-- [User IAM](0_AWS_Serverless/3_User_IAM_.txt)
+### By Main Category
+- **☁️ Cloud & DevOps:** AWS, Docker, Serverless, Infrastructure
+- **💻 Programming:** Java, JavaScript, TypeScript, Rust
+- **🏗️ System Design:** Architecture, Databases, Scalability
+- **🛠️ Development:** Testing, Frontend, Authentication
+- **🔬 Fundamentals:** OS, Networking, Algorithms, Multimedia
 
-## JavaScript Files
+### By Technology Stack
+- **Backend:** Java/Spring, Node.js, Serverless
+- **Frontend:** React, Angular, TypeScript
+- **Cloud:** AWS (Lambda, S3, DynamoDB, ECS)
+- **Database:** SQL, NoSQL, Performance tuning
+- **DevOps:** Docker, CI/CD, Monitoring
 
-- [Extra JavaScript Exercises](Js_30days_leetcode.js/)
-- [JavaScript Event Loop](js_event_loop.js)
-- [Tree Iteration](JsTutorials/ExtraEx/TreeItr.js)
-- [Tree Example 4](JsTutorials/ExtraEx/4_tree.js)
-- [Tree Example 5](JsTutorials/ExtraEx/5_tree.js)
-- [Create File/Folder](NodeJsExtraTopics/creatre_file_folder_.js)
+---
 
-## TypeScript Files
+## 📊 Blog Statistics
 
-- [Partial, Omit, keyof](Ts/0_as_Partial_is_ommit_typeOf_keyOf_.ts)
-- [Move Function](Ts/0_as_Partial_is_ommit_typeOf_keyOf_.ts)
-- [Modules and Components](React_Angular/Angular.md)
-- [Routes Module](React_Angular/Angular.md)
-- [Mat Table](React_Angular/Angular.md)
-- [Forms for Submissions](React_Angular/Angular.md)
-- [Search](React_Angular/Angular.md)
-- [TypeORM](Ts/0_Practice_.md)
-- [NestJS](Ts/0_Practice_.md)
-- [Swagger](Ts/0_Practice_.md)
-- [Logger](Ts/0_Practice_.md)
-- [API Test Cases](Ts/0_Practice_.md)
-- [Unit Test Cases](Ts/0_Practice_.md)
+- **📝 Total Posts:** 251
+- **🏷️ Main Categories:** 5 primary domains
+- **🔖 Sub-categories:** 20+ specialized topics
+- **📅 Updated:** Regularly with new learnings
+- **🌍 Deployment:** GitHub Pages with Jekyll
+
+---
+
+## 🎯 Learning Paths
+
+### **Cloud Engineer Path**
+1. **AWS Fundamentals** → IAM, EC2, S3
+2. **Serverless Architecture** → Lambda, API Gateway
+3. **Container Orchestration** → ECS, Docker
+4. **Infrastructure as Code** → CloudFormation, SAM
+
+### **Full-Stack Developer Path**
+1. **Backend Development** → Java/Spring, Node.js
+2. **Frontend Frameworks** → React, Angular
+3. **Database Design** → SQL, NoSQL patterns
+4. **API Development** → REST, Authentication
+
+### **System Designer Path**
+1. **Distributed Systems** → CAP theorem, Consistency
+2. **Database Architecture** → Scaling, Indexing
+3. **Performance Engineering** → Optimization, Caching
+4. **Microservices** → Design patterns, Communication
+
+---
+
+## 🤝 Connect
+
+- **GitHub:** [ganeshydv](https://github.com/ganeshydv)
+- **Blog:** [ganeshydv.github.io](https://ganeshydv.github.io)
+- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/ganesh-gurkhude-52bb66233)
+
+---
+
+*⭐ Star this repository if you find the content helpful for your learning journey!*
+
+---
+
+*Last updated: July 2025 | Built with ❤️ using Jekyll & GitHub Pages*

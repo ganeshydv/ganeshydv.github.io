@@ -1,0 +1,15 @@
+
+- JDK →JRE → Java source code → compiled to bytecode (.class) → run by JVM → executed as machine code (bits)
+-  Maven (builds App) → Dependency → Code → JAR/WAR
+
+## Request: 
+User --> Servlet --> APP Logic --> JPA --> JDBC--> DB
+
+## ✅ **Key Concepts**
+
+| Term   | Stands For            | Responsibility                         | Maps To DB? | Layer                 |
+|--------|------------------------|-----------------------------------------|--------------|------------------------|
+| DTO    | Data Transfer Object   | Moves data between layers or systems    | ❌ No         | Controller ↔ Service   |
+| Model  | General term           | Depends on usage                        | Maybe         | Varies                 |
+| Entity | Entity class (JPA)     | Maps Java object to DB table            | ✅ Yes        | Persistence Layer      |
+| DAO    | Data Access Object     | Interface/class to access data source   | ❌ (works with Entity) | Repository Layer       |

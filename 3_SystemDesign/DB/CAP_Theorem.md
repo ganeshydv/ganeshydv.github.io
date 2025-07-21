@@ -8,15 +8,28 @@
 ## `IF NOT : Choose one - Latency OR Consistency`
 ## `Availibiltiy and Consistency can go along`
 
+
+## 💡 Note on SQL Databases
+- `Traditional SQL databases (PostgreSQL, MySQL) are not distributed by default, so CAP doesn’t apply directly.`
+- But:
+   - Distributed SQL systems like CockroachDB, Spanner, YugabyteDB do need to make CAP trade-offs
 ## CAP
 The CAP theorem states that in any distributed system, you can achieve only two of the following three guarantees at any given time:
 
 1. ### Consistency (C): 
     - Every read receives the most recent write, ensuring `data uniformity across the system`.
 2. ### Availability (A): 
-    - Every request receives a response (either success or failure), ensuring the `system is always accessible`.
+    - Every request receives a response (either success or failure), ensuring the `system is always accessible`. 
+    - No timeout.
 3. ### Partition Tolerance (P): 
     - `The system continues to operate even if communication between nodes is disrupted` (network partition occurs).
+
+| Letter | Stands For              | Meaning                                                                         |
+| ------ | ----------------------- | ------------------------------------------------------------------------------- |
+| C      | **Consistency**         | All nodes see the same data at the same time                                    |
+| A      | **Availability**        | Every request receives a response (success or failure) — no timeouts            |
+| P      | **Partition Tolerance** | The system continues to operate even if there’s a network failure between nodes |
+
 
 ## Relaiblity :
 refers to the ability of a system to operate continuously and correctly over time, without failures or interruptions

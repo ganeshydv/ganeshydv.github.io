@@ -1,5 +1,7 @@
 ## An IAM Role is a set of permissions that AWS services (like Lambda) assume to perform actions on other AWS resources.
 
+- ### AssumeRolePolicyDocument = Who can use the role
+- ### Policies = What the role can do once assumed
 - ### When AWS Lambda runs, it needs:
    - `Permission to assume a role` (this is controlled by AssumeRolePolicyDocument).
    - `Permission to access AWS services` (this is defined inside Policies).

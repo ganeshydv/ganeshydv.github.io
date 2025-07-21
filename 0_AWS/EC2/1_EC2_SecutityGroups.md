@@ -3,8 +3,8 @@
 - `controls`: traffic allowed into or out of EC2 instance
 - It can have : 
 - It contains ALLOW rules only as by default in comming traffic is forbidden
-   - 1) security group [or]
-   - 2) IP address
+   1) security group [or]
+   2) IP address
 - `Firewall`
 - `Regulets`: 
    - Acces to port
@@ -18,12 +18,11 @@
 ----------------------------------------------------------
 ## How to create Security group
 
-- 1) `crate Insatnce of Ec2`
-- 2) `go to Network & Security`
-- 3) `got to Secure group`
-- 4) `inbound rules` : from outside to instance
-       - here you have to add/DELETE security group TYPE
-- 5)  `outbound rules` : from Insatnce to outside
+1) `crate Insatnce of Ec2`
+2) `go to Network & Security`
+3) `got to Secure group`
+4) `inbound rules` : from outside to instance     - here you have to add/DELETE security group TYPE
+5)  `outbound rules` : from Insatnce to outside
 
 
 ----------

@@ -1,0 +1,2 @@
+
+### Spring uses the class name (with the first letter in lowercase) as the default bean name when you annotate a class with @Component, @Service, @Repository, or @Controller without specifying a custom name.

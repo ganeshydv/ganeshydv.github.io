@@ -1,0 +1,101 @@
+title: "Tech Skills Blog"
+description: "My journey through AWS, Java, Databases, System Design, and more"
+author: "Ganesh Gurkhude"
+email: gurkhudeganesh@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ganeshydv.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "GGurkhude"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "GGurkhude"
+
+# Main Categories for Navigation
+main_categories:
+  - name: "Cloud & DevOps"
+    slug: "cloud-devops"
+    subcategories:
+      - "AWS Services"
+      - "Docker & Containers"
+      - "Serverless"
+      - "Infrastructure"
+  - name: "Programming Languages"
+    slug: "programming"
+    subcategories:
+      - "Java & Spring"
+      - "JavaScript & Node.js"
+      - "TypeScript"
+      - "Rust"
+  - name: "System Design & Architecture"
+    slug: "system-design"
+    subcategories:
+      - "Distributed Systems"
+      - "Database Design"
+      - "API Design"
+      - "Performance"
+  - name: "Development & Testing"
+    slug: "development"
+    subcategories:
+      - "Testing Frameworks"
+      - "Code Quality"
+      - "Frontend Frameworks"
+      - "Authentication"
+  - name: "Computer Science Fundamentals"
+    slug: "fundamentals"
+    subcategories:
+      - "Operating Systems"
+      - "Networking"
+      - "Algorithms & Data Structures"
+      - "Multimedia Processing"
+
+# Navigation
+header_pages:
+  - about.md
+  - categories.md
+
+# Social links
+github_username: ganeshydv
+linkedin_username: https://www.linkedin.com/in/ganesh-gurkhude-52bb66233
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X
+
+# Exclude files from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - generateIndexInMd.js
+  - package.json
+  - tsconfig.json

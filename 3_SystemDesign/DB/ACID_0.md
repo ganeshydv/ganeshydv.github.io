@@ -1,0 +1,10 @@
+## ACID
+- Transaction = Query
+### 1. Automicity: All or nothing
+- If one Transaction is running 2 or more queries then if later any query fails it should rollback so there is No transaction
+### 2. Consistency: before and after transaction (Query) data should be consistent
+- If table has constraints or updating one table should lead to change in another then this process should be complete else inconsistent data will be generated.
+### 3. Isolation:  One Row can be accessed by only one transaction at a time.
+- If 2 transactions wants to access same row or waiting to acess one row after another but that row is being locked by another transaction this will create `DEADLOCK`.
+- 
+### 4. Durability: After Commit if DB fails still after restart data should be recovered
