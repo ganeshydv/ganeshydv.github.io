@@ -1,0 +1,66 @@
+---
+layout: post
+title: "How Does a Video Player Read MP4?"
+date: 2025-07-21
+categories: [multimedia, 0-2-how-video-player-reads--md]
+tags: []
+author: "GGurkhude"
+excerpt: "Learning notes on how does a video player read mp4?"
+original_path: "VideoProcessing/0.2_how_video_player_reads_.md"
+---
+
+
+# 🔍 How Does a Video Player Read MP4?
+### 1. Reads ftyp → Confirms MP4 format.
+### 2. Reads moov → Extracts:
+- Track info (trak) → Finds video, audio, subtitle tracks.
+- Sample tables (stbl) → Finds where actual data is in mdat.
+- Time scale (timescale) → Determines playback speed.
+### 3. Reads mdat → Fetches frames from video/audio/subtitle tracks.
+### 4. Decodes frames and renders them in sync.
+
+
+## 📌 Understanding Sample Tables (stbl)
+### Inside moov → trak → mdia → minf → stbl, we have:
+- Sample Description (stsd) → Codec info (e.g., avc1 for H.264 video).
+- Sample Size (stsz) → Size of each frame/sample.
+- Chunk Offset (stco or co64) → File positions of media chunks.
+- Time-to-Sample (stts) → Playback timing.
+### When a player needs the next frame, it:
+- Looks at stsz to know frame size.
+- Uses stco to locate mdat data.
+- Refers to stts to sync audio/video.
+
+## 📌 How MP4 Knows Where Video, Audio & Subtitle Are?
+#### 1. Multiple trak atoms in moov:
+
+  - One trak for video (hdlr → vide).
+  - One trak for audio (hdlr → soun).
+  - One trak for subtitles (hdlr → sbtl or subt).
+#### 2. Each track has a sample table (stbl) that points to mdat positions.
+#### 3. Player decodes & synchronizes tracks using stts (time mapping).
+
+## 🔹 Real-World Example (MP4 Atom Layout)
+```scss
+[ftyp] (File Type)
+[moov] (Movie Metadata)
+  ├── [mvhd] (Movie Header)
+  ├── [trak] (Video Track)
+  │    ├── [mdia] (Media)
+  │         ├── [minf] (Media Info)
+  │              ├── [stbl] (Sample Table)
+  ├── [trak] (Audio Track)
+  │    ├── [mdia] (Media)
+  │         ├── [minf] (Media Info)
+  │              ├── [stbl] (Sample Table)
+[mdat] (Media Data)
+```
+## 🔹 Optimizations for Streaming
+### 1. Progressive MP4 (Fast Start):
+
+- Moves moov to the beginning so players can start playback before downloading mdat.
+### 2. Fragmented MP4 (fMP4):
+
+- Splits video into multiple moof + mdat pairs, useful for adaptive streaming.
+
+## Where 
