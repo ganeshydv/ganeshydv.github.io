@@ -56,38 +56,52 @@ This blog contains my learning notes, insights, and technical documentation acro
 
 ```
 📦 Tech Skills Blog
-├── 📂 _posts/                    # All blog posts (251 articles)
+├── 📂 _posts/                    # All blog posts (250+ articles)
 ├── 📂 _config.yml               # Jekyll configuration
 ├── 📂 index.md                 # Homepage
 ├── 📂 about.md                 # About page
 ├── 📂 categories.md            # Categories overview
 ├── 📂 Gemfile                  # Ruby dependencies
 │
-├── 📂 0_AWS/                   # ☁️ AWS Services & Cloud Computing
-├── 📂 0_AWS_SAM/              # AWS SAM Templates & Serverless
-├── 📂 0_AWS_Serverless/       # Serverless Framework & Lambda
+├── 📂 0_AWS/                   # AWS Services & Cloud
+│   ├── 📂 ECS/                # Container orchestration
+│   ├── 📂 Lambda/             # Serverless functions
+│   ├── 📂 Api_Gateway/        # API management
+│   ├── 📂 Cognito/            # Authentication services
+│   └── 📂 ...                 # Other AWS services
 │
-├── 📂 JAVA/                    # ☕ Java & Spring Framework
-├── 📂 _JsTutorials/           # 🟨 JavaScript & Node.js Core
-├── 📂 _Ts/                    # 🔷 TypeScript Development
-├── 📂 RustEx/                 # 🦀 Rust Programming
+├── 📂 JAVA/                    # Java & Spring Framework
+│   ├── 📂 SpringBoot/         # Spring Boot applications
+│   ├── 📂 Adv_Java/          # Advanced Java concepts
+│   └── 📂 ...                 # Java fundamentals
 │
-├── 📂 3_SystemDesign/          # 🏗️ System Design & Architecture
-├── 📂 4_DataBase_RDS_DynamoDB/ # 🗄️ Database Design & Management
-├── 📂 2_Networking/            # 🌐 Network Protocols & Communication
-├── 📂 1_OS/                    # 💻 Operating System Concepts
+├── 📂 3_SystemDesign/          # System Design & Architecture
+│   ├── 📂 DB/                 # Database design patterns
+│   ├── 📂 demo/               # Design pattern examples
+│   └── 📂 ...                 # Distributed systems
 │
-├── 📂 React_Angular/          # ⚛️ Frontend Frameworks
-├── 📂 NestJs/                # 🏠 NestJS Framework
-├── 📂 Testing/                # 🧪 Testing & Quality Assurance
-├── 📂 4_Docker/              # 🐳 Containerization & DevOps
-├── 📂 5_Auth_JWT/            # 🔐 Authentication & Security
+├── 📂 2_Networking/            # Network Protocols & Communication
+│   └── 📂 ...                 # TCP/IP, HTTP, DNS concepts
 │
-├── 📂 VideoProcessing/       # 🎥 Multimedia & Streaming
-├── 📂 JMeter/                # 📊 Performance Testing
-├── 📂 SonarQube/             # 🔍 Code Quality & Analysis
-├── 📂 _DSA_NeetCode/         # 🧮 Algorithms & Data Structures
-└── 📂 ...                    # Additional specialized topics
+├── 📂 1_OS/                    # Operating System Concepts
+│   └── 📂 ...                 # Process, memory, scheduling
+│
+├── 📂 _JsTutorials/           # JavaScript & Node.js
+│   ├── 📂 PromisesAndAsync/   # Async programming
+│   ├── 📂 Arrays/             # Data structures
+│   ├── 📂 Events/             # Event handling
+│   └── 📂 ...                 # Core JS concepts
+│
+├── 📂 React_Angular/          # Frontend Frameworks
+│   ├── 📂 Angular/            # Angular development
+│   └── 📂 ...                 # React concepts
+│
+├── 📂 Testing/                # Testing & Quality Assurance
+├── 📂 4_Docker/              # Containerization
+├── 📂 VideoProcessing/       # Multimedia & Streaming
+├── 📂 NestJs/                # Node.js framework
+├── 📂 5_Auth_JWT/            # Authentication patterns
+└── 📂 ...                    # Additional technology topics
 ```
 
 ---
@@ -133,7 +147,7 @@ bundle exec jekyll serve
 
 ## 📊 Blog Statistics
 
-- **📝 Total Posts:** 251
+- **📝 Total Posts:** 250+
 - **🏷️ Main Categories:** 5 primary domains
 - **🔖 Sub-categories:** 20+ specialized topics
 - **📅 Updated:** Regularly with new learnings

@@ -1,0 +1,51 @@
+# Simple Jekyll build and deploy
+name: Build and Deploy Jekyll
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      run: |
+        git clone https://github.com/${{ github.repository }}.git .
+        git checkout ${{ github.sha }}
+    
+    - name: Setup Ruby and Jekyll
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ruby-full build-essential zlib1g-dev
+        echo 'export PATH="$HOME/.gem/bin:$PATH"' >> ~/.bashrc
+        source ~/.bashrc
+        gem install jekyll bundler
+    
+    - name: Install dependencies
+      run: |
+        bundle install
+    
+    - name: Build Jekyll site
+      run: |
+        bundle exec jekyll build
+    
+    - name: List generated files
+      run: |
+        ls -la _site/
+    
+    - name: Deploy to GitHub Pages
+      run: |
+        cd _site
+        git init
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        git commit -m "Deploy Jekyll site"
+        git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main:gh-pages
