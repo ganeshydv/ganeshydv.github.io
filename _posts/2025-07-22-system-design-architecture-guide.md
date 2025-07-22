@@ -15,56 +15,61 @@ Comprehensive system design guide covering scalability, consistency, CAP theorem
 
 ## 📚 Table of Contents
 
-- [1. Deployment Strategies](#section-1)
-- [1. Newroking](#section-1)
-- [2. Newroking](#section-2)
-- [2. Rate Limiting](#section-2)
-- [3. Upload Site To S3](#section-3)
-- [999. Cloud Server](#section-999)
-- [999. How Request Works Dns](#section-999)
-- [999. Readme](#section-999)
-- [999. Solid](#section-999)
-- [999. Sso](#section-999)
-- [999. Topics](#section-999)
-- [999. Proxy Reverseproxy](#section-999)
-- [999. Tls Handshake](#section-999)
-  - [0. Analysis](#section-0)
-  - [0. Acid 0](#section-0)
-  - [0. Cap 0](#section-0)
-  - [0. Cap Ap 0](#section-0)
-  - [0. Cap Cp 0](#section-0)
-  - [1. Requirement](#section-1)
-  - [1. Sharding](#section-1)
-  - [1. Acid 1](#section-1)
-  - [1. Cap Ap 1](#section-1)
-  - [1. Cognito 1 Sign Up](#section-1)
-  - [2. Consistent Hashing](#section-2)
-  - [2. Acid 2 Isolation Levels 1](#section-2)
-  - [2. Acid 2 I Lock 1](#section-2)
-  - [2. Acid 2 I Lock 2](#section-2)
-  - [2. Cognito 2 Sing In](#section-2)
-  - [2-1. Cognito 2.1 Sign In](#section-2-1)
-  - [3. Chainofresponsibiltypattern Logging](#section-3)
-  - [999. Cap Cp Vs Ap](#section-999)
-  - [999. Cap Theorem](#section-999)
-  - [999. Stock Market Design](#section-999)
-  - [999. Index](#section-999)
-  - [999. Overview](#section-999)
-  - [999. Cognito](#section-999)
-  - [999. Jwks](#section-999)
-    - [0. Vdo Upload](#section-0)
-    - [1. Vdo Large File Upload S3 Presigned](#section-1)
-    - [2. Vdo Large File Upload S3 Lambda](#section-2)
-    - [999. Sns Push Notifications](#section-999)
-    - [999. Spotify Design](#section-999)
-    - [999. Design](#section-999)
-                - [999. Patterns](#section-999)
+
+- [**1.** Deployment Strategies](#section-1)
+- [**1.** Newroking](#section-1)
+
+- [**2.** Newroking](#section-2)
+- [**2.** Rate Limiting](#section-2)
+
+- [**3.** Upload Site To S3](#section-3)
+- [**999.** Cloud Server](#section-999)
+- [**999.** How Request Works Dns](#section-999)
+- [**999.** Readme](#section-999)
+- [**999.** Solid](#section-999)
+- [**999.** Sso](#section-999)
+- [**999.** Topics](#section-999)
+- [**999.** Proxy Reverseproxy](#section-999)
+- [**999.** Tls Handshake](#section-999)
+  - [**0.** Analysis](#section-0)
+  - [**0.** Acid 0](#section-0)
+  - [**0.** Cap 0](#section-0)
+  - [**0.** Cap Ap 0](#section-0)
+  - [**0.** Cap Cp 0](#section-0)
+  - [**1.** Requirement](#section-1)
+  - [**1.** Sharding](#section-1)
+  - [**1.** Acid 1](#section-1)
+  - [**1.** Cap Ap 1](#section-1)
+  - [**1.** Cognito 1 Sign Up](#section-1)
+  - [**2.** Consistent Hashing](#section-2)
+  - [**2.** Acid 2 Isolation Levels 1](#section-2)
+  - [**2.** Acid 2 I Lock 1](#section-2)
+  - [**2.** Acid 2 I Lock 2](#section-2)
+  - [**2.** Cognito 2 Sing In](#section-2)
+  - [**2-1.** Cognito 2.1 Sign In](#section-2-1)
+  - [**3.** Chainofresponsibiltypattern Logging](#section-3)
+  - [**999.** Cap Cp Vs Ap](#section-999)
+  - [**999.** Cap Theorem](#section-999)
+  - [**999.** Stock Market Design](#section-999)
+  - [**999.** Index](#section-999)
+  - [**999.** Overview](#section-999)
+  - [**999.** Cognito](#section-999)
+  - [**999.** Jwks](#section-999)
+    - [**0.** Vdo Upload](#section-0)
+    - [**1.** Vdo Large File Upload S3 Presigned](#section-1)
+    - [**2.** Vdo Large File Upload S3 Lambda](#section-2)
+    - [**999.** Sns Push Notifications](#section-999)
+    - [**999.** Spotify Design](#section-999)
+    - [**999.** Design](#section-999)
+      - [**999.** Patterns](#section-999)
 
 ---
 
 
 
 ## 1. Deployment Strategies {#section-1}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # Deployment Strategies
 
@@ -134,6 +139,8 @@ General 6 Ways:
 ---
 
 ## 1. Newroking {#section-1}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # Network Communication Process
 
@@ -226,6 +233,8 @@ addresses remain constant for routing decisions.
 
 ## 2. Newroking {#section-2}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 Data Layer [ Application Layer + Transport Layer ] --> Network Laye [IP added to packet ] --> Data link [Link layer ] : mac added to 
 
 
@@ -254,6 +263,8 @@ In summary, encapsulation starts at the higher layers, and as you move down the 
 ---
 
 ## 2. Rate Limiting {#section-2}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # Rate Limiting:
 
@@ -286,6 +297,8 @@ In the context of rate limiting, the Token Bucket algorithm can be used to enfor
 ---
 
 ## 3. Upload Site To S3 {#section-3}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 1. Create bucket
 2. enable static hosting
@@ -744,7 +757,7 @@ At this point, the TLS handshake is complete, and both parties now communicate u
 
 ### 0. Analysis {#section-0}
 
-> **Topic: BatchProcessing**
+> **📁 Topic: BatchProcessing**
 
 ## What needs to process? - object, system analysis
 - total objects : ?
@@ -793,7 +806,7 @@ At this point, the TLS handshake is complete, and both parties now communicate u
 
 ### 0. Acid 0 {#section-0}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## ACID
 - Transaction = Query
@@ -810,7 +823,7 @@ At this point, the TLS handshake is complete, and both parties now communicate u
 
 ### 0. Cap 0 {#section-0}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## 💡 Note on SQL Databases
 - `Traditional SQL databases (PostgreSQL, MySQL) are not distributed by default, so CAP doesn’t apply directly.`
@@ -862,7 +875,7 @@ Now network between them breaks (Partition happens).
 
 ### 0. Cap Ap 0 {#section-0}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## ✅ What is Partition Tolerance?
 - The system continues to operate even if network partitions occur (i.e., nodes cannot talk to each other).
@@ -919,7 +932,7 @@ This is a common confusion. In CAP:
 
 ### 0. Cap Cp 0 {#section-0}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## How Consistency is managed? (CP system)
 - `All clients see the same data, even if they connect to different nodes.`
@@ -953,7 +966,7 @@ This is how strong consistency is enforced.
 
 ### 1. Requirement {#section-1}
 
-> **Topic: BatchProcessing**
+> **📁 Topic: BatchProcessing**
 
 # Objective: Design Course assignment System
 - In this there will be muliple owner account and each owener will have muliple students
@@ -980,7 +993,7 @@ This is how strong consistency is enforced.
 
 ### 1. Sharding {#section-1}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 # SHARDING : to Optimize
   - Dividing DB
@@ -1013,7 +1026,7 @@ This is how strong consistency is enforced.
 
 ### 1. Acid 1 {#section-1}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 # ⚙ A — Atomicity
 ### 🔹 What It Means:
@@ -1122,7 +1135,7 @@ So DBs follow this optimized path:
 
 ### 1. Cap Ap 1 {#section-1}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## 💡 Key Concepts That Make AP Possible:
 ### 🔁 1. Eventual Consistency
@@ -1175,7 +1188,7 @@ So DBs follow this optimized path:
 
 ### 1. Cognito 1 Sign Up {#section-1}
 
-> **Topic: OAuth2 cognito**
+> **📁 Topic: OAuth2 cognito**
 
 ## Cognito Sign Up
 ```
@@ -1242,7 +1255,7 @@ const command = new AdminUpdateUserAttributesCommand({
 
 ### 2. Consistent Hashing {#section-2}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## Sharding and Consistent Hashing Explained
 
@@ -1375,7 +1388,7 @@ Would you like further improvements or optimizations? 🚀
 
 ### 2. Acid 2 Isolation Levels 1 {#section-2}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 # 🔒 Isolation ensures:
 Multiple transactions running concurrently do not interfere with each other’s data in a way that would lead to inconsistency.
@@ -1471,7 +1484,7 @@ COMMIT;
 
 ### 2. Acid 2 I Lock 1 {#section-2}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## ✅ Lock Conflicts in SQL Databases
 Lock conflicts happen when two or more transactions are trying to read/write the same row or table and the DB needs to ensure isolation.
@@ -1635,7 +1648,7 @@ Deadlocks happen when two or more transactions acquire partial locks and then wa
 
 ### 2. Acid 2 I Lock 2 {#section-2}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## Eaxmple booking systems
 ### especially for things like train/bus/movie tickets or event seats in which one user is booking seats 1 to 10 another at the same time booking 5 to 10 and other users may trying to book same seats so In this scenario do you mean wh need to lock in sequential order so there will be no deadlock and one thing I'm confused how this situation will handled do db is going to make sure and give error if he finds these seats are already locked or db will or another transaction will decide locks and other bookings will fail 
@@ -1752,7 +1765,7 @@ Instead, use bulk queries, always lock in order, and maybe batch by sections.
 
 ### 2. Cognito 2 Sing In {#section-2}
 
-> **Topic: OAuth2 cognito**
+> **📁 Topic: OAuth2 cognito**
 
 ## Cognito Sign In:
 
@@ -1808,7 +1821,7 @@ const command = new InitiateAuthCommand({
 
 ### 2-1. Cognito 2.1 Sign In {#section-2-1}
 
-> **Topic: OAuth2 cognito**
+> **📁 Topic: OAuth2 cognito**
 
 ## ✅ Architecture: Amplify + Cognito (Frontend Auth) + Backend (Token Verification)
 ### 🔁 Flow Overview
@@ -1859,7 +1872,7 @@ https://cognito-idp.<region>.amazonaws.com/<userPoolId>/.well-known/jwks.json
 
 ### 3. Chainofresponsibiltypattern Logging {#section-3}
 
-> **Topic: LLD Design Patterns**
+> **📁 Topic: LLD Design Patterns**
 
 ## Chain Of Responibilty Pattern 
 
@@ -2049,7 +2062,7 @@ public static void main(){
 
 ### 999. Cap Cp Vs Ap {#section-999}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## 🔁 Quick Comparison: CP vs AP
 | Feature             | CP System                    | AP System                    |
@@ -2063,7 +2076,7 @@ public static void main(){
 
 ### 999. Cap Theorem {#section-999}
 
-> **Topic: DB**
+> **📁 Topic: DB**
 
 ## Distributed system 
 - system with Partion of network  [P-CAP]
@@ -2134,7 +2147,7 @@ It measures how consistently the system delivers its expected functionality, ens
 
 ### 999. Stock Market Design {#section-999}
 
-> **Topic: HLD**
+> **📁 Topic: HLD**
 
 Designing a **Stock Exchange Application** for buying and selling shares across different exchanges is a complex endeavor that requires careful consideration of various system design aspects to ensure **scalability**, **reliability**, **security**, and **low latency**. Below is a comprehensive approach to designing such a system.
 
@@ -2461,7 +2474,7 @@ By meticulously planning and implementing these aspects, you can build a robust 
 
 ### 999. Index {#section-999}
 
-> **Topic: LLD Design Patterns**
+> **📁 Topic: LLD Design Patterns**
 
 [Chain of Responsibilty pattern ](./3_ChainOfResponsibiltyPattern_logging.md)
 
@@ -2469,7 +2482,7 @@ By meticulously planning and implementing these aspects, you can build a robust 
 
 ### 999. Overview {#section-999}
 
-> **Topic: LLD Design Patterns**
+> **📁 Topic: LLD Design Patterns**
 
 ## Creations
 
@@ -2606,7 +2619,7 @@ class MainClass{
 
 ### 999. Cognito {#section-999}
 
-> **Topic: OAuth2 cognito**
+> **📁 Topic: OAuth2 cognito**
 
 ## ✅ What Is a Cognito User Pool?
 A User Pool in AWS Cognito is a user directory and authentication service — it's more than just a place to store users.
@@ -2627,7 +2640,7 @@ A User Pool in AWS Cognito is a user directory and authentication service — it
 
 ### 999. Jwks {#section-999}
 
-> **Topic: OAuth2 cognito**
+> **📁 Topic: OAuth2 cognito**
 
 ## ✅ What is JWKS?
 - JWKS is a public set of keys used to verify JWT tokens (ID tokens or access tokens).
@@ -2661,7 +2674,7 @@ Client (Angular)      Cognito              Backend API           JWKS Endpoint
 
 #### 0. Vdo Upload {#section-0}
 
-> **Topic: HLD\VideoUpload**
+> **📁 Topic: HLD\VideoUpload**
 
 # 🚀 Efficient & Fast Video Upload Approaches
 
@@ -2807,7 +2820,7 @@ Uses **UDP (instead of HTTP/TCP)** for ultra-fast data transfer, avoiding the ov
 
 #### 1. Vdo Large File Upload S3 Presigned {#section-1}
 
-> **Topic: HLD\VideoUpload**
+> **📁 Topic: HLD\VideoUpload**
 
 ## **🔹 Uploading Large Files to S3 Using Pre-Signed URLs and Multipart Upload**  
 
@@ -2965,7 +2978,7 @@ export async function completeUpload(event) {
 
 #### 2. Vdo Large File Upload S3 Lambda {#section-2}
 
-> **Topic: HLD\VideoUpload**
+> **📁 Topic: HLD\VideoUpload**
 
 # Large File Upload to S3 Using Pre-Signed URLs & Processing with Lambda
 
@@ -3168,7 +3181,7 @@ export async function handler(event) {
 
 #### 999. Sns Push Notifications {#section-999}
 
-> **Topic: HLD\SNS Push notifications**
+> **📁 Topic: HLD\SNS Push notifications**
 
 ![Push notifcations](SNS_Push_Notifications.jpg)
 
@@ -3342,7 +3355,7 @@ This flow ensures seamless and targeted notifications to users' mobile devices, 
 
 #### 999. Spotify Design {#section-999}
 
-> **Topic: HLD\spotify**
+> **📁 Topic: HLD\spotify**
 
 ![Spotify Design](Spotify_design.jpg)
 
@@ -3416,7 +3429,7 @@ This flow ensures seamless and targeted notifications to users' mobile devices, 
 
 #### 999. Design {#section-999}
 
-> **Topic: HLD\VideoStreamApp**
+> **📁 Topic: HLD\VideoStreamApp**
 
 ## Requirement
 1. Can upload Video
@@ -3597,7 +3610,7 @@ file 'chunk_2'
 
 ###### 999. Patterns {#section-999}
 
-> **Topic: demo\src\main\java\com\LLD\Patterns\ObserverPattern**
+> **📁 Topic: demo\src\main\java\com\LLD\Patterns\ObserverPattern**
 
 https://notebook.zohopublic.in/public/notes/bietvc07e6ecf28d7409286145c16e623f9ed
 

@@ -15,52 +15,57 @@ Complete AWS guide covering Lambda, ECS, IAM, API Gateway, DynamoDB, and deploym
 
 ## 📚 Table of Contents
 
-- [0. Aws](#section-0)
-- [0. Aws Cmd](#section-0)
-- [0. Aws Free Tier](#section-0)
-- [0. Iam Role Policy](#section-0)
-- [1. Iam](#section-1)
-- [1-1. Iam Mfa](#section-1-1)
-- [1-2. User Access](#section-1-2)
-- [1-3. Iam Role](#section-1-3)
-- [1-4. Iam Security Tools](#section-1-4)
-- [3. Aws Cicd Serverless](#section-3)
-- [3. Ssh](#section-3)
-- [999. Advanced Lambda Optimization Guide](#section-999)
-- [999. Aws Ecs Complete Cicd](#section-999)
-- [999. Aws Networking Vpc Subnet Sg](#section-999)
-- [999. Cloudwatch](#section-999)
-- [999. General Deployment Process](#section-999)
-  - [0. Aws Api Gateway](#section-0)
-  - [0. Aws Codepipeline](#section-0)
-  - [0. Ec2](#section-0)
-  - [0. How Ecs Auto Scales](#section-0)
-  - [0. How Ecs Ec2 Task Scales](#section-0)
-  - [0. How Lamdba Works](#section-0)
-  - [0. Lambda Limits 0](#section-0)
-  - [0. Lambda Limits 1 Summary](#section-0)
-  - [0. Sqs 0](#section-0)
-  - [0. Targetgroup](#section-0)
-  - [0-1. Db Connection](#section-0-1)
-  - [1. Ec2 Secutitygroups](#section-1)
-  - [1. Scaling And Alb](#section-1)
-  - [1. Scaling Scenerio](#section-1)
-  - [1. Ex Lambds](#section-1)
-  - [2. Aws Cicd](#section-2)
-  - [2. Aws Target Group How Failure Handles](#section-2)
-  - [999. How Ecs Instance Launched](#section-999)
-  - [999. Suumaryof Ecs](#section-999)
-  - [999. Ecs](#section-999)
-  - [999. Lambda Awsapigateway](#section-999)
-  - [999. Lambda Serverlessyml](#section-999)
-  - [999. Sqs Sam](#section-999)
-  - [999. Aws Target Group Health Check Rolback](#section-999)
+- [**0.** Aws](#section-0)
+- [**0.** Aws Cmd](#section-0)
+- [**0.** Aws Free Tier](#section-0)
+- [**0.** Iam Role Policy](#section-0)
+
+- [**1.** Iam](#section-1)
+- [**1-1.** Iam Mfa](#section-1-1)
+- [**1-2.** User Access](#section-1-2)
+- [**1-3.** Iam Role](#section-1-3)
+- [**1-4.** Iam Security Tools](#section-1-4)
+
+- [**3.** Aws Cicd Serverless](#section-3)
+- [**3.** Ssh](#section-3)
+- [**999.** Advanced Lambda Optimization Guide](#section-999)
+- [**999.** Aws Ecs Complete Cicd](#section-999)
+- [**999.** Aws Networking Vpc Subnet Sg](#section-999)
+- [**999.** Cloudwatch](#section-999)
+- [**999.** General Deployment Process](#section-999)
+- [**999.** Lambda Best Practices Demo](#section-999)
+  - [**0.** Aws Api Gateway](#section-0)
+  - [**0.** Aws Codepipeline](#section-0)
+  - [**0.** Ec2](#section-0)
+  - [**0.** How Ecs Auto Scales](#section-0)
+  - [**0.** How Ecs Ec2 Task Scales](#section-0)
+  - [**0.** How Lamdba Works](#section-0)
+  - [**0.** Lambda Limits 0](#section-0)
+  - [**0.** Lambda Limits 1 Summary](#section-0)
+  - [**0.** Sqs 0](#section-0)
+  - [**0.** Targetgroup](#section-0)
+  - [**0-1.** Db Connection](#section-0-1)
+  - [**1.** Ec2 Secutitygroups](#section-1)
+  - [**1.** Scaling And Alb](#section-1)
+  - [**1.** Scaling Scenerio](#section-1)
+  - [**1.** Ex Lambds](#section-1)
+  - [**2.** Aws Cicd](#section-2)
+  - [**2.** Aws Target Group How Failure Handles](#section-2)
+  - [**999.** How Ecs Instance Launched](#section-999)
+  - [**999.** Suumaryof Ecs](#section-999)
+  - [**999.** Ecs](#section-999)
+  - [**999.** Lambda Awsapigateway](#section-999)
+  - [**999.** Lambda Serverlessyml](#section-999)
+  - [**999.** Sqs Sam](#section-999)
+  - [**999.** Aws Target Group Health Check Rolback](#section-999)
 
 ---
 
 
 
 ## 0. Aws {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 [text](AWS_Free_Tier.md)
 
@@ -75,6 +80,8 @@ Complete AWS guide covering Lambda, ECS, IAM, API Gateway, DynamoDB, and deploym
 ---
 
 ## 0. Aws Cmd {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## 1. Check ECS Cluster from Cloudshell:
 
@@ -107,6 +114,8 @@ aws ecs list-tasks --cluster your-cluster-name
 ---
 
 ## 0. Aws Free Tier {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 1. RDS: 2 months
  - type: for D2- 1 node only  
@@ -144,6 +153,8 @@ aws ecs list-tasks --cluster your-cluster-name
 ---
 
 ## 0. Iam Role Policy {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## An IAM Role is a set of permissions that AWS services (like Lambda) assume to perform actions on other AWS resources.
 
@@ -295,6 +306,8 @@ Resources:
 
 ## 1. Iam {#section-1}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 - `You can use both IAM and AWS IAM Identity Center to create new usersor federate existing users into AWS. The main difference between the two is that IAM users are granted long-term credentials to your AWS resources while users in IAM Identity Center have temporary credentials that are established each time the user signs-in to AWS`
 --------
 - `A principal entity is a person or application that is authenticated 
@@ -379,6 +392,8 @@ user does not have some acees he will not be able to access those things.
 
 ## 1-1. Iam Mfa {#section-1-1}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ### Multi Factor Authentication
 
 - `psd + mfa device ==> login succeess`
@@ -388,6 +403,8 @@ user does not have some acees he will not be able to access those things.
 ---
 
 ## 1-2. User Access {#section-1-2}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # 3 Ways to access AWS :
 
@@ -407,6 +424,8 @@ user does not have some acees he will not be able to access those things.
 ---
 
 ## 1-3. Iam Role {#section-1-3}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## Role:
 
@@ -435,6 +454,8 @@ user does not have some acees he will not be able to access those things.
 
 ## 1-4. Iam Security Tools {#section-1-4}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 1) IAM Credentials Report ( account-level )
 
 2) IAM Access Advisor ( User-level )
@@ -442,6 +463,8 @@ user does not have some acees he will not be able to access those things.
 ---
 
 ## 3. Aws Cicd Serverless {#section-3}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # Serverless Deployment Automation  
 
@@ -498,6 +521,8 @@ Write Code → Run Tests → Deploy
 ---
 
 ## 3. Ssh {#section-3}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## SSH : MAC/LINUX/windows10
 ## putty: windows<10
@@ -871,9 +896,68 @@ ECS Task Definition:
 
 ---
 
+## 999. Lambda Best Practices Demo {#section-999}
+
+# AWS Lambda Best Practices
+
+## Introduction
+Here are the essential best practices for AWS Lambda development and deployment.
+
+## Performance Optimization
+
+### Memory Configuration
+- Start with 128MB and adjust based on performance tests
+- Monitor CloudWatch metrics for optimization opportunities
+
+### Cold Start Reduction
+- Use provisioned concurrency for critical functions
+- Keep function code lightweight
+- Minimize external dependencies
+
+## Security Best Practices
+
+### IAM Permissions
+- Follow principle of least privilege
+- Use specific resource ARNs instead of wildcards
+- Regularly audit and rotate credentials
+
+### Environment Variables
+- Use AWS Systems Manager Parameter Store for sensitive data
+- Encrypt environment variables at rest
+
+## Monitoring and Logging
+
+### CloudWatch Integration
+- Set up appropriate log retention policies
+- Use structured logging with JSON format
+- Monitor key metrics: duration, errors, throttles
+
+### X-Ray Tracing
+- Enable X-Ray for distributed tracing
+- Analyze performance bottlenecks
+- Track downstream service calls
+
+## Cost Optimization
+
+### Resource Management
+- Right-size memory allocation
+- Use appropriate timeout values
+- Leverage Lambda layers for shared code
+
+### Pricing Considerations
+- Monitor request count and duration
+- Consider Savings Plans for predictable workloads
+- Use CloudWatch dashboards for cost tracking
+
+## Conclusion
+
+Following these best practices will help you build robust, performant, and cost-effective Lambda functions that scale with your business needs.
+
+---
+
 ### 0. Aws Api Gateway {#section-0}
 
-> **Topic: Api Gateway**
+> **📁 Topic: Api Gateway**
 
 ## AWS ApiGateway:
 
@@ -891,7 +975,7 @@ In AWS API Gateway, API keys are used to `control and track acces`s to your APIs
 
 ### 0. Aws Codepipeline {#section-0}
 
-> **Topic: CICD**
+> **📁 Topic: CICD**
 
 ## CodePipeline:
 ```text
@@ -915,7 +999,7 @@ Codedeploy/ECS [for deployment]
 
 ### 0. Ec2 {#section-0}
 
-> **Topic: EC2**
+> **📁 Topic: EC2**
 
 ## EC2 :
 
@@ -966,7 +1050,7 @@ Codedeploy/ECS [for deployment]
 
 ### 0. How Ecs Auto Scales {#section-0}
 
-> **Topic: ECS**
+> **📁 Topic: ECS**
 
 # 🚀 How Scaling Works in ECS with EC2 (Launch Type)
 ## 1️⃣ Each ECS Task Runs on an EC2 Instance
@@ -1002,7 +1086,7 @@ Codedeploy/ECS [for deployment]
 
 ### 0. How Ecs Ec2 Task Scales {#section-0}
 
-> **Topic: ECS**
+> **📁 Topic: ECS**
 
 ## 1️⃣ Relationship Between ECS, EC2, and Tasks
 - ECS Cluster = Group of EC2 instances (if using the EC2 launch type).
@@ -1038,7 +1122,7 @@ Codedeploy/ECS [for deployment]
 
 ### 0. How Lamdba Works {#section-0}
 
-> **Topic: Lambda**
+> **📁 Topic: Lambda**
 
 # AWS Lambda Container Reuse
 
@@ -1084,7 +1168,7 @@ To optimize performance, resources like database connections, HTTP clients, or i
 
 ### 0. Lambda Limits 0 {#section-0}
 
-> **Topic: Lambda**
+> **📁 Topic: Lambda**
 
 ### Max Execution Time: 900 sec = 15 min
 ### Input event limit: 256kb
@@ -1177,7 +1261,7 @@ AWS Lambda has **soft limits** (adjustable) and **hard limits** (fixed). Below i
 
 ### 0. Lambda Limits 1 Summary {#section-0}
 
-> **Topic: Lambda**
+> **📁 Topic: Lambda**
 
 # 🔹 AWS Lambda: Synchronous vs. Asynchronous Invocation
 
@@ -1258,7 +1342,7 @@ If your event payload **exceeds 256KB**, use:
 
 ### 0. Sqs 0 {#section-0}
 
-> **Topic: SQS**
+> **📁 Topic: SQS**
 
 ## Amazon SQS Message Limits
 
@@ -1321,7 +1405,7 @@ If your event payload **exceeds 256KB**, use:
 
 ### 0. Targetgroup {#section-0}
 
-> **Topic: TagretGroup+ALB+ECS**
+> **📁 Topic: TagretGroup+ALB+ECS**
 
 ```
 ECS --> Service -- Task Defination --> Tasks <-- Target Group <-- ALB
@@ -1334,7 +1418,7 @@ ECS --> Service -- Task Defination --> Tasks <-- Target Group <-- ALB
 
 ### 0-1. Db Connection {#section-0-1}
 
-> **Topic: Lambda**
+> **📁 Topic: Lambda**
 
 > if connection is closed when execution is done will it be good I mean as u said a lambda once executed it's container still will be running to take other tasks it means if will make connection close it will reestablish for second right but if connection is not closed issue will be connection exhausted right if there are 5 lambda functions and connection limit is 5 it means it's fine and it will be like there are continuous 25 request it will not make new 25 connections but will use existing connections so possible number of connection request to db <=25 but if connection is closed after each request possible number of connection request to db ==25 right
 
@@ -1443,7 +1527,7 @@ export const handler = async (event) => {
 
 ### 1. Ec2 Secutitygroups {#section-1}
 
-> **Topic: EC2**
+> **📁 Topic: EC2**
 
 ## Security Groups : for Network security in AWS
 - `controls`: traffic allowed into or out of EC2 instance
@@ -1522,7 +1606,7 @@ which types of traffic are allowed to reach the resource.
 
 ### 1. Scaling And Alb {#section-1}
 
-> **Topic: ECS**
+> **📁 Topic: ECS**
 
 # 1️⃣ How ALB Knows About ECS Tasks?
 ## Step 1: Target Group Registration
@@ -1598,7 +1682,7 @@ Task C (IP: 10.0.2.7, Port: 80)
 
 ### 1. Scaling Scenerio {#section-1}
 
-> **Topic: ECS**
+> **📁 Topic: ECS**
 
 # ECS Cluster Architecture (EC2 Launch Type)
 
@@ -1716,7 +1800,7 @@ ECS Cluster
 
 ### 1. Ex Lambds {#section-1}
 
-> **Topic: Lambda**
+> **📁 Topic: Lambda**
 
 ## Using a Singleton Approach (Recommended)
 - A singleton pattern ensures that the database connection is created once and reused across multiple invocations in a warm Lambda container.
@@ -1868,7 +1952,7 @@ Resources:
 
 ### 2. Aws Cicd {#section-2}
 
-> **Topic: CICD**
+> **📁 Topic: CICD**
 
 # AWS CI/CD Pipeline Guide  
 
@@ -1987,7 +2071,7 @@ Instead of manual deployment, use **CodePipeline** to automate the process.
 
 ### 2. Aws Target Group How Failure Handles {#section-2}
 
-> **Topic: TagretGroup+ALB+ECS**
+> **📁 Topic: TagretGroup+ALB+ECS**
 
 # ✅ ECS + ALB Health Check Behavior: Failure Handling Scenarios
 
@@ -2087,7 +2171,7 @@ When already running (live) tasks fail:
 
 ### 999. How Ecs Instance Launched {#section-999}
 
-> **Topic: ECS**
+> **📁 Topic: ECS**
 
 ## Launch Docker Container = Launch ECS Tasks on ECS Cluster
 
@@ -2109,7 +2193,7 @@ When already running (live) tasks fail:
 
 ### 999. Suumaryof Ecs {#section-999}
 
-> **Topic: ECS**
+> **📁 Topic: ECS**
 
 In summary, every ECS instance should be registered with an ECS cluster,
 and tasks are launched on these instances based on Task Definitions. 
@@ -2120,7 +2204,7 @@ routing traffic to the tasks running as part of those services.
 
 ### 999. Ecs {#section-999}
 
-> **Topic: ECS**
+> **📁 Topic: ECS**
 
 ```
 ECS : https://www.youtube.com/watch?v=ARGmrYFfv44
@@ -2164,7 +2248,7 @@ ECS : https://www.youtube.com/watch?v=ARGmrYFfv44
 
 ### 999. Lambda Awsapigateway {#section-999}
 
-> **Topic: Lambda**
+> **📁 Topic: Lambda**
 
 ## 1) When you create serverless application and deploy it on aws lambda you have to integrate awsApiGateWay to your lambda service : 
 >### Execution steps
@@ -2278,7 +2362,7 @@ Event types:
 
 ### 999. Lambda Serverlessyml {#section-999}
 
-> **Topic: Lambda**
+> **📁 Topic: Lambda**
 
 ## serverless.yml Templete
 
@@ -2329,7 +2413,7 @@ Event types:
 
 ### 999. Sqs Sam {#section-999}
 
-> **Topic: SQS**
+> **📁 Topic: SQS**
 
 ## Check Queue List:
 - `aws --endpoint-url=http://localhost:4566 sqs list-queues`
@@ -2354,7 +2438,7 @@ Event types:
 
 ### 999. Aws Target Group Health Check Rolback {#section-999}
 
-> **Topic: TagretGroup+ALB+ECS**
+> **📁 Topic: TagretGroup+ALB+ECS**
 
 # Target Groups: 
 ## 1. ALB uses for Load Balancing

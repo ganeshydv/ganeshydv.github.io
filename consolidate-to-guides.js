@@ -143,12 +143,17 @@ function processFolder(folderPath, config) {
         const sectionId = generateSectionId(file);
         const headerLevel = level + 2; // Start from ## for main sections
         const headerPrefix = '#'.repeat(Math.min(headerLevel, 6));
-        
-        let sectionHeader = `${headerPrefix} ${sectionId}. ${sectionTitle} {#section-${sectionId}}\n\n`;
+          let sectionHeader = `${headerPrefix} ${sectionId}. ${sectionTitle} {#section-${sectionId}}\n\n`;
         
         // Add subsection info if in subfolder
         if (relativePath && relativePath !== '.') {
-          sectionHeader += `> **Topic: ${relativePath.replace(/[_\-]/g, ' ')}**\n\n`;
+          sectionHeader += `> **📁 Topic: ${relativePath.replace(/[_\-]/g, ' ')}**\n\n`;
+        }
+        
+        // Add quick navigation for major sections
+        const indexParts = parseFileIndex(file);
+        if (indexParts[0] < 999 && level === 0) {
+          sectionHeader += `*📖 [← Back to Table of Contents](#-table-of-contents)*\n\n`;
         }
 
         allContent.push({
@@ -201,14 +206,24 @@ function processFolder(folderPath, config) {
     if (a.level !== b.level) return a.level - b.level;
     return compareIndices(a.file, b.file);
   });
-
-  // Generate table of contents
+  // Generate table of contents with better organization
   let toc = "## 📚 Table of Contents\n\n";
+  
+  // Group sections by topic for better readability
+  let currentLevel = 0;
   allContent.forEach(section => {
     if (!section.file.startsWith('__folder_')) {
-      const indent = '  '.repeat(section.level);
+      const indent = '  '.repeat(Math.min(section.level, 3));
       const sectionId = generateSectionId(section.file);
-      toc += `${indent}- [${sectionId}. ${section.title}](#section-${sectionId})\n`;
+      
+      // Add visual separators for major section changes
+      const indexParts = parseFileIndex(section.file);
+      if (indexParts[0] > currentLevel && indexParts[0] < 999) {
+        toc += '\n';
+        currentLevel = indexParts[0];
+      }
+      
+      toc += `${indent}- [**${sectionId}.** ${section.title}](#section-${sectionId})\n`;
     }
   });
   toc += "\n---\n\n";

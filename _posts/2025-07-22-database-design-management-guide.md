@@ -15,31 +15,38 @@ Complete database guide covering RDS, DynamoDB, SQL optimization, and database a
 
 ## 📚 Table of Contents
 
-- [0. Rds 0](#section-0)
-- [1. Rds Api 1](#section-1)
-- [999. Rds Vs Dynamodb](#section-999)
-- [999. Sql](#section-999)
-  - [0-1. Dynamodb 0.1 Keys](#section-0-1)
-  - [0-1-1. Dynamodb 0.1.1 Gsi Lsi](#section-0-1-1)
-  - [0-1-1. Dynamodb 0.1.1 Gsi Vs Lsi](#section-0-1-1)
-  - [0-1-2. Dynamodb 0.1.2 Questions](#section-0-1-2)
-  - [0-2. Dynamodb 0.2 How Data Stored](#section-0-2)
-  - [0-2-1. Dynamodb 0.2.1 Internals](#section-0-2-1)
-  - [1. Dynamodb 1 Limits](#section-1)
-  - [1-2. Dynamodb 1.2 Limit](#section-1-2)
-  - [2-0. Dynamodb 2.0 Read Write Cmds](#section-2-0)
-  - [2. Dynamodb 2 Rcu Wcu Cal](#section-2)
-  - [2-1. Dynamodb 2.1 Get](#section-2-1)
-  - [2-2. Dynamodb 2.2 Update Batchwrite Vs Transaction](#section-2-2)
-  - [3. Dynamodb 3 Sd](#section-3)
-  - [4. Dynamodb 4 Cost](#section-4)
-  - [5. Dynamodb 5 Cmd](#section-5)
+- [**0.** Rds 0](#section-0)
+
+- [**1.** Rds Api 1](#section-1)
+- [**999.** Rds Vs Dynamodb](#section-999)
+- [**999.** Sql](#section-999)
+  - [**0-1.** Dynamodb 0.1 Keys](#section-0-1)
+  - [**0-1-1.** Dynamodb 0.1.1 Gsi Lsi](#section-0-1-1)
+  - [**0-1-1.** Dynamodb 0.1.1 Gsi Vs Lsi](#section-0-1-1)
+  - [**0-1-2.** Dynamodb 0.1.2 Questions](#section-0-1-2)
+  - [**0-2.** Dynamodb 0.2 How Data Stored](#section-0-2)
+  - [**0-2-1.** Dynamodb 0.2.1 Internals](#section-0-2-1)
+  - [**1.** Dynamodb 1 Limits](#section-1)
+  - [**1-2.** Dynamodb 1.2 Limit](#section-1-2)
+
+  - [**2-0.** Dynamodb 2.0 Read Write Cmds](#section-2-0)
+  - [**2.** Dynamodb 2 Rcu Wcu Cal](#section-2)
+  - [**2-1.** Dynamodb 2.1 Get](#section-2-1)
+  - [**2-2.** Dynamodb 2.2 Update Batchwrite Vs Transaction](#section-2-2)
+
+  - [**3.** Dynamodb 3 Sd](#section-3)
+
+  - [**4.** Dynamodb 4 Cost](#section-4)
+
+  - [**5.** Dynamodb 5 Cmd](#section-5)
 
 ---
 
 
 
 ## 0. Rds 0 {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## 1. Storage Limits
 - Maximum Storage per DB Instance:
@@ -170,6 +177,8 @@ Use application-side timeouts to avoid long queries.
 
 ## 1. Rds Api 1 {#section-1}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 1. Traditional HTTP API: ORM--> RDS
 2. DATA API: 
    - Data API maximum concurrent requests: 500 concurrent Requests
@@ -242,7 +251,7 @@ SHOW CREATE TABLE table_name;
 
 ### 0-1. Dynamodb 0.1 Keys {#section-0-1}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 ## How Partion key, composite key, sort key, GSI and LSI is used
 > Partion Key- Primary Key
@@ -272,7 +281,7 @@ SHOW CREATE TABLE table_name;
 
 ### 0-1-1. Dynamodb 0.1.1 Gsi Lsi {#section-0-1-1}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # 1️⃣ How Does LSI Work?
 - LSI uses the **same Partition Key (PK)** but allows a different **Sort Key (SK)**.
@@ -379,7 +388,7 @@ We create a **GSI with**:
 
 ### 0-1-1. Dynamodb 0.1.1 Gsi Vs Lsi {#section-0-1-1}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 ## Link [GSI VS LSI](https://www.dynamodbguide.com/local-or-global-choosing-a-secondary-index-type-in-dynamo-db/)
 
@@ -430,7 +439,7 @@ We create a **GSI with**:
 
 ### 0-1-2. Dynamodb 0.1.2 Questions {#section-0-1-2}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # 1️⃣ What If an Item Doesn’t Have a Sort Key?
 - If your table has only a **Partition Key (PK)** (i.e., a **simple primary key**), all queries will be based **only on the PK**.
@@ -496,7 +505,7 @@ You'll get an error like:
 
 ### 0-2. Dynamodb 0.2 How Data Stored {#section-0-2}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # How data is stored in DynamoDB
 - This PK will divide data in Partitions
@@ -625,7 +634,7 @@ Multi-Partition Queries → Best done using BatchGetCommand or GSIs, avoid ScanC
 
 ### 0-2-1. Dynamodb 0.2.1 Internals {#section-0-2-1}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # DynamoDB Query Processing: Hashing & Indexing Explained
 
@@ -719,7 +728,7 @@ When a **Global Secondary Index (GSI)** is created:
 
 ### 1. Dynamodb 1 Limits {#section-1}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # 1. Capacity & Throughput Limits
 - 1. on demand - auto scale
@@ -840,7 +849,7 @@ When a **Global Secondary Index (GSI)** is created:
 
 ### 1-2. Dynamodb 1.2 Limit {#section-1-2}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 ## ✅ DynamoDB Performance: No Issues If WCU & RCU Are Sufficient
 - If you provision enough Write Capacity Units (WCU) and Read Capacity Units (RCU), DynamoDB will not throttle your requests. It will scale to handle the load efficiently.
@@ -894,7 +903,7 @@ Unlike traditional databases (like **RDS, MySQL, PostgreSQL**), **DynamoDB is se
 
 ### 2-0. Dynamodb 2.0 Read Write Cmds {#section-2-0}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # 🔹 DynamoDB Read & Write Operations - Full Comparison Table
 
@@ -958,7 +967,7 @@ Unlike traditional databases (like **RDS, MySQL, PostgreSQL**), **DynamoDB is se
 
 ### 2. Dynamodb 2 Rcu Wcu Cal {#section-2}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # DynamoDB RCU & WCU Calculation
 
@@ -1070,7 +1079,7 @@ Unlike traditional databases (like **RDS, MySQL, PostgreSQL**), **DynamoDB is se
 
 ### 2-1. Dynamodb 2.1 Get {#section-2-1}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # 📌 Getting Data from DynamoDB: Two Main Methods  
 
@@ -1171,7 +1180,7 @@ async function fetchAllItems(studentId) {
 
 ### 2-2. Dynamodb 2.2 Update Batchwrite Vs Transaction {#section-2-2}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # 🛠️ Why Both Transactions and BatchWriteItem in DynamoDB?  
 
@@ -1216,7 +1225,7 @@ DynamoDB provides both **Transactions (TransactWriteItems)** and **BatchWriteIte
 
 ### 3. Dynamodb 3 Sd {#section-3}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 # 🛠 Best Practices for System Design
 ## 1. Avoid Hot Partitions:
@@ -1240,7 +1249,7 @@ Use secondary indexes wisely (but not excessively).
 
 ### 4. Dynamodb 4 Cost {#section-4}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 ## DynamoDB
 ### Example
@@ -1426,7 +1435,7 @@ If you optimize **batch sizes**, you reduce WCU by **~30%**
 
 ### 5. Dynamodb 5 Cmd {#section-5}
 
-> **Topic: DynamoDB**
+> **📁 Topic: DynamoDB**
 
 ## DynamoDB Command Support Matrix
 

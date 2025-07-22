@@ -15,50 +15,57 @@ Comprehensive guide covering Java fundamentals, Spring Boot, Maven, JPA, Hiberna
 
 ## 📚 Table of Contents
 
-- [0. Streams](#section-0)
-- [1. Maven](#section-1)
-- [1-1. Pom](#section-1-1)
-- [1-1-2. Maven Lifecycle](#section-1-1-2)
-- [1-2. Maven Module Structure](#section-1-2)
-- [2. Jdbc](#section-2)
-- [3-0. Hibernate Arch](#section-3-0)
-- [3. Hibernate](#section-3)
-- [3-1-0. Jpa](#section-3-1-0)
-- [3-1-1. Hibernate Jpa](#section-3-1-1)
-- [3-1-2. Hibernate Jpa Mapping](#section-3-1-2)
-- [4. Server Config](#section-4)
-- [999. What When](#section-999)
-  - [0. Jvm Jre Jdk](#section-0)
-  - [0. Before Spring Boot](#section-0)
-  - [0-1. How Java Code Runs](#section-0-1)
-  - [0-2. How Java Code Runs](#section-0-2)
-  - [1-0. Memory Management Garbage Collection](#section-1-0)
-  - [1. Spring Boot](#section-1)
-  - [1-1. Memory Management Garbage Collection](#section-1-1)
-  - [1-1. Spring Boot @springbootapplication](#section-1-1)
-  - [2. Java Exception](#section-2)
-  - [2. Spring Boot Request Handling](#section-2)
-  - [2-1. Spring Boot Request Validation](#section-2-1)
-  - [3-0. Multihreading Process Thread Heap Stack](#section-3-0)
-  - [3. Spring Boot Exception Handling](#section-3)
-  - [3-1. Multithreading Thread Creation](#section-3-1)
-  - [3-2. Multithreading Monitor Locks](#section-3-2)
-  - [3-2-1. Multithreading Monitor Lock](#section-3-2-1)
-  - [3-2-2. Multithreading Stop Resume Suspend Deprecated](#section-3-2-2)
-  - [3-2-3. Multithreading Demon Thread Reentrantlock](#section-3-2-3)
-  - [3-2-4. Multithreading Readwritelock](#section-3-2-4)
-  - [3-2-4-1. Readwritelock](#section-3-2-4-1)
-  - [3-2-5. Multithreading Stampedlock](#section-3-2-5)
-  - [4. Spring Boot Dependency Resolution](#section-4)
-  - [5. Multithreading Reentrantlock Vs Readwritelock Vs Stampedlock Vs Semaphorelock](#section-5)
-  - [5-2. Spring Boot Hql Relations](#section-5-2)
-  - [999. Readme](#section-999)
+- [**0.** Streams](#section-0)
+
+- [**1.** Maven](#section-1)
+- [**1-1.** Pom](#section-1-1)
+- [**1-1-2.** Maven Lifecycle](#section-1-1-2)
+- [**1-2.** Maven Module Structure](#section-1-2)
+
+- [**2.** Jdbc](#section-2)
+
+- [**3-0.** Hibernate Arch](#section-3-0)
+- [**3.** Hibernate](#section-3)
+- [**3-1-0.** Jpa](#section-3-1-0)
+- [**3-1-1.** Hibernate Jpa](#section-3-1-1)
+- [**3-1-2.** Hibernate Jpa Mapping](#section-3-1-2)
+
+- [**4.** Server Config](#section-4)
+- [**999.** What When](#section-999)
+  - [**0.** Jvm Jre Jdk](#section-0)
+  - [**0.** Before Spring Boot](#section-0)
+  - [**0-1.** How Java Code Runs](#section-0-1)
+  - [**0-2.** How Java Code Runs](#section-0-2)
+  - [**1-0.** Memory Management Garbage Collection](#section-1-0)
+  - [**1.** Spring Boot](#section-1)
+  - [**1-1.** Memory Management Garbage Collection](#section-1-1)
+  - [**1-1.** Spring Boot @springbootapplication](#section-1-1)
+  - [**2.** Java Exception](#section-2)
+  - [**2.** Spring Boot Request Handling](#section-2)
+  - [**2-1.** Spring Boot Request Validation](#section-2-1)
+  - [**3-0.** Multihreading Process Thread Heap Stack](#section-3-0)
+  - [**3.** Spring Boot Exception Handling](#section-3)
+  - [**3-1.** Multithreading Thread Creation](#section-3-1)
+  - [**3-2.** Multithreading Monitor Locks](#section-3-2)
+  - [**3-2-1.** Multithreading Monitor Lock](#section-3-2-1)
+  - [**3-2-2.** Multithreading Stop Resume Suspend Deprecated](#section-3-2-2)
+  - [**3-2-3.** Multithreading Demon Thread Reentrantlock](#section-3-2-3)
+  - [**3-2-4.** Multithreading Readwritelock](#section-3-2-4)
+  - [**3-2-4-1.** Readwritelock](#section-3-2-4-1)
+  - [**3-2-5.** Multithreading Stampedlock](#section-3-2-5)
+  - [**4.** Spring Boot Dependency Resolution](#section-4)
+
+  - [**5.** Multithreading Reentrantlock Vs Readwritelock Vs Stampedlock Vs Semaphorelock](#section-5)
+  - [**5-2.** Spring Boot Hql Relations](#section-5-2)
+  - [**999.** Readme](#section-999)
 
 ---
 
 
 
 ## 0. Streams {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## Streams :
 - form JAVA 8 in java.util.strm pkg
@@ -152,6 +159,8 @@ public class StreamGroupingExample {
 
 ## 1. Maven {#section-1}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ## Maven : 
 - `Maven is a powerful build automation and project management tool for Java`
 - Manage - depencency, Project Structure, Creating Executable File, Plugins, Build Lifecycle
@@ -200,6 +209,8 @@ public class StreamGroupingExample {
 ---
 
 ## 1-1. Pom {#section-1-1}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## POM : Project Object Model
 
@@ -482,6 +493,8 @@ Extends Maven’s capabilities (e.g., to build JAR files, run tests, create docu
 
 ## 1-1-2. Maven Lifecycle {#section-1-1-2}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ## Maven Life Cycle :
 
 - Order is : **`Life Cycle <== Phase <== Goal`**
@@ -542,6 +555,8 @@ Extends Maven’s capabilities (e.g., to build JAR files, run tests, create docu
 ---
 
 ## 1-2. Maven Module Structure {#section-1-2}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## Why Can't the Main Module Be Packaged as JAR?
 1. ### Conflict Between Parent and Artifact Roles
@@ -669,6 +684,8 @@ mvn install -P jar-profile
 
 ## 2. Jdbc {#section-2}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ## JDBC : 
 - `JDBC (Java Database Connectivity) is an API in Java that allows you to interact with databases.`
 ## Key Components of JDBC
@@ -781,6 +798,8 @@ try (Connection connection = dataSource.getConnection()) {
 
 ## 3-0. Hibernate Arch {#section-3-0}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 !["Hibernate_str"](3.0_Hibernate_str.png)
 ## Hibernate Structure :
 ```
@@ -815,6 +834,8 @@ try (Connection connection = dataSource.getConnection()) {
 ---
 
 ## 3. Hibernate {#section-3}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## Hibernate
 ```
@@ -1200,6 +1221,8 @@ List<Object[]> results = session.createNativeQuery(sql)
 
 ## 3-1-0. Jpa {#section-3-1-0}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ## JPA : Java Persistence API
 
 - This is only kind of schemas, Interfaces but no solid implementation so if want to utilize need ORM which will use JPA to create query and then send it to DB.
@@ -1212,6 +1235,8 @@ List<Object[]> results = session.createNativeQuery(sql)
 ---
 
 ## 3-1-1. Hibernate Jpa {#section-3-1-1}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## Hibernate with JPA
 
@@ -1281,12 +1306,16 @@ List<Object[]> results = session.createNativeQuery(sql)
 
 ## 3-1-2. Hibernate Jpa Mapping {#section-3-1-2}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ## ! Mapping of POJO clasess/Entity Bean Class Using Annotation
 - JDK >= 5 && Hibernate >=3
 
 ---
 
 ## 4. Server Config {#section-4}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## Depnedency
 
@@ -1319,7 +1348,7 @@ User --> Servlet --> APP Logic --> JPA --> JDBC--> DB
 
 ### 0. Jvm Jre Jdk {#section-0}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## 🔍 JDK = JRE (JVM + libs) + Compiler
 
@@ -1342,7 +1371,7 @@ Java code cannot run without the JVM (Java Virtual Machine)
 
 ### 0. Before Spring Boot {#section-0}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 ## ✅ **Spring Ecosystem Evolution Overview**
 
@@ -1454,7 +1483,7 @@ Req -> Servlet Container (Req Handler) web.xml [collection of servlet]--> App
 
 ### 0-1. How Java Code Runs {#section-0-1}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## 🧭 Final Refined Summary (Steps)
 1. JVM: starts New JVM Process (cmd: java MyApp)
@@ -1555,7 +1584,7 @@ JVM allocates Heap and Stack memory before execution, and memory is used dynamic
 
 ### 0-2. How Java Code Runs {#section-0-2}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## Step 1: Compile java code (JDK) --> .java to .class (bytecode)
 - Java compiler (part of JDK) compiles code
@@ -1602,7 +1631,7 @@ JVM allocates Heap and Stack memory before execution, and memory is used dynamic
 
 ### 1-0. Memory Management Garbage Collection {#section-1-0}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## Memory Management:
 - Java handles memory management and gc using JVM automatically.
@@ -1685,7 +1714,7 @@ JVM Memory:
 
 ### 1. Spring Boot {#section-1}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 ## Spring Boot
 - No Seperate Server Initialization
@@ -1710,7 +1739,7 @@ JVM Memory:
 
 ### 1-1. Memory Management Garbage Collection {#section-1-1}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## Stack & Heap in RAM Created/Managed by JVM 
 | Memory Area | Used For                                                     |
@@ -1777,7 +1806,7 @@ JVM Memory:
 
 ### 1-1. Spring Boot @springbootapplication {#section-1-1}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 # @SpringBootApplication = @EnableAutoConfiguration + @ComponentScan + @Configuration
 
@@ -1793,7 +1822,7 @@ using `@ComponentScan`.
 
 ### 2. Java Exception {#section-2}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## Hierarchy:
 ```
@@ -1805,7 +1834,7 @@ Exception = checked (compileTime) + Unchecked (RuntTime)
 
 ### 2. Spring Boot Request Handling {#section-2}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 # @Controller
 ```java
@@ -1987,7 +2016,7 @@ return new User(1L, "Alice");
 
 ### 2-1. Spring Boot Request Validation {#section-2-1}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 # @Valid: for validations
 ### 1. Dependecy:
@@ -2048,7 +2077,7 @@ public class GlobalExceptionHandler {
 
 ### 3-0. Multihreading Process Thread Heap Stack {#section-3-0}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 # How Java Memory allocation works?
 
@@ -2108,7 +2137,7 @@ public class GlobalExceptionHandler {
 
 ### 3. Spring Boot Exception Handling {#section-3}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 ## Spring Boot Exception Handling
 ### @ControllerAdvice: Class Level
@@ -2138,7 +2167,7 @@ class GlobalExceptionHanlder{
 
 ### 3-1. Multithreading Thread Creation {#section-3-1}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## Thread Creation
 2 ways:
@@ -2257,7 +2286,7 @@ class Main{
 
 ### 3-2. Multithreading Monitor Locks {#section-3-2}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## Monitor object
 - Object on which JVM puts lock is Monitor Object
@@ -2449,7 +2478,7 @@ task 3
 
 ### 3-2-1. Multithreading Monitor Lock {#section-3-2-1}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## 🧠 "If the monitor lock is on the current object (this), then why doesn't it block access to all other methods of that object?"
 
@@ -2635,7 +2664,7 @@ class UserManagement {
 
 ### 3-2-2. Multithreading Stop Resume Suspend Deprecated {#section-3-2-2}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## Why Stop(), Resume(), Suspended() is deprecated
 - Stop(): 
@@ -2666,7 +2695,7 @@ class UserManagement {
 
 ### 3-2-3. Multithreading Demon Thread Reentrantlock {#section-3-2-3}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 # 💡 Key Principle of Locking in JAVA
 ### A lock (including ReentrantLock, ReadWriteLock, Semaphore, Stampede) controls access to the code block, not the object — it doesn't care about the object instance, only about the lock instance.
@@ -2773,7 +2802,7 @@ Condition condition = lock.newCondition();
 
 ### 3-2-4. Multithreading Readwritelock {#section-3-2-4}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 # Read Write Lock
 ## 🔍 What is ReadWriteLock?
@@ -2912,7 +2941,7 @@ public class Main {
 
 ### 3-2-4-1. Readwritelock {#section-3-2-4-1}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## 🔑 Your Question:
 If multiple objects share the same ReadWriteLock object, will they be mutually exclusive, even though they are different objects
@@ -2987,7 +3016,7 @@ Now:
 
 ### 3-2-5. Multithreading Stampedlock {#section-3-2-5}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 # StampedLock
 - `Optimistic Lock + Passimistic Lock [ReadWriteLock]`
@@ -3081,7 +3110,7 @@ try {
 
 ### 4. Spring Boot Dependency Resolution {#section-4}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 ### Spring uses the class name (with the first letter in lowercase) as the default bean name when you annotate a class with @Component, @Service, @Repository, or @Controller without specifying a custom name.
 
@@ -3089,7 +3118,7 @@ try {
 
 ### 5. Multithreading Reentrantlock Vs Readwritelock Vs Stampedlock Vs Semaphorelock {#section-5}
 
-> **Topic: Adv Java**
+> **📁 Topic: Adv Java**
 
 ## ✅ 1. Why ReentrantLock is more flexible for dependent writes (multi-object coordination)
 ### Real-life Problem: Multi-resource consistency
@@ -3175,7 +3204,7 @@ try {
 
 ### 5-2. Spring Boot Hql Relations {#section-5-2}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 ## Hibernate (via JPA annotations & used internally by Spring Data JPA) helps manage these automatically by:
 - Mapping foreign keys
@@ -3295,7 +3324,7 @@ private List<Order> orders;
 
 ### 999. Readme {#section-999}
 
-> **Topic: SpringBoot**
+> **📁 Topic: SpringBoot**
 
 - Contexts:
    - Application Context

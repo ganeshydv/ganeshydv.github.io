@@ -15,38 +15,45 @@ Complete networking guide covering TCP/IP, DNS, routing, protocols, and network 
 
 ## 📚 Table of Contents
 
-- [0. Browser](#section-0)
-- [0. Dns](#section-0)
-- [0. Proxy Reverseproxy](#section-0)
-- [0. Summary](#section-0)
-- [0. Tarck Ip Traceroute](#section-0)
-- [0. Tls Handshake](#section-0)
-- [1. Newroking](#section-1)
-- [2. Tcp Ip Newroking](#section-2)
-- [3-0. How Device Finds If Destination Ip In Local Or External Network](#section-3-0)
-- [3. Practical Networking](#section-3)
-- [3-1. Dhcp Arp Nat](#section-3-1)
-- [3-1. Do Router Uses Arp](#section-3-1)
-- [3-1-1. Process Request Tcp Packet Frame Ip Mac Arp Nat](#section-3-1-1)
-- [3-1-2. Corrected Network Cycle](#section-3-1-2)
-- [3-2. How Devices Locates Ex Whatsapp Msg](#section-3-2)
-- [4. Internal Network](#section-4)
-- [5. External Network](#section-5)
-  - [0. Packet Routing](#section-0)
-  - [1. Tcp Http Octet Upload](#section-1)
-  - [1. Intro To Network](#section-1)
-  - [1. Packet To Destiantion](#section-1)
-  - [2. Tcp Http Mulipart Upload](#section-2)
-  - [2. Tcp Ip](#section-2)
-  - [2. Tcp Ip Protocols](#section-2)
-  - [2. Arp](#section-2)
-  - [3. Subnetting](#section-3)
+- [**0.** Browser](#section-0)
+- [**0.** Dns](#section-0)
+- [**0.** Proxy Reverseproxy](#section-0)
+- [**0.** Summary](#section-0)
+- [**0.** Tarck Ip Traceroute](#section-0)
+- [**0.** Tls Handshake](#section-0)
+
+- [**1.** Newroking](#section-1)
+
+- [**2.** Tcp Ip Newroking](#section-2)
+
+- [**3-0.** How Device Finds If Destination Ip In Local Or External Network](#section-3-0)
+- [**3.** Practical Networking](#section-3)
+- [**3-1.** Dhcp Arp Nat](#section-3-1)
+- [**3-1.** Do Router Uses Arp](#section-3-1)
+- [**3-1-1.** Process Request Tcp Packet Frame Ip Mac Arp Nat](#section-3-1-1)
+- [**3-1-2.** Corrected Network Cycle](#section-3-1-2)
+- [**3-2.** How Devices Locates Ex Whatsapp Msg](#section-3-2)
+
+- [**4.** Internal Network](#section-4)
+
+- [**5.** External Network](#section-5)
+  - [**0.** Packet Routing](#section-0)
+  - [**1.** Tcp Http Octet Upload](#section-1)
+  - [**1.** Intro To Network](#section-1)
+  - [**1.** Packet To Destiantion](#section-1)
+  - [**2.** Tcp Http Mulipart Upload](#section-2)
+  - [**2.** Tcp Ip](#section-2)
+  - [**2.** Tcp Ip Protocols](#section-2)
+  - [**2.** Arp](#section-2)
+  - [**3.** Subnetting](#section-3)
 
 ---
 
 
 
 ## 0. Browser {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ### How DNS is Resolved in Browser :
 ```text
@@ -63,6 +70,8 @@ Url --> DNS look up --> 1) DNS cache (browser cache)
 ---
 
 ## 0. Dns {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 steps:
 
@@ -81,6 +90,8 @@ steps:
 
 ## 0. Proxy Reverseproxy {#section-0}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 Proxy : client don't know where req is sent
 ReverseProxy :server don't know where data is being sent
 
@@ -94,6 +105,8 @@ Proxy may know data
 ---
 
 ## 0. Summary {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # General flow:
 sending a request to server 
@@ -225,6 +238,8 @@ So, to clarify your question: Yes, the routing table helps the router decide the
 
 ## 0. Tarck Ip Traceroute {#section-0}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ### cmd 
 
 #### 1)in windows: tracert ip_address
@@ -233,6 +248,8 @@ So, to clarify your question: Yes, the routing table helps the router decide the
 ---
 
 ## 0. Tls Handshake {#section-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## Can you explain and TLS and what are the significance it has
 
@@ -361,6 +378,8 @@ providing confidentiality and integrity for the communication.
 
 ## 1. Newroking {#section-1}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 DEVICE (IP+MAC) ---> Router-MAC+IP [Device IP+Device MAC] --> 
 Router makes Source Mac: device MAC and Destination Mac: Routers MAC 
 
@@ -458,6 +477,8 @@ addresses remain constant for routing decisions.
 
 ## 2. Tcp Ip Newroking {#section-2}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ## Network Layers and Data Encapsulation
 
 1. **Application Layer (Layer 7)**: The Protocol Data Unit (PDU) is referred to as a message or data.
@@ -484,6 +505,8 @@ addresses remain constant for routing decisions.
 ---
 
 ## 3-0. How Device Finds If Destination Ip In Local Or External Network {#section-3-0}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 ## Q] how device know if destination ip is in local network or external netwrok
 
@@ -528,6 +551,8 @@ efficiently directing data to its intended destination.
 ---
 
 ## 3. Practical Networking {#section-3}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 Q1]router has two ips internal 
    and external is it right
@@ -614,6 +639,8 @@ translation between internal and external IP addresses.
 ---
 
 ## 3-1. Dhcp Arp Nat {#section-3-1}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # DHCP, ARP, NAT in Router
 
@@ -738,6 +765,8 @@ Device B's NAT table entry: (192.168.1.3, 5001) -> (203.0.113.1, 10002) <-- Note
 
 ## 3-1. Do Router Uses Arp {#section-3-1}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 # Do router uses ARP 
 ChatGPT
 Yes, ARP (Address Resolution Protocol) is used by 
@@ -792,6 +821,8 @@ addresses within the same subnet.
 ---
 
 ## 3-1-1. Process Request Tcp Packet Frame Ip Mac Arp Nat {#section-3-1-1}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # so generally what happens is 
 ```text
@@ -914,6 +945,8 @@ Handling Responses:
 ---
 
 ## 3-1-2. Corrected Network Cycle {#section-3-1-2}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # Network Cycle
 ## HOW WEBSITE is Loaded [Network Part] 
@@ -1051,6 +1084,8 @@ Handling Responses:
 
 ## 3-2. How Devices Locates Ex Whatsapp Msg {#section-3-2}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 ### Process from app to server to app
 
 1) device get's IP: device (MAC)---> router ( saves MAC with IP )--> DHCP (in router )-->gives new IP to device i.e. Internal IP
@@ -1087,6 +1122,8 @@ Note: ARP (Address Resolution Protocol) is typically used within a local network
 ---
 
 ## 4. Internal Network {#section-4}
+
+*📖 [← Back to Table of Contents](#-table-of-contents)*
 
 # Internal Network Communication
 
@@ -1251,6 +1288,8 @@ communication within a single broadcast domain or local subnet.
 
 ## 5. External Network {#section-5}
 
+*📖 [← Back to Table of Contents](#-table-of-contents)*
+
 # Communication with External Network
 
 ## 1) Device Obtains IP from Router
@@ -1330,7 +1369,7 @@ The response process is not detailed in the selected content. However, typically
 
 ### 0. Packet Routing {#section-0}
 
-> **Topic: summary**
+> **📁 Topic: summary**
 
 # 📡 Packet Routing Process
 
@@ -1503,7 +1542,7 @@ Do you want a **detailed breakdown of packet traversal across multiple networks*
 
 ### 1. Tcp Http Octet Upload {#section-1}
 
-> **Topic: Examples**
+> **📁 Topic: Examples**
 
 # 🚀 How `application/octet-stream` Works in Video Uploads
 
@@ -1552,7 +1591,7 @@ Would you like a sample **Node.js/NestJS implementation** for efficient video up
 
 ### 1. Intro To Network {#section-1}
 
-> **Topic: Nvidia coursera network**
+> **📁 Topic: Nvidia coursera network**
 
 # Introduction to Network
 
@@ -1641,7 +1680,7 @@ addresses and devices
 
 ### 1. Packet To Destiantion {#section-1}
 
-> **Topic: Packet Tracing**
+> **📁 Topic: Packet Tracing**
 
 # Packet Routing Process
 
@@ -1753,7 +1792,7 @@ Device A from PORT (SWITCH - MAC Table )
 
 ### 2. Tcp Http Mulipart Upload {#section-2}
 
-> **Topic: Examples**
+> **📁 Topic: Examples**
 
 # 🚀 How HTTP Works with Multipart Form-Data Uploads (Behind the Scenes of TCP & HTTP)
 
@@ -1902,7 +1941,7 @@ Once all packets arrive:
 
 ### 2. Tcp Ip {#section-2}
 
-> **Topic: Nvidia coursera network**
+> **📁 Topic: Nvidia coursera network**
 
 # Welcome to TCP/IP Protocol Suite Course
 
@@ -2001,7 +2040,7 @@ This concludes the discussion on TCP/IP protocol suite. We've seen how the appli
 
 ### 2. Tcp Ip Protocols {#section-2}
 
-> **Topic: Nvidia coursera network**
+> **📁 Topic: Nvidia coursera network**
 
 # 7] Application Layer Protocols:
   - This converts data in required format 
@@ -2060,7 +2099,7 @@ This concludes the discussion on TCP/IP protocol suite. We've seen how the appli
 
 ### 2. Arp {#section-2}
 
-> **Topic: Packet Tracing**
+> **📁 Topic: Packet Tracing**
 
 ### ARP: IP address to MAC address mapping
 
@@ -2074,7 +2113,7 @@ Source broadcasts ARP Request it already know IP of destination
 
 ### 3. Subnetting {#section-3}
 
-> **Topic: Packet Tracing**
+> **📁 Topic: Packet Tracing**
 
 # Subnettting: dividing Ip address into sub addresses
 # 7 Attributes of subnetting:

@@ -15,8 +15,8 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 
 ## 📚 Table of Contents
 
-- [999. Sort](#section-999)
-- [999. Tips](#section-999)
+- [**999.** Sort](#section-999)
+- [**999.** Tips](#section-999)
 
 ---
 
