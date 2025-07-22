@@ -15,55 +15,62 @@ Comprehensive guide covering Java fundamentals, Spring Boot, Maven, JPA, Hiberna
 
 ## 📚 Table of Contents
 
-- [**0.** Streams](#section-0)
+- [📝 **0.** Java 8 Streams API](#section-0)
+  - [🧠 **0.** JVM JRE JDK](#section-0)
+  - [🌱 **0.** Before Spring Boot](#section-0)
+  - [📝 **0-1.** How Java Code Runs](#section-0-1)
+  - [📝 **0-2.** How Java Code Runs](#section-0-2)
 
-- [**1.** Maven](#section-1)
-- [**1-1.** Pom](#section-1-1)
-- [**1-1-2.** Maven Lifecycle](#section-1-1-2)
-- [**1-2.** Maven Module Structure](#section-1-2)
+### 📖 Core Topics
+- [🔧 **1.** Maven Build Tool](#section-1)
+- [🔧 **1-1.** Maven POM Configuration](#section-1-1)
+- [🔧 **1-1-2.** Maven Build Lifecycle](#section-1-1-2)
+- [🔧 **1-2.** Maven Multi-Module Projects](#section-1-2)
+  - [🧠 **1-0.** JVM Memory Management & Garbage Collection](#section-1-0)
+  - [🌱 **1.** Spring Boot Framework](#section-1)
+  - [🧠 **1-1.** JVM Memory Management & Garbage Collection](#section-1-1)
+  - [🌱 **1-1.** Spring Boot Main Application Class](#section-1-1)
 
-- [**2.** Jdbc](#section-2)
+### 📖 Core Topics
+- [💾 **2.** Java Database Connectivity (JDBC)](#section-2)
+  - [🚨 **2.** Exception Handling in Java](#section-2)
+  - [🌱 **2.** HTTP Request Processing in Spring Boot](#section-2)
+  - [🌱 **2-1.** Input Validation in Spring Boot](#section-2-1)
 
-- [**3-0.** Hibernate Arch](#section-3-0)
-- [**3.** Hibernate](#section-3)
-- [**3-1-0.** Jpa](#section-3-1-0)
-- [**3-1-1.** Hibernate Jpa](#section-3-1-1)
-- [**3-1-2.** Hibernate Jpa Mapping](#section-3-1-2)
+### 📖 Core Topics
+- [💾 **3-0.** Hibernate Architecture Overview](#section-3-0)
+- [💾 **3.** Hibernate ORM Framework](#section-3)
+- [💾 **3-1-0.** Java Persistence API (JPA)](#section-3-1-0)
+- [💾 **3-1-1.** Hibernate with JPA](#section-3-1-1)
+- [💾 **3-1-2.** JPA Entity Mappings & Relations](#section-3-1-2)
+  - [📝 **3-0.** Multihreading Process Thread Heap Stack](#section-3-0)
+  - [🚨 **3.** Exception & Error Handling](#section-3)
+  - [⚡ **3-1.** Multithreading Thread Creation](#section-3-1)
+  - [⚡ **3-2.** Multithreading Monitor Locks](#section-3-2)
+  - [⚡ **3-2-1.** Multithreading Monitor Lock](#section-3-2-1)
+  - [⚡ **3-2-2.** Multithreading Stop Resume Suspend Deprecated](#section-3-2-2)
+  - [⚡ **3-2-3.** Multithreading Demon Thread Reentrantlock](#section-3-2-3)
+  - [⚡ **3-2-4.** Multithreading Readwritelock](#section-3-2-4)
+  - [📝 **3-2-4-1.** Readwritelock](#section-3-2-4-1)
+  - [⚡ **3-2-5.** Multithreading Stampedlock](#section-3-2-5)
 
-- [**4.** Server Config](#section-4)
-- [**999.** What When](#section-999)
-  - [**0.** Jvm Jre Jdk](#section-0)
-  - [**0.** Before Spring Boot](#section-0)
-  - [**0-1.** How Java Code Runs](#section-0-1)
-  - [**0-2.** How Java Code Runs](#section-0-2)
-  - [**1-0.** Memory Management Garbage Collection](#section-1-0)
-  - [**1.** Spring Boot](#section-1)
-  - [**1-1.** Memory Management Garbage Collection](#section-1-1)
-  - [**1-1.** Spring Boot @springbootapplication](#section-1-1)
-  - [**2.** Java Exception](#section-2)
-  - [**2.** Spring Boot Request Handling](#section-2)
-  - [**2-1.** Spring Boot Request Validation](#section-2-1)
-  - [**3-0.** Multihreading Process Thread Heap Stack](#section-3-0)
-  - [**3.** Spring Boot Exception Handling](#section-3)
-  - [**3-1.** Multithreading Thread Creation](#section-3-1)
-  - [**3-2.** Multithreading Monitor Locks](#section-3-2)
-  - [**3-2-1.** Multithreading Monitor Lock](#section-3-2-1)
-  - [**3-2-2.** Multithreading Stop Resume Suspend Deprecated](#section-3-2-2)
-  - [**3-2-3.** Multithreading Demon Thread Reentrantlock](#section-3-2-3)
-  - [**3-2-4.** Multithreading Readwritelock](#section-3-2-4)
-  - [**3-2-4-1.** Readwritelock](#section-3-2-4-1)
-  - [**3-2-5.** Multithreading Stampedlock](#section-3-2-5)
-  - [**4.** Spring Boot Dependency Resolution](#section-4)
+### 📖 Core Topics
+- [📝 **4.** Server Configuration & Deployment](#section-4)
+  - [🌱 **4.** Spring Boot Dependency Resolution](#section-4)
 
-  - [**5.** Multithreading Reentrantlock Vs Readwritelock Vs Stampedlock Vs Semaphorelock](#section-5)
-  - [**5-2.** Spring Boot Hql Relations](#section-5-2)
-  - [**999.** Readme](#section-999)
+### 📖 Adv Java
+  - [⚡ **5.** Multithreading Reentrantlock Vs Readwritelock Vs Stampedlock Vs Semaphorelock](#section-5)
+  - [🌱 **5-2.** Spring Boot Hql Relations](#section-5-2)
+- [📝 **999.** What When](#section-999)
+  - [📝 **999.** Readme](#section-999)
 
 ---
 
+*💡 **Quick Navigation Tip:** Click any section title to jump directly to that topic. Use 'Back to TOC' links to return to this overview.*
 
 
-## 0. Streams {#section-0}
+
+## 0. Java 8 Streams API {#section-0}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -157,7 +164,7 @@ public class StreamGroupingExample {
 
 ---
 
-## 1. Maven {#section-1}
+## 1. Maven Build Tool {#section-1}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -208,7 +215,7 @@ public class StreamGroupingExample {
 
 ---
 
-## 1-1. Pom {#section-1-1}
+## 1-1. Maven POM Configuration {#section-1-1}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -491,7 +498,7 @@ Extends Maven’s capabilities (e.g., to build JAR files, run tests, create docu
 
 ---
 
-## 1-1-2. Maven Lifecycle {#section-1-1-2}
+## 1-1-2. Maven Build Lifecycle {#section-1-1-2}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -554,7 +561,7 @@ Extends Maven’s capabilities (e.g., to build JAR files, run tests, create docu
 
 ---
 
-## 1-2. Maven Module Structure {#section-1-2}
+## 1-2. Maven Multi-Module Projects {#section-1-2}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -682,7 +689,7 @@ mvn install -P jar-profile
 
 ---
 
-## 2. Jdbc {#section-2}
+## 2. Java Database Connectivity (JDBC) {#section-2}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -796,7 +803,7 @@ try (Connection connection = dataSource.getConnection()) {
 
 ---
 
-## 3-0. Hibernate Arch {#section-3-0}
+## 3-0. Hibernate Architecture Overview {#section-3-0}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -833,7 +840,7 @@ try (Connection connection = dataSource.getConnection()) {
 
 ---
 
-## 3. Hibernate {#section-3}
+## 3. Hibernate ORM Framework {#section-3}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -1219,7 +1226,7 @@ List<Object[]> results = session.createNativeQuery(sql)
 
 ---
 
-## 3-1-0. Jpa {#section-3-1-0}
+## 3-1-0. Java Persistence API (JPA) {#section-3-1-0}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -1234,7 +1241,7 @@ List<Object[]> results = session.createNativeQuery(sql)
 
 ---
 
-## 3-1-1. Hibernate Jpa {#section-3-1-1}
+## 3-1-1. Hibernate with JPA {#section-3-1-1}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -1304,7 +1311,7 @@ List<Object[]> results = session.createNativeQuery(sql)
 
 ---
 
-## 3-1-2. Hibernate Jpa Mapping {#section-3-1-2}
+## 3-1-2. JPA Entity Mappings & Relations {#section-3-1-2}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -1313,7 +1320,7 @@ List<Object[]> results = session.createNativeQuery(sql)
 
 ---
 
-## 4. Server Config {#section-4}
+## 4. Server Configuration & Deployment {#section-4}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -1346,7 +1353,7 @@ User --> Servlet --> APP Logic --> JPA --> JDBC--> DB
 
 ---
 
-### 0. Jvm Jre Jdk {#section-0}
+### 0. JVM JRE JDK {#section-0}
 
 > **📁 Topic: Adv Java**
 
@@ -1629,7 +1636,7 @@ JVM allocates Heap and Stack memory before execution, and memory is used dynamic
 
 ---
 
-### 1-0. Memory Management Garbage Collection {#section-1-0}
+### 1-0. JVM Memory Management & Garbage Collection {#section-1-0}
 
 > **📁 Topic: Adv Java**
 
@@ -1712,7 +1719,7 @@ JVM Memory:
 
 ---
 
-### 1. Spring Boot {#section-1}
+### 1. Spring Boot Framework {#section-1}
 
 > **📁 Topic: SpringBoot**
 
@@ -1737,7 +1744,7 @@ JVM Memory:
 
 ---
 
-### 1-1. Memory Management Garbage Collection {#section-1-1}
+### 1-1. JVM Memory Management & Garbage Collection {#section-1-1}
 
 > **📁 Topic: Adv Java**
 
@@ -1804,7 +1811,7 @@ JVM Memory:
 
 ---
 
-### 1-1. Spring Boot @springbootapplication {#section-1-1}
+### 1-1. Spring Boot Main Application Class {#section-1-1}
 
 > **📁 Topic: SpringBoot**
 
@@ -1820,7 +1827,7 @@ using `@ComponentScan`.
 
 ---
 
-### 2. Java Exception {#section-2}
+### 2. Exception Handling in Java {#section-2}
 
 > **📁 Topic: Adv Java**
 
@@ -1832,7 +1839,7 @@ Exception = checked (compileTime) + Unchecked (RuntTime)
 
 ---
 
-### 2. Spring Boot Request Handling {#section-2}
+### 2. HTTP Request Processing in Spring Boot {#section-2}
 
 > **📁 Topic: SpringBoot**
 
@@ -2014,7 +2021,7 @@ return new User(1L, "Alice");
 
 ---
 
-### 2-1. Spring Boot Request Validation {#section-2-1}
+### 2-1. Input Validation in Spring Boot {#section-2-1}
 
 > **📁 Topic: SpringBoot**
 
@@ -2135,7 +2142,7 @@ public class GlobalExceptionHandler {
 
 ---
 
-### 3. Spring Boot Exception Handling {#section-3}
+### 3. Exception & Error Handling {#section-3}
 
 > **📁 Topic: SpringBoot**
 

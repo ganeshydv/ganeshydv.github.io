@@ -80,15 +80,84 @@ function compareIndices(a, b) {
 }
 
 function cleanSectionTitle(filename) {
-  return filename
-    .replace(/\.md$/, '')
-    .replace(/^\d+(?:\.\d+)*[_\-]*/, '') // Remove leading numbers
+  // First get the raw title without extension
+  let title = filename.replace(/\.md$/, '');
+  
+  // For better readability, keep the original structure but clean it up
+  title = title
+    .replace(/^\d+(?:\.\d+)*[_\-]*/, '') // Remove leading numbers and separators
+    .replace(/[_\-]/g, ' ') // Convert underscores and dashes to spaces
+    .replace(/\s+/g, ' ') // Normalize multiple spaces
+    .trim();
+  
+  // Capitalize properly while preserving acronyms
+  title = title.split(' ').map(word => {
+    // Preserve common acronyms
+    const acronyms = ['JPA', 'JVM', 'JRE', 'JDK', 'API', 'REST', 'HTTP', 'JDBC', 'SQL', 'AWS', 'IAM', 'RDS', 'ECS'];
+    const upperWord = word.toUpperCase();
+    if (acronyms.includes(upperWord)) {
+      return upperWord;
+    }
+    // Special handling for SpringBoot-style words
+    if (word.toLowerCase().includes('spring')) {
+      return 'Spring Boot';
+    }
+    // Regular capitalization
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }).join(' ');
+  
+  return title || 'Introduction';
+}
+
+function getOriginalBlogTitle(filename) {
+  // Extract the more descriptive title from filename while preserving structure
+  let title = filename.replace(/\.md$/, '');
+  
+  // Remove leading numbers but keep the descriptive part
+  title = title.replace(/^\d+(?:\.\d+)*[_\-]*/, '');
+  
+  // Convert to readable format
+  title = title
     .replace(/[_\-]/g, ' ')
     .replace(/\s+/g, ' ')
-    .trim()
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ') || 'Introduction';
+    .trim();
+  
+  // Handle special cases and improve readability
+  const titleMappings = {
+    'maven': 'Maven Build Tool',
+    'pom': 'Maven POM Configuration',
+    'maven lifecycle': 'Maven Build Lifecycle',
+    'maven module structure': 'Maven Multi-Module Projects',
+    'jdbc': 'Java Database Connectivity (JDBC)',
+    'hibernate arch': 'Hibernate Architecture Overview',
+    'hibernate': 'Hibernate ORM Framework',
+    'jpa': 'Java Persistence API (JPA)',
+    'hibernate jpa': 'Hibernate with JPA',
+    'hibernate jpa mapping': 'JPA Entity Mappings & Relations',
+    'server config': 'Server Configuration & Deployment',
+    'streams': 'Java 8 Streams API',
+    'spring boot': 'Spring Boot Framework',
+    'spring boot @springbootapplication': 'Spring Boot Main Application Class',
+    'spring boot request handling': 'HTTP Request Processing in Spring Boot',
+    'spring boot request validation': 'Input Validation in Spring Boot',
+    'spring boot exception handling': 'Exception & Error Handling',
+    'multithreading': 'Java Multithreading & Concurrency',
+    'memory management garbage collection': 'JVM Memory Management & Garbage Collection',
+    'java exception': 'Exception Handling in Java'
+  };
+  
+  const lowerTitle = title.toLowerCase();
+  if (titleMappings[lowerTitle]) {
+    return titleMappings[lowerTitle];
+  }
+  
+  // Default cleanup for unmapped titles
+  return title.split(' ').map(word => {
+    const acronyms = ['JPA', 'JVM', 'JRE', 'JDK', 'API', 'REST', 'HTTP', 'JDBC', 'SQL', 'AWS'];
+    const upperWord = word.toUpperCase();
+    if (acronyms.includes(upperWord)) return upperWord;
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }).join(' ');
 }
 
 function generateSectionId(filename) {
@@ -137,13 +206,11 @@ function processFolder(folderPath, config) {
         content = content.replace(/^---[\s\S]*?---\n/, '');
         
         // Skip empty files
-        if (content.trim().length === 0) return;
-
-        const sectionTitle = cleanSectionTitle(file);
+        if (content.trim().length === 0) return;        const sectionTitle = getOriginalBlogTitle(file);
         const sectionId = generateSectionId(file);
         const headerLevel = level + 2; // Start from ## for main sections
         const headerPrefix = '#'.repeat(Math.min(headerLevel, 6));
-          let sectionHeader = `${headerPrefix} ${sectionId}. ${sectionTitle} {#section-${sectionId}}\n\n`;
+        let sectionHeader = `${headerPrefix} ${sectionId}. ${sectionTitle} {#section-${sectionId}}\n\n`;
         
         // Add subsection info if in subfolder
         if (relativePath && relativePath !== '.') {
@@ -205,28 +272,59 @@ function processFolder(folderPath, config) {
   allContent.sort((a, b) => {
     if (a.level !== b.level) return a.level - b.level;
     return compareIndices(a.file, b.file);
-  });
-  // Generate table of contents with better organization
+  });  // Generate table of contents with better organization and descriptive titles
   let toc = "## 📚 Table of Contents\n\n";
   
-  // Group sections by topic for better readability
-  let currentLevel = 0;
+  // Group sections by major topic areas
+  const topicGroups = {};
   allContent.forEach(section => {
     if (!section.file.startsWith('__folder_')) {
-      const indent = '  '.repeat(Math.min(section.level, 3));
-      const sectionId = generateSectionId(section.file);
-      
-      // Add visual separators for major section changes
       const indexParts = parseFileIndex(section.file);
-      if (indexParts[0] > currentLevel && indexParts[0] < 999) {
-        toc += '\n';
-        currentLevel = indexParts[0];
-      }
+      const mainIndex = indexParts[0];
       
-      toc += `${indent}- [**${sectionId}.** ${section.title}](#section-${sectionId})\n`;
+      if (!topicGroups[mainIndex]) {
+        topicGroups[mainIndex] = [];
+      }
+      topicGroups[mainIndex].push(section);
     }
   });
-  toc += "\n---\n\n";
+  
+  // Generate organized TOC
+  Object.keys(topicGroups).sort((a, b) => parseInt(a) - parseInt(b)).forEach(mainIndex => {
+    const sections = topicGroups[mainIndex];
+    
+    // Add section group header for major topics
+    if (mainIndex !== '999' && sections.length > 0) {
+      const firstSection = sections[0];
+      const groupTitle = firstSection.subfolder ? 
+        firstSection.subfolder.replace(/[_\-]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : 
+        'Core Topics';
+      
+      if (mainIndex !== '0') {
+        toc += `\n### 📖 ${groupTitle}\n`;
+      }
+    }
+    
+    // Add individual sections with better formatting
+    sections.forEach(section => {
+      const indent = '  '.repeat(Math.min(section.level, 2));
+      const sectionId = generateSectionId(section.file);
+      const displayTitle = getOriginalBlogTitle(section.file);
+      
+      // Use emoji indicators for different types of content
+      let emoji = '📝';
+      if (displayTitle.toLowerCase().includes('spring')) emoji = '🌱';
+      else if (displayTitle.toLowerCase().includes('database') || displayTitle.toLowerCase().includes('jpa') || displayTitle.toLowerCase().includes('hibernate')) emoji = '💾';
+      else if (displayTitle.toLowerCase().includes('maven')) emoji = '🔧';
+      else if (displayTitle.toLowerCase().includes('multithread') || displayTitle.toLowerCase().includes('concurrency')) emoji = '⚡';
+      else if (displayTitle.toLowerCase().includes('exception') || displayTitle.toLowerCase().includes('error')) emoji = '🚨';
+      else if (displayTitle.toLowerCase().includes('memory') || displayTitle.toLowerCase().includes('jvm')) emoji = '🧠';
+      
+      toc += `${indent}- [${emoji} **${sectionId}.** ${displayTitle}](#section-${sectionId})\n`;
+    });
+  });
+  
+  toc += "\n---\n\n*💡 **Quick Navigation Tip:** Click any section title to jump directly to that topic. Use 'Back to TOC' links to return to this overview.*\n\n";
 
   // Combine all content
   const combinedContent = allContent.map(section => section.content).join('\n\n---\n\n');

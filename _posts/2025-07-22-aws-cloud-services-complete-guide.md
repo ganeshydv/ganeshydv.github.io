@@ -15,55 +15,61 @@ Complete AWS guide covering Lambda, ECS, IAM, API Gateway, DynamoDB, and deploym
 
 ## 📚 Table of Contents
 
-- [**0.** Aws](#section-0)
-- [**0.** Aws Cmd](#section-0)
-- [**0.** Aws Free Tier](#section-0)
-- [**0.** Iam Role Policy](#section-0)
+- [📝 **0.** AWS](#section-0)
+- [📝 **0.** AWS Cmd](#section-0)
+- [📝 **0.** AWS Free Tier](#section-0)
+- [📝 **0.** Iam Role Policy](#section-0)
+  - [📝 **0.** AWS API Gateway](#section-0)
+  - [📝 **0.** AWS Codepipeline](#section-0)
+  - [📝 **0.** Ec2](#section-0)
+  - [📝 **0.** How Ecs Auto Scales](#section-0)
+  - [📝 **0.** How Ecs Ec2 Task Scales](#section-0)
+  - [📝 **0.** How Lamdba Works](#section-0)
+  - [📝 **0.** Lambda Limits 0](#section-0)
+  - [📝 **0.** Lambda Limits 1 Summary](#section-0)
+  - [📝 **0.** Sqs 0](#section-0)
+  - [📝 **0.** Targetgroup](#section-0)
+  - [📝 **0-1.** Db Connection](#section-0-1)
 
-- [**1.** Iam](#section-1)
-- [**1-1.** Iam Mfa](#section-1-1)
-- [**1-2.** User Access](#section-1-2)
-- [**1-3.** Iam Role](#section-1-3)
-- [**1-4.** Iam Security Tools](#section-1-4)
+### 📖 Core Topics
+- [📝 **1.** Iam](#section-1)
+- [📝 **1-1.** Iam Mfa](#section-1-1)
+- [📝 **1-2.** User Access](#section-1-2)
+- [📝 **1-3.** Iam Role](#section-1-3)
+- [📝 **1-4.** Iam Security Tools](#section-1-4)
+  - [📝 **1.** Ec2 Secutitygroups](#section-1)
+  - [📝 **1.** Scaling And Alb](#section-1)
+  - [📝 **1.** Scaling Scenerio](#section-1)
+  - [📝 **1.** Ex Lambds](#section-1)
 
-- [**3.** Aws Cicd Serverless](#section-3)
-- [**3.** Ssh](#section-3)
-- [**999.** Advanced Lambda Optimization Guide](#section-999)
-- [**999.** Aws Ecs Complete Cicd](#section-999)
-- [**999.** Aws Networking Vpc Subnet Sg](#section-999)
-- [**999.** Cloudwatch](#section-999)
-- [**999.** General Deployment Process](#section-999)
-- [**999.** Lambda Best Practices Demo](#section-999)
-  - [**0.** Aws Api Gateway](#section-0)
-  - [**0.** Aws Codepipeline](#section-0)
-  - [**0.** Ec2](#section-0)
-  - [**0.** How Ecs Auto Scales](#section-0)
-  - [**0.** How Ecs Ec2 Task Scales](#section-0)
-  - [**0.** How Lamdba Works](#section-0)
-  - [**0.** Lambda Limits 0](#section-0)
-  - [**0.** Lambda Limits 1 Summary](#section-0)
-  - [**0.** Sqs 0](#section-0)
-  - [**0.** Targetgroup](#section-0)
-  - [**0-1.** Db Connection](#section-0-1)
-  - [**1.** Ec2 Secutitygroups](#section-1)
-  - [**1.** Scaling And Alb](#section-1)
-  - [**1.** Scaling Scenerio](#section-1)
-  - [**1.** Ex Lambds](#section-1)
-  - [**2.** Aws Cicd](#section-2)
-  - [**2.** Aws Target Group How Failure Handles](#section-2)
-  - [**999.** How Ecs Instance Launched](#section-999)
-  - [**999.** Suumaryof Ecs](#section-999)
-  - [**999.** Ecs](#section-999)
-  - [**999.** Lambda Awsapigateway](#section-999)
-  - [**999.** Lambda Serverlessyml](#section-999)
-  - [**999.** Sqs Sam](#section-999)
-  - [**999.** Aws Target Group Health Check Rolback](#section-999)
+### 📖 CICD
+  - [📝 **2.** AWS Cicd](#section-2)
+  - [📝 **2.** AWS Target Group How Failure Handles](#section-2)
+
+### 📖 Core Topics
+- [📝 **3.** AWS Cicd Serverless](#section-3)
+- [📝 **3.** Ssh](#section-3)
+- [📝 **999.** Advanced Lambda Optimization Guide](#section-999)
+- [📝 **999.** AWS Ecs Complete Cicd](#section-999)
+- [📝 **999.** AWS Networking Vpc Subnet Sg](#section-999)
+- [📝 **999.** Cloudwatch](#section-999)
+- [📝 **999.** General Deployment Process](#section-999)
+- [📝 **999.** Lambda Best Practices Demo](#section-999)
+  - [📝 **999.** How Ecs Instance Launched](#section-999)
+  - [📝 **999.** Suumaryof Ecs](#section-999)
+  - [📝 **999.** Ecs](#section-999)
+  - [📝 **999.** Lambda Awsapigateway](#section-999)
+  - [📝 **999.** Lambda Serverlessyml](#section-999)
+  - [📝 **999.** Sqs Sam](#section-999)
+  - [📝 **999.** AWS Target Group Health Check Rolback](#section-999)
 
 ---
 
+*💡 **Quick Navigation Tip:** Click any section title to jump directly to that topic. Use 'Back to TOC' links to return to this overview.*
 
 
-## 0. Aws {#section-0}
+
+## 0. AWS {#section-0}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -79,7 +85,7 @@ Complete AWS guide covering Lambda, ECS, IAM, API Gateway, DynamoDB, and deploym
 
 ---
 
-## 0. Aws Cmd {#section-0}
+## 0. AWS Cmd {#section-0}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -113,7 +119,7 @@ aws ecs list-tasks --cluster your-cluster-name
 
 ---
 
-## 0. Aws Free Tier {#section-0}
+## 0. AWS Free Tier {#section-0}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -462,7 +468,7 @@ user does not have some acees he will not be able to access those things.
 
 ---
 
-## 3. Aws Cicd Serverless {#section-3}
+## 3. AWS Cicd Serverless {#section-3}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -622,7 +628,7 @@ Following these best practices will help you build robust, performant, and cost-
 
 ---
 
-## 999. Aws Ecs Complete Cicd {#section-999}
+## 999. AWS Ecs Complete Cicd {#section-999}
 
 # CI/CD and Container Orchestration with Amazon ECS
 
@@ -703,7 +709,7 @@ This separation of concerns allows CI/CD pipelines to focus on building and pack
 
 ---
 
-## 999. Aws Networking Vpc Subnet Sg {#section-999}
+## 999. AWS Networking Vpc Subnet Sg {#section-999}
 
 ------------------------------------------------------------
 
@@ -955,7 +961,7 @@ Following these best practices will help you build robust, performant, and cost-
 
 ---
 
-### 0. Aws Api Gateway {#section-0}
+### 0. AWS API Gateway {#section-0}
 
 > **📁 Topic: Api Gateway**
 
@@ -973,7 +979,7 @@ In AWS API Gateway, API keys are used to `control and track acces`s to your APIs
 
 ---
 
-### 0. Aws Codepipeline {#section-0}
+### 0. AWS Codepipeline {#section-0}
 
 > **📁 Topic: CICD**
 
@@ -1950,7 +1956,7 @@ Resources:
 
 ---
 
-### 2. Aws Cicd {#section-2}
+### 2. AWS Cicd {#section-2}
 
 > **📁 Topic: CICD**
 
@@ -2069,7 +2075,7 @@ Instead of manual deployment, use **CodePipeline** to automate the process.
 
 ---
 
-### 2. Aws Target Group How Failure Handles {#section-2}
+### 2. AWS Target Group How Failure Handles {#section-2}
 
 > **📁 Topic: TagretGroup+ALB+ECS**
 
@@ -2436,7 +2442,7 @@ Event types:
 
 ---
 
-### 999. Aws Target Group Health Check Rolback {#section-999}
+### 999. AWS Target Group Health Check Rolback {#section-999}
 
 > **📁 Topic: TagretGroup+ALB+ECS**
 

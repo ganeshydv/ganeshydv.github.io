@@ -15,32 +15,39 @@ Complete database guide covering RDS, DynamoDB, SQL optimization, and database a
 
 ## 📚 Table of Contents
 
-- [**0.** Rds 0](#section-0)
+- [📝 **0.** Rds 0](#section-0)
+  - [📝 **0-1.** Dynamodb 0.1 Keys](#section-0-1)
+  - [📝 **0-1-1.** Dynamodb 0.1.1 Gsi Lsi](#section-0-1-1)
+  - [📝 **0-1-1.** Dynamodb 0.1.1 Gsi Vs Lsi](#section-0-1-1)
+  - [📝 **0-1-2.** Dynamodb 0.1.2 Questions](#section-0-1-2)
+  - [📝 **0-2.** Dynamodb 0.2 How Data Stored](#section-0-2)
+  - [📝 **0-2-1.** Dynamodb 0.2.1 Internals](#section-0-2-1)
 
-- [**1.** Rds Api 1](#section-1)
-- [**999.** Rds Vs Dynamodb](#section-999)
-- [**999.** Sql](#section-999)
-  - [**0-1.** Dynamodb 0.1 Keys](#section-0-1)
-  - [**0-1-1.** Dynamodb 0.1.1 Gsi Lsi](#section-0-1-1)
-  - [**0-1-1.** Dynamodb 0.1.1 Gsi Vs Lsi](#section-0-1-1)
-  - [**0-1-2.** Dynamodb 0.1.2 Questions](#section-0-1-2)
-  - [**0-2.** Dynamodb 0.2 How Data Stored](#section-0-2)
-  - [**0-2-1.** Dynamodb 0.2.1 Internals](#section-0-2-1)
-  - [**1.** Dynamodb 1 Limits](#section-1)
-  - [**1-2.** Dynamodb 1.2 Limit](#section-1-2)
+### 📖 Core Topics
+- [📝 **1.** Rds API 1](#section-1)
+  - [📝 **1.** Dynamodb 1 Limits](#section-1)
+  - [📝 **1-2.** Dynamodb 1.2 Limit](#section-1-2)
 
-  - [**2-0.** Dynamodb 2.0 Read Write Cmds](#section-2-0)
-  - [**2.** Dynamodb 2 Rcu Wcu Cal](#section-2)
-  - [**2-1.** Dynamodb 2.1 Get](#section-2-1)
-  - [**2-2.** Dynamodb 2.2 Update Batchwrite Vs Transaction](#section-2-2)
+### 📖 DynamoDB
+  - [📝 **2-0.** Dynamodb 2.0 Read Write Cmds](#section-2-0)
+  - [📝 **2.** Dynamodb 2 Rcu Wcu Cal](#section-2)
+  - [📝 **2-1.** Dynamodb 2.1 Get](#section-2-1)
+  - [📝 **2-2.** Dynamodb 2.2 Update Batchwrite Vs Transaction](#section-2-2)
 
-  - [**3.** Dynamodb 3 Sd](#section-3)
+### 📖 DynamoDB
+  - [📝 **3.** Dynamodb 3 Sd](#section-3)
 
-  - [**4.** Dynamodb 4 Cost](#section-4)
+### 📖 DynamoDB
+  - [📝 **4.** Dynamodb 4 Cost](#section-4)
 
-  - [**5.** Dynamodb 5 Cmd](#section-5)
+### 📖 DynamoDB
+  - [📝 **5.** Dynamodb 5 Cmd](#section-5)
+- [📝 **999.** Rds Vs Dynamodb](#section-999)
+- [📝 **999.** SQL](#section-999)
 
 ---
+
+*💡 **Quick Navigation Tip:** Click any section title to jump directly to that topic. Use 'Back to TOC' links to return to this overview.*
 
 
 
@@ -175,7 +182,7 @@ Use application-side timeouts to avoid long queries.
 
 ---
 
-## 1. Rds Api 1 {#section-1}
+## 1. Rds API 1 {#section-1}
 
 *📖 [← Back to Table of Contents](#-table-of-contents)*
 
@@ -218,7 +225,7 @@ Use application-side timeouts to avoid long queries.
 
 ---
 
-## 999. Sql {#section-999}
+## 999. SQL {#section-999}
 
 ## Check indexes Query:
 ```sql

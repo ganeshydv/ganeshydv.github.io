@@ -15,10 +15,12 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 
 ## 📚 Table of Contents
 
-- [**999.** Sort](#section-999)
-- [**999.** Tips](#section-999)
+- [📝 **999.** Sort](#section-999)
+- [📝 **999.** Tips](#section-999)
 
 ---
+
+*💡 **Quick Navigation Tip:** Click any section title to jump directly to that topic. Use 'Back to TOC' links to return to this overview.*
 
 
 

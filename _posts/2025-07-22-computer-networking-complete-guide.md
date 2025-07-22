@@ -15,39 +15,46 @@ Complete networking guide covering TCP/IP, DNS, routing, protocols, and network 
 
 ## 📚 Table of Contents
 
-- [**0.** Browser](#section-0)
-- [**0.** Dns](#section-0)
-- [**0.** Proxy Reverseproxy](#section-0)
-- [**0.** Summary](#section-0)
-- [**0.** Tarck Ip Traceroute](#section-0)
-- [**0.** Tls Handshake](#section-0)
+- [📝 **0.** Browser](#section-0)
+- [📝 **0.** Dns](#section-0)
+- [📝 **0.** Proxy Reverseproxy](#section-0)
+- [📝 **0.** Summary](#section-0)
+- [📝 **0.** Tarck Ip Traceroute](#section-0)
+- [📝 **0.** Tls Handshake](#section-0)
+  - [📝 **0.** Packet Routing](#section-0)
 
-- [**1.** Newroking](#section-1)
+### 📖 Core Topics
+- [📝 **1.** Newroking](#section-1)
+  - [📝 **1.** Tcp HTTP Octet Upload](#section-1)
+  - [📝 **1.** Intro To Network](#section-1)
+  - [📝 **1.** Packet To Destiantion](#section-1)
 
-- [**2.** Tcp Ip Newroking](#section-2)
+### 📖 Core Topics
+- [📝 **2.** Tcp Ip Newroking](#section-2)
+  - [📝 **2.** Tcp HTTP Mulipart Upload](#section-2)
+  - [📝 **2.** Tcp Ip](#section-2)
+  - [📝 **2.** Tcp Ip Protocols](#section-2)
+  - [📝 **2.** Arp](#section-2)
 
-- [**3-0.** How Device Finds If Destination Ip In Local Or External Network](#section-3-0)
-- [**3.** Practical Networking](#section-3)
-- [**3-1.** Dhcp Arp Nat](#section-3-1)
-- [**3-1.** Do Router Uses Arp](#section-3-1)
-- [**3-1-1.** Process Request Tcp Packet Frame Ip Mac Arp Nat](#section-3-1-1)
-- [**3-1-2.** Corrected Network Cycle](#section-3-1-2)
-- [**3-2.** How Devices Locates Ex Whatsapp Msg](#section-3-2)
+### 📖 Core Topics
+- [📝 **3-0.** How Device Finds If Destination Ip In Local Or External Network](#section-3-0)
+- [📝 **3.** Practical Networking](#section-3)
+- [📝 **3-1.** Dhcp Arp Nat](#section-3-1)
+- [📝 **3-1.** Do Router Uses Arp](#section-3-1)
+- [📝 **3-1-1.** Process Request Tcp Packet Frame Ip Mac Arp Nat](#section-3-1-1)
+- [📝 **3-1-2.** Corrected Network Cycle](#section-3-1-2)
+- [📝 **3-2.** How Devices Locates Ex Whatsapp Msg](#section-3-2)
+  - [📝 **3.** Subnetting](#section-3)
 
-- [**4.** Internal Network](#section-4)
+### 📖 Core Topics
+- [📝 **4.** Internal Network](#section-4)
 
-- [**5.** External Network](#section-5)
-  - [**0.** Packet Routing](#section-0)
-  - [**1.** Tcp Http Octet Upload](#section-1)
-  - [**1.** Intro To Network](#section-1)
-  - [**1.** Packet To Destiantion](#section-1)
-  - [**2.** Tcp Http Mulipart Upload](#section-2)
-  - [**2.** Tcp Ip](#section-2)
-  - [**2.** Tcp Ip Protocols](#section-2)
-  - [**2.** Arp](#section-2)
-  - [**3.** Subnetting](#section-3)
+### 📖 Core Topics
+- [📝 **5.** External Network](#section-5)
 
 ---
+
+*💡 **Quick Navigation Tip:** Click any section title to jump directly to that topic. Use 'Back to TOC' links to return to this overview.*
 
 
 
@@ -1540,7 +1547,7 @@ Do you want a **detailed breakdown of packet traversal across multiple networks*
 
 ---
 
-### 1. Tcp Http Octet Upload {#section-1}
+### 1. Tcp HTTP Octet Upload {#section-1}
 
 > **📁 Topic: Examples**
 
@@ -1790,7 +1797,7 @@ Device A from PORT (SWITCH - MAC Table )
 
 ---
 
-### 2. Tcp Http Mulipart Upload {#section-2}
+### 2. Tcp HTTP Mulipart Upload {#section-2}
 
 > **📁 Topic: Examples**
 
