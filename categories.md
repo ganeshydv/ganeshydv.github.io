@@ -133,12 +133,13 @@ This creates a logical hierarchy that follows the actual folder structure
 ## 📁 {{ main_category }}
 
     {% comment %}Get all subcategories for this main category{% endcomment %}
-    {% assign subcategories = site.posts | where_exp: "post", "post.categories[0] == main_category" | map: 'categories' | map: 'last' | uniq | sort %}
+    {% assign main_cat_posts = site.posts | where_exp: "item", "item.categories[0] == main_category" %}
+    {% assign subcategories = main_cat_posts | map: 'categories' | map: 'last' | uniq | sort %}
     
     {% for subcategory in subcategories %}
       {% if subcategory != "" and subcategory != main_category %}
 ### 📂 {{ subcategory }}
-        {% assign topic_posts = site.posts | where_exp: "post", "post.categories[0] == main_category and post.categories[1] == subcategory" | sort: 'title' %}
+        {% assign topic_posts = site.posts | where_exp: "item", "item.categories[0] == main_category and item.categories[1] == subcategory" | sort: 'title' %}
         {% for post in topic_posts limit: 8 %}
 - [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %Y" }}
         {% endfor %}
@@ -151,7 +152,7 @@ This creates a logical hierarchy that follows the actual folder structure
     {% endfor %}
 
     {% comment %}Also show posts that only have main category{% endcomment %}
-    {% assign main_only_posts = site.posts | where_exp: "post", "post.categories[0] == main_category and post.categories.size == 1" | sort: 'title' %}
+    {% assign main_only_posts = site.posts | where_exp: "item", "item.categories[0] == main_category and item.categories.size == 1" | sort: 'title' %}
     {% if main_only_posts.size > 0 %}
 ### 📄 General {{ main_category }} Posts
       {% for post in main_only_posts limit: 5 %}
