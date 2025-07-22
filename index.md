@@ -11,63 +11,81 @@ title: "Tech Skills Blog"
 
 ## 🌟 What You'll Find Here
 
-This blog is my comprehensive collection of **250+ technical articles** covering everything from AWS cloud services to advanced system design patterns. Each post represents hands-on learning, real-world insights, and practical implementations.
+This blog features **7 comprehensive technical guides** that consolidate all my learning materials into complete, indexed resources. Each guide combines multiple topics and follows a structured, sequential approach for in-depth learning.
 
 ---
 
-## 🔥 Featured Learning Domains
+## 🔥 Complete Learning Guides
 
-### ☁️ **Cloud & DevOps**
-Dive deep into **AWS ecosystem**, serverless architecture, and modern deployment strategies.
+### ☕ **Java & Spring Boot Complete Guide**
+Comprehensive guide covering Java fundamentals, Spring Boot, Maven, JPA, Hibernate, and Multithreading.
 
-**Key Topics:** Lambda, DynamoDB, ECS, Docker, CI/CD, Infrastructure as Code
+**Sections:** Core Java, Memory Management, Spring Boot, JPA/Hibernate, Maven, Multithreading
 
-[Explore Cloud Posts →](/categories/#cloud-devops)
-
----
-
-### 💻 **Programming Languages** 
-Master **Java/Spring**, **JavaScript/Node.js**, and modern development patterns.
-
-**Key Topics:** Spring Boot, Event Loop, Async Programming, Multithreading
-
-[Browse Programming →](/categories/#programming)
+[Read Complete Java Guide →](/2025/07/22/java-spring-boot-complete-guide.html)
 
 ---
 
-### 🏗️ **System Design & Architecture**
-Learn scalable system design, database optimization, and distributed systems.
+### ☁️ **AWS Cloud Services Complete Guide**
+Complete AWS guide covering Lambda, ECS, IAM, API Gateway, DynamoDB, and deployment strategies.
 
-**Key Topics:** CAP Theorem, Database Design, Microservices, Performance
+**Sections:** IAM, Lambda, ECS, API Gateway, DynamoDB, CI/CD, CloudWatch
 
-[View System Design →](/categories/#system-design)
-
----
-
-### 🛠️ **Development & Testing**
-Explore testing frameworks, frontend development, and authentication patterns.
-
-**Key Topics:** React, Angular, JMeter, JWT, Code Quality
-
-[See Development →](/categories/#development)
+[Read Complete AWS Guide →](/2025/07/22/aws-cloud-services-complete-guide.html)
 
 ---
 
-### 🔬 **CS Fundamentals**
-Understand operating systems, networking protocols, and algorithms.
+### 🏗️ **System Design & Architecture Guide**
+Comprehensive system design guide covering scalability, consistency, CAP theorem, and architecture patterns.
 
-**Key Topics:** Process Management, TCP/IP, Data Structures, Multimedia
+**Sections:** CAP Theorem, ACID Properties, Distributed Systems, Design Patterns, OAuth2
 
-[Check Fundamentals →](/categories/#fundamentals)
+[Read Complete System Design Guide →](/2025/07/22/system-design-architecture-guide.html)
+
+---
+
+### �️ **Database Design & Management Guide**
+Complete database guide covering RDS, DynamoDB, SQL optimization, and database architecture.
+
+**Sections:** RDS Configuration, DynamoDB Operations, SQL Optimization, Database Architecture
+
+[Read Complete Database Guide →](/2025/07/22/database-design-management-guide.html)
+
+---
+
+### 🌐 **Computer Networking Complete Guide**
+Complete networking guide covering TCP/IP, DNS, routing, protocols, and network security.
+
+**Sections:** Network Fundamentals, TCP/IP, DNS, Routing, Network Security, Protocols
+
+[Read Complete Networking Guide →](/2025/07/22/computer-networking-complete-guide.html)
+
+---
+
+### � **JavaScript & Node.js Complete Guide**
+Modern JavaScript development guide covering ES6+, Node.js, async programming, and frontend frameworks.
+
+**Sections:** ES6+ Features, Async Programming, Node.js, DOM Manipulation, Modern JavaScript
+
+[Read Complete JavaScript Guide →](/2025/07/22/javascript-nodejs-complete-guide.html)
+
+---
+
+### 🧮 **Data Structures & Algorithms Guide**
+Complete DSA guide covering sorting, searching, trees, graphs, and coding patterns.
+
+**Sections:** Sorting Algorithms, Data Structures, Algorithm Analysis, Coding Patterns
+
+[Read Complete DSA Guide →](/2025/07/22/data-structures-algorithms-guide.html)
 
 ---
 
 ## 📊 Quick Stats
 
-- **📝 {{ site.posts.size }}+ Technical Articles**
-- **🏷️ 5 Main Learning Domains** 
-- **🔖 20+ Specialized Topics**
-- **📅 Regularly Updated Content**
+- **� 7 Comprehensive Guides** covering all technical domains
+- **🔢 Indexed Sections** following numerical sequence (0.1, 0.2, 1.0, etc.)
+- **🏷️ 5 Main Learning Domains** with complete coverage
+- **📅 Regularly Updated Content** with new sections
 - **🌍 Deployed on GitHub Pages**
 
 ---
@@ -75,49 +93,50 @@ Understand operating systems, networking protocols, and algorithms.
 ## 🚀 Popular Learning Paths
 
 ### **Cloud Engineer Journey**
-1. **AWS Fundamentals** → IAM, EC2, S3 basics
-2. **Serverless Development** → Lambda, API Gateway  
-3. **Container Orchestration** → ECS, Docker deployment
-4. **DevOps Practices** → CI/CD, Infrastructure as Code
+1. **AWS Fundamentals** → [AWS Complete Guide: IAM, EC2, S3 basics](/2025/07/22/aws-cloud-services-complete-guide.html#section-0)
+2. **Serverless Development** → [AWS Complete Guide: Lambda, API Gateway](/2025/07/22/aws-cloud-services-complete-guide.html#section-999)  
+3. **Container Orchestration** → [AWS Complete Guide: ECS, Docker deployment](/2025/07/22/aws-cloud-services-complete-guide.html#section-999)
+4. **DevOps Practices** → [AWS Complete Guide: CI/CD, Infrastructure as Code](/2025/07/22/aws-cloud-services-complete-guide.html#section-2)
 
 ### **Full-Stack Developer Path**
-1. **Backend Mastery** → Java/Spring, Node.js patterns
-2. **Frontend Excellence** → React, Angular, TypeScript
-3. **Database Design** → SQL optimization, NoSQL modeling
-4. **System Integration** → APIs, Authentication, Testing
+1. **Backend Mastery** → [Java Complete Guide: Spring Boot, Enterprise patterns](/2025/07/22/java-spring-boot-complete-guide.html#section-1)
+2. **Frontend Excellence** → [JavaScript Complete Guide: Modern JS, Node.js](/2025/07/22/javascript-nodejs-complete-guide.html)
+3. **Database Design** → [Database Complete Guide: SQL optimization, NoSQL modeling](/2025/07/22/database-design-management-guide.html)
+4. **System Integration** → [System Design Guide: APIs, Authentication, Scaling](/2025/07/22/system-design-architecture-guide.html)
 
 ### **System Designer Track**
-1. **Distributed Systems** → Consistency, scalability patterns
-2. **Database Architecture** → Performance, indexing strategies  
-3. **Microservices Design** → Communication, fault tolerance
-4. **Performance Engineering** → Optimization, monitoring
+1. **Distributed Systems** → [System Design Guide: Consistency, scalability patterns](/2025/07/22/system-design-architecture-guide.html#section-0)
+2. **Database Architecture** → [Database Guide: Performance, indexing strategies](/2025/07/22/database-design-management-guide.html#section-0)  
+3. **Network Design** → [Networking Guide: Protocols, routing, security](/2025/07/22/computer-networking-complete-guide.html)
+4. **Algorithm Mastery** → [DSA Guide: Data structures, optimization](/2025/07/22/data-structures-algorithms-guide.html)
 
 ---
 
-## 💡 Recent Highlights
+## 💡 Latest Complete Guides
 
-{% for post in site.posts limit: 6 %}
+{% assign consolidated_posts = site.posts | where_exp: "post", "post.tags contains 'complete-guide'" | sort: 'date' | reverse %}
+{% for post in consolidated_posts limit: 7 %}
 ### [{{ post.title }}]({{ post.url }})
-{{ post.excerpt | strip_html | truncatewords: 25 }}
+{{ post.description }}
 
-**Categories:** {{ post.categories | join: ", " }} | **Date:** {{ post.date | date: "%B %d, %Y" }}
+**Categories:** {{ post.categories | join: " → " }} | **Date:** {{ post.date | date: "%B %d, %Y" }}
 
 ---
 {% endfor %}
 
-[View All Posts →](/categories/)
+[View All Guides →](/categories/)
 
 ---
 
-## 🎯 Why This Blog?
+## 🎯 Why These Guides?
 
-**Real-World Learning:** Each post comes from actual implementation experience, not just theory.
+**Comprehensive Learning:** Each guide consolidates multiple related topics into a single, well-structured resource.
 
-**Comprehensive Coverage:** From basic concepts to advanced patterns across multiple technology stacks.
+**Indexed Organization:** Content follows numerical sequences (0.1, 0.2, 1.0, 1.1) making it easy to follow logical progression.
 
-**Practical Focus:** Code examples, best practices, and lessons learned from real projects.
+**Practical Focus:** Real-world examples, code samples, and lessons learned from actual implementation experience.
 
-**Continuous Growth:** Regular updates as I explore new technologies and deepen existing knowledge.
+**Complete Coverage:** From fundamental concepts to advanced patterns, each guide covers its domain thoroughly.
 
 ---
 
@@ -131,10 +150,11 @@ Understand operating systems, networking protocols, and algorithms.
 
 ## 🔍 How to Navigate
 
-- **By Category:** Use the [Categories](/categories/) page for organized browsing
-- **By Topic:** Search for specific technologies or concepts
-- **By Learning Path:** Follow suggested tracks based on your goals
-- **By Recency:** Check latest posts on this homepage
+- **By Complete Guides:** Browse comprehensive [Complete Learning Guides](#-complete-learning-guides) above
+- **By Category:** Use the [Categories](/categories/) page for traditional post browsing  
+- **By Collection:** Explore [Technical Collections](/collections/) for individual topic pages
+- **By Learning Path:** Follow the suggested tracks based on your career goals
+- **By Index:** Jump to specific sections using the numerical indices (0.1, 1.2, etc.)
 
 ---
 

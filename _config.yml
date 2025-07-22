@@ -13,7 +13,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Collections
+# Collections - Consolidated into comprehensive guides
 collections:
   posts:
     output: true

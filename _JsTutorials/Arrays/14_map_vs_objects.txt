@@ -1,9 +1,0 @@
-
-map : 1) any value as key i.e. object,array,string,symbols etc
-      2) for large data
-      3) adding or removing data : performance good
-
-object: 
-    1) only string, number or symbol as KEYS
-    2) for small or medium data
-    3)  adding or removing data : performance best/quick
