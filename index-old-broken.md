@@ -11,7 +11,7 @@ title: "Tech Skills Blog"
 
 ## 🌟 What You'll Find Here
 
-This blog features **6 comprehensive technical guides** that consolidate all my learning materials into complete, indexed resources. Each guide combines multiple topics and follows a structured, sequential approach for in-depth learning.
+This blog features **7 comprehensive technical guides** that consolidate all my learning materials into complete, indexed resources. Each guide combines multiple topics and follows a structured, sequential approach for in-depth learning.
 
 ---
 
@@ -44,7 +44,7 @@ Comprehensive system design guide covering scalability, consistency, CAP theorem
 
 ---
 
-### 💾 **Database Design & Management Guide**
+### �️ **Database Design & Management Guide**
 Complete database guide covering RDS, DynamoDB, SQL optimization, and database architecture.
 
 **Sections:** RDS Configuration, DynamoDB Operations, SQL Optimization, Database Architecture
@@ -62,6 +62,15 @@ Complete networking guide covering TCP/IP, DNS, routing, protocols, and network 
 
 ---
 
+### � **JavaScript & Node.js Complete Guide**
+Modern JavaScript development guide covering ES6+, Node.js, async programming, and frontend frameworks.
+
+**Sections:** ES6+ Features, Async Programming, Node.js, DOM Manipulation, Modern JavaScript
+
+[Read Complete JavaScript Guide →](/2025/07/22/javascript-nodejs-complete-guide.html)
+
+---
+
 ### 🧮 **Data Structures & Algorithms Guide**
 Complete DSA guide covering sorting, searching, trees, graphs, and coding patterns.
 
@@ -73,9 +82,9 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 
 ## 📊 Quick Stats
 
-- **📚 6 Comprehensive Guides** covering all technical domains
+- **� 7 Comprehensive Guides** covering all technical domains
 - **🔢 Indexed Sections** following numerical sequence (0.1, 0.2, 1.0, etc.)
-- **🏷️ 6 Main Learning Domains** with complete coverage
+- **🏷️ 5 Main Learning Domains** with complete coverage
 - **📅 Regularly Updated Content** with new sections
 - **🌍 Deployed on GitHub Pages**
 
@@ -91,9 +100,9 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 
 ### **Full-Stack Developer Path**
 1. **Backend Mastery** → [Java Complete Guide: Spring Boot, Enterprise patterns](/2025/07/22/java-spring-boot-complete-guide.html#section-1)
-2. **Database Design** → [Database Complete Guide: SQL optimization, NoSQL modeling](/2025/07/22/database-design-management-guide.html)
-3. **System Integration** → [System Design Guide: APIs, Authentication, Scaling](/2025/07/22/system-design-architecture-guide.html)
-4. **Networking** → [Networking Guide: Protocols, TCP/IP stack](/2025/07/22/computer-networking-complete-guide.html)
+2. **Frontend Excellence** → [JavaScript Complete Guide: Modern JS, Node.js](/2025/07/22/javascript-nodejs-complete-guide.html)
+3. **Database Design** → [Database Complete Guide: SQL optimization, NoSQL modeling](/2025/07/22/database-design-management-guide.html)
+4. **System Integration** → [System Design Guide: APIs, Authentication, Scaling](/2025/07/22/system-design-architecture-guide.html)
 
 ### **System Designer Track**
 1. **Distributed Systems** → [System Design Guide: Consistency, scalability patterns](/2025/07/22/system-design-architecture-guide.html#section-0)
@@ -106,7 +115,7 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 ## 💡 Latest Complete Guides
 
 {% assign consolidated_posts = site.posts | where_exp: "post", "post.tags contains 'complete-guide'" | sort: 'date' | reverse %}
-{% for post in consolidated_posts limit: 6 %}
+{% for post in consolidated_posts limit: 7 %}
 ### [{{ post.title }}]({{ post.url }})
 {{ post.description }}
 
