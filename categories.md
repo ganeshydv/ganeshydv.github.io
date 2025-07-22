@@ -8,7 +8,7 @@ permalink: /categories/
 
 Explore my technical learning journey organized by main domains and specialized topics.
 
----
+<!-- ---
 
 ## ☁️ Cloud & DevOps
 
@@ -115,26 +115,55 @@ Explore my technical learning journey organized by main domains and specialized 
 
 ### Multimedia Processing
 - **Video Formats:** MP4, streaming protocols
-- **File Processing:** Upload strategies, format conversion
+- **File Processing:** Upload strategies, format conversion -->
 
 ---
 
 ## 🔍 Browse All Posts by Category
 
-{% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+{% comment %}
+Group posts by main category (folder-based) and then by subcategory (subfolder-based)
+This creates a logical hierarchy that follows the actual folder structure
+{% endcomment %}
 
-{% for category in categories %}
-  {% if category != "" %}
-### {{ category | capitalize | replace: '-', ' ' }}
-    {% assign posts = site.posts | where: 'categories', category %}
-    {% for post in posts limit: 5 %}
+{% assign main_categories = site.posts | map: 'categories' | map: 'first' | uniq | sort %}
+
+{% for main_category in main_categories %}
+  {% if main_category != "" %}
+## 📁 {{ main_category }}
+
+    {% comment %}Get all subcategories for this main category{% endcomment %}
+    {% assign subcategories = site.posts | where_exp: "post", "post.categories[0] == main_category" | map: 'categories' | map: 'last' | uniq | sort %}
+    
+    {% for subcategory in subcategories %}
+      {% if subcategory != "" and subcategory != main_category %}
+### 📂 {{ subcategory }}
+        {% assign topic_posts = site.posts | where_exp: "post", "post.categories[0] == main_category and post.categories[1] == subcategory" | sort: 'title' %}
+        {% for post in topic_posts limit: 8 %}
 - [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %Y" }}
-    {% endfor %}
-    {% assign remaining = posts.size | minus: 5 %}
-    {% if remaining > 0 %}
-- *... and {{ remaining }} more posts*
-    {% endif %}
+        {% endfor %}
+        {% assign remaining = topic_posts.size | minus: 8 %}
+        {% if remaining > 0 %}
+- *... and {{ remaining }} more posts in {{ subcategory }}*
+        {% endif %}
 
+      {% endif %}
+    {% endfor %}
+
+    {% comment %}Also show posts that only have main category{% endcomment %}
+    {% assign main_only_posts = site.posts | where_exp: "post", "post.categories[0] == main_category and post.categories.size == 1" | sort: 'title' %}
+    {% if main_only_posts.size > 0 %}
+### 📄 General {{ main_category }} Posts
+      {% for post in main_only_posts limit: 5 %}
+- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %Y" }}
+      {% endfor %}
+      {% assign remaining = main_only_posts.size | minus: 5 %}
+      {% if remaining > 0 %}
+- *... and {{ remaining }} more general posts*
+      {% endif %}
+
+    {% endif %}
+---
   {% endif %}
 {% endfor %}
 

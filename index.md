@@ -69,7 +69,7 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 
 [Read Complete DSA Guide →](/2025/07/22/data-structures-algorithms-guide.html)
 
----
+<!-- ---
 
 ## 📊 Quick Stats
 
@@ -77,11 +77,11 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 - **🔢 Indexed Sections** following numerical sequence (0.1, 0.2, 1.0, etc.)
 - **🏷️ 6 Main Learning Domains** with complete coverage
 - **📅 Regularly Updated Content** with new sections
-- **🌍 Deployed on GitHub Pages**
+- **🌍 Deployed on GitHub Pages** -->
 
----
+<!-- --- -->
 
-## 🚀 Popular Learning Paths
+<!-- ## 🚀 Popular Learning Paths
 
 ### **Cloud Engineer Journey**
 1. **AWS Fundamentals** → [AWS Complete Guide: IAM, EC2, S3 basics](/2025/07/22/aws-cloud-services-complete-guide.html#section-0)
@@ -99,7 +99,7 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 1. **Distributed Systems** → [System Design Guide: Consistency, scalability patterns](/2025/07/22/system-design-architecture-guide.html#section-0)
 2. **Database Architecture** → [Database Guide: Performance, indexing strategies](/2025/07/22/database-design-management-guide.html#section-0)  
 3. **Network Design** → [Networking Guide: Protocols, routing, security](/2025/07/22/computer-networking-complete-guide.html)
-4. **Algorithm Mastery** → [DSA Guide: Data structures, optimization](/2025/07/22/data-structures-algorithms-guide.html)
+4. **Algorithm Mastery** → [DSA Guide: Data structures, optimization](/2025/07/22/data-structures-algorithms-guide.html) -->
 
 ---
 
@@ -119,7 +119,7 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 
 ---
 
-## 🎯 Why These Guides?
+<!-- ## 🎯 Why These Guides?
 
 **Comprehensive Learning:** Each guide consolidates multiple related topics into a single, well-structured resource.
 
@@ -127,9 +127,9 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 
 **Practical Focus:** Real-world examples, code samples, and lessons learned from actual implementation experience.
 
-**Complete Coverage:** From fundamental concepts to advanced patterns, each guide covers its domain thoroughly.
+**Complete Coverage:** From fundamental concepts to advanced patterns, each guide covers its domain thoroughly. -->
 
----
+<!-- --- -->
 
 ## 🤝 Connect & Learn Together
 
@@ -137,7 +137,7 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 - **💼 LinkedIn:** [Connect with me](https://www.linkedin.com/in/ganesh-gurkhude-52bb66233) - Let's discuss tech
 - **📧 Email:** gurkhudeganesh@gmail.com - Questions and collaborations welcome
 
----
+<!-- ---
 
 ## 🔍 How to Navigate
 
@@ -145,7 +145,7 @@ Complete DSA guide covering sorting, searching, trees, graphs, and coding patter
 - **By Category:** Use the [Categories](/categories/) page for traditional post browsing  
 - **By Collection:** Explore [Technical Collections](/collections/) for individual topic pages
 - **By Learning Path:** Follow the suggested tracks based on your career goals
-- **By Index:** Jump to specific sections using the numerical indices (0.1, 1.2, etc.)
+- **By Index:** Jump to specific sections using the numerical indices (0.1, 1.2, etc.) -->
 
 ---
 

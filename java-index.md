@@ -12,7 +12,7 @@ Comprehensive collection of Java tutorials, Spring Boot guides, and enterprise d
 
 Since we've consolidated all Java content into comprehensive guides, please visit:
 
-### [☕ Java & Spring Boot Complete Guide](/2025/07/22/java-spring-boot-complete-guide.html)
+### [☕ Java & Spring Boot Complete Guide](/_posts/2025/07/22/java-spring-boot-complete-guide.html)
 
 This comprehensive guide includes all Java topics organized by indexed sections:
 - Core Java fundamentals (sections 0-2)

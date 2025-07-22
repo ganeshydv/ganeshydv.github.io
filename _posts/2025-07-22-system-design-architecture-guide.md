@@ -112,7 +112,8 @@ There are six general ways to deploy applications:
 
 6. **Shadow**: This strategy involves deploying the new version (B) alongside the current version (A), but only sending live traffic to A. B receives the same requests as A but doesn't return responses to the users. This allows you to test B with real data without affecting the user experience.
 
-==============================================================
+
+#
 General 6 Ways:
 
 1) Recreate : replace at once : Remove A --> Deploy B : Replace A by B
