@@ -8,18 +8,20 @@ permalink: /java/
 
 Comprehensive collection of Java tutorials, Spring Boot guides, and enterprise development patterns.
 
-## 📖 All Java Articles
+## 📖 Java Learning Guide
 
-{% assign java_docs = site.java | sort: 'title' %}
-{% for doc in java_docs %}
-### [{{ doc.title }}]({{ doc.url | relative_url }})
-{% if doc.subcategory %}_{{ doc.subcategory }}_{% endif %}
-{% if doc.excerpt %}{{ doc.excerpt | strip_html | truncatewords: 20 }}{% endif %}
+Since we've consolidated all Java content into comprehensive guides, please visit:
 
----
-{% endfor %}
+### [☕ Java & Spring Boot Complete Guide](/2025/07/22/java-spring-boot-complete-guide.html)
 
-## 🏷️ Topics Covered
+This comprehensive guide includes all Java topics organized by indexed sections:
+- Core Java fundamentals (sections 0-2)
+- Advanced Java concepts (sections 3-5) 
+- Spring Boot development (subfolder sections)
+- Maven and build tools
+- JPA/Hibernate and database integration
+
+## 🏷️ Topics Covered in the Complete Guide
 
 - **Core Java**: JVM, JRE, JDK, Memory Management, Garbage Collection
 - **Spring Boot**: Auto-configuration, Request Handling, Exception Handling

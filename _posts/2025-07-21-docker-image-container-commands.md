@@ -51,10 +51,9 @@ always remember: In Docker file
   - Remove All :
    ```cmd 
     docker rm $(docker ps -a -q)
-   ```
-  - List containers
+   ```  - List containers
    ```cmd
-    docker ps -a --format "{{.ID}}\t{{.CreatedAt}}\t{{.Names}}"
+    docker ps -a --format "{% raw %}{{.ID}}\t{{.CreatedAt}}\t{{.Names}}{% endraw %}"
    ```
   - paas ENV file:
   `docker run --env-file <path_to_env_file> <image_name>`

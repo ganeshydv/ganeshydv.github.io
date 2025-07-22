@@ -1,11 +1,11 @@
 ---
 layout: post
-title: ""If the monitor lock is on the current object (this), then why doesn't it block access to all other methods of that object?""
+title: "If the monitor lock is on the current object (this), then why doesn't it block access to all other methods of that object?"
 date: 2025-07-21
 categories: [java, adv-java]
 tags: [java, concurrency]
 author: "GGurkhude"
-excerpt: "Learning notes on "if the monitor lock is on the current object (this), then why doesn't it block access to all other methods of that object?""
+excerpt: "Learning notes on monitor locks and method access blocking in Java multithreading"
 original_path: "JAVA/Adv_Java/3.2.1_multithreading_monitor_lock_.md"
 ---
 

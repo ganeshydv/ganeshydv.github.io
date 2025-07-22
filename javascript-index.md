@@ -8,18 +8,15 @@ permalink: /javascript/
 
 Modern JavaScript development, Node.js backend programming, and frontend frameworks.
 
-## 📖 All JavaScript Articles
+## 📖 JavaScript Learning Guide
 
-{% assign js_docs = site.jstutorials | sort: 'title' %}
-{% for doc in js_docs %}
-### [{{ doc.title }}]({{ doc.url | relative_url }})
-{% if doc.subcategory %}_{{ doc.subcategory }}_{% endif %}
-{% if doc.excerpt %}{{ doc.excerpt | strip_html | truncatewords: 20 }}{% endif %}
+Since we've consolidated all JavaScript content into comprehensive guides, please visit:
 
----
-{% endfor %}
+### [💻 JavaScript & Node.js Complete Guide](/2025/07/22/javascript-nodejs-complete-guide.html)
 
-## 🏷️ Topics Covered
+This comprehensive guide includes all JavaScript topics organized by indexed sections.
+
+## 🏷️ Topics Covered in the Complete Guide
 
 - **ES6+ Features**: Arrow functions, Classes, Modules, Destructuring
 - **Async Programming**: Promises, Async/Await, Event Loop, Callbacks

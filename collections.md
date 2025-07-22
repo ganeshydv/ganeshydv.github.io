@@ -6,95 +6,116 @@ permalink: /collections/
 
 # Technical Notes Collection
 
-Welcome to my comprehensive collection of technical notes organized by topic. Each section contains practical guides, tutorials, and reference materials.
+Welcome to my comprehensive collection of technical notes. All content has been consolidated into **7 comprehensive learning guides** for better organization and learning flow.
 
-## 📚 Browse by Collection
+## 📚 Comprehensive Learning Guides
 
 ### ☕ Java & Spring Framework
-Explore Java fundamentals, Spring Boot, JPA/Hibernate, multithreading, and enterprise development patterns.
+Complete Java development guide covering fundamentals through enterprise patterns.
 
 **Topics:** Core Java, Spring Boot, Maven, JDBC, Hibernate, Multithreading, Memory Management
 
-{% assign java_docs = site.java | sort: 'title' %}
-{% for doc in java_docs limit:5 %}
-- [{{ doc.title }}]({{ doc.url | relative_url }})
-{% endfor %}
-{% if site.java.size > 5 %}
-[View all {{ site.java.size }} Java articles →](/java/)
-{% endif %}
+[Read Java Complete Guide →](/2025/07/22/java-spring-boot-complete-guide.html)
 
 ---
 
 ### ☁️ AWS & Cloud Services  
-AWS services, serverless architecture, ECS, Lambda, IAM, and cloud deployment strategies.
+Complete AWS guide covering all major services and deployment strategies.
 
 **Topics:** Lambda, ECS, IAM, API Gateway, CloudWatch, CI/CD, Serverless
 
-{% assign aws_docs = site.aws | sort: 'title' %}
-{% for doc in aws_docs limit:5 %}
-- [{{ doc.title }}]({{ doc.url | relative_url }})
-{% endfor %}
-{% if site.aws.size > 5 %}
-[View all {{ site.aws.size }} AWS articles →](/aws/)
-{% endif %}
+[Read AWS Complete Guide →](/2025/07/22/aws-cloud-services-complete-guide.html)
 
 ---
 
 ### 🌐 JavaScript & Node.js
-Modern JavaScript, ES6+, Node.js, async programming, and frontend development.
+Modern JavaScript development from fundamentals to advanced concepts.
 
-**Topics:** Event Loop, Promises, Closures, Prototypes, Async/Await, DOM Manipulation
+**Topics:** ES6+, Async Programming, Node.js, DOM Manipulation, Modern JavaScript
 
-{% assign js_docs = site.jstutorials | sort: 'title' %}
-{% for doc in js_docs limit:5 %}
-- [{{ doc.title }}]({{ doc.url | relative_url }})
-{% endfor %}
-{% if site.jstutorials.size > 5 %}
-[View all {{ site.jstutorials.size }} JavaScript articles →](/javascript/)
-{% endif %}
+[Read JavaScript Complete Guide →](/2025/07/22/javascript-nodejs-complete-guide.html)
 
 ---
 
 ### 🧮 Algorithms & Data Structures
-Computer science fundamentals, coding patterns, and algorithmic problem-solving techniques.
+Computer science fundamentals and problem-solving techniques.
 
-**Topics:** Sorting, Searching, Data Structures, Algorithm Analysis, Coding Patterns
+**Topics:** Sorting, Data Structures, Algorithm Analysis, Coding Patterns
 
-{% assign dsa_docs = site.dsa | sort: 'title' %}
-{% for doc in dsa_docs limit:5 %}
-- [{{ doc.title }}]({{ doc.url | relative_url }})
-{% endfor %}
-{% if site.dsa.size > 5 %}
-[View all {{ site.dsa.size }} DSA articles →](/algorithms/)
-{% endif %}
+[Read DSA Complete Guide →](/2025/07/22/data-structures-algorithms-guide.html)
 
 ---
 
-## 🔍 All Categories
+### 🗄️ Database Design & Management
+Database fundamentals, optimization, and architecture patterns.
+
+**Topics:** RDS, DynamoDB, SQL Optimization, Database Architecture
+
+[Read Database Complete Guide →](/2025/07/22/database-design-management-guide.html)
+
+---
+
+### 🌐 Computer Networking
+Network protocols, architecture, and security fundamentals.
+
+**Topics:** TCP/IP, DNS, Routing, Network Security, Protocols
+
+[Read Networking Complete Guide →](/2025/07/22/computer-networking-complete-guide.html)
+
+---
+
+### 🏗️ System Design & Architecture
+Scalable system design and distributed architecture patterns.
+
+**Topics:** CAP Theorem, ACID Properties, Distributed Systems, Design Patterns
+
+[Read System Design Complete Guide →](/2025/07/22/system-design-architecture-guide.html)
+
+---
+
+## 🔍 All Learning Guides
 
 <div class="collection-grid">
   <div class="collection-card">
     <h3>☕ Java & Spring</h3>
-    <p>{{ site.java.size }} articles</p>
-    <a href="/java/">Browse Java →</a>
+    <p>Complete development guide</p>
+    <a href="/2025/07/22/java-spring-boot-complete-guide.html">Read Guide →</a>
   </div>
   
   <div class="collection-card">
     <h3>☁️ AWS Services</h3>
-    <p>{{ site.aws.size }} articles</p>
-    <a href="/aws/">Browse AWS →</a>
+    <p>Cloud services & deployment</p>
+    <a href="/2025/07/22/aws-cloud-services-complete-guide.html">Read Guide →</a>
   </div>
   
   <div class="collection-card">
     <h3>🌐 JavaScript</h3>
-    <p>{{ site.jstutorials.size }} articles</p>
-    <a href="/javascript/">Browse JavaScript →</a>
+    <p>Modern JS & Node.js</p>
+    <a href="/2025/07/22/javascript-nodejs-complete-guide.html">Read Guide →</a>
   </div>
   
   <div class="collection-card">
     <h3>🧮 Algorithms</h3>
-    <p>{{ site.dsa.size }} articles</p>
-    <a href="/algorithms/">Browse DSA →</a>
+    <p>DSA & problem solving</p>
+    <a href="/2025/07/22/data-structures-algorithms-guide.html">Read Guide →</a>
+  </div>
+  
+  <div class="collection-card">
+    <h3>🗄️ Databases</h3>
+    <p>Design & management</p>
+    <a href="/2025/07/22/database-design-management-guide.html">Read Guide →</a>
+  </div>
+  
+  <div class="collection-card">
+    <h3>🌐 Networking</h3>
+    <p>Protocols & architecture</p>
+    <a href="/2025/07/22/computer-networking-complete-guide.html">Read Guide →</a>
+  </div>
+  
+  <div class="collection-card">
+    <h3>🏗️ System Design</h3>
+    <p>Scalable architecture</p>
+    <a href="/2025/07/22/system-design-architecture-guide.html">Read Guide →</a>
   </div>
 </div>
 

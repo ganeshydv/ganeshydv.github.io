@@ -8,18 +8,15 @@ permalink: /algorithms/
 
 Computer science fundamentals, coding patterns, and problem-solving techniques.
 
-## 📖 All DSA Articles
+## 📖 DSA Learning Guide
 
-{% assign dsa_docs = site.dsa | sort: 'title' %}
-{% for doc in dsa_docs %}
-### [{{ doc.title }}]({{ doc.url | relative_url }})
-{% if doc.subcategory %}_{{ doc.subcategory }}_{% endif %}
-{% if doc.excerpt %}{{ doc.excerpt | strip_html | truncatewords: 20 }}{% endif %}
+Since we've consolidated all DSA content into comprehensive guides, please visit:
 
----
-{% endfor %}
+### [🧮 Data Structures & Algorithms Complete Guide](/2025/07/22/data-structures-algorithms-guide.html)
 
-## 🏷️ Topics Covered
+This comprehensive guide includes all DSA topics organized by indexed sections.
+
+## 🏷️ Topics Covered in the Complete Guide
 
 - **Sorting Algorithms**: Quick sort, Merge sort, Heap sort, Bubble sort
 - **Data Structures**: Arrays, Linked lists, Trees, Graphs, Hash tables
