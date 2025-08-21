@@ -7,7 +7,7 @@ type TFA_RESULT = {
 };
 
 const result: TFA_RESULT = {
-//   EXPIRED: "",
+  EXPIRED: "EXPIRED",
   INVALID: "INVALID",
   NOTEXIST: "NOTEXIST",
   UNSUPPORTED_TOTEM_TYPE: "UNSUPPORTED_TOTEM_TYPE",
@@ -23,14 +23,16 @@ enum TFA_result {
   PASS = "PASS",
 }
 
-// const result_: TFA_result = TFA_result.EXPIRED; // Valid
-// const anotherResult_: TFA_result.INVALID = "INVALID"; // Valid, which might not be what you want
+const result_: TFA_result = TFA_result.EXPIRED; // Valid
+const anotherResult_: TFA_result.INVALID = TFA_result.INVALID 
+// const anotherResult_1: TFA_result = "INVALID"  // Error
+
 
 /*
 
 */
 
-type TFA_RESULt_2 =
+type TFA_RESULT_2 =
   | 'EXPIRED'
   | 'INVALID'
   | 'NOTEXIST'
@@ -39,4 +41,4 @@ type TFA_RESULt_2 =
 
 const result_2: TFA_RESULT_2 = 'EXPIRED'; // Valid
 const anotherResult_2: TFA_RESULT_2 = 'INVALID'; // Valid
-const invalidResult_2: TFA_RESULT_2 = 'OTHER'; // Error, as 'OTHER' is not allowed
+// const invalidResult_2: TFA_RESULT_2 = 'OTHER'; // Error, as 'OTHER' is not allowed

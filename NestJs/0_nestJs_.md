@@ -78,3 +78,4 @@ export class CreateUserDto {
   email: string;
 }
 ```
+## forRoot (), forRootAsync(), forFeature() && forFeatureAsync(), register() , registerAsync()
